@@ -11,22 +11,19 @@ export default function About({ onNavigate }: AboutProps) {
     <div className="bg-softWhite">
       <section
         aria-labelledby="about-heading"
-        className="relative overflow-hidden bg-navy min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] flex items-center"
+        className="relative overflow-hidden bg-navy min-h-[400px]"
       >
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-40"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: 'url(/siteherojan2026_opac80.png)',
-            backgroundPosition: 'center 30%',
           }}
         />
-        <div className="absolute inset-0 bg-navy/60" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 id="about-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
+          <h1 id="about-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5 drop-shadow-lg">
             About
           </h1>
-          <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed">
+          <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed drop-shadow-md">
             This work is grounded in real relationships, not hype.
           </p>
         </div>
