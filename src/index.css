@@ -229,6 +229,9 @@
     transition: opacity 0.3s ease-in-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out;
     overflow: hidden;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .flip-card-front {
