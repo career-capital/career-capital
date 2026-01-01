@@ -39,7 +39,7 @@ export default function Contact({ onNavigate }: ContactProps) {
     <div className="bg-softWhite">
       <section
         aria-labelledby="contact-heading"
-        className="relative overflow-hidden bg-navy min-h-[400px]"
+        className="relative overflow-hidden bg-navy min-h-[350px]"
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -48,10 +48,10 @@ export default function Contact({ onNavigate }: ContactProps) {
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
-          <h1 id="contact-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5 drop-shadow-lg">
+          <h1 id="contact-heading" className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
             Let's Talk
           </h1>
-          <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed drop-shadow-md">
+          <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
             Every investment in your growth compounds over time. Building AI fluency and strengthening relationships isn't just about solving today's challenges—it's about creating lasting capability that pays dividends across your entire career. Let's explore what approach makes sense for you and your team.
           </p>
         </div>
