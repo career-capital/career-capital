@@ -60,7 +60,7 @@ export default function FlipCard({ front, back }: FlipCardProps) {
               <h3 className="text-lg font-medium text-ink pr-4 leading-tight">
                 {front.title}
               </h3>
-              <RotateCw className="w-5 h-5 text-steel flex-shrink-0" aria-hidden="true" />
+              <RotateCw className="w-5 h-5 text-steel flex-shrink-0 transition-transform duration-300" aria-hidden="true" />
             </div>
             <ul className="space-y-2">
               {back.content.map((item, index) => (
