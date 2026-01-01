@@ -120,14 +120,12 @@ export default function Services({ onNavigate }: ServicesProps) {
         <div className="absolute inset-0 bg-navy/60" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="max-w-3xl">
-            <h1 id="services-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5">
-              Services
-            </h1>
-            <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed">
-              Your brand is in the room even when you&apos;re not. Let&apos;s build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
-            </p>
-          </div>
+          <h1 id="services-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5">
+            Services
+          </h1>
+          <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed">
+            Your brand is in the room even when you&apos;re not. Let&apos;s build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
+          </p>
         </div>
       </section>
 

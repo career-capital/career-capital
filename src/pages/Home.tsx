@@ -41,35 +41,33 @@ export default function Home({ onNavigate }: HomeProps) {
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
-              AI fluency + strong relationships are the new career capital
-            </h1>
-            <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-              Strategic guidance for organizations ready to build AI readiness without losing
-              the human side of work.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                  onNavigate('services');
-                }}
-                className="btn-primary-on-dark"
-              >
-                Explore Services
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
-              <button
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                  onNavigate('contact');
-                }}
-                className="btn-secondary-on-dark"
-              >
-                Let's Talk
-              </button>
-            </div>
+          <h1 className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
+            AI fluency + strong relationships are the new career capital
+          </h1>
+          <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
+            Strategic guidance for organizations ready to build AI readiness without losing
+            the human side of work.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button
+              onClick={() => {
+                window.scrollTo(0, 0);
+                onNavigate('services');
+              }}
+              className="btn-primary-on-dark"
+            >
+              Explore Services
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </button>
+            <button
+              onClick={() => {
+                window.scrollTo(0, 0);
+                onNavigate('contact');
+              }}
+              className="btn-secondary-on-dark"
+            >
+              Let's Talk
+            </button>
           </div>
         </div>
       </section>

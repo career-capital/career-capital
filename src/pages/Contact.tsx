@@ -51,14 +51,12 @@ export default function Contact({ onNavigate }: ContactProps) {
         <div className="absolute inset-0 bg-navy/60" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="max-w-3xl">
-            <h1 id="contact-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5">
-              Let's Talk
-            </h1>
-            <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed">
-              Every investment in your growth compounds over time. Building AI fluency and strengthening relationships isn't just about solving today's challenges—it's about creating lasting capability that pays dividends across your entire career. Let's explore what approach makes sense for you and your team.
-            </p>
-          </div>
+          <h1 id="contact-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5">
+            Let's Talk
+          </h1>
+          <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed">
+            Every investment in your growth compounds over time. Building AI fluency and strengthening relationships isn't just about solving today's challenges—it's about creating lasting capability that pays dividends across your entire career. Let's explore what approach makes sense for you and your team.
+          </p>
         </div>
       </section>
 

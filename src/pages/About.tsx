@@ -23,14 +23,12 @@ export default function About({ onNavigate }: AboutProps) {
         <div className="absolute inset-0 bg-navy/60" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="max-w-3xl">
-            <h1 id="about-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5">
-              About
-            </h1>
-            <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed">
-              This work is grounded in real relationships, not hype.
-            </p>
-          </div>
+          <h1 id="about-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5">
+            About
+          </h1>
+          <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed">
+            This work is grounded in real relationships, not hype.
+          </p>
         </div>
       </section>
 
