@@ -30,6 +30,7 @@ export default function Admin() {
     quote: '',
     author: '',
     company: '',
+    display_order: '',
     is_active: true,
     featured: false,
     tags: [] as string[],
@@ -58,10 +59,16 @@ export default function Admin() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
+    const targetPosition = formData.display_order ? parseInt(formData.display_order) : null;
+
     if (editingId) {
+      // Update existing testimonial
+      const updateData = { ...formData };
+      delete updateData.display_order;
+
       const { error } = await supabase
         .from('testimonials')
-        .update(formData)
+        .update(updateData)
         .eq('id', editingId);
 
       if (error) {
@@ -69,19 +76,53 @@ export default function Admin() {
         alert('Failed to update testimonial');
         return;
       }
+
+      // If position specified, use smart insertion
+      if (targetPosition !== null && targetPosition > 0) {
+        const { error: positionError } = await supabase.rpc('insert_testimonial_at_position', {
+          testimonial_id_param: editingId,
+          target_position: targetPosition,
+        });
+
+        if (positionError) {
+          console.error('Error setting position:', positionError);
+          alert('Failed to set position');
+          return;
+        }
+      }
     } else {
+      // Create new testimonial
       const maxOrder = testimonials.length > 0
         ? Math.max(...testimonials.map(t => t.display_order))
         : 0;
 
-      const { error } = await supabase
+      const insertData = { ...formData };
+      delete insertData.display_order;
+
+      const { data: newTestimonial, error } = await supabase
         .from('testimonials')
-        .insert([{ ...formData, display_order: maxOrder + 1 }]);
+        .insert([{ ...insertData, display_order: maxOrder + 1 }])
+        .select()
+        .single();
 
       if (error) {
         console.error('Error creating testimonial:', error);
         alert('Failed to create testimonial');
         return;
+      }
+
+      // If position specified, move it there with smart insertion
+      if (targetPosition !== null && targetPosition > 0 && newTestimonial) {
+        const { error: positionError } = await supabase.rpc('insert_testimonial_at_position', {
+          testimonial_id_param: newTestimonial.id,
+          target_position: targetPosition,
+        });
+
+        if (positionError) {
+          console.error('Error setting position:', positionError);
+          alert('Failed to set position');
+          return;
+        }
       }
     }
 
@@ -95,6 +136,7 @@ export default function Admin() {
       quote: testimonial.quote,
       author: testimonial.author,
       company: testimonial.company,
+      display_order: testimonial.display_order.toString(),
       is_active: testimonial.is_active,
       featured: testimonial.featured || false,
       tags: testimonial.tags || [],
@@ -201,6 +243,7 @@ export default function Admin() {
       quote: '',
       author: '',
       company: '',
+      display_order: '',
       is_active: true,
       featured: false,
       tags: [],
@@ -370,6 +413,27 @@ export default function Admin() {
                   <option value="client">Client Testimonial</option>
                   <option value="character_witness">Professional Endorsement</option>
                 </select>
+              </div>
+
+              <div>
+                <label htmlFor="display_order" className="block text-base font-medium text-ink mb-2">
+                  Display Position (Optional)
+                </label>
+                <input
+                  type="number"
+                  id="display_order"
+                  name="display_order"
+                  min="1"
+                  max={testimonials.length + 1}
+                  value={formData.display_order}
+                  onChange={handleChange}
+                  placeholder="Leave blank to add at end"
+                  className="w-full px-4 py-3 border border-border focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-colors"
+                />
+                <p className="text-sm text-slate mt-1">
+                  Enter a position number to insert this testimonial at that spot. Other testimonials will automatically shift to make room.
+                  {editingId && formData.display_order && ` (Currently at position ${formData.display_order})`}
+                </p>
               </div>
 
               <div>
