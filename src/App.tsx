@@ -36,7 +36,7 @@ function App() {
       case 'testimonials':
         return <Testimonials onNavigate={setCurrentPage} />;
       case 'contact':
-        return <Contact />;
+        return <Contact onNavigate={setCurrentPage} />;
       case 'admin':
         return <Admin />;
       default:

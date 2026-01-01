@@ -1,7 +1,13 @@
-import { Mail, MessageSquare, Calendar, Rocket } from 'lucide-react';
+import { Mail, MessageSquare, Calendar, Rocket, ArrowRight } from 'lucide-react';
 import { useState, FormEvent } from 'react';
 
-export default function Contact() {
+type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
+
+interface ContactProps {
+  onNavigate: (page: Page) => void;
+}
+
+export default function Contact({ onNavigate }: ContactProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -233,6 +239,29 @@ export default function Contact() {
                 No pressure, no formal pitch required. Reach out with questions, share what's on your mind, or simply start a conversation. Sometimes the best partnerships begin with a casual exchange—come as you are.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="services-cta-heading" className="bg-navy text-trueWhite py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <h2 id="services-cta-heading" className="text-3xl md:text-4xl font-light mb-6">
+              Not sure where to start?
+            </h2>
+            <p className="text-xl text-trueWhite/90 mb-8 leading-relaxed">
+              Browse the full range of services—from strategic advisory and AI enablement to speaking engagements and workshops. Understanding what's possible can help frame our conversation.
+            </p>
+            <button
+              onClick={() => {
+                window.scrollTo(0, 0);
+                onNavigate('services');
+              }}
+              className="btn-primary-on-dark"
+            >
+              View Services
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </button>
           </div>
         </div>
       </section>
