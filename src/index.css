@@ -184,27 +184,29 @@
 
   /* ===== FLIP CARD COMPONENTS ===== */
   .flip-card-container {
-    min-height: 260px;
+    perspective: 1000px;
+    height: 260px;
   }
 
   @media (max-width: 640px) {
     .flip-card-container {
-      min-height: 300px;
+      height: 300px;
     }
   }
 
   .speaking-flip-cards .flip-card-container {
-    min-height: 220px;
+    height: 220px;
   }
 
   @media (max-width: 640px) {
     .speaking-flip-cards .flip-card-container {
-      min-height: 280px;
+      height: 280px;
     }
   }
 
   .flip-card {
-    @apply relative w-full cursor-pointer;
+    @apply relative w-full h-full cursor-pointer;
+    transform-style: preserve-3d;
   }
 
   .flip-card:focus {
@@ -212,44 +214,34 @@
   }
 
   .flip-card-inner {
-    @apply relative w-full;
-    transition: transform 0.2s ease-out;
+    @apply relative w-full h-full;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
   }
 
   @media (hover: hover) {
     .flip-card:hover .flip-card-inner {
       transform: translateY(-4px);
     }
+
+    .flip-card.flipped:hover .flip-card-inner {
+      transform: rotateY(180deg) translateY(-4px);
+    }
   }
 
   .flip-card-front,
   .flip-card-back {
-    @apply w-full bg-trueWhite border-2 border-border rounded-lg;
+    @apply absolute w-full h-full bg-trueWhite border-2 border-border rounded-lg;
     padding: 1.5rem;
-    transition: opacity 0.3s ease-in-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
     overflow: hidden;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .flip-card-front {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .flip-card-back {
-    display: none;
-    flex-direction: column;
-  }
-
-  .flip-card.flipped .flip-card-front {
-    display: none;
-  }
-
-  .flip-card.flipped .flip-card-back {
-    display: flex;
   }
 
   @media (max-width: 640px) {
@@ -265,6 +257,10 @@
       @apply border-steel;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
   }
 }
 
