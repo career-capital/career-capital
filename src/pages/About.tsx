@@ -11,7 +11,7 @@ export default function About({ onNavigate }: AboutProps) {
     <div className="bg-softWhite">
       <section
         aria-labelledby="about-heading"
-        className="relative overflow-hidden bg-navy min-h-[350px]"
+        className="relative overflow-hidden bg-navy"
       >
         <div
           className="absolute inset-0 bg-cover bg-center"

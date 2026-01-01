@@ -39,7 +39,7 @@ export default function Contact({ onNavigate }: ContactProps) {
     <div className="bg-softWhite">
       <section
         aria-labelledby="contact-heading"
-        className="relative overflow-hidden bg-navy min-h-[350px]"
+        className="relative overflow-hidden bg-navy"
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
