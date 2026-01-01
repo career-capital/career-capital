@@ -37,7 +37,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/career_capital_hero_image.png)',
+            backgroundImage: 'url(/siteherojan2026_opac80.png)',
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
