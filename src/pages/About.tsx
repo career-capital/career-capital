@@ -34,8 +34,9 @@ export default function About({ onNavigate }: AboutProps) {
         </div>
       </section>
 
-      <section aria-label="About Nisaini Rexach" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-[1fr_400px] gap-8 lg:gap-12 items-start">
+      <section aria-label="About Nisaini Rexach" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[1fr_400px] gap-8 lg:gap-12 items-start">
           <div>
             <div className="space-y-6 text-lg text-slate leading-relaxed">
               <p>
@@ -85,6 +86,7 @@ export default function About({ onNavigate }: AboutProps) {
               />
             </picture>
           </div>
+        </div>
         </div>
       </section>
 

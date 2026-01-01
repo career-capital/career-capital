@@ -62,8 +62,9 @@ export default function Contact({ onNavigate }: ContactProps) {
         </div>
       </section>
 
-      <section aria-label="Contact form and information" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 gap-16">
+      <section aria-label="Contact form and information" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-16">
           <div>
             <h2 id="form-heading" className="text-2xl font-light text-ink mb-8">Get in Touch</h2>
 
@@ -240,6 +241,7 @@ export default function Contact({ onNavigate }: ContactProps) {
               </p>
             </div>
           </div>
+        </div>
         </div>
       </section>
 

@@ -131,12 +131,14 @@ export default function Services({ onNavigate }: ServicesProps) {
         </div>
       </section>
 
-      <section aria-labelledby="core-services-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 id="core-services-heading" className="text-3xl font-light text-ink mb-12">Core Services</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {coreServices.map((service, index) => (
-            <FlipCard key={index} front={service.front} back={service.back} />
-          ))}
+      <section aria-labelledby="core-services-heading" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="core-services-heading" className="text-3xl font-light text-ink mb-12">Core Services</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {coreServices.map((service, index) => (
+              <FlipCard key={index} front={service.front} back={service.back} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -199,15 +201,17 @@ export default function Services({ onNavigate }: ServicesProps) {
         </div>
       </section>
 
-      <section aria-labelledby="addons-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="mb-12">
-          <h2 id="addons-heading" className="text-3xl font-light text-ink mb-4">Add-On Services</h2>
-          <p className="text-lg text-slate leading-relaxed max-w-3xl">Complement your core engagement with additional support options designed for sustained momentum and deeper learning.</p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-8">
-          {addOns.map((addon, index) => (
-            <FlipCard key={index} front={addon.front} back={addon.back} />
-          ))}
+      <section aria-labelledby="addons-heading" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 id="addons-heading" className="text-3xl font-light text-ink mb-4">Add-On Services</h2>
+            <p className="text-lg text-slate leading-relaxed max-w-3xl">Complement your core engagement with additional support options designed for sustained momentum and deeper learning.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {addOns.map((addon, index) => (
+              <FlipCard key={index} front={addon.front} back={addon.back} />
+            ))}
+          </div>
         </div>
       </section>
 

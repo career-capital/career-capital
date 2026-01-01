@@ -129,12 +129,14 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
         </div>
       </section>
 
-      <section aria-labelledby="topics-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 id="topics-heading" className="text-3xl font-light text-ink mb-12">Speaking Topics</h2>
-        <div className="grid md:grid-cols-2 gap-8 speaking-flip-cards">
-          {topics.map((topic, index) => (
-            <FlipCard key={index} front={topic.front} back={topic.back} />
-          ))}
+      <section aria-labelledby="topics-heading" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="topics-heading" className="text-3xl font-light text-ink mb-12">Speaking Topics</h2>
+          <div className="grid md:grid-cols-2 gap-8 speaking-flip-cards">
+            {topics.map((topic, index) => (
+              <FlipCard key={index} front={topic.front} back={topic.back} />
+            ))}
+          </div>
         </div>
       </section>
 
