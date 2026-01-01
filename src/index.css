@@ -1,0 +1,439 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Career Capital design tokens */
+:root {
+  /* Core Neutrals */
+  --cc-soft-white: #F8F9FA;
+  --cc-true-white: #FFFFFF;
+  --cc-ink: #1A1A1A;
+
+  /* Grey System - WCAG AAA compliant */
+  --cc-slate: #3F4653; /* Updated from #4B5563 for 8.01:1 contrast ratio */
+  --cc-border: #D1D5DB;
+  --cc-surface: #E6E9EE; /* Changed from #f1f3f5 to increase contrast for bkgd colors */
+
+  /* Signature Blue */
+  --cc-navy: #0F2A44;
+
+  /* Accent Blue */
+  --cc-steel: #2F5D8A;
+}
+
+@layer base {
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    color: var(--cc-ink);
+    background: var(--cc-soft-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Enhanced readability for all users */
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    text-align: left;
+    hyphens: none;
+  }
+
+  /* Paragraph spacing for dyslexia-friendliness */
+  p {
+    max-width: 65ch;
+    orphans: 2;
+    widows: 2;
+  }
+
+  p + p {
+    margin-top: 1.25em;
+  }
+
+  /* Heading line-heights for readability */
+  h1 {
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+
+  h2 {
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+
+  h3, h4, h5, h6 {
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+
+  /* Small text improvements */
+  .text-sm, .text-xs {
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+  }
+
+  /* Uppercase text needs more spacing */
+  .uppercase {
+    letter-spacing: 0.05em !important;
+  }
+
+  /* Enhanced link styling for accessibility */
+  a {
+    color: var(--cc-navy);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: all 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--cc-steel);
+    text-decoration-thickness: 2px;
+  }
+
+  /* Remove underlines from button-styled links */
+  a.btn-primary,
+  a.btn-secondary,
+  a.btn-secondary-transparent,
+  a.btn-primary-on-dark,
+  a.btn-secondary-on-dark,
+  a.btn-secondary-on-dark-transparent,
+  a.btn-outline-light,
+  a.btn-outline-dark {
+    text-decoration: none;
+  }
+
+  a.btn-primary:hover,
+  a.btn-secondary:hover,
+  a.btn-secondary-transparent:hover,
+  a.btn-primary-on-dark:hover,
+  a.btn-secondary-on-dark:hover,
+  a.btn-secondary-on-dark-transparent:hover,
+  a.btn-outline-light:hover,
+  a.btn-outline-dark:hover {
+    text-decoration: none;
+  }
+
+  /* Highly visible focus indicators for keyboard navigation */
+  *:focus-visible {
+    outline: 3px solid var(--cc-steel);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* Primary button on light backgrounds - navy fill, most prominent */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-navy text-trueWhite text-sm font-medium tracking-wide hover:bg-steel transition-colors;
+  }
+
+  /* Secondary button on light backgrounds - SOLID FILL (recommended for accessibility on busy backgrounds) */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy bg-softWhite text-navy text-sm font-medium tracking-wide hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
+  }
+
+  /* Secondary button TRANSPARENT variant - use only on clean, simple backgrounds */
+  .btn-secondary-transparent {
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy bg-transparent text-navy text-sm font-medium tracking-wide hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
+  }
+
+  /* Primary button on dark backgrounds - off-white fill, most prominent */
+  .btn-primary-on-dark {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-softWhite text-navy text-sm font-medium tracking-wide hover:bg-steel hover:text-trueWhite transition-colors;
+  }
+
+  /* Secondary button on dark backgrounds - SOLID FILL (recommended for accessibility) */
+  .btn-secondary-on-dark {
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-softWhite bg-navy text-trueWhite text-sm font-medium tracking-wide hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
+  }
+
+  /* Secondary button on dark backgrounds - TRANSPARENT variant */
+  .btn-secondary-on-dark-transparent {
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-softWhite bg-transparent text-trueWhite text-sm font-medium tracking-wide hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-trueWhite bg-trueWhite/10 backdrop-blur-sm text-trueWhite text-sm font-medium tracking-wide hover:bg-trueWhite/20 hover:border-trueWhite transition-colors;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy bg-navy/5 text-navy text-sm font-medium tracking-wide hover:bg-navy/10 transition-colors;
+  }
+
+  /* ===== CARD COMPONENTS ===== */
+
+  /* Interactive/Selectable Card - provides clear affordance for interaction */
+  .card-interactive {
+    @apply bg-trueWhite border border-border rounded-lg p-6 cursor-pointer transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 hover:border-steel;
+  }
+
+  /* Informational Card - static presentation of content */
+  .card-info {
+    @apply bg-trueWhite border border-border rounded-lg p-6 shadow-sm transition-all duration-200 hover:border-steel hover:shadow-md hover:-translate-y-1;
+  }
+
+  /* Interactive card on dark backgrounds */
+  .card-interactive-dark {
+    @apply bg-navy/80 backdrop-blur-sm border border-softWhite/20 rounded-lg p-6 cursor-pointer transition-all duration-200 hover:bg-navy/90 hover:border-softWhite/40 hover:-translate-y-0.5;
+  }
+
+  /* Informational card on dark backgrounds */
+  .card-info-dark {
+    @apply bg-navy/80 backdrop-blur-sm border border-softWhite/20 rounded-lg p-6 transition-all duration-200 hover:bg-navy/90 hover:border-softWhite/30 hover:-translate-y-1;
+  }
+
+  /* ===== FLIP CARD COMPONENTS ===== */
+  .flip-card-container {
+    perspective: 1000px;
+    height: 260px;
+  }
+
+  @media (max-width: 640px) {
+    .flip-card-container {
+      height: 300px;
+    }
+  }
+
+  .speaking-flip-cards .flip-card-container {
+    height: 220px;
+  }
+
+  @media (max-width: 640px) {
+    .speaking-flip-cards .flip-card-container {
+      height: 280px;
+    }
+  }
+
+  .flip-card {
+    @apply relative w-full h-full cursor-pointer;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:focus {
+    @apply outline-none;
+  }
+
+  .flip-card-inner {
+    @apply relative w-full h-full;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  @media (hover: hover) {
+    .flip-card:hover .flip-card-inner {
+      transform: translateY(-4px);
+    }
+
+    .flip-card.flipped:hover .flip-card-inner {
+      transform: rotateY(180deg) translateY(-4px);
+    }
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    @apply absolute w-full h-full bg-trueWhite border-2 border-border rounded-lg;
+    padding: 1.5rem;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  @media (max-width: 640px) {
+    .flip-card-front,
+    .flip-card-back {
+      padding: 1.75rem;
+    }
+  }
+
+  @media (hover: hover) {
+    .flip-card:hover .flip-card-front,
+    .flip-card:hover .flip-card-back {
+      @apply border-steel;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  /* Animated hamburger menu */
+  .hamburger-line {
+    @apply absolute left-1/2 w-5 h-0.5 bg-ink transition-all duration-300 ease-in-out;
+    transform: translateX(-50%);
+  }
+
+  .hamburger-line-1 {
+    top: 12px;
+  }
+
+  .hamburger-line-2 {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .hamburger-line-3 {
+    bottom: 12px;
+  }
+
+  .hamburger-open .hamburger-line-1 {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+
+  .hamburger-open .hamburger-line-2 {
+    opacity: 0;
+  }
+
+  .hamburger-open .hamburger-line-3 {
+    bottom: 50%;
+    transform: translateX(-50%) translateY(50%) rotate(-45deg);
+  }
+
+  /* Mobile menu animations */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes menuItemFadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .mobile-menu-enter {
+    animation: slideDown 0.3s ease-out forwards;
+  }
+
+  .menu-item-1 {
+    animation: menuItemFadeIn 0.3s ease-out 0.05s backwards;
+  }
+
+  .menu-item-2 {
+    animation: menuItemFadeIn 0.3s ease-out 0.1s backwards;
+  }
+
+  .menu-item-3 {
+    animation: menuItemFadeIn 0.3s ease-out 0.15s backwards;
+  }
+
+  .menu-item-4 {
+    animation: menuItemFadeIn 0.3s ease-out 0.2s backwards;
+  }
+
+  .menu-item-5 {
+    animation: menuItemFadeIn 0.3s ease-out 0.25s backwards;
+  }
+
+  .menu-item-6 {
+    animation: menuItemFadeIn 0.3s ease-out 0.3s backwards;
+  }
+
+  /* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+
+  /* Screen reader only content */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* Focus visible only for keyboard navigation */
+  .js:not(.keyboard-nav) *:focus {
+    outline: none;
+  }
+
+  .keyboard-nav *:focus-visible {
+    outline: 3px solid var(--cc-steel);
+    outline-offset: 3px;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    .flip-card,
+    .flip-card-inner,
+    .mobile-menu-enter,
+    [class*="menu-item-"] {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    * {
+      border-color: currentColor !important;
+    }
+
+    button,
+    a,
+    [role="button"] {
+      outline: 2px solid currentColor !important;
+      outline-offset: 2px !important;
+    }
+  }
+
+  /* Touch device optimizations */
+  .touch-device button,
+  .touch-device a,
+  .touch-device [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Save data mode - disable animations */
+  .save-data * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
