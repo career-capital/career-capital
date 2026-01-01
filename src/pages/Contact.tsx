@@ -31,16 +31,32 @@ export default function Contact() {
 
   return (
     <div className="bg-softWhite">
-      <section aria-labelledby="contact-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-        <div className="max-w-3xl">
-          <h1 id="contact-heading" className="text-4xl md:text-5xl font-light text-ink mb-6">Let's Talk</h1>
-          <p className="text-lg md:text-xl text-slate leading-relaxed">
-            Every investment in your growth compounds over time. Building AI fluency and strengthening relationships isn't just about solving today's challenges—it's about creating lasting capability that pays dividends across your entire career. Let's explore what approach makes sense for you and your team.
-          </p>
+      <section
+        aria-labelledby="contact-heading"
+        className="relative overflow-hidden bg-navy min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] flex items-center"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{
+            backgroundImage: 'url(/siteherojan2026_opac80.png)',
+            backgroundPosition: 'center 30%',
+          }}
+        />
+        <div className="absolute inset-0 bg-navy/60" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-3xl">
+            <h1 id="contact-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5">
+              Let's Talk
+            </h1>
+            <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed">
+              Every investment in your growth compounds over time. Building AI fluency and strengthening relationships isn't just about solving today's challenges—it's about creating lasting capability that pays dividends across your entire career. Let's explore what approach makes sense for you and your team.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section aria-label="Contact form and information" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <section aria-label="Contact form and information" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
             <h2 id="form-heading" className="text-2xl font-light text-ink mb-8">Get in Touch</h2>

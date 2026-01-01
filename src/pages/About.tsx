@@ -9,15 +9,35 @@ interface AboutProps {
 export default function About({ onNavigate }: AboutProps) {
   return (
     <div className="bg-softWhite">
-      <section aria-labelledby="about-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-        <h1 id="about-heading" className="text-4xl md:text-5xl font-light text-ink mb-6">About</h1>
+      <section
+        aria-labelledby="about-heading"
+        className="relative overflow-hidden bg-navy min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] flex items-center"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{
+            backgroundImage: 'url(/siteherojan2026_opac80.png)',
+            backgroundPosition: 'center 30%',
+          }}
+        />
+        <div className="absolute inset-0 bg-navy/60" />
 
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-3xl">
+            <h1 id="about-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5">
+              About
+            </h1>
+            <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed">
+              This work is grounded in real relationships, not hype.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="About Nisaini Rexach" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-[1fr_400px] gap-8 lg:gap-12 items-start">
           <div>
             <div className="space-y-6 text-lg text-slate leading-relaxed">
-              <p>
-                This work is grounded in <em>real</em> relationships, not hype.
-              </p>
               <p>
                 Career Capital was founded on a simple observation: the organizations that will
                 thrive in the age of AI aren't the ones with the most sophisticated technology—they're
