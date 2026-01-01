@@ -119,6 +119,13 @@ export default function Admin() {
       return;
     }
 
+    // Normalize display_order to remove gaps
+    const { error: normalizeError } = await supabase.rpc('normalize_testimonials_display_order');
+
+    if (normalizeError) {
+      console.error('Error normalizing display order:', normalizeError);
+    }
+
     fetchTestimonials();
   };
 
@@ -241,6 +248,19 @@ export default function Admin() {
     });
   };
 
+  const handleNormalizeOrder = async () => {
+    const { error } = await supabase.rpc('normalize_testimonials_display_order');
+
+    if (error) {
+      console.error('Error normalizing display order:', error);
+      alert('Failed to normalize order');
+      return;
+    }
+
+    alert('Display order has been normalized successfully!');
+    fetchTestimonials();
+  };
+
   if (loading) {
     return (
       <div className="bg-softWhite min-h-screen flex items-center justify-center">
@@ -255,13 +275,22 @@ export default function Admin() {
         <div className="flex justify-between items-center mb-8">
           <h1 id="admin-heading" className="text-4xl md:text-5xl font-light text-ink">Testimonials Admin</h1>
           {!showForm && (
-            <button
-              onClick={() => setShowForm(true)}
-              className="btn-primary flex items-center gap-2"
-            >
-              <Plus className="w-4 h-4" />
-              Add New
-            </button>
+            <div className="flex gap-3">
+              <button
+                onClick={handleNormalizeOrder}
+                className="btn-outline text-sm"
+                title="Fix display order gaps and duplicates"
+              >
+                Fix Order
+              </button>
+              <button
+                onClick={() => setShowForm(true)}
+                className="btn-primary flex items-center gap-2"
+              >
+                <Plus className="w-4 h-4" />
+                Add New
+              </button>
+            </div>
           )}
         </div>
 
