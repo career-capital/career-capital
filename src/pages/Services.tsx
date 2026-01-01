@@ -106,16 +106,32 @@ export default function Services({ onNavigate }: ServicesProps) {
 
   return (
     <div className="bg-softWhite">
-      <section aria-labelledby="services-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-        <div className="max-w-3xl">
-          <h1 id="services-heading" className="text-4xl md:text-5xl font-light text-ink mb-6">Services</h1>
-          <p className="text-lg md:text-xl text-slate leading-relaxed">
-            Your brand is in the room even when you&apos;re not. Let&apos;s build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
-          </p>
+      <section
+        aria-labelledby="services-heading"
+        className="relative overflow-hidden bg-navy min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] flex items-center"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{
+            backgroundImage: 'url(/siteherojan2026_opac80.png)',
+            backgroundPosition: 'center 30%',
+          }}
+        />
+        <div className="absolute inset-0 bg-navy/60" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-3xl">
+            <h1 id="services-heading" className="text-4xl md:text-5xl font-light text-trueWhite mb-4 md:mb-5">
+              Services
+            </h1>
+            <p className="text-lg md:text-xl text-trueWhite/90 leading-relaxed">
+              Your brand is in the room even when you&apos;re not. Let&apos;s build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section aria-labelledby="core-services-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <section aria-labelledby="core-services-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 id="core-services-heading" className="text-3xl font-light text-ink mb-12">Core Services</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {coreServices.map((service, index) => (
