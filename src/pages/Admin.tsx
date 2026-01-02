@@ -1,6 +1,6 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { supabase, Testimonial } from '../lib/supabase';
-import { Plus, Edit2, Trash2, X, ChevronUp, ChevronDown, Tag as TagIcon, Mail, MessageSquare } from 'lucide-react';
+import { Plus, Edit2, Trash2, X, ChevronUp, ChevronDown, Tag as TagIcon, Mail, MessageSquare, LogOut } from 'lucide-react';
 
 interface ContactSubmission {
   id: string;
@@ -371,6 +371,16 @@ export default function Admin() {
     fetchTestimonials();
   };
 
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      console.error('Error signing out:', error);
+      alert('Failed to sign out');
+      return;
+    }
+    window.location.href = '/';
+  };
+
   if (loading) {
     return (
       <div className="bg-softWhite min-h-screen flex items-center justify-center">
@@ -384,6 +394,14 @@ export default function Admin() {
       <section aria-labelledby="admin-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="flex justify-between items-center mb-8">
           <h1 id="admin-heading" className="text-4xl md:text-5xl font-light text-ink">Career Capital CMS</h1>
+          <button
+            onClick={handleLogout}
+            className="btn-outline flex items-center gap-2"
+            title="Sign out"
+          >
+            <LogOut className="w-4 h-4" />
+            Logout
+          </button>
         </div>
 
         <div className="flex gap-4 mb-8 border-b border-border">
