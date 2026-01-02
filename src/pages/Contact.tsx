@@ -176,6 +176,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                     required
                     value={formData.name}
                     onChange={handleChange}
+                    autoComplete="name"
                     className="w-full px-4 py-3 border border-border focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-colors"
                     aria-required="true"
                   />
@@ -192,6 +193,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                     required
                     value={formData.email}
                     onChange={handleChange}
+                    autoComplete="email"
                     className="w-full px-4 py-3 border border-border focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-colors"
                     aria-required="true"
                   />
@@ -207,6 +209,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                     name="organization"
                     value={formData.organization}
                     onChange={handleChange}
+                    autoComplete="organization"
                     className="w-full px-4 py-3 border border-border focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-colors"
                   />
                 </div>
