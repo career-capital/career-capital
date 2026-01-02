@@ -1,4 +1,5 @@
 import { Linkedin, Mail } from 'lucide-react';
+import Logo from './Logo';
 
 type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
 
@@ -12,7 +13,9 @@ export default function Footer({ onNavigate }: FooterProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 mb-8">
           <div>
-            <p className="text-lg font-light mb-2">Career Capital</p>
+            <div className="mb-4">
+              <Logo variant="stacked" color="dark" className="h-16 w-auto" />
+            </div>
             <p className="text-sm text-slate mb-4">
               The currency of the future
             </p>

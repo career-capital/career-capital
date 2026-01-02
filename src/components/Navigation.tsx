@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useFocusTrap } from '../hooks/useFocusTrap';
+import Logo from './Logo';
 
 type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
 
@@ -75,10 +76,10 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
           <div className="flex justify-between items-center h-20">
             <button
               onClick={() => handleNavClick('home')}
-              className="text-2xl font-light tracking-tight text-ink"
+              className="flex items-center h-12"
               aria-label="Career Capital home"
             >
-              Career Capital
+              <Logo variant="stacked" color="dark" className="h-full w-auto" />
             </button>
 
             <div className="hidden md:flex items-center space-x-8">
