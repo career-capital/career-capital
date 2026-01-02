@@ -152,11 +152,11 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
 
       <section aria-labelledby="speaking-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="speaking-cta-heading" className="text-3xl font-light mb-6">
+            Public Speaking with Purpose: TEDx Chicago
+          </h2>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
-              <h2 id="speaking-cta-heading" className="text-3xl font-light mb-6">
-                Public Speaking with Purpose: TEDx Chicago
-              </h2>
               <p className="text-lg text-trueWhite/90 leading-relaxed mb-4">
                 A powerful exploration of intentional relationship-building as career capital.
                 Through personal stories spanning from Chicago's government housing to boardrooms
