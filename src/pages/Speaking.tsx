@@ -250,15 +250,15 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
             </div>
           </div>
           <div className="mt-8 rounded-lg overflow-hidden shadow-2xl">
-            <picture>
-              <source srcSet="/nisaini_tedxchicago.webp" type="image/webp" />
-              <img
-                src="/nisaini_tedxchicago.jpg"
-                alt="Nisaini presenting at TEDx Chicago on the red circular stage with TEDxChicago branding"
-                className="w-full h-auto"
-                loading="lazy"
+            <div className="relative" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/vT3fUJ1-BvA"
+                title="Nisaini Rexach TEDx Chicago Talk: Social Wealth and Career Capital"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
               />
-            </picture>
+            </div>
           </div>
         </div>
       </section>
