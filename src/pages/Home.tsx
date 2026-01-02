@@ -164,37 +164,49 @@ export default function Home({ onNavigate }: HomeProps) {
 
       <section aria-labelledby="speaking-heading" className="bg-navy text-trueWhite py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <h2 id="speaking-heading" className="text-3xl md:text-4xl font-light mb-6">
-              TEDx Chicago Speaker
-            </h2>
-            <p className="text-xl text-trueWhite/90 mb-4 leading-relaxed">
-              "How social wealth can transform your career"
-            </p>
-            <p className="text-lg text-trueWhite/80 mb-8 leading-relaxed">
-              Relationships are career capital. When you invest in building genuine connections—your
-              "social wealth"—your network becomes the foundation that underwrites your next opportunity.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                  onNavigate('contact');
-                }}
-                className="btn-primary-on-dark"
-              >
-                Book for Your Event
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
-              <a
-                href="https://youtu.be/vT3fUJ1-BvA?si=VM77gHpuH9371MAY"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary-on-dark inline-flex items-center justify-center"
-              >
-                Watch the Talk
-                <ExternalLink className="ml-2 w-4 h-4" />
-              </a>
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
+            <div className="flex-1">
+              <h2 id="speaking-heading" className="text-3xl md:text-4xl font-light mb-6">
+                TEDx Chicago Speaker
+              </h2>
+              <p className="text-xl text-trueWhite/90 mb-4 leading-relaxed">
+                "How social wealth can transform your career"
+              </p>
+              <p className="text-lg text-trueWhite/80 mb-8 leading-relaxed">
+                Relationships are career capital. When you invest in building genuine connections—your
+                "social wealth"—your network becomes the foundation that underwrites your next opportunity.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    onNavigate('contact');
+                  }}
+                  className="btn-primary-on-dark"
+                >
+                  Book for Your Event
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </button>
+                <a
+                  href="https://youtu.be/vT3fUJ1-BvA?si=VM77gHpuH9371MAY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary-on-dark inline-flex items-center justify-center"
+                >
+                  Watch the Talk
+                  <ExternalLink className="ml-2 w-4 h-4" />
+                </a>
+              </div>
+            </div>
+            <div className="w-full lg:w-[450px] flex-shrink-0">
+              <div className="overflow-hidden shadow-2xl">
+                <img
+                  src="/tedx05.jpg"
+                  alt="Nisaini Rexach presenting at TEDx Chicago"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
