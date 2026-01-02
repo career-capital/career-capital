@@ -275,12 +275,12 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
         </div>
       </section>
 
-      <section aria-labelledby="final-cta-heading" className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 id="final-cta-heading" className="text-4xl font-light text-ink mb-6">
+      <section aria-labelledby="final-cta-heading" className="bg-navy text-trueWhite py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="final-cta-heading" className="text-4xl font-light mb-6">
             Ready to Bring This Insight to Your Organization?
           </h2>
-          <p className="text-xl text-slate leading-relaxed mb-8">
+          <p className="text-xl text-trueWhite/90 leading-relaxed mb-8">
             Let's discuss how a keynote, workshop, or facilitated session can help your team build the relationships and capabilities that drive lasting success.
           </p>
           <button
@@ -288,7 +288,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
               window.scrollTo(0, 0);
               onNavigate('contact');
             }}
-            className="btn-primary inline-flex items-center"
+            className="btn-primary-on-dark inline-flex items-center"
           >
             Get in Touch
             <ArrowRight className="ml-2 w-4 h-4" />
