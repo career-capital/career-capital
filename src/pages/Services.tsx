@@ -137,7 +137,7 @@ export default function Services({ onNavigate }: ServicesProps) {
             Services
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Your brand is in the room even when you&apos;re not. Let&apos;s build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
+            <strong>Your brand is in the room even when you&apos;re not.</strong> Let&apos;s build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
           </p>
         </div>
       </section>
@@ -155,7 +155,8 @@ export default function Services({ onNavigate }: ServicesProps) {
 
       <section aria-labelledby="engagements-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="engagements-heading" className="text-3xl font-light text-ink mb-8">How Engagements Work</h2>
+          <h2 id="engagements-heading" className="text-3xl font-light text-ink mb-4">How Engagements Work</h2>
+          <p className="text-xl text-slate mb-8">A Clear, Collaborative Process—Designed Around You</p>
           <div className="max-w-3xl">
             <div className="flex gap-6 relative">
               <div className="relative flex-shrink-0">

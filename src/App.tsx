@@ -109,7 +109,7 @@ function App() {
       <main role="main" id="main-content" className="pt-20">
         {renderPage()}
       </main>
-      <Footer />
+      <Footer onNavigate={setCurrentPage} />
       <BackToTop />
     </div>
   );

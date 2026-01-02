@@ -40,7 +40,7 @@ export default function About({ onNavigate }: AboutProps) {
             About
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            This work is grounded in real relationships, not hype.
+            Bridging Human Relationships and AI‑Ready Communication
           </p>
         </div>
       </section>
@@ -51,35 +51,16 @@ export default function About({ onNavigate }: AboutProps) {
           <div>
             <div className="space-y-6 text-lg text-slate leading-relaxed">
               <p>
-                Career Capital was founded on a simple observation: the organizations that will
-                thrive in the age of AI aren't the ones with the most sophisticated technology—they're
-                the ones that combine technical capability with strong human relationships.
+                Nis is a strategic communicator, mentor, and main stage TEDxChicago speaker whose work sits at the intersection of relationship‑driven growth and AI‑ready communication. Her philosophy is rooted in the belief that careers accelerate when clarity, connection, and credibility work together—and she helps individuals and organizations build all three with intention.
               </p>
               <p>
-                Through years of facilitating workshops, advising leaders, and speaking at conferences,
-                I've seen firsthand how mindset shifts can transform an organization's approach to AI.
-                When leaders move from fear to fluency, when teams learn to work with AI tools
-                confidently, and when relationships remain strong through technological change—that's
-                when real transformation happens.
+                Her signature framework, Social Wealth, draws from lived experiences spanning Chicago's public housing to Fortune 500 boardrooms. It's a reminder that every encounter is an interview, every relationship is an asset, and every moment is an opportunity to shape how others experience you.
               </p>
               <p>
-                My work focuses on making AI accessible and practical while never losing sight of
-                what makes organizations truly effective: trust, communication, and genuine human connection.
+                Through Career Capital, Nis brings curiosity, structural agility, and relationship management to every engagement. She helps clients communicate with precision, strengthen their professional presence, and build the relational capital needed to thrive in an AI‑accelerating world.
               </p>
-            </div>
-
-            <div className="space-y-6 text-lg text-slate leading-relaxed mt-8">
               <p>
-                <a
-                  href="https://www.linkedin.com/in/nisainirexach/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-navy hover:text-steel transition-colors font-medium"
-                >
-                  Nisaini Rexach
-                  <ExternalLink className="w-4 h-4" aria-label="opens in new window" />
-                </a>
-                {" "}is a leader in social impact in big tech, specializing in Corporate Social Responsibility. As a Teach For America alum, her journey began with a deep curiosity for learning and a commitment to service—experiences that shaped her perspective and brought her to this space where she explores the intersection of generative AI and relationship building. Her professional experience spans Fortune 500 companies, startups, and community organizations—bringing both technical depth and relationship-building expertise to every engagement.
+                Whether she's coaching emerging leaders, advising executives, or speaking on national stages, Nis is committed to one thing: helping people show up with clarity, confidence, and purpose—so their work, their voice, and their impact carry further.
               </p>
             </div>
           </div>
@@ -151,7 +132,7 @@ export default function About({ onNavigate }: AboutProps) {
             </h2>
             <p className="text-lg text-trueWhite/90 mb-8">
               If you're ready to build AI fluency in your organization while strengthening
-              relationships, I'd love to hear from you.
+              relationships, we'd love to hear from you.
             </p>
             <button
               onClick={() => {

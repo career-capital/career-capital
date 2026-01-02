@@ -138,10 +138,10 @@ export default function Contact({ onNavigate }: ContactProps) {
         </picture>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
           <h1 id="contact-heading" className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
-            Let's Talk
+            Contact
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Every investment in your growth compounds over time. Building AI fluency and strengthening relationships isn't just about solving today's challenges—it's about creating lasting capability that pays dividends across your entire career. Let's explore what approach makes sense for you and your team.
+            Let's Build Your Career Capital
           </p>
         </div>
       </section>
@@ -164,7 +164,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                   Thank you for reaching out!
                 </h3>
                 <p className="text-slate leading-relaxed mb-6">
-                  I'll review your message and get back to you within 1-2 business days
+                  We'll review your message and get back to you within 1-2 business days
                   to discuss next steps.
                 </p>
                 <button
@@ -290,7 +290,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                 <div>
                   <h3 className="font-medium text-ink mb-2">Response Time</h3>
                   <p className="text-slate leading-relaxed">
-                    I respond to all inquiries within 1-2 business days.
+                    We respond to all inquiries within 1-2 business days.
                   </p>
                 </div>
               </div>
@@ -314,7 +314,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                 <div>
                   <h3 className="font-medium text-ink mb-2">Tailored Proposal</h3>
                   <p className="text-slate leading-relaxed">
-                    I'll create a customized approach based on your organization's context.
+                    We'll create a customized approach based on your organization's context.
                   </p>
                 </div>
               </div>

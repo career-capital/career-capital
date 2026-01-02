@@ -58,12 +58,26 @@ export default function Home({ onNavigate }: HomeProps) {
         </picture>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
           <h1 className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
-            AI fluency + strong relationships are the new career capital
+            AI Fluency + Social Wealth = Your New Competitive Edge
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
             Strategic guidance for organizations ready to build AI readiness without losing
             the human side of work.
           </p>
+          <div className="flex flex-wrap gap-4 mb-8 text-trueWhite/90 text-sm">
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite/90"></span>
+              TEDx Chicago Main Stage Speaker
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite/90"></span>
+              Fortune 500 Experience
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite/90"></span>
+              Social Impact Leader
+            </span>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={() => {

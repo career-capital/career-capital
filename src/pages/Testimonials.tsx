@@ -122,10 +122,10 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
         </picture>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
           <h1 id="testimonials-heading" className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
-            Your relationships are your real resume, here's mine:
+            Testimonials
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            My work is rooted in relationships — the real resume that follows you from one chapter to the next. The voices below come from clients, collaborators, and leaders who've experienced my approach firsthand. Their words reflect the trust, clarity, and momentum we build together.
+            Real Stories. Real Transformation.
           </p>
         </div>
       </section>
