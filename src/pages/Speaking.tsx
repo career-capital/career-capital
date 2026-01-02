@@ -154,19 +154,6 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="differentiators-heading" className="text-3xl font-light text-ink mb-12">What Makes These Engagements Different</h2>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
-            <div className="w-full lg:w-80 flex-shrink-0">
-              <div className="rounded-lg overflow-hidden shadow-xl">
-                <picture>
-                  <source srcSet="/nisaini_tedxchicago.webp" type="image/webp" />
-                  <img
-                    src="/nisaini_tedxchicago.jpg"
-                    alt="Nisaini presenting at TEDx Chicago"
-                    className="w-full h-auto"
-                    loading="lazy"
-                  />
-                </picture>
-              </div>
-            </div>
             <div className="flex-1">
               <div className="flex gap-6 relative">
                 <div className="relative flex-shrink-0">
@@ -215,6 +202,16 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
                     Quick wins matter, but sustained success matters more. This work is about making strategic deposits that compound over time—building relationships and capabilities that create lasting value.
                   </p>
                 </div>
+              </div>
+            </div>
+            <div className="w-full lg:w-80 flex-shrink-0">
+              <div className="rounded-lg overflow-hidden shadow-xl">
+                <img
+                  src="/tedx02.jpg"
+                  alt="Nisaini presenting at TEDx Chicago"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -267,6 +264,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
                     className="absolute top-0 left-0 w-full h-full"
                     src="https://www.youtube.com/embed/vT3fUJ1-BvA?si=mG__tB1DhZR_GLUX"
                     title="YouTube video player"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
