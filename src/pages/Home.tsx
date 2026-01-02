@@ -201,7 +201,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="w-full lg:w-[450px] flex-shrink-0">
               <div className="overflow-hidden shadow-2xl">
                 <img
-                  src="/tedx05.jpg"
+                  src="/nisaini-tedxchicago-closeup.jpg"
                   alt="Nisaini Rexach presenting at TEDx Chicago"
                   className="w-full h-auto"
                   loading="lazy"
