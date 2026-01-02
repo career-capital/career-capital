@@ -221,14 +221,9 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
         </div>
       </section>
 
-      <section aria-labelledby="speaking-cta-heading" className="bg-navy text-trueWhite py-16 relative">
-        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#263F56" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="absolute top-6 right-6 hidden lg:block" aria-hidden="true">
-          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
-          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-          <line x1="12" x2="12" y1="19" y2="22"/>
-        </svg>
+      <section aria-labelledby="speaking-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-8 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
               <h2 id="speaking-cta-heading" className="text-3xl font-light mb-6">
                 Public Speaking with Purpose: TEDx Chicago
@@ -265,14 +260,15 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
                 </a>
               </div>
             </div>
-            <div className="w-full lg:w-96 flex-shrink-0">
+            <div className="w-full lg:w-[500px] flex-shrink-0">
               <div className="rounded-lg overflow-hidden shadow-2xl">
                 <div className="relative" style={{ paddingBottom: '56.25%' }}>
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube-nocookie.com/embed/vT3fUJ1-BvA"
-                    title="Nisaini Rexach TEDx Chicago Talk: Social Wealth and Career Capital"
+                    src="https://www.youtube.com/embed/vT3fUJ1-BvA?si=mG__tB1DhZR_GLUX"
+                    title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                   />
                 </div>
