@@ -79,7 +79,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
               className="flex items-center h-12"
               aria-label="Career Capital home"
             >
-              <Logo variant="stacked" color="dark" className="h-full w-auto" />
+              <Logo variant="horizontal" color="dark" className="h-full w-auto" />
             </button>
 
             <div className="hidden md:flex items-center space-x-8">

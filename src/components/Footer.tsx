@@ -14,7 +14,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid md:grid-cols-3 gap-12 mb-8">
           <div>
             <div className="mb-4">
-              <Logo variant="stacked" color="dark" className="h-16 w-auto" />
+              <Logo variant="horizontal" color="dark" className="h-12 w-auto" />
             </div>
             <p className="text-sm text-slate mb-4">
               The currency of the future
