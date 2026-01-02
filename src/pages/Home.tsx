@@ -71,7 +71,7 @@ export default function Home({ onNavigate }: HomeProps) {
             </span>
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-trueWhite"></span>
-              Fortune 500 Experience
+              Fortune 100 Experience
             </span>
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-trueWhite"></span>
