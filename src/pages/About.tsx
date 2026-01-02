@@ -51,7 +51,14 @@ export default function About({ onNavigate }: AboutProps) {
           <div>
             <div className="space-y-6 text-lg text-slate leading-relaxed">
               <p>
-                Nis is a strategic communicator, mentor, and main stage TEDxChicago speaker whose work sits at the intersection of relationship‑driven growth and AI‑ready communication. Her philosophy is rooted in the belief that careers accelerate when clarity, connection, and credibility work together—and she helps individuals and organizations build all three with intention.
+                <a
+                  href="https://www.linkedin.com/in/nisainirexach/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-navy hover:text-steel"
+                >
+                  Nisaini Rexach
+                </a> is a strategic communicator, mentor, and main stage TEDxChicago speaker whose work sits at the intersection of relationship‑driven growth and AI‑ready communication. Her philosophy is rooted in the belief that careers accelerate when clarity, connection, and credibility work together—and she helps individuals and organizations build all three with intention.
               </p>
               <p>
                 Her signature framework, Social Wealth, draws from lived experiences spanning Chicago's public housing to Fortune 500 boardrooms. It's a reminder that every encounter is an interview, every relationship is an asset, and every moment is an opportunity to shape how others experience you.

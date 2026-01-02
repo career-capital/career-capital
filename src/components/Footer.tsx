@@ -118,8 +118,8 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
 
-        <div className="border-t border-border pt-6">
-          <p className="text-sm text-slate text-center">
+        <div className="border-t border-border pt-6 flex justify-center">
+          <p className="text-sm text-slate">
             &copy; 2026 Career Capital. All rights reserved.
           </p>
         </div>
