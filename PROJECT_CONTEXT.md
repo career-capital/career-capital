@@ -412,9 +412,13 @@ VITE_SUPABASE_ANON_KEY=your_anon_key
 - TEDx Talk: https://youtu.be/vT3fUJ1-BvA?si=VM77gHpuH9371MAY
 
 **Primary Images:**
-- Hero: `/career_capital_hero_image.png`
-- Headshot (Desktop): `/nisaini_rexach_headshot_2025 copy.jpg`
-- Headshot (Mobile): `/nisaini_rexach_headshot_2025 copy copy.jpg`
+- Hero Images (Responsive):
+  - Desktop (1920px): `/sitehero_desktop.webp`
+  - Tablet (1024px): `/sitehero_tablet.webp`
+  - Mobile (640px): `/sitehero_mobile.webp`
+  - Fallback (JPEG): `/sitehero_fallback.jpg`
+- Headshot: `/nisaini_rexach_headshot_2025 copy.jpg`
+- Headshot Fallback: `/nisaini_rexach_headshot_2025 copy copy.jpg`
 
 **Color Values (for reference):**
 ```css
