@@ -101,20 +101,20 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
         <picture className="absolute inset-0">
           <source
             media="(min-width: 1024px)"
-            srcSet="/siteherojan2026_opac80-desktop.webp"
+            srcSet="/sitehero_desktop.webp"
             type="image/webp"
           />
           <source
             media="(min-width: 640px)"
-            srcSet="/siteherojan2026_opac80-tablet.webp"
+            srcSet="/sitehero_tablet.webp"
             type="image/webp"
           />
           <source
-            srcSet="/siteherojan2026_opac80-mobile.webp"
+            srcSet="/sitehero_mobile.webp"
             type="image/webp"
           />
           <img
-            src="/siteherojan2026_opac80-fallback.jpg"
+            src="/sitehero_fallback.jpg"
             alt=""
             className="w-full h-full object-cover"
             loading="eager"
