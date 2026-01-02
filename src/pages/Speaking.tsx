@@ -108,7 +108,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
 
       <section aria-labelledby="formats-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="formats-heading" className="text-3xl font-light text-ink mb-12">Engagement Formats</h2>
+          <h2 id="formats-heading" className="text-3xl font-light text-ink mb-12">Engagement formats</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="space-y-4">
               <Mic className="w-12 h-12 text-navy" strokeWidth={1.5} />
@@ -142,7 +142,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
 
       <section aria-labelledby="topics-heading" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="topics-heading" className="text-3xl font-light text-ink mb-12">Speaking Topics</h2>
+          <h2 id="topics-heading" className="text-3xl font-light text-ink mb-12">Speaking topics</h2>
           <div className="grid md:grid-cols-2 gap-8 speaking-flip-cards">
             {topics.map((topic, index) => (
               <FlipCard key={index} front={topic.front} back={topic.back} />
@@ -154,7 +154,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
       <section aria-labelledby="speaking-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="speaking-cta-heading" className="text-3xl font-light mb-6">
-            Public Speaking with Purpose: TEDx Chicago
+            Public speaking with purpose: TEDx Chicago
           </h2>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
@@ -210,7 +210,8 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
 
       <section aria-labelledby="differentiators-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="differentiators-heading" className="text-3xl font-light text-ink mb-12">What Makes These Engagements Different</h2>
+          <h2 id="differentiators-heading" className="text-3xl font-light text-ink mb-4">What makes these engagements different</h2>
+          <p className="text-xl text-slate mb-12">Real partnership built on trust, customization, and lasting capability.</p>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
               <div className="flex gap-6 relative">
@@ -219,7 +220,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
                   <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="font-medium text-ink mb-2">Relationships First, Always</h3>
+                  <h3 className="font-medium text-ink mb-2">Relationships first, always</h3>
                   <p className="text-slate leading-relaxed">
                     This isn't transactional consulting. We build trust and genuine connection alongside technical capability—because lasting transformation happens through people, not just processes.
                   </p>
@@ -232,7 +233,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
                   <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="font-medium text-ink mb-2">Customized to Your Reality</h3>
+                  <h3 className="font-medium text-ink mb-2">Customized to your reality</h3>
                   <p className="text-slate leading-relaxed">
                     No templates or cookie-cutter frameworks. Every engagement is shaped around your organization's unique context, culture, and challenges—because what works for one team rarely fits another.
                   </p>
@@ -245,7 +246,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
                   <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="font-medium text-ink mb-2">Fluency Over Dependency</h3>
+                  <h3 className="font-medium text-ink mb-2">Fluency over dependency</h3>
                   <p className="text-slate leading-relaxed">
                     The goal is to build your team's lasting capability, not create reliance on outside expertise. We work together to develop the confidence and skills that compound long after our engagement ends.
                   </p>
@@ -255,7 +256,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
               <div className="flex gap-6 relative">
                 <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-2"></div>
                 <div>
-                  <h3 className="font-medium text-ink mb-2">Long-Term Partnership Mindset</h3>
+                  <h3 className="font-medium text-ink mb-2">Long-term partnership mindset</h3>
                   <p className="text-slate leading-relaxed">
                     Quick wins matter, but sustained success matters more. This work is about making strategic deposits that compound over time—building relationships and capabilities that create lasting value.
                   </p>
@@ -279,7 +280,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
       <section aria-labelledby="final-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="final-cta-heading" className="text-4xl font-light mb-6">
-            Ready to Bring This Insight to Your Organization?
+            Ready to bring this insight to your organization?
           </h2>
           <p className="text-xl text-trueWhite/90 leading-relaxed mb-8">
             Let's discuss how a keynote, workshop, or facilitated session can help your team build the relationships and capabilities that drive lasting success.

@@ -108,7 +108,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="grid md:grid-cols-3 gap-12">
             <div className="space-y-4">
               <Sparkles className="w-12 h-12 text-navy" strokeWidth={1.5} />
-              <h3 className="text-xl font-medium text-ink">AI Fluency</h3>
+              <h3 className="text-xl font-medium text-ink">AI fluency</h3>
               <p className="text-slate leading-relaxed">
                 Build organizational confidence and capability around AI through strategic
                 guidance and practical enablement.
@@ -117,7 +117,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
             <div className="space-y-4">
               <Users className="w-12 h-12 text-navy" strokeWidth={1.5} />
-              <h3 className="text-xl font-medium text-ink">Relationship Management</h3>
+              <h3 className="text-xl font-medium text-ink">Relationship management</h3>
               <p className="text-slate leading-relaxed">
                 Strengthen the human connections that drive business success, even as
                 technology evolves.
@@ -126,7 +126,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
             <div className="space-y-4">
               <TrendingUp className="w-12 h-12 text-navy" strokeWidth={1.5} />
-              <h3 className="text-xl font-medium text-ink">Mindset Shifts</h3>
+              <h3 className="text-xl font-medium text-ink">Mindset shifts</h3>
               <p className="text-slate leading-relaxed">
                 Transform how leaders think about AI—from threat to tool, from confusion
                 to clarity.
@@ -138,7 +138,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
       <section aria-labelledby="testimonials-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-light text-ink mb-12 text-center">
-          What Clients Say
+          What clients say
         </h2>
 {testimonials.length > 0 ? (
           <>
@@ -167,7 +167,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
               <h2 id="speaking-heading" className="text-3xl md:text-4xl font-light mb-6">
-                TEDx Chicago Speaker
+                TEDx Chicago speaker
               </h2>
               <p className="text-xl text-trueWhite/90 mb-4 leading-relaxed">
                 "How social wealth can transform your career"

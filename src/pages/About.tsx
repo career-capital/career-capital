@@ -92,12 +92,12 @@ export default function About({ onNavigate }: AboutProps) {
 
       <section aria-labelledby="philosophy-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="philosophy-heading" className="text-3xl font-light text-ink mb-12">Core Philosophy</h2>
+          <h2 id="philosophy-heading" className="text-3xl font-light text-ink mb-12">Core philosophy</h2>
           <div className="grid md:grid-cols-3 gap-12">
             <div className="space-y-4">
               <Heart className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">
-                Relationships Matter Most
+                Relationships matter most
               </h3>
               <p className="text-slate leading-relaxed">
                 Technology amplifies human capability, but relationships create the foundation
@@ -109,7 +109,7 @@ export default function About({ onNavigate }: AboutProps) {
             <div className="space-y-4">
               <Target className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">
-                Practical Over Theoretical
+                Practical over theoretical
               </h3>
               <p className="text-slate leading-relaxed">
                 AI guidance should be actionable, not abstract. Every strategy must translate
@@ -120,7 +120,7 @@ export default function About({ onNavigate }: AboutProps) {
             <div className="space-y-4">
               <Compass className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">
-                Clarity Through Change
+                Clarity through change
               </h3>
               <p className="text-slate leading-relaxed">
                 Technological transformation doesn't have to be chaotic. With the right guidance,
