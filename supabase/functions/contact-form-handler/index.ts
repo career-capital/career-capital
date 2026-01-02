@@ -51,7 +51,7 @@ Deno.serve(async (req: Request) => {
             "Authorization": `Bearer ${RESEND_API_KEY}`,
           },
           body: JSON.stringify({
-            from: "Career Capital <onboarding@resend.dev>",
+            from: "Career Capital <hello@careercapital.io>",
             to: ["info@careercapital.io"],
             reply_to: formData.email,
             subject: `New Contact Form Submission - ${formData.inquiryType}`,
