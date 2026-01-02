@@ -148,7 +148,7 @@ export default function Contact({ onNavigate }: ContactProps) {
             Contact
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Let's build your career capital
+            Let's build your career capital.
           </p>
         </div>
       </section>
@@ -333,20 +333,12 @@ export default function Contact({ onNavigate }: ContactProps) {
                 <div>
                   <h3 className="font-medium text-ink mb-2">Project Launch</h3>
                   <p className="text-slate leading-relaxed">
-                    Lock in scope, align on expectations, and get to work.
+                    It's time to lock in the scope, align on expectations, and get to work.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-surface p-8 border border-border mt-12">
-              <h3 className="text-lg font-medium text-ink mb-4">
-                Just exploring?
-              </h3>
-              <p className="text-slate leading-relaxed">
-                No pressure, no formal pitch required. Reach out with questions, share what's on your mind, or simply start a conversation. Sometimes the best partnerships begin with a casual exchange—come as you are.
-              </p>
-            </div>
           </div>
         </div>
         </div>

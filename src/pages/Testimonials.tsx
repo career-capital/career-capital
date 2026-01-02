@@ -130,6 +130,17 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
         </div>
       </section>
 
+      <section aria-label="Introduction" className="py-12 border-b border-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-lg text-slate leading-relaxed mb-6">
+            These testimonials come from clients across a range of engagements—from keynote speaking and workshop facilitation to executive coaching and strategic advisory work. Some reflect the impact of specific programs, while others speak to long-term professional relationships.
+          </p>
+          <p className="text-lg text-slate leading-relaxed">
+            You'll also find endorsements from colleagues and professional peers who have observed my work firsthand. Together, they offer a comprehensive view of how I show up, what I deliver, and the value I bring to organizations and individuals alike.
+          </p>
+        </div>
+      </section>
+
       <section aria-labelledby="filters-heading" className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-l-2 border-navy/20 pl-6 py-4 mb-10">

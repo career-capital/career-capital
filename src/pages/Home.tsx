@@ -61,7 +61,7 @@ export default function Home({ onNavigate }: HomeProps) {
             AI Fluency + Social Wealth = Your New Competitive Edge
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            It's time to lock in the scope: strategic guidance for organizations ready to build AI readiness without losing
+            Strategic guidance for organizations ready to build AI readiness without losing
             the human side of work.
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
