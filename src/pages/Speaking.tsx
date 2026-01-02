@@ -152,54 +152,69 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
 
       <section aria-labelledby="differentiators-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="differentiators-heading" className="text-3xl font-light text-ink mb-8">What Makes These Engagements Different</h2>
-          <div className="max-w-3xl">
-            <div className="flex gap-6 relative">
-              <div className="relative flex-shrink-0">
-                <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
-                <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
-              </div>
-              <div className="pb-8">
-                <h3 className="font-medium text-ink mb-2">Relationships First, Always</h3>
-                <p className="text-slate leading-relaxed">
-                  This isn't transactional consulting. We build trust and genuine connection alongside technical capability—because lasting transformation happens through people, not just processes.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 relative">
-              <div className="relative flex-shrink-0">
-                <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
-                <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
-              </div>
-              <div className="pb-8">
-                <h3 className="font-medium text-ink mb-2">Customized to Your Reality</h3>
-                <p className="text-slate leading-relaxed">
-                  No templates or cookie-cutter frameworks. Every engagement is shaped around your organization's unique context, culture, and challenges—because what works for one team rarely fits another.
-                </p>
+          <h2 id="differentiators-heading" className="text-3xl font-light text-ink mb-12">What Makes These Engagements Different</h2>
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
+            <div className="w-full lg:w-80 flex-shrink-0">
+              <div className="rounded-lg overflow-hidden shadow-xl">
+                <picture>
+                  <source srcSet="/nisaini_tedxchicago.webp" type="image/webp" />
+                  <img
+                    src="/nisaini_tedxchicago.jpg"
+                    alt="Nisaini presenting at TEDx Chicago"
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
-
-            <div className="flex gap-6 relative">
-              <div className="relative flex-shrink-0">
-                <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
-                <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+            <div className="flex-1">
+              <div className="flex gap-6 relative">
+                <div className="relative flex-shrink-0">
+                  <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
+                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+                </div>
+                <div className="pb-8">
+                  <h3 className="font-medium text-ink mb-2">Relationships First, Always</h3>
+                  <p className="text-slate leading-relaxed">
+                    This isn't transactional consulting. We build trust and genuine connection alongside technical capability—because lasting transformation happens through people, not just processes.
+                  </p>
+                </div>
               </div>
-              <div className="pb-8">
-                <h3 className="font-medium text-ink mb-2">Fluency Over Dependency</h3>
-                <p className="text-slate leading-relaxed">
-                  The goal is to build your team's lasting capability, not create reliance on outside expertise. We work together to develop the confidence and skills that compound long after our engagement ends.
-                </p>
-              </div>
-            </div>
 
-            <div className="flex gap-6 relative">
-              <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-2"></div>
-              <div>
-                <h3 className="font-medium text-ink mb-2">Long-Term Partnership Mindset</h3>
-                <p className="text-slate leading-relaxed">
-                  Quick wins matter, but sustained success matters more. This work is about making strategic deposits that compound over time—building relationships and capabilities that create lasting value.
-                </p>
+              <div className="flex gap-6 relative">
+                <div className="relative flex-shrink-0">
+                  <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
+                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+                </div>
+                <div className="pb-8">
+                  <h3 className="font-medium text-ink mb-2">Customized to Your Reality</h3>
+                  <p className="text-slate leading-relaxed">
+                    No templates or cookie-cutter frameworks. Every engagement is shaped around your organization's unique context, culture, and challenges—because what works for one team rarely fits another.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6 relative">
+                <div className="relative flex-shrink-0">
+                  <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
+                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+                </div>
+                <div className="pb-8">
+                  <h3 className="font-medium text-ink mb-2">Fluency Over Dependency</h3>
+                  <p className="text-slate leading-relaxed">
+                    The goal is to build your team's lasting capability, not create reliance on outside expertise. We work together to develop the confidence and skills that compound long after our engagement ends.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6 relative">
+                <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-2"></div>
+                <div>
+                  <h3 className="font-medium text-ink mb-2">Long-Term Partnership Mindset</h3>
+                  <p className="text-slate leading-relaxed">
+                    Quick wins matter, but sustained success matters more. This work is about making strategic deposits that compound over time—building relationships and capabilities that create lasting value.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -213,51 +228,55 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
           <line x1="12" x2="12" y1="19" y2="22"/>
         </svg>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-8">
-            <h2 id="speaking-cta-heading" className="text-3xl font-light mb-6">
-              Public Speaking with Purpose: TEDx Chicago
-            </h2>
-            <p className="text-lg text-trueWhite/90 leading-relaxed mb-4">
-              A powerful exploration of intentional relationship-building as career capital.
-              Through personal stories spanning from Chicago's government housing to boardrooms
-              with Fortune 500 CEOs, this talk introduces the "social wealth" framework—showing
-              how your supporters become the foundation for every career move you make.
-            </p>
-            <p className="text-lg text-trueWhite/90 leading-relaxed mb-8">
-              <strong className="text-trueWhite">Key insight:</strong> Your network doesn't just open doors—it underwrites your next opportunity.
-              Every encounter is an interview, and investing in genuine relationships compounds over time.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                  onNavigate('contact');
-                }}
-                className="btn-primary-on-dark"
-              >
-                Inquire About Availability
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
-              <a
-                href="https://youtu.be/vT3fUJ1-BvA?si=VM77gHpuH9371MAY"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary-on-dark"
-              >
-                Watch the Talk
-                <ExternalLink className="ml-2 w-4 h-4" />
-              </a>
+          <div className="flex flex-col lg:flex-row gap-8 items-start">
+            <div className="flex-1">
+              <h2 id="speaking-cta-heading" className="text-3xl font-light mb-6">
+                Public Speaking with Purpose: TEDx Chicago
+              </h2>
+              <p className="text-lg text-trueWhite/90 leading-relaxed mb-4">
+                A powerful exploration of intentional relationship-building as career capital.
+                Through personal stories spanning from Chicago's government housing to boardrooms
+                with Fortune 500 CEOs, this talk introduces the "social wealth" framework—showing
+                how your supporters become the foundation for every career move you make.
+              </p>
+              <p className="text-lg text-trueWhite/90 leading-relaxed mb-8">
+                <strong className="text-trueWhite">Key insight:</strong> Your network doesn't just open doors—it underwrites your next opportunity.
+                Every encounter is an interview, and investing in genuine relationships compounds over time.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    onNavigate('contact');
+                  }}
+                  className="btn-primary-on-dark"
+                >
+                  Inquire About Availability
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </button>
+                <a
+                  href="https://youtu.be/vT3fUJ1-BvA?si=VM77gHpuH9371MAY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary-on-dark"
+                >
+                  Watch the Talk
+                  <ExternalLink className="ml-2 w-4 h-4" />
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="mt-8 rounded-lg overflow-hidden shadow-2xl">
-            <div className="relative" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/vT3fUJ1-BvA"
-                title="Nisaini Rexach TEDx Chicago Talk: Social Wealth and Career Capital"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
+            <div className="w-full lg:w-96 flex-shrink-0">
+              <div className="rounded-lg overflow-hidden shadow-2xl">
+                <div className="relative" style={{ paddingBottom: '56.25%' }}>
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube-nocookie.com/embed/vT3fUJ1-BvA"
+                    title="Nisaini Rexach TEDx Chicago Talk: Social Wealth and Career Capital"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
