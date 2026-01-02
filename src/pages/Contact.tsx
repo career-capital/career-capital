@@ -26,8 +26,10 @@ export default function Contact({ onNavigate }: ContactProps) {
     setSubmitting(true);
     setError(null);
 
+    console.log('Form submission started', formData);
+
     try {
-      const { error: dbError } = await supabase
+      const { data, error: dbError } = await supabase
         .from('contact_submissions')
         .insert([{
           name: formData.name,
@@ -36,26 +38,34 @@ export default function Contact({ onNavigate }: ContactProps) {
           inquiry_type: formData.inquiryType,
           message: formData.message,
           status: 'new',
-        }]);
+        }])
+        .select();
+
+      console.log('Database response:', { data, error: dbError });
 
       if (dbError) {
-        throw new Error('Failed to save your submission. Please try again.');
+        console.error('Database error:', dbError);
+        throw new Error(`Failed to save your submission: ${dbError.message}`);
       }
+
+      console.log('Database insert successful, sending email notification...');
 
       const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/contact-form-handler`;
 
       try {
-        await fetch(apiUrl, {
+        const emailResponse = await fetch(apiUrl, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(formData),
         });
+        console.log('Email notification response:', emailResponse.status);
       } catch (emailError) {
         console.error('Email notification failed:', emailError);
       }
 
+      console.log('Form submission completed successfully');
       setSubmitted(true);
       setFormData({
         name: '',
