@@ -141,7 +141,7 @@ export default function Contact({ onNavigate }: ContactProps) {
             Contact
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Let's Build Your Career Capital
+            Let's build your career capital
           </p>
         </div>
       </section>

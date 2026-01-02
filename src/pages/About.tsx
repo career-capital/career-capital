@@ -40,7 +40,7 @@ export default function About({ onNavigate }: AboutProps) {
             About
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Bridging Human Relationships and AI‑Ready Communication
+            Bridging human relationships and AI‑ready communication
           </p>
         </div>
       </section>

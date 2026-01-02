@@ -125,7 +125,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
             Testimonials
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Real Stories. Real Transformation.
+            Real stories, real transformation.
           </p>
         </div>
       </section>

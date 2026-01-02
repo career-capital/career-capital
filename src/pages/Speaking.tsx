@@ -100,7 +100,8 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
             Speaking & Workshops
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            TEDx‑Level Insight for Your Team or Organization
+            Practical guidance and powerful frameworks for teams ready to build AI fluency,
+            strengthen relationships, and lead through transformation with clarity and confidence.
           </p>
         </div>
       </section>
