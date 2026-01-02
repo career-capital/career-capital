@@ -213,7 +213,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
           <line x1="12" x2="12" y1="19" y2="22"/>
         </svg>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mb-8">
             <h2 id="speaking-cta-heading" className="text-3xl font-light mb-6">
               Public Speaking with Purpose: TEDx Chicago
             </h2>
@@ -248,6 +248,17 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
                 <ExternalLink className="ml-2 w-4 h-4" />
               </a>
             </div>
+          </div>
+          <div className="mt-8 rounded-lg overflow-hidden shadow-2xl">
+            <picture>
+              <source srcSet="/nisaini_tedxchicago.webp" type="image/webp" />
+              <img
+                src="/nisaini_tedxchicago.jpg"
+                alt="Nisaini presenting at TEDx Chicago on the red circular stage with TEDxChicago branding"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </picture>
           </div>
         </div>
       </section>
