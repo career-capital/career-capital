@@ -261,10 +261,10 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-[450px] flex-shrink-0">
-              <div className="rounded-lg overflow-hidden shadow-xl">
+            <div className="w-full lg:w-[500px] flex-shrink-0">
+              <div className="overflow-hidden shadow-xl">
                 <img
-                  src="/tedx02.jpg"
+                  src="/tedx05.jpg"
                   alt="Nisaini presenting at TEDx Chicago"
                   className="w-full h-auto"
                   loading="lazy"
