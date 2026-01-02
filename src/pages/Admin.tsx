@@ -1,6 +1,18 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { supabase, Testimonial } from '../lib/supabase';
-import { Plus, Edit2, Trash2, X, ChevronUp, ChevronDown, Tag as TagIcon } from 'lucide-react';
+import { Plus, Edit2, Trash2, X, ChevronUp, ChevronDown, Tag as TagIcon, Mail, MessageSquare } from 'lucide-react';
+
+interface ContactSubmission {
+  id: string;
+  name: string;
+  email: string;
+  organization: string;
+  inquiry_type: string;
+  message: string;
+  status: string;
+  created_at: string;
+  updated_at: string;
+}
 
 const ENGAGEMENT_TYPE_TAGS = [
   'Keynote Speaking',
@@ -21,7 +33,9 @@ const OTHER_TAGS = [
 ];
 
 export default function Admin() {
+  const [activeTab, setActiveTab] = useState<'testimonials' | 'contacts'>('testimonials');
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [contactSubmissions, setContactSubmissions] = useState<ContactSubmission[]>([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -38,8 +52,12 @@ export default function Admin() {
   });
 
   useEffect(() => {
-    fetchTestimonials();
-  }, []);
+    if (activeTab === 'testimonials') {
+      fetchTestimonials();
+    } else {
+      fetchContactSubmissions();
+    }
+  }, [activeTab]);
 
   const fetchTestimonials = async () => {
     setLoading(true);
@@ -54,6 +72,55 @@ export default function Admin() {
       setTestimonials(data || []);
     }
     setLoading(false);
+  };
+
+  const fetchContactSubmissions = async () => {
+    setLoading(true);
+    const { data, error } = await supabase
+      .from('contact_submissions')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      console.error('Error fetching contact submissions:', error);
+    } else {
+      setContactSubmissions(data || []);
+    }
+    setLoading(false);
+  };
+
+  const handleUpdateSubmissionStatus = async (id: string, newStatus: string) => {
+    const { error } = await supabase
+      .from('contact_submissions')
+      .update({ status: newStatus })
+      .eq('id', id);
+
+    if (error) {
+      console.error('Error updating submission status:', error);
+      alert('Failed to update status');
+      return;
+    }
+
+    fetchContactSubmissions();
+  };
+
+  const handleDeleteSubmission = async (id: string) => {
+    if (!confirm('Are you sure you want to delete this submission?')) {
+      return;
+    }
+
+    const { error } = await supabase
+      .from('contact_submissions')
+      .delete()
+      .eq('id', id);
+
+    if (error) {
+      console.error('Error deleting submission:', error);
+      alert('Failed to delete submission');
+      return;
+    }
+
+    fetchContactSubmissions();
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -316,26 +383,61 @@ export default function Admin() {
     <div className="bg-softWhite min-h-screen">
       <section aria-labelledby="admin-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="flex justify-between items-center mb-8">
-          <h1 id="admin-heading" className="text-4xl md:text-5xl font-light text-ink">Testimonials Admin</h1>
-          {!showForm && (
-            <div className="flex gap-3">
-              <button
-                onClick={handleNormalizeOrder}
-                className="btn-outline text-sm"
-                title="Fix display order gaps and duplicates"
-              >
-                Fix Order
-              </button>
-              <button
-                onClick={() => setShowForm(true)}
-                className="btn-primary flex items-center gap-2"
-              >
-                <Plus className="w-4 h-4" />
-                Add New
-              </button>
-            </div>
-          )}
+          <h1 id="admin-heading" className="text-4xl md:text-5xl font-light text-ink">Career Capital CMS</h1>
         </div>
+
+        <div className="flex gap-4 mb-8 border-b border-border">
+          <button
+            onClick={() => setActiveTab('testimonials')}
+            className={`px-6 py-3 font-medium transition-colors ${
+              activeTab === 'testimonials'
+                ? 'text-navy border-b-2 border-navy'
+                : 'text-slate hover:text-ink'
+            }`}
+          >
+            <MessageSquare className="w-4 h-4 inline mr-2" />
+            Testimonials
+          </button>
+          <button
+            onClick={() => setActiveTab('contacts')}
+            className={`px-6 py-3 font-medium transition-colors ${
+              activeTab === 'contacts'
+                ? 'text-navy border-b-2 border-navy'
+                : 'text-slate hover:text-ink'
+            }`}
+          >
+            <Mail className="w-4 h-4 inline mr-2" />
+            Contact Submissions
+            {contactSubmissions.filter(s => s.status === 'new').length > 0 && (
+              <span className="ml-2 inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-trueWhite bg-navy rounded-full">
+                {contactSubmissions.filter(s => s.status === 'new').length}
+              </span>
+            )}
+          </button>
+        </div>
+
+        {activeTab === 'testimonials' && (
+          <>
+            <div className="flex justify-end items-center mb-8">
+              {!showForm && (
+                <div className="flex gap-3">
+                  <button
+                    onClick={handleNormalizeOrder}
+                    className="btn-outline text-sm"
+                    title="Fix display order gaps and duplicates"
+                  >
+                    Fix Order
+                  </button>
+                  <button
+                    onClick={() => setShowForm(true)}
+                    className="btn-primary flex items-center gap-2"
+                  >
+                    <Plus className="w-4 h-4" />
+                    Add New
+                  </button>
+                </div>
+              )}
+            </div>
 
         {showForm && (
           <div className="bg-surface border border-border p-8 mb-8">
@@ -705,6 +807,85 @@ export default function Admin() {
             </div>
           )}
         </div>
+        </>
+        )}
+
+        {activeTab === 'contacts' && (
+          <div className="space-y-4">
+            {contactSubmissions.map((submission) => (
+              <div
+                key={submission.id}
+                className="bg-surface border border-border p-6"
+              >
+                <div className="flex justify-between gap-4 mb-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <h3 className="text-lg font-medium text-ink">{submission.name}</h3>
+                      <span className={`text-xs px-2 py-1 ${
+                        submission.status === 'new' ? 'bg-navy text-trueWhite' :
+                        submission.status === 'read' ? 'bg-slate/20 text-slate' :
+                        submission.status === 'responded' ? 'bg-green-100 text-green-800' :
+                        'bg-gray-100 text-gray-600'
+                      }`}>
+                        {submission.status.toUpperCase()}
+                      </span>
+                      <span className={`text-xs px-2 py-1 ${
+                        submission.inquiry_type === 'consulting' ? 'bg-blue-100 text-blue-800' :
+                        submission.inquiry_type === 'speaking' ? 'bg-purple-100 text-purple-800' :
+                        submission.inquiry_type === 'workshop' ? 'bg-orange-100 text-orange-800' :
+                        'bg-gray-100 text-gray-600'
+                      }`}>
+                        {submission.inquiry_type === 'consulting' ? 'Consulting' :
+                         submission.inquiry_type === 'speaking' ? 'Speaking' :
+                         submission.inquiry_type === 'workshop' ? 'Workshop' : 'Other'}
+                      </span>
+                    </div>
+                    <p className="text-slate text-sm mb-1">
+                      <a href={`mailto:${submission.email}`} className="hover:text-navy transition-colors">
+                        {submission.email}
+                      </a>
+                    </p>
+                    {submission.organization && (
+                      <p className="text-slate text-sm mb-3">{submission.organization}</p>
+                    )}
+                    <p className="text-ink leading-relaxed mb-3 whitespace-pre-wrap">
+                      {submission.message}
+                    </p>
+                    <p className="text-xs text-slate">
+                      Submitted: {new Date(submission.created_at).toLocaleString()}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <select
+                      value={submission.status}
+                      onChange={(e) => handleUpdateSubmissionStatus(submission.id, e.target.value)}
+                      className="text-xs px-2 py-1 border border-border focus:border-navy focus:ring-1 focus:ring-navy outline-none"
+                    >
+                      <option value="new">New</option>
+                      <option value="read">Read</option>
+                      <option value="responded">Responded</option>
+                      <option value="archived">Archived</option>
+                    </select>
+                    <button
+                      onClick={() => handleDeleteSubmission(submission.id)}
+                      className="p-2 text-slate hover:text-red-600 transition-colors"
+                      title="Delete"
+                    >
+                      <Trash2 className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {contactSubmissions.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-slate">No contact submissions yet.</p>
+              </div>
+            )}
+          </div>
+        )}
       </section>
     </div>
   );

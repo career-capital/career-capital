@@ -1,5 +1,6 @@
 import { Mail, MessageSquare, Calendar, Rocket, ArrowRight } from 'lucide-react';
 import { useState, FormEvent } from 'react';
+import { supabase } from '../lib/supabase';
 
 type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
 
@@ -17,14 +18,54 @@ export default function Contact({ onNavigate }: ContactProps) {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(null);
 
-    const statusElement = document.getElementById('form-status');
-    if (statusElement) {
-      statusElement.focus();
+    try {
+      const { error: dbError } = await supabase
+        .from('contact_submissions')
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          organization: formData.organization,
+          inquiry_type: formData.inquiryType,
+          message: formData.message,
+          status: 'new',
+        }]);
+
+      if (dbError) {
+        throw new Error('Failed to save your submission. Please try again.');
+      }
+
+      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/contact-form-handler`;
+
+      try {
+        await fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+      } catch (emailError) {
+        console.error('Email notification failed:', emailError);
+      }
+
+      setSubmitted(true);
+      const statusElement = document.getElementById('form-status');
+      if (statusElement) {
+        statusElement.focus();
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      setError(err instanceof Error ? err.message : 'An error occurred. Please try again.');
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -81,6 +122,11 @@ export default function Contact({ onNavigate }: ContactProps) {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6" aria-labelledby="form-heading">
+                {error && (
+                  <div className="bg-red-50 border border-red-200 p-4 text-red-800" role="alert">
+                    {error}
+                  </div>
+                )}
                 <div>
                   <label htmlFor="name" className="block text-base font-medium text-ink mb-2">
                     Name *
@@ -167,9 +213,10 @@ export default function Contact({ onNavigate }: ContactProps) {
 
                 <button
                   type="submit"
-                  className="btn-primary w-full"
+                  disabled={submitting}
+                  className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {submitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             )}
