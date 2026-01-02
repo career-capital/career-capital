@@ -8,24 +8,22 @@ export default {
     extend: {
       colors: {
         // Core Neutrals
-        softWhite: "#F8F9FA",
-        trueWhite: "#FFFFFF",
-        ink: "#1A1A1A",
+        softWhite: "#F8F9FA",  // Bright Snow - page backgrounds, navigation
+        trueWhite: "#FFFFFF",   // True White - cards, modals, high-contrast surfaces
+        ink: "#1A1A1A",         // Carbon Black - high-emphasis text, footer
         black: "#000000",
 
-        // Grey System - WCAG AAA compliant
-        slate: "#3F4653", // Updated from #4B5563 for 8.01:1 contrast ratio on soft-white
-        border: "#D1D5DB",
-        surface: "#F1F3F5",
+        // Grey System - optimized for readability
+        slate: "#4B5563",       // Charcoal Blue - primary body text
+        border: "#D1D5DB",      // Pale Slate - borders, dividers
+        surface: "#E6E9EE",     // Surface - section backgrounds, form containers
 
-        // Signature Blue
-        navy: "#0F2A44",
-
-        // Accent Blue
-        steel: "#2F5D8A",
+        // Primary Brand Colors
+        navy: "#0F2A44",        // Deep Space Blue - primary brand color, headings, CTAs
+        steel: "#2F5D8A",       // Baltic Blue - links, hover states, interactive accents
         lightBlue: "#4A90E2",
 
-        // Legacy/Utility
+        // Utility Colors
         success: "#166534",
         warning: "#A16207",
         error: "#B91C1C",

@@ -6,20 +6,19 @@
 
 | Color Name | Hex Code | Tailwind Class | Usage |
 |------------|----------|----------------|-------|
-| Navy | `#1B3A52` | `navy` | Primary brand color, headers, navigation text, CTA buttons |
-| Steel Blue | `#2F5D8A` | `steel` | Interactive states (hover, focus), links, accents |
-| Warm Gold | `#D4AF37` | `gold` | Accent color, highlights, special callouts |
+| Deep Space Blue | `#0F2A44` | `navy` | Primary brand color, headings, hero sections, primary CTAs |
+| Baltic Blue | `#2F5D8A` | `steel` | Links, hover states, focus rings, interactive accents |
+| Carbon Black | `#1A1A1A` | `ink` | High-emphasis text, footer content, dark UI elements |
 
 ### Neutral Colors
 
 | Color Name | Hex Code | Tailwind Class | Usage |
 |------------|----------|----------------|-------|
-| True White | `#FFFFFF` | `trueWhite` | **Cards only** - all card components for maximum contrast |
-| Soft White | `#F8F9FA` | `softWhite` | Page backgrounds, navigation bar, secondary buttons |
-| Surface | `#F1F3F5` | `surface` | Form sections, accordion panels, disclosure backgrounds |
-| Border | `#DEE2E6` | `border` | All borders, dividers, subtle separations |
-| Text Primary | `#212529` | `text` | Body text, primary content |
-| Text Muted | `#6C757D` | `text-muted` | Secondary text, metadata, captions |
+| True White | `#FFFFFF` | `trueWhite` | **Cards only** - all card components, modals, high-contrast surfaces |
+| Bright Snow | `#F8F9FA` | `softWhite` | Page backgrounds, navigation bar |
+| Surface | `#E6E9EE` | `surface` | Section backgrounds, form containers, panels |
+| Pale Slate | `#D1D5DB` | `border` | Borders, dividers, subtle outlines |
+| Charcoal Blue | `#4B5563` | `slate` | Primary body text, content |
 
 ## Component Color Guidelines
 
@@ -35,69 +34,69 @@
 ### Buttons
 
 #### Primary Button (CTA)
-- Background: Navy (`#1B3A52`)
+- Background: Deep Space Blue (`#0F2A44`)
 - Text: True White (`#FFFFFF`)
-- Hover: Steel Blue (`#2F5D8A`)
+- Hover: Baltic Blue (`#2F5D8A`)
 - Border: None
 - Class: `.btn-primary`
 
 #### Secondary Button
-- Background: Soft White (`#F8F9FA`)
-- Text: Navy (`#1B3A52`)
-- Hover Border: Steel Blue (`#2F5D8A`)
-- Border: Border color (`#DEE2E6`)
+- Background: Bright Snow (`#F8F9FA`)
+- Text: Deep Space Blue (`#0F2A44`)
+- Hover Border: Baltic Blue (`#2F5D8A`)
+- Border: Pale Slate (`#D1D5DB`)
 - Class: `.btn-secondary`
 
-#### Accent Button
-- Background: Warm Gold (`#D4AF37`)
-- Text: Navy (`#1B3A52`)
-- Hover: Darker gold (10% darker)
-- Border: None
+#### Accent Button (Alternative)
+- Background: True White (`#FFFFFF`)
+- Text: Baltic Blue (`#2F5D8A`)
+- Border: Baltic Blue (`#2F5D8A`)
+- Hover: Background transitions to Baltic Blue, text to white
 - Class: `.btn-accent`
 
 ### Navigation
 
-- Background: Soft White (`#F8F9FA`)
-- Links (inactive): Navy (`#1B3A52`)
-- Links (hover): Steel Blue (`#2F5D8A`)
-- Active indicator: Steel Blue (`#2F5D8A`) underline
-- Border bottom: Border color (`#DEE2E6`)
+- Background: Bright Snow (`#F8F9FA`)
+- Links (inactive): Deep Space Blue (`#0F2A44`)
+- Links (hover): Baltic Blue (`#2F5D8A`)
+- Active indicator: Baltic Blue (`#2F5D8A`) underline
+- Border bottom: Pale Slate (`#D1D5DB`)
 
 ### Forms
 
 #### Form Containers
-- Background: Surface (`#F1F3F5`)
-- Border: Border color (`#DEE2E6`)
+- Background: Surface (`#E6E9EE`)
+- Border: Pale Slate (`#D1D5DB`)
 - Padding: 2rem (32px)
 
 #### Input Fields
 - Background: True White (`#FFFFFF`)
-- Border: Border color (`#DEE2E6`)
-- Focus border: Steel Blue (`#2F5D8A`)
-- Focus ring: Steel Blue with 20% opacity
-- Text: Text Primary (`#212529`)
-- Placeholder: Text Muted (`#6C757D`)
+- Border: Pale Slate (`#D1D5DB`)
+- Focus border: Baltic Blue (`#2F5D8A`)
+- Focus ring: Baltic Blue with 20% opacity
+- Text: Charcoal Blue (`#4B5563`)
+- Placeholder: Charcoal Blue at 60% opacity
 
 #### Labels
-- Color: Text Primary (`#212529`)
-- Required indicator: Steel Blue (`#2F5D8A`)
+- Color: Charcoal Blue (`#4B5563`)
+- Required indicator: Baltic Blue (`#2F5D8A`)
 
 ### Interactive States
 
 #### Hover
-- Primary action: Steel Blue (`#2F5D8A`)
-- Cards: Border changes to Steel Blue
-- Links: Steel Blue (`#2F5D8A`)
+- Primary action: Baltic Blue (`#2F5D8A`)
+- Cards: Border changes to Baltic Blue
+- Links: Baltic Blue (`#2F5D8A`)
 - Slight elevation (-1px to -4px transform)
 
 #### Focus
-- Border: Steel Blue (`#2F5D8A`) 2px solid
-- Ring: Steel Blue with 50% opacity, 3px offset
+- Border: Baltic Blue (`#2F5D8A`) 2px solid
+- Ring: Baltic Blue with 50% opacity, 3px offset
 - No outline (replaced with custom focus ring)
 
 #### Active/Pressed
 - Slight scale down (98%)
-- Border remains Steel Blue
+- Border remains Baltic Blue
 
 #### Disabled
 - Opacity: 50%
@@ -107,48 +106,48 @@
 ### Backgrounds
 
 #### Page Backgrounds
-- Main: Soft White (`#F8F9FA`)
-- Sections: Alternating Soft White and Surface
+- Main: Bright Snow (`#F8F9FA`)
+- Sections: Alternating Bright Snow and Surface
 
 #### Hero Sections
-- Background: Navy (`#1B3A52`) with hero image overlay
-- Text: True White (`#FFFFFF`)
-- Accents: Warm Gold (`#D4AF37`)
+- Background: Deep Space Blue (`#0F2A44`) with hero image overlay
+- Text: True White (`#FFFFFF`) or Bright Snow (`#F8F9FA`)
+- Accents: Baltic Blue (`#2F5D8A`)
 
 #### Dark Sections
-- Background: Navy (`#1B3A52`)
-- Text: Soft White (`#F8F9FA`)
-- Accents: Warm Gold (`#D4AF37`)
+- Background: Deep Space Blue (`#0F2A44`)
+- Text: Bright Snow (`#F8F9FA`)
+- Accents: Baltic Blue (`#2F5D8A`)
 
 ### Text Color Hierarchy
 
-1. **Headings (H1-H6):** Navy (`#1B3A52`)
-2. **Body text:** Text Primary (`#212529`)
-3. **Secondary/Meta text:** Text Muted (`#6C757D`)
-4. **Links:** Navy (default) → Steel Blue (hover)
-5. **Text on dark backgrounds:** True White (`#FFFFFF`)
+1. **Headings (H1-H6):** Deep Space Blue (`#0F2A44`)
+2. **Body text:** Charcoal Blue (`#4B5563`)
+3. **Secondary/Meta text:** Charcoal Blue at 70% opacity
+4. **Links:** Baltic Blue (`#2F5D8A`) → darker on hover
+5. **Text on dark backgrounds:** Bright Snow (`#F8F9FA`) or True White (`#FFFFFF`)
 
 ### Accordions & Disclosures
 
-- Background (closed): Surface (`#F1F3F5`)
-- Background (open): Surface (`#F1F3F5`)
-- Border: Border color (`#DEE2E6`)
-- Header text: Navy (`#1B3A52`)
-- Icon: Steel Blue (`#2F5D8A`)
-- Content text: Text Primary (`#212529`)
+- Background (closed): Surface (`#E6E9EE`)
+- Background (open): Surface (`#E6E9EE`)
+- Border: Pale Slate (`#D1D5DB`)
+- Header text: Deep Space Blue (`#0F2A44`)
+- Icon: Baltic Blue (`#2F5D8A`)
+- Content text: Charcoal Blue (`#4B5563`)
 
 ### Testimonials
 
 #### Grid/Carousel Cards
 - Background: True White (`#FFFFFF`)
-- Border: Border color (`#DEE2E6`)
-- Quote text: Text Primary (`#212529`)
-- Attribution: Text Muted (`#6C757D`)
-- Hover border: Steel Blue (`#2F5D8A`)
+- Border: Pale Slate (`#D1D5DB`)
+- Quote text: Charcoal Blue (`#4B5563`)
+- Attribution: Charcoal Blue at 70% opacity
+- Hover border: Baltic Blue (`#2F5D8A`)
 
 #### Featured Testimonials
-- Background: Surface (`#F1F3F5`)
-- Border: 2px Warm Gold (`#D4AF37`)
+- Background: Surface (`#E6E9EE`)
+- Border: 2px Baltic Blue (`#2F5D8A`)
 - Special treatment to highlight importance
 
 ## Typography
@@ -263,7 +262,7 @@ transition: background-color 200ms ease-out;
 
 ### Focus Indicators
 - Visible on all interactive elements
-- Steel Blue (`#2F5D8A`) 2px border
+- Baltic Blue (`#2F5D8A`) 2px border
 - 3px offset ring with 50% opacity
 - Never remove focus indicators
 
@@ -296,8 +295,8 @@ Lucide React icon library
 
 ### Color
 - Default: Inherit from parent
-- Primary action: Steel Blue (`#2F5D8A`)
-- Decorative: Text Muted (`#6C757D`)
+- Primary action: Baltic Blue (`#2F5D8A`)
+- Decorative: Charcoal Blue at 60% opacity
 - On dark: True White (`#FFFFFF`)
 
 ## Motion & Animation
@@ -326,7 +325,7 @@ Always respect `prefers-reduced-motion` media query:
 ```tsx
 <div className="card-info">
   <h3 className="text-2xl font-semibold text-navy mb-4">Service Title</h3>
-  <p className="text-text mb-4">Description content...</p>
+  <p className="text-slate mb-4">Description content...</p>
 </div>
 ```
 
@@ -355,7 +354,7 @@ Always respect `prefers-reduced-motion` media query:
 ```tsx
 <a
   href="/services"
-  className="text-navy hover:text-steel transition-colors duration-200"
+  className="text-steel hover:text-navy transition-colors duration-200"
 >
   Services
 </a>
@@ -378,3 +377,14 @@ Always respect `prefers-reduced-motion` media query:
 - Test all color combinations for sufficient contrast
 - Cards are the primary content containers and should always use pure white
 - Keep the overall aesthetic clean, professional, and modern
+
+### Color Palette Updates (January 2026)
+
+**Refined Color System** - The palette has been optimized for improved contrast, readability, and brand consistency:
+
+1. **Primary Colors**: Deep Space Blue (#0F2A44), Baltic Blue (#2F5D8A), and Carbon Black (#1A1A1A) provide a sophisticated, professional foundation
+2. **Neutral System**: Bright Snow (#F8F9FA), Surface (#E6E9EE), Pale Slate (#D1D5DB), and Charcoal Blue (#4B5563) create optimal hierarchy and readability
+3. **Removed**: Warm Gold accent has been removed to maintain a restrained, premium aesthetic
+4. **Text Colors**: Charcoal Blue (#4B5563) replaces previous text colors for better readability on light backgrounds
+5. **Surface Color**: Updated from #F1F3F5 to #E6E9EE for improved background contrast
+6. **Link Behavior**: Links now default to Baltic Blue and darken to Deep Space Blue on hover for clearer interactivity

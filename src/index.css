@@ -9,16 +9,14 @@
   --cc-true-white: #FFFFFF;
   --cc-ink: #1A1A1A;
 
-  /* Grey System - WCAG AAA compliant */
-  --cc-slate: #3F4653; /* Updated from #4B5563 for 8.01:1 contrast ratio */
-  --cc-border: #D1D5DB;
-  --cc-surface: #E6E9EE; /* Changed from #f1f3f5 to increase contrast for bkgd colors */
+  /* Grey System - optimized for readability */
+  --cc-slate: #4B5563; /* Charcoal Blue - primary body text */
+  --cc-border: #D1D5DB; /* Pale Slate - borders, dividers */
+  --cc-surface: #E6E9EE; /* Surface - section backgrounds, form containers */
 
-  /* Signature Blue */
-  --cc-navy: #0F2A44;
-
-  /* Accent Blue */
-  --cc-steel: #2F5D8A;
+  /* Primary Brand Colors */
+  --cc-navy: #0F2A44; /* Deep Space Blue - primary brand, headings, CTAs */
+  --cc-steel: #2F5D8A; /* Baltic Blue - links, interactive accents */
 }
 
 @layer base {
@@ -78,7 +76,7 @@
 
   /* Enhanced link styling for accessibility */
   a {
-    color: var(--cc-navy);
+    color: var(--cc-steel);
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
@@ -86,7 +84,7 @@
   }
 
   a:hover {
-    color: var(--cc-steel);
+    color: var(--cc-navy);
     text-decoration-thickness: 2px;
   }
 
