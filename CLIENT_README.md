@@ -1,8 +1,8 @@
-# Career Capital Website - MVP
+# Career Capital Website
 
 ## What You Have
 
-A complete, production-ready minimum viable website for Career Capital consulting services.
+A complete, production-ready website for Career Capital consulting services.
 
 ### Live Pages
 
@@ -83,7 +83,7 @@ Minimum changes needed:
 4. Choose domain name
 5. Deploy to hosting
 
-### Optional Enhancements (Post-MVP)
+### Optional Enhancements
 
 After launch, you could add:
 - Blog or insights section
