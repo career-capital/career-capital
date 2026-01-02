@@ -111,11 +111,11 @@ export default function TestimonialCarousel({
               aria-hidden={index !== currentIndex}
             >
               <blockquote className="max-w-4xl mx-auto space-y-6 px-4 text-center">
-                <p className="text-2xl text-ink leading-relaxed italic font-light">
+                <p className="testimonial-quote text-2xl">
                   "{testimonial.quote}"
                 </p>
                 <footer>
-                  <p className="text-slate font-medium max-w-none">
+                  <p className="testimonial-attribution max-w-none">
                     — {testimonial.author}, {testimonial.company}
                   </p>
                 </footer>
