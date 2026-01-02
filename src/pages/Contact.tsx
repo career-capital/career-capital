@@ -59,10 +59,17 @@ export default function Contact({ onNavigate }: ContactProps) {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
           },
           body: JSON.stringify(formData),
         });
-        console.log('Email notification response:', emailResponse.status);
+
+        if (emailResponse.ok) {
+          const result = await emailResponse.json();
+          console.log('Email notification sent:', result);
+        } else {
+          console.error('Email notification failed with status:', emailResponse.status);
+        }
       } catch (emailError) {
         console.error('Email notification failed:', emailError);
       }
