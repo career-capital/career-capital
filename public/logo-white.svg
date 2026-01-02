@@ -1,0 +1,13 @@
+<svg width="400" height="100" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- CAREER (top line) -->
+  <text x="0" y="45" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="42" fill="#FAFAFA" letter-spacing="2">CAREER</text>
+
+  <!-- CAPITAL (bottom line) -->
+  <text x="0" y="85" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="42" fill="#FAFAFA" letter-spacing="2">CAPITAL</text>
+</svg>
