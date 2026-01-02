@@ -8,15 +8,15 @@ interface FooterProps {
 
 export default function Footer({ onNavigate }: FooterProps) {
   return (
-    <footer role="contentinfo" className="bg-navy text-trueWhite border-t border-steel/20 py-12">
+    <footer role="contentinfo" className="bg-softWhite text-ink border-t border-border py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 mb-8">
           <div>
             <p className="text-lg font-light mb-2">Career Capital</p>
-            <p className="text-sm text-trueWhite/70 mb-4">
+            <p className="text-sm text-slate mb-4">
               The currency of the future
             </p>
-            <p className="text-sm text-trueWhite/70">
+            <p className="text-sm text-slate">
               Building AI fluency and social wealth for lasting career impact.
             </p>
           </div>
@@ -31,7 +31,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                       window.scrollTo(0, 0);
                       onNavigate?.('home');
                     }}
-                    className="text-trueWhite/70 hover:text-trueWhite transition-colors"
+                    className="text-slate hover:text-navy transition-colors"
                   >
                     Home
                   </button>
@@ -42,7 +42,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                       window.scrollTo(0, 0);
                       onNavigate?.('about');
                     }}
-                    className="text-trueWhite/70 hover:text-trueWhite transition-colors"
+                    className="text-slate hover:text-navy transition-colors"
                   >
                     About
                   </button>
@@ -53,7 +53,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                       window.scrollTo(0, 0);
                       onNavigate?.('services');
                     }}
-                    className="text-trueWhite/70 hover:text-trueWhite transition-colors"
+                    className="text-slate hover:text-navy transition-colors"
                   >
                     Services
                   </button>
@@ -64,7 +64,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                       window.scrollTo(0, 0);
                       onNavigate?.('speaking');
                     }}
-                    className="text-trueWhite/70 hover:text-trueWhite transition-colors"
+                    className="text-slate hover:text-navy transition-colors"
                   >
                     Speaking & Workshops
                   </button>
@@ -75,7 +75,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                       window.scrollTo(0, 0);
                       onNavigate?.('testimonials');
                     }}
-                    className="text-trueWhite/70 hover:text-trueWhite transition-colors"
+                    className="text-slate hover:text-navy transition-colors"
                   >
                     Testimonials
                   </button>
@@ -86,7 +86,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                       window.scrollTo(0, 0);
                       onNavigate?.('contact');
                     }}
-                    className="text-trueWhite/70 hover:text-trueWhite transition-colors"
+                    className="text-slate hover:text-navy transition-colors"
                   >
                     Contact
                   </button>
@@ -99,27 +99,27 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h3 className="text-base font-medium mb-4">Connect</h3>
             <div className="space-y-3">
               <a
-                href="mailto:nisaini@careercapital.co"
-                className="flex items-center gap-2 text-sm text-trueWhite/70 hover:text-trueWhite transition-colors"
+                href="mailto:info@careercapital.io"
+                className="flex items-center gap-2 text-sm text-slate hover:text-navy transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                nisaini@careercapital.co
+                info@careercapital.io
               </a>
               <a
                 href="https://www.linkedin.com/in/nisainirexach/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-trueWhite/70 hover:text-trueWhite transition-colors"
+                className="flex items-center gap-2 text-sm text-slate hover:text-navy transition-colors"
               >
-                <Linkedin className="w-4 h-4" />
+                <Linkedin className="w-4 h-4" fill="currentColor" />
                 LinkedIn
               </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-steel/20 pt-6 text-center">
-          <p className="text-sm text-trueWhite/70">
+        <div className="border-t border-border pt-6">
+          <p className="text-sm text-slate text-center">
             &copy; 2026 Career Capital. All rights reserved.
           </p>
         </div>
