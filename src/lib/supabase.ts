@@ -8,6 +8,11 @@ export const supabase = supabaseUrl && supabaseAnonKey
   ? createClient(supabaseUrl, supabaseAnonKey)
   : createClient('https://placeholder.supabase.co', 'placeholder-key');
 
+console.log('Supabase client initialized:', {
+  url: supabaseUrl ? 'configured' : 'missing',
+  key: supabaseAnonKey ? 'configured' : 'missing'
+});
+
 export interface Testimonial {
   id: string;
   quote: string;

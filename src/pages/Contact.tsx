@@ -21,6 +21,8 @@ export default function Contact({ onNavigate }: ContactProps) {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  console.log('Contact component loaded');
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -157,7 +159,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6" aria-labelledby="form-heading">
+              <form onSubmit={handleSubmit} className="space-y-6" aria-labelledby="form-heading" noValidate>
                 {error && (
                   <div className="bg-red-50 border border-red-200 p-4 text-red-800" role="alert">
                     {error}
@@ -251,6 +253,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                   type="submit"
                   disabled={submitting}
                   className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                  onClick={(e) => console.log('Button clicked', e)}
                 >
                   {submitting ? 'Sending...' : 'Send Message'}
                 </button>
