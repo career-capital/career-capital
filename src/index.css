@@ -59,6 +59,16 @@
     letter-spacing: -0.01em;
   }
 
+  /* Headings on navy backgrounds should be offwhite for contrast */
+  .bg-navy h1,
+  .bg-navy h2,
+  .bg-navy h3,
+  .bg-navy h4,
+  .bg-navy h5,
+  .bg-navy h6 {
+    color: var(--cc-soft-white);
+  }
+
   h1 {
     font-size: 3rem;
     font-weight: 700;
