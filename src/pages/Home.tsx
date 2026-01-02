@@ -34,12 +34,28 @@ export default function Home({ onNavigate }: HomeProps) {
   return (
     <div className="bg-softWhite">
       <section aria-label="Introduction and main message" className="relative overflow-hidden bg-navy min-h-[600px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/siteherojan2026_opac80.png)',
-          }}
-        />
+        <picture className="absolute inset-0">
+          <source
+            media="(min-width: 1024px)"
+            srcSet="/siteherojan2026_opac80-desktop.webp"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 640px)"
+            srcSet="/siteherojan2026_opac80-tablet.webp"
+            type="image/webp"
+          />
+          <source
+            srcSet="/siteherojan2026_opac80-mobile.webp"
+            type="image/webp"
+          />
+          <img
+            src="/siteherojan2026_opac80-fallback.jpg"
+            alt=""
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+        </picture>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
           <h1 className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
             AI fluency + strong relationships are the new career capital
