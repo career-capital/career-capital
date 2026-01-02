@@ -64,17 +64,17 @@ export default function Home({ onNavigate }: HomeProps) {
             Strategic guidance for organizations ready to build AI readiness without losing
             the human side of work.
           </p>
-          <div className="flex flex-wrap gap-4 mb-8 text-trueWhite/90 text-sm">
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite/90"></span>
+          <div className="flex flex-wrap gap-3 mb-8">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite"></span>
               TEDx Chicago Main Stage Speaker
             </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite/90"></span>
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite"></span>
               Fortune 500 Experience
             </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite/90"></span>
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite"></span>
               Social Impact Leader
             </span>
           </div>
