@@ -57,6 +57,14 @@ export default function Contact({ onNavigate }: ContactProps) {
       }
 
       setSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        organization: '',
+        inquiryType: '',
+        message: '',
+      });
+
       const statusElement = document.getElementById('form-status');
       if (statusElement) {
         statusElement.focus();
@@ -67,6 +75,18 @@ export default function Contact({ onNavigate }: ContactProps) {
     } finally {
       setSubmitting(false);
     }
+  };
+
+  const handleReset = () => {
+    setSubmitted(false);
+    setError(null);
+    setFormData({
+      name: '',
+      email: '',
+      organization: '',
+      inquiryType: '',
+      message: '',
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -115,10 +135,16 @@ export default function Contact({ onNavigate }: ContactProps) {
                 <h3 className="text-xl font-medium text-ink mb-4">
                   Thank you for reaching out!
                 </h3>
-                <p className="text-slate leading-relaxed">
+                <p className="text-slate leading-relaxed mb-6">
                   I'll review your message and get back to you within 1-2 business days
                   to discuss next steps.
                 </p>
+                <button
+                  onClick={handleReset}
+                  className="btn-secondary"
+                >
+                  Submit Another Inquiry
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6" aria-labelledby="form-heading">
