@@ -289,7 +289,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
               <div className="flex gap-6 relative items-stretch">
                 <div className="relative flex-shrink-0 w-3">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 24px)', height: 'calc(100% - 0.8rem - 36px)' }}>
+                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 18px)', height: 'calc(100% - 0.8rem - 30px)' }}>
                     <line x1="6" y1="0" x2="6" y2="100%" stroke="#cbd5e1" strokeWidth="3" strokeLinecap="round" />
                   </svg>
                 </div>
@@ -304,7 +304,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
               <div className="flex gap-6 relative items-stretch">
                 <div className="relative flex-shrink-0 w-3">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 24px)', height: 'calc(100% - 0.8rem - 36px)' }}>
+                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 18px)', height: 'calc(100% - 0.8rem - 30px)' }}>
                     <line x1="6" y1="0" x2="6" y2="100%" stroke="#cbd5e1" strokeWidth="3" strokeLinecap="round" />
                   </svg>
                 </div>
@@ -319,7 +319,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
               <div className="flex gap-6 relative items-stretch">
                 <div className="relative flex-shrink-0 w-3">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 24px)', height: 'calc(100% - 0.8rem - 36px)' }}>
+                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 18px)', height: 'calc(100% - 0.8rem - 30px)' }}>
                     <line x1="6" y1="0" x2="6" y2="100%" stroke="#cbd5e1" strokeWidth="3" strokeLinecap="round" />
                   </svg>
                 </div>
