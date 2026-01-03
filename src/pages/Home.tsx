@@ -9,6 +9,48 @@ interface HomeProps {
   onNavigate: (page: Page) => void;
 }
 
+const FALLBACK_TESTIMONIALS: Testimonial[] = [
+  {
+    id: 'fallback-1',
+    quote: 'Nisaini\'s mentorship has been transformative. She taught me to leverage authentic relationships as social wealth, redefining my brand, empowering my voice, and opening endless career opportunities.',
+    author: 'Gabriela S.',
+    company: 'United Airlines',
+    display_order: 1,
+    is_active: true,
+    featured: true,
+    tags: ['Career Capital', 'Social Wealth'],
+    testimonial_type: 'character_witness',
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+  {
+    id: 'fallback-2',
+    quote: 'I\'ve had the pleasure of collaborating with Nisaini on multiple public presentations and events, and Nisaini has proven herself to be an exceptional collaborator and speaker. Her passion for giving to her network, combined with her strategic approach to connection, makes her an invaluable partner on stage and a trusted leader off it.',
+    author: 'Melissa L.',
+    company: 'Microsoft',
+    display_order: 2,
+    is_active: true,
+    featured: true,
+    tags: ['Keynote Speaking', 'Leadership Development', 'Relationship Management'],
+    testimonial_type: 'character_witness',
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+  {
+    id: 'fallback-3',
+    quote: 'The future of work belongs to those who understand the power of relationships, and Nisaini stands apart by pairing deep lived experience with countless real-world examples from her own community— and a rare gift for using powerful, accessible language to give people the tools, confidence, and clarity to practice meaningful, intentional connection in their work and lives.',
+    author: 'Kelly F.',
+    company: 'TEDxChicago',
+    display_order: 3,
+    is_active: true,
+    featured: true,
+    tags: ['Keynote Speaking', 'Social Wealth', 'Leadership Development'],
+    testimonial_type: 'character_witness',
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+];
+
 export default function Home({ onNavigate }: HomeProps) {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
 
@@ -23,8 +65,11 @@ export default function Home({ onNavigate }: HomeProps) {
 
       if (error) {
         console.error('Error fetching testimonials:', error);
+        setTestimonials(FALLBACK_TESTIMONIALS);
+      } else if (data && data.length > 0) {
+        setTestimonials(data);
       } else {
-        setTestimonials(data || []);
+        setTestimonials(FALLBACK_TESTIMONIALS);
       }
     };
 
@@ -61,20 +106,16 @@ export default function Home({ onNavigate }: HomeProps) {
             AI Fluency + Social Wealth = Your New Competitive Edge
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Strategic guidance for organizations ready to build AI readiness without losing
-            the human side of work.
+            Strategic guidance for organizations building AI readiness while elevating the human side of work.
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite"></span>
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
               TEDx Chicago Main Stage Speaker
             </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite"></span>
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
               Fortune 100 Experience
             </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite"></span>
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
               Social Impact Leader
             </span>
           </div>
@@ -82,21 +123,21 @@ export default function Home({ onNavigate }: HomeProps) {
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                onNavigate('services');
+                onNavigate('contact');
               }}
               className="btn-primary-on-dark"
             >
-              Explore Services
+              Let's Talk
               <ArrowRight className="ml-2 w-4 h-4" />
             </button>
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                onNavigate('contact');
+                onNavigate('services');
               }}
               className="btn-secondary-on-dark"
             >
-              Let's Talk
+              Explore Services
             </button>
           </div>
         </div>
@@ -104,9 +145,11 @@ export default function Home({ onNavigate }: HomeProps) {
 
       <section aria-labelledby="capabilities-heading" className="bg-surface py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="capabilities-heading" className="sr-only">Core Capabilities</h2>
+          <h2 id="capabilities-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-12">
+            Building AI fluency and social wealth for lasting career impact
+          </h2>
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="space-y-4">
+            <div className="flex flex-col space-y-4">
               <Sparkles className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">AI fluency</h3>
               <p className="text-slate leading-relaxed">
@@ -115,7 +158,7 @@ export default function Home({ onNavigate }: HomeProps) {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="flex flex-col space-y-4">
               <Users className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">Relationship management</h3>
               <p className="text-slate leading-relaxed">
@@ -124,7 +167,7 @@ export default function Home({ onNavigate }: HomeProps) {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="flex flex-col space-y-4">
               <TrendingUp className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">Mindset shifts</h3>
               <p className="text-slate leading-relaxed">
@@ -137,8 +180,8 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       <section aria-labelledby="testimonials-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-light text-ink mb-12 text-center">
-          What clients say
+        <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-12 text-center">
+          What people say
         </h2>
 {testimonials.length > 0 ? (
           <>
@@ -149,11 +192,11 @@ export default function Home({ onNavigate }: HomeProps) {
                   window.scrollTo(0, 0);
                   onNavigate('testimonials');
                 }}
-                className="inline-flex items-center text-navy hover:text-steel font-medium transition-colors group underline underline-offset-2"
+                className="inline-flex items-center text-base text-navy hover:text-steel font-medium transition-colors group underline underline-offset-2"
                 aria-label="Navigate to testimonials page to see all client reviews"
               >
                 View All Testimonials
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </button>
             </div>
           </>
@@ -166,7 +209,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
-              <h2 id="speaking-heading" className="text-3xl md:text-4xl font-light mb-6">
+              <h2 id="speaking-heading" className="text-3xl md:text-4xl font-semibold mb-6">
                 TEDx Chicago speaker
               </h2>
               <p className="text-xl text-trueWhite/90 mb-4 leading-relaxed">

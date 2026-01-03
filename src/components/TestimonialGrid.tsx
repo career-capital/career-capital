@@ -46,14 +46,11 @@ export default function TestimonialGrid({
             className="bg-surface border border-border p-8"
           >
             <blockquote className="space-y-4">
-              <p className="text-lg text-ink leading-relaxed italic">
+              <p className="testimonial-quote">
                 "{testimonial.quote}"
               </p>
-              <footer className="text-slate font-medium not-italic">
-                — {testimonial.author}
-                {testimonial.company && (
-                  <>, <cite className="not-italic">{testimonial.company}</cite></>
-                )}
+              <footer className="testimonial-attribution not-italic">
+                <strong className="font-semibold">— {testimonial.author}</strong>, {testimonial.company}
               </footer>
             </blockquote>
           </article>
