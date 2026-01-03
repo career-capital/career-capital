@@ -208,7 +208,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
         </div>
       </section>
 
-      <section aria-labelledby="publications-heading" className="bg-surface py-16">
+      <section aria-labelledby="publications-heading" className="bg-softWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="publications-heading" className="text-3xl font-semibold text-ink mb-4">
             Featured In

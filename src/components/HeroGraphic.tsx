@@ -27,7 +27,7 @@ export default function HeroGraphic() {
               cx={x}
               cy={yPos}
               r={currentDotSize}
-              fill="white"
+              fill="#2F5D8A"
               opacity={currentOpacity}
             />
           );
@@ -55,27 +55,27 @@ export default function HeroGraphic() {
       <rect width="1200" height="600" fill="url(#bgGradient)" />
 
       <g>
-        {createWaveDots(480, 60, 2, 2, 12, 0.4)}
+        {createWaveDots(480, 60, 2, 2, 12, 0.5)}
       </g>
 
       <g>
-        {createWaveDots(440, 70, 2.2, 1.8, 14, 0.35)}
+        {createWaveDots(440, 70, 2.2, 1.8, 14, 0.45)}
       </g>
 
       <g>
-        {createWaveDots(400, 80, 2.4, 1.5, 16, 0.3)}
+        {createWaveDots(400, 80, 2.4, 1.5, 16, 0.4)}
       </g>
 
       <g>
-        {createWaveDots(360, 90, 2.6, 1.2, 18, 0.25)}
+        {createWaveDots(360, 90, 2.6, 1.2, 18, 0.35)}
       </g>
 
       <g>
-        {createWaveDots(320, 100, 2.8, 1, 20, 0.2)}
+        {createWaveDots(320, 100, 2.8, 1, 20, 0.3)}
       </g>
 
-      <g opacity="0.15">
-        <ellipse cx="900" cy="300" rx="350" ry="250" fill="white" />
+      <g opacity="0.2">
+        <ellipse cx="900" cy="300" rx="350" ry="250" fill="#2F5D8A" />
       </g>
     </svg>
   );
