@@ -145,11 +145,11 @@ export default function Home({ onNavigate }: HomeProps) {
 
       <section aria-labelledby="capabilities-heading" className="bg-surface py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="capabilities-heading" className="text-3xl md:text-4xl font-light text-ink mb-12 text-center">
+          <h2 id="capabilities-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-12">
             Building AI fluency and social wealth for lasting career impact
           </h2>
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="flex flex-col items-center text-center space-y-4">
+            <div className="flex flex-col space-y-4">
               <Sparkles className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">AI fluency</h3>
               <p className="text-slate leading-relaxed">
@@ -158,7 +158,7 @@ export default function Home({ onNavigate }: HomeProps) {
               </p>
             </div>
 
-            <div className="flex flex-col items-center text-center space-y-4">
+            <div className="flex flex-col space-y-4">
               <Users className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">Relationship management</h3>
               <p className="text-slate leading-relaxed">
@@ -167,7 +167,7 @@ export default function Home({ onNavigate }: HomeProps) {
               </p>
             </div>
 
-            <div className="flex flex-col items-center text-center space-y-4">
+            <div className="flex flex-col space-y-4">
               <TrendingUp className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">Mindset shifts</h3>
               <p className="text-slate leading-relaxed">
@@ -180,7 +180,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       <section aria-labelledby="testimonials-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-light text-ink mb-12 text-center">
+        <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-12 text-center">
           What clients say
         </h2>
 {testimonials.length > 0 ? (
@@ -209,7 +209,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
-              <h2 id="speaking-heading" className="text-3xl md:text-4xl font-light mb-6">
+              <h2 id="speaking-heading" className="text-3xl md:text-4xl font-semibold mb-6">
                 TEDx Chicago speaker
               </h2>
               <p className="text-xl text-trueWhite/90 mb-4 leading-relaxed">
