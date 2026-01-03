@@ -64,7 +64,7 @@ export default function FlipCard({ front, back }: FlipCardProps) {
             </div>
             <ul className="space-y-2">
               {back.content.map((item, index) => (
-                <li key={index} className="flex gap-3 text-base text-slate leading-relaxed">
+                <li key={index} className="flex gap-3 text-sm text-slate leading-relaxed">
                   <span className="text-steel font-medium flex-shrink-0 mt-0.5">•</span>
                   <span>{item}</span>
                 </li>

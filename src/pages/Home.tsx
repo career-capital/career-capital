@@ -181,7 +181,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
       <section aria-labelledby="testimonials-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-12 text-center">
-          What clients say
+          What people say
         </h2>
 {testimonials.length > 0 ? (
           <>
