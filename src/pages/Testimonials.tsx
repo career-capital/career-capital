@@ -17,6 +17,48 @@ const ENGAGEMENT_TYPES = [
 
 const TESTIMONIALS_PER_PAGE = 8;
 
+const FALLBACK_TESTIMONIALS: Testimonial[] = [
+  {
+    id: 'fallback-1',
+    quote: 'Nisaini\'s mentorship has been transformative. She taught me to leverage authentic relationships as social wealth, redefining my brand, empowering my voice, and opening endless career opportunities.',
+    author: 'Gabriela S.',
+    company: 'United Airlines',
+    display_order: 1,
+    is_active: true,
+    featured: true,
+    tags: ['Executive Coaching', 'Career Capital', 'Social Wealth'],
+    testimonial_type: 'character_witness',
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+  {
+    id: 'fallback-2',
+    quote: 'I\'ve had the pleasure of collaborating with Nisaini on multiple public presentations and events, and Nisaini has proven herself to be an exceptional collaborator and speaker. Her passion for giving to her network, combined with her strategic approach to connection, makes her an invaluable partner on stage and a trusted leader off it.',
+    author: 'Melissa L.',
+    company: 'Microsoft',
+    display_order: 2,
+    is_active: true,
+    featured: true,
+    tags: ['Keynote Speaking', 'Leadership Development', 'Relationship Management'],
+    testimonial_type: 'character_witness',
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+  {
+    id: 'fallback-3',
+    quote: 'The future of work belongs to those who understand the power of relationships, and Nisaini stands apart by pairing deep lived experience with countless real-world examples from her own community— and a rare gift for using powerful, accessible language to give people the tools, confidence, and clarity to practice meaningful, intentional connection in their work and lives.',
+    author: 'Kelly F.',
+    company: 'TEDxChicago',
+    display_order: 3,
+    is_active: true,
+    featured: true,
+    tags: ['Keynote Speaking', 'Social Wealth', 'Leadership Development'],
+    testimonial_type: 'character_witness',
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+];
+
 export default function Testimonials({ onNavigate }: TestimonialsProps) {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [loading, setLoading] = useState(true);
@@ -39,12 +81,25 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
 
     if (error) {
       console.error('Error fetching testimonials:', error);
-    } else {
-      setTestimonials(data || []);
+      const testimonialsData = FALLBACK_TESTIMONIALS;
+      setTestimonials(testimonialsData);
 
       // Find which engagement types are actually used in testimonials
       const usedTypes = new Set<string>();
-      data?.forEach(t => {
+      testimonialsData.forEach(t => {
+        t.tags?.forEach(tag => {
+          if (ENGAGEMENT_TYPES.includes(tag)) {
+            usedTypes.add(tag);
+          }
+        });
+      });
+      setAvailableEngagementTypes(Array.from(usedTypes));
+    } else if (data && data.length > 0) {
+      setTestimonials(data);
+
+      // Find which engagement types are actually used in testimonials
+      const usedTypes = new Set<string>();
+      data.forEach(t => {
         t.tags?.forEach(tag => {
           if (ENGAGEMENT_TYPES.includes(tag)) {
             usedTypes.add(tag);
@@ -52,6 +107,20 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
         });
       });
       setAvailableEngagementTypes(Array.from(usedTypes).sort());
+    } else {
+      // If data is empty, use fallback
+      const testimonialsData = FALLBACK_TESTIMONIALS;
+      setTestimonials(testimonialsData);
+
+      const usedTypes = new Set<string>();
+      testimonialsData.forEach(t => {
+        t.tags?.forEach(tag => {
+          if (ENGAGEMENT_TYPES.includes(tag)) {
+            usedTypes.add(tag);
+          }
+        });
+      });
+      setAvailableEngagementTypes(Array.from(usedTypes));
     }
     setLoading(false);
   };

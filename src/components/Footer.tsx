@@ -114,7 +114,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-base text-slate hover:text-navy transition-colors"
               >
-                <Linkedin className="w-5 h-5" fill="currentColor" />
+                <Linkedin className="w-5 h-5" strokeWidth={0} fill="currentColor" />
                 LinkedIn
               </a>
             </div>

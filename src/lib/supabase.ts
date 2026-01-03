@@ -17,7 +17,6 @@ export interface Testimonial {
   id: string;
   quote: string;
   author: string;
-  role?: string;
   company: string;
   display_order: number;
   is_active: boolean;

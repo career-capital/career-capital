@@ -9,6 +9,48 @@ interface HomeProps {
   onNavigate: (page: Page) => void;
 }
 
+const FALLBACK_TESTIMONIALS: Testimonial[] = [
+  {
+    id: 'fallback-1',
+    quote: 'Nisaini\'s mentorship has been transformative. She taught me to leverage authentic relationships as social wealth, redefining my brand, empowering my voice, and opening endless career opportunities.',
+    author: 'Gabriela S.',
+    company: 'United Airlines',
+    display_order: 1,
+    is_active: true,
+    featured: true,
+    tags: ['Executive Coaching', 'Career Capital', 'Social Wealth'],
+    testimonial_type: 'character_witness',
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+  {
+    id: 'fallback-2',
+    quote: 'I\'ve had the pleasure of collaborating with Nisaini on multiple public presentations and events, and Nisaini has proven herself to be an exceptional collaborator and speaker. Her passion for giving to her network, combined with her strategic approach to connection, makes her an invaluable partner on stage and a trusted leader off it.',
+    author: 'Melissa L.',
+    company: 'Microsoft',
+    display_order: 2,
+    is_active: true,
+    featured: true,
+    tags: ['Keynote Speaking', 'Leadership Development', 'Relationship Management'],
+    testimonial_type: 'character_witness',
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+  {
+    id: 'fallback-3',
+    quote: 'The future of work belongs to those who understand the power of relationships, and Nisaini stands apart by pairing deep lived experience with countless real-world examples from her own community— and a rare gift for using powerful, accessible language to give people the tools, confidence, and clarity to practice meaningful, intentional connection in their work and lives.',
+    author: 'Kelly F.',
+    company: 'TEDxChicago',
+    display_order: 3,
+    is_active: true,
+    featured: true,
+    tags: ['Keynote Speaking', 'Social Wealth', 'Leadership Development'],
+    testimonial_type: 'character_witness',
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  },
+];
+
 export default function Home({ onNavigate }: HomeProps) {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
 
@@ -23,8 +65,11 @@ export default function Home({ onNavigate }: HomeProps) {
 
       if (error) {
         console.error('Error fetching testimonials:', error);
+        setTestimonials(FALLBACK_TESTIMONIALS);
+      } else if (data && data.length > 0) {
+        setTestimonials(data);
       } else {
-        setTestimonials(data || []);
+        setTestimonials(FALLBACK_TESTIMONIALS);
       }
     };
 
@@ -93,10 +138,9 @@ export default function Home({ onNavigate }: HomeProps) {
                 window.scrollTo(0, 0);
                 onNavigate('contact');
               }}
-              className="btn-primary-on-dark"
+              className="btn-secondary-on-dark"
             >
               Let's Talk
-              <ArrowRight className="ml-2 w-4 h-4" />
             </button>
           </div>
         </div>

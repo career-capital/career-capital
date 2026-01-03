@@ -325,8 +325,8 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
             <div className="w-full lg:w-[500px] flex-shrink-0">
               <div className="overflow-hidden shadow-xl aspect-[4/3]">
                 <img
-                  src="/05.jpg"
-                  alt="Professional team collaboration and workshop facilitation"
+                  src="/dsc00446.jpg"
+                  alt="Nisaini Rexach presenting at podium"
                   className="w-full h-full object-cover object-[40%_center]"
                   loading="lazy"
                 />

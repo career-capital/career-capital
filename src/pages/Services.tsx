@@ -211,8 +211,8 @@ export default function Services({ onNavigate }: ServicesProps) {
             <div className="w-full lg:w-[500px] flex-shrink-0">
               <div className="overflow-hidden shadow-xl aspect-[4/3]">
                 <img
-                  src="/04.jpg"
-                  alt="Team collaboration in a professional meeting"
+                  src="/3865532919418905075.webp"
+                  alt="Workshop facilitation and team collaboration"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

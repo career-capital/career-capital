@@ -43,7 +43,6 @@ export default function Admin() {
   const [formData, setFormData] = useState({
     quote: '',
     author: '',
-    role: '',
     company: '',
     display_order: '',
     is_active: true,
@@ -203,7 +202,6 @@ export default function Admin() {
     setFormData({
       quote: testimonial.quote,
       author: testimonial.author,
-      role: testimonial.role || '',
       company: testimonial.company,
       display_order: testimonial.display_order.toString(),
       is_active: testimonial.is_active,
@@ -311,7 +309,6 @@ export default function Admin() {
     setFormData({
       quote: '',
       author: '',
-      role: '',
       company: '',
       display_order: '',
       is_active: true,
@@ -490,38 +487,22 @@ export default function Admin() {
                 />
               </div>
 
-              <div>
-                <label htmlFor="author" className="block text-base font-medium text-ink mb-2">
-                  Author (First Name, Last Initial) *
-                </label>
-                <input
-                  type="text"
-                  id="author"
-                  name="author"
-                  required
-                  value={formData.author}
-                  onChange={handleChange}
-                  placeholder="e.g., Gabriela S"
-                  className="w-full px-4 py-3 border border-border focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-colors"
-                />
-                <p className="text-sm text-slate mt-1">Period will be added automatically after last initial</p>
-              </div>
-
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="role" className="block text-base font-medium text-ink mb-2">
-                    Role *
+                  <label htmlFor="author" className="block text-base font-medium text-ink mb-2">
+                    Author (First Name, Last Initial) *
                   </label>
                   <input
                     type="text"
-                    id="role"
-                    name="role"
+                    id="author"
+                    name="author"
                     required
-                    value={formData.role}
+                    value={formData.author}
                     onChange={handleChange}
-                    placeholder="e.g., Associate Developer"
+                    placeholder="e.g., Gabriela S"
                     className="w-full px-4 py-3 border border-border focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-colors"
                   />
+                  <p className="text-sm text-slate mt-1">Period will be added automatically after last initial</p>
                 </div>
 
                 <div>
@@ -750,11 +731,7 @@ export default function Admin() {
                   <p className="text-slate leading-relaxed mb-4 italic">
                     "{testimonial.quote}"
                   </p>
-                  <p className="text-ink font-medium">{testimonial.author}</p>
-                  {testimonial.role && (
-                    <p className="text-slate text-sm">{testimonial.role}</p>
-                  )}
-                  <p className="text-slate text-sm">{testimonial.company}</p>
+                  <p className="text-ink"><strong className="font-semibold">{testimonial.author}</strong>, {testimonial.company}</p>
                   {testimonial.tags && testimonial.tags.length > 0 && (
                     <div className="flex flex-wrap gap-1 mt-2">
                       {testimonial.tags.map(tag => {

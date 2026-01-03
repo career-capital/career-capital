@@ -290,48 +290,48 @@ export default function Contact({ onNavigate }: ContactProps) {
           <div>
             <h2 id="expectations-heading" className="text-2xl font-light text-ink mb-8">What to expect</h2>
             <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <Mail className="w-6 h-6 text-navy" />
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <Mail className="w-5 h-5 text-navy" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-ink mb-2">Response Time</h3>
+                  <h3 className="text-lg text-ink mb-2">Response Time</h3>
                   <p className="text-slate leading-relaxed">
                     We respond to all inquiries within 1-2 business days.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <MessageSquare className="w-6 h-6 text-navy" />
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <MessageSquare className="w-5 h-5 text-navy" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-ink mb-2">Discovery Conversation</h3>
+                  <h3 className="text-lg text-ink mb-2">Discovery Conversation</h3>
                   <p className="text-slate leading-relaxed">
                     We'll schedule a call to discuss your needs, challenges, and goals in detail.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <Calendar className="w-6 h-6 text-navy" />
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <Calendar className="w-5 h-5 text-navy" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-ink mb-2">Tailored Proposal</h3>
+                  <h3 className="text-lg text-ink mb-2">Tailored Proposal</h3>
                   <p className="text-slate leading-relaxed">
                     We'll create a customized approach based on your organization's context.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <Rocket className="w-6 h-6 text-navy" />
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <Rocket className="w-5 h-5 text-navy" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-ink mb-2">Project Launch</h3>
+                  <h3 className="text-lg text-ink mb-2">Project Launch</h3>
                   <p className="text-slate leading-relaxed">
                     It's time to lock in the scope, align on expectations, and get to work.
                   </p>
