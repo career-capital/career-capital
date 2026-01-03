@@ -160,9 +160,11 @@ export default function Services({ onNavigate }: ServicesProps) {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
               <div className="flex gap-6 relative items-stretch">
-                <div className="relative flex-shrink-0">
+                <div className="relative flex-shrink-0 w-3">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
+                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 18px)', height: 'calc(100% - 36px)' }}>
+                    <line x1="6" y1="0" x2="6" y2="100%" stroke="#cbd5e1" strokeWidth="3" strokeLinecap="round" />
+                  </svg>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">Every encounter is an interview</h3>
@@ -173,9 +175,11 @@ export default function Services({ onNavigate }: ServicesProps) {
               </div>
 
               <div className="flex gap-6 relative items-stretch">
-                <div className="relative flex-shrink-0">
+                <div className="relative flex-shrink-0 w-3">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
+                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 18px)', height: 'calc(100% - 36px)' }}>
+                    <line x1="6" y1="0" x2="6" y2="100%" stroke="#cbd5e1" strokeWidth="3" strokeLinecap="round" />
+                  </svg>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">We come to the table prepared</h3>
@@ -186,9 +190,11 @@ export default function Services({ onNavigate }: ServicesProps) {
               </div>
 
               <div className="flex gap-6 relative items-stretch">
-                <div className="relative flex-shrink-0">
+                <div className="relative flex-shrink-0 w-3">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
+                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 18px)', height: 'calc(100% - 36px)' }}>
+                    <line x1="6" y1="0" x2="6" y2="100%" stroke="#cbd5e1" strokeWidth="3" strokeLinecap="round" />
+                  </svg>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">We make deposits with intention</h3>
