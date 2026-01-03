@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 interface Testimonial {
   quote: string;
   author: string;
+  role?: string;
   company: string;
 }
 
@@ -116,7 +117,19 @@ export default function TestimonialCarousel({
                 </p>
                 <footer>
                   <p className="testimonial-attribution max-w-none">
-                    — {testimonial.author}, {testimonial.company}
+                    — {testimonial.author}
+                    {testimonial.role && (
+                      <>
+                        <br />
+                        <span className="text-sm">{testimonial.role}</span>
+                      </>
+                    )}
+                    {testimonial.company && (
+                      <>
+                        <br />
+                        <span className="text-sm">{testimonial.company}</span>
+                      </>
+                    )}
                   </p>
                 </footer>
               </blockquote>

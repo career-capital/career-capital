@@ -61,8 +61,7 @@ export default function Home({ onNavigate }: HomeProps) {
             AI Fluency + Social Wealth = Your New Competitive Edge
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Strategic guidance for organizations ready to build AI readiness without losing
-            the human side of work.
+            Strategic guidance for organizations building AI readiness while elevating the human side of work.
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
@@ -94,9 +93,10 @@ export default function Home({ onNavigate }: HomeProps) {
                 window.scrollTo(0, 0);
                 onNavigate('contact');
               }}
-              className="btn-secondary-on-dark"
+              className="btn-primary-on-dark"
             >
               Let's Talk
+              <ArrowRight className="ml-2 w-4 h-4" />
             </button>
           </div>
         </div>
@@ -104,9 +104,11 @@ export default function Home({ onNavigate }: HomeProps) {
 
       <section aria-labelledby="capabilities-heading" className="bg-surface py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="capabilities-heading" className="sr-only">Core Capabilities</h2>
+          <h2 id="capabilities-heading" className="text-3xl md:text-4xl font-light text-ink mb-12 text-center">
+            Building AI fluency and social wealth for lasting career impact
+          </h2>
           <div className="grid md:grid-cols-3 gap-12">
-            <div className="space-y-4">
+            <div className="flex flex-col items-center text-center space-y-4">
               <Sparkles className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">AI fluency</h3>
               <p className="text-slate leading-relaxed">
@@ -115,7 +117,7 @@ export default function Home({ onNavigate }: HomeProps) {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="flex flex-col items-center text-center space-y-4">
               <Users className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">Relationship management</h3>
               <p className="text-slate leading-relaxed">
@@ -124,7 +126,7 @@ export default function Home({ onNavigate }: HomeProps) {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="flex flex-col items-center text-center space-y-4">
               <TrendingUp className="w-12 h-12 text-navy" strokeWidth={1.5} />
               <h3 className="text-xl font-medium text-ink">Mindset shifts</h3>
               <p className="text-slate leading-relaxed">

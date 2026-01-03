@@ -208,6 +208,65 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
         </div>
       </section>
 
+      <section aria-labelledby="publications-heading" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="publications-heading" className="text-3xl font-light text-ink mb-8 text-center">
+            Featured in
+          </h2>
+          <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
+            <span className="text-xl text-slate font-medium">Chicago Sun-Times</span>
+            <span className="text-slate">•</span>
+            <span className="text-xl text-slate font-medium">Crain's Chicago Business</span>
+            <span className="text-slate">•</span>
+            <span className="text-xl text-slate font-medium">Chi Tech for Good</span>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <a
+              href="https://chicago.suntimes.com/other-views/2024/12/24/philanthropy-more-than-writing-check-teach-for-america-access-kids-young-people-nisaini-rexach"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 p-4 bg-surface hover:bg-border transition-colors group"
+            >
+              <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 mt-1 group-hover:text-steel transition-colors" />
+              <div>
+                <p className="font-medium text-ink group-hover:text-navy transition-colors">
+                  Philanthropy is about more than writing a check
+                </p>
+                <p className="text-sm text-slate">Chicago Sun-Times</p>
+              </div>
+            </a>
+            <a
+              href="https://www.chicagobusiness.com/people-on-the-move/nisaini-rexach"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 p-4 bg-surface hover:bg-border transition-colors group"
+            >
+              <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 mt-1 group-hover:text-steel transition-colors" />
+              <div>
+                <p className="font-medium text-ink group-hover:text-navy transition-colors">
+                  Nisaini Rexach at Teach For America
+                </p>
+                <p className="text-sm text-slate">Crain's Chicago Business</p>
+              </div>
+            </a>
+            <a
+              href="https://chitechforgood.com/f/nisaini-rexach-pioneering-a-new-era-of-social-impact-in-chicago"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 p-4 bg-surface hover:bg-border transition-colors group"
+            >
+              <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 mt-1 group-hover:text-steel transition-colors" />
+              <div>
+                <p className="font-medium text-ink group-hover:text-navy transition-colors">
+                  Nisaini Rexach: Pioneering a New Era of Social Impact in Chicago
+                </p>
+                <p className="text-sm text-slate">Chi Tech for Good</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section aria-labelledby="differentiators-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="differentiators-heading" className="text-3xl font-light text-ink mb-4">What makes these engagements different</h2>

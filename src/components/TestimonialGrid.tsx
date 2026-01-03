@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface Testimonial {
   quote: string;
   author: string;
+  role?: string;
   company: string;
 }
 
@@ -51,8 +52,17 @@ export default function TestimonialGrid({
               </p>
               <footer className="testimonial-attribution not-italic">
                 — {testimonial.author}
+                {testimonial.role && (
+                  <>
+                    <br />
+                    <span className="text-sm">{testimonial.role}</span>
+                  </>
+                )}
                 {testimonial.company && (
-                  <>, <cite className="not-italic">{testimonial.company}</cite></>
+                  <>
+                    <br />
+                    <span className="text-sm">{testimonial.company}</span>
+                  </>
                 )}
               </footer>
             </blockquote>
