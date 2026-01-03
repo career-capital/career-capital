@@ -44,13 +44,13 @@ export default function FlipCard({ front, back }: FlipCardProps) {
               </h3>
               <RotateCw className="w-5 h-5 text-steel flex-shrink-0 transition-transform duration-300" aria-hidden="true" />
             </div>
-            <p className="text-slate leading-relaxed text-base mb-4">
+            <p className="text-slate leading-relaxed text-sm mb-4">
               {front.description}
             </p>
-            <p className="text-sm text-slate/70 mt-auto hidden sm:block">
+            <p className="text-xs text-slate/70 mt-auto hidden sm:block">
               Click for details
             </p>
-            <p className="text-sm text-slate/70 mt-auto sm:hidden">
+            <p className="text-xs text-slate/70 mt-auto sm:hidden">
               Tap for details
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function FlipCard({ front, back }: FlipCardProps) {
             </div>
             <ul className="space-y-2">
               {back.content.map((item, index) => (
-                <li key={index} className="flex gap-3 text-base text-slate leading-relaxed">
+                <li key={index} className="flex gap-3 text-sm text-slate leading-relaxed">
                   <span className="text-steel font-medium flex-shrink-0 mt-0.5">•</span>
                   <span>{item}</span>
                 </li>

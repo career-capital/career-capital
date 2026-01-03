@@ -25,24 +25,19 @@
   }
 
   body {
-    color: var(--cc-slate);
+    color: var(--cc-ink);
     background: var(--cc-soft-white);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
+    /* Enhanced readability for all users */
+    line-height: 1.7;
+    letter-spacing: 0.01em;
     text-align: left;
     hyphens: none;
   }
 
   /* Paragraph spacing for dyslexia-friendliness */
   p {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: var(--cc-slate);
     max-width: 65ch;
     orphans: 2;
     widows: 2;
@@ -52,103 +47,31 @@
     margin-top: 1.25em;
   }
 
-  /* Heading hierarchy with Space Grotesk */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-    color: var(--cc-navy);
-    letter-spacing: -0.01em;
-  }
-
-  /* Headings on navy backgrounds should be offwhite for contrast */
-  .bg-navy h1,
-  .bg-navy h2,
-  .bg-navy h3,
-  .bg-navy h4,
-  .bg-navy h5,
-  .bg-navy h6 {
-    color: var(--cc-soft-white);
-  }
-
+  /* Heading line-heights for readability */
   h1 {
-    font-size: 3rem;
-    font-weight: 700;
     line-height: 1.1;
+    letter-spacing: -0.015em;
   }
 
   h2 {
-    font-size: 2.25rem;
-    font-weight: 600;
     line-height: 1.2;
+    letter-spacing: -0.015em;
   }
 
-  h3 {
-    font-size: 1.875rem;
-    font-weight: 600;
-    line-height: 1.25;
+  h3, h4, h5, h6 {
+    line-height: 1.3;
+    letter-spacing: -0.015em;
   }
 
-  h4 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.35;
-  }
-
-  h5 {
-    font-size: 1.25rem;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-
-  h6 {
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1.4;
+  /* Small text improvements */
+  .text-sm, .text-xs {
+    line-height: 1.6;
+    letter-spacing: 0.02em;
   }
 
   /* Uppercase text needs more spacing */
   .uppercase {
     letter-spacing: 0.05em !important;
-  }
-
-  /* Logo typography */
-  .logo-text {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--cc-navy);
-  }
-
-  /* Secondary body text for cards and metadata */
-  .text-body-sm {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 0.875rem;
-    line-height: 1.55;
-    color: rgba(75, 85, 99, 0.85);
-  }
-
-  /* Testimonial quote styling */
-  .testimonial-quote {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-style: italic;
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: var(--cc-slate);
-  }
-
-  /* Testimonial attribution */
-  .testimonial-attribution {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    color: rgba(75, 85, 99, 0.7);
-  }
-
-  /* Navigation typography */
-  .nav-link {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-    font-weight: 500;
-    font-size: 1.0625rem;
   }
 
   /* Enhanced link styling for accessibility */
@@ -165,7 +88,7 @@
     text-decoration-thickness: 2px;
   }
 
-  /* Remove underlines from button-styled links and card links */
+  /* Remove underlines from button-styled links */
   a.btn-primary,
   a.btn-secondary,
   a.btn-secondary-transparent,
@@ -173,8 +96,7 @@
   a.btn-secondary-on-dark,
   a.btn-secondary-on-dark-transparent,
   a.btn-outline-light,
-  a.btn-outline-dark,
-  a.no-underline {
+  a.btn-outline-dark {
     text-decoration: none;
   }
 
@@ -185,8 +107,7 @@
   a.btn-secondary-on-dark:hover,
   a.btn-secondary-on-dark-transparent:hover,
   a.btn-outline-light:hover,
-  a.btn-outline-dark:hover,
-  a.no-underline:hover {
+  a.btn-outline-dark:hover {
     text-decoration: none;
   }
 
@@ -199,49 +120,42 @@
 }
 
 @layer components {
-  /* All buttons use Space Grotesk with proper typography */
-  [class*="btn-"] {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-  }
-
   /* Primary button on light backgrounds - navy fill, most prominent */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-navy text-trueWhite text-base hover:bg-steel transition-colors;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-navy text-trueWhite text-sm font-medium tracking-wide hover:bg-steel transition-colors;
   }
 
   /* Secondary button on light backgrounds - SOLID FILL (recommended for accessibility on busy backgrounds) */
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy bg-softWhite text-navy text-base hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy bg-softWhite text-navy text-sm font-medium tracking-wide hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
   }
 
   /* Secondary button TRANSPARENT variant - use only on clean, simple backgrounds */
   .btn-secondary-transparent {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy bg-transparent text-navy text-base hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy bg-transparent text-navy text-sm font-medium tracking-wide hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
   }
 
   /* Primary button on dark backgrounds - off-white fill, most prominent */
   .btn-primary-on-dark {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-softWhite text-navy text-base hover:bg-steel hover:text-trueWhite transition-colors;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-softWhite text-navy text-sm font-medium tracking-wide hover:bg-steel hover:text-trueWhite transition-colors;
   }
 
   /* Secondary button on dark backgrounds - SOLID FILL (recommended for accessibility) */
   .btn-secondary-on-dark {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-softWhite bg-navy text-trueWhite text-base hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-softWhite bg-navy text-trueWhite text-sm font-medium tracking-wide hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
   }
 
   /* Secondary button on dark backgrounds - TRANSPARENT variant */
   .btn-secondary-on-dark-transparent {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-softWhite bg-transparent text-trueWhite text-base hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-softWhite bg-transparent text-trueWhite text-sm font-medium tracking-wide hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
   }
 
   .btn-outline-light {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-trueWhite bg-trueWhite/10 backdrop-blur-sm text-trueWhite text-base hover:bg-trueWhite/20 hover:border-trueWhite transition-colors;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-trueWhite bg-trueWhite/10 backdrop-blur-sm text-trueWhite text-sm font-medium tracking-wide hover:bg-trueWhite/20 hover:border-trueWhite transition-colors;
   }
 
   .btn-outline-dark {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy bg-navy/5 text-navy text-base hover:bg-navy/10 transition-colors;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy bg-navy/5 text-navy text-sm font-medium tracking-wide hover:bg-navy/10 transition-colors;
   }
 
   /* ===== CARD COMPONENTS ===== */

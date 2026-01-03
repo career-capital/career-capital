@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { useFocusTrap } from '../hooks/useFocusTrap';
-import Logo from './Logo';
 
 type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
 
@@ -73,13 +72,13 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
         aria-label="Main navigation"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-28">
+          <div className="flex justify-between items-center h-20">
             <button
               onClick={() => handleNavClick('home')}
-              className="flex items-center h-16"
+              className="text-2xl font-light tracking-tight text-ink"
               aria-label="Career Capital home"
             >
-              <Logo variant="stacked" color="dark" className="h-full w-auto" />
+              Career Capital
             </button>
 
             <div className="hidden md:flex items-center space-x-8">
@@ -87,10 +86,10 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`nav-link transition-all relative pb-1 ${
+                  className={`text-sm font-medium tracking-wide transition-all relative pb-1 ${
                     currentPage === link.id
-                      ? 'text-navy after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-steel'
-                      : 'text-navy hover:text-steel after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-steel after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200'
+                      ? 'text-ink after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-steel'
+                      : 'text-slate hover:text-steel after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-steel after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200'
                   }`}
                   aria-current={currentPage === link.id ? 'page' : undefined}
                 >
@@ -124,10 +123,10 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`nav-link block w-full text-left text-xl py-4 px-5 transition-all duration-200 menu-item-${index + 1} ${
+                  className={`block w-full text-left text-lg font-medium py-4 px-5 transition-all duration-200 menu-item-${index + 1} ${
                     currentPage === link.id
-                      ? 'text-navy border-l-4 border-steel bg-steel/10'
-                      : 'text-navy border-l-4 border-transparent hover:bg-steel/20 hover:text-steel active:bg-steel/25'
+                      ? 'text-ink border-l-4 border-steel bg-steel/10'
+                      : 'text-slate border-l-4 border-transparent hover:bg-steel/20 hover:text-steel active:bg-steel/25'
                   }`}
                   aria-current={currentPage === link.id ? 'page' : undefined}
                 >
