@@ -18,7 +18,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     display_order: 1,
     is_active: true,
     featured: true,
-    tags: ['Executive Coaching', 'Career Capital', 'Social Wealth'],
+    tags: ['Career Capital', 'Social Wealth'],
     testimonial_type: 'character_witness',
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
@@ -109,16 +109,13 @@ export default function Home({ onNavigate }: HomeProps) {
             Strategic guidance for organizations building AI readiness while elevating the human side of work.
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite"></span>
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
               TEDx Chicago Main Stage Speaker
             </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite"></span>
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
               Fortune 100 Experience
             </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-trueWhite"></span>
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
               Social Impact Leader
             </span>
           </div>

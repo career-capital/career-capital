@@ -44,7 +44,7 @@ export default function FlipCard({ front, back }: FlipCardProps) {
               </h3>
               <RotateCw className="w-5 h-5 text-steel flex-shrink-0 transition-transform duration-300" aria-hidden="true" />
             </div>
-            <p className="text-slate leading-relaxed text-sm mb-4">
+            <p className="text-slate leading-relaxed text-base mb-4">
               {front.description}
             </p>
             <p className="text-xs text-slate/70 mt-auto hidden sm:block">

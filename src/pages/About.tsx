@@ -1,4 +1,4 @@
-import { Heart, Target, Compass, ExternalLink } from 'lucide-react';
+import { Heart, Target, Compass, ExternalLink, ArrowRight } from 'lucide-react';
 
 type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
 
@@ -149,6 +149,7 @@ export default function About({ onNavigate }: AboutProps) {
               className="btn-primary-on-dark"
             >
               Get in Touch
+              <ArrowRight className="ml-2 w-4 h-4" />
             </button>
           </div>
         </div>
