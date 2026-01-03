@@ -287,9 +287,9 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
               <div className="flex gap-6 relative items-start">
-                <div className="relative flex-shrink-0 mt-1">
-                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
-                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
+                <div className="relative flex-shrink-0">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
+                  <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">Relationships first, always</h3>
@@ -300,9 +300,9 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
               </div>
 
               <div className="flex gap-6 relative items-start">
-                <div className="relative flex-shrink-0 mt-1">
-                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
-                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
+                <div className="relative flex-shrink-0">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
+                  <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">Customized to your reality</h3>
@@ -313,9 +313,9 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
               </div>
 
               <div className="flex gap-6 relative items-start">
-                <div className="relative flex-shrink-0 mt-1">
-                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
-                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
+                <div className="relative flex-shrink-0">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
+                  <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">Fluency over dependency</h3>
@@ -326,7 +326,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
               </div>
 
               <div className="flex gap-6 relative items-start">
-                <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-1"></div>
+                <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-[0.4rem]"></div>
                 <div>
                   <h3 className="text-lg text-ink mb-2">Long-term partnership mindset</h3>
                   <p className="text-slate leading-relaxed">

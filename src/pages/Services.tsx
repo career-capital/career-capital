@@ -160,9 +160,9 @@ export default function Services({ onNavigate }: ServicesProps) {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
               <div className="flex gap-6 relative items-start">
-                <div className="relative flex-shrink-0 mt-1">
-                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
-                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
+                <div className="relative flex-shrink-0">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
+                  <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">Every encounter is an interview</h3>
@@ -173,9 +173,9 @@ export default function Services({ onNavigate }: ServicesProps) {
               </div>
 
               <div className="flex gap-6 relative items-start">
-                <div className="relative flex-shrink-0 mt-1">
-                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
-                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
+                <div className="relative flex-shrink-0">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
+                  <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">We come to the table prepared</h3>
@@ -186,9 +186,9 @@ export default function Services({ onNavigate }: ServicesProps) {
               </div>
 
               <div className="flex gap-6 relative items-start">
-                <div className="relative flex-shrink-0 mt-1">
-                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
-                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
+                <div className="relative flex-shrink-0">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
+                  <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">We make deposits with intention</h3>
@@ -199,7 +199,7 @@ export default function Services({ onNavigate }: ServicesProps) {
               </div>
 
               <div className="flex gap-6 relative items-start">
-                <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-1"></div>
+                <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-[0.4rem]"></div>
                 <div>
                   <h3 className="text-lg text-ink mb-2">The dividends will surprise you</h3>
                   <p className="text-slate leading-relaxed">
