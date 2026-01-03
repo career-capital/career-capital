@@ -269,7 +269,7 @@
   /* ===== FLIP CARD COMPONENTS ===== */
   .flip-card-container {
     perspective: 1000px;
-    height: 260px;
+    height: 280px;
   }
 
   @media (max-width: 640px) {
@@ -278,11 +278,23 @@
     }
   }
 
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .flip-card-container {
+      height: 320px;
+    }
+  }
+
   .speaking-flip-cards .flip-card-container {
-    height: 220px;
+    height: 240px;
   }
 
   @media (max-width: 640px) {
+    .speaking-flip-cards .flip-card-container {
+      height: 280px;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1023px) {
     .speaking-flip-cards .flip-card-container {
       height: 280px;
     }
@@ -326,12 +338,28 @@
     transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
     overflow: hidden;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
   }
 
   @media (max-width: 640px) {
     .flip-card-front,
     .flip-card-back {
       padding: 1.75rem;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .flip-card-front,
+    .flip-card-back {
+      padding: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .flip-card-front,
+    .flip-card-back {
+      padding: 2rem;
     }
   }
 

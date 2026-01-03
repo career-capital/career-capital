@@ -76,20 +76,20 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
         <picture className="absolute inset-0">
           <source
             media="(min-width: 1024px)"
-            srcSet="/sitehero_desktop.webp"
+            srcSet="/sitehero-desktop.webp"
             type="image/webp"
           />
           <source
             media="(min-width: 640px)"
-            srcSet="/sitehero_tablet.webp"
+            srcSet="/sitehero-tablet.webp"
             type="image/webp"
           />
           <source
-            srcSet="/sitehero_mobile.webp"
+            srcSet="/sitehero-mobile.webp"
             type="image/webp"
           />
           <img
-            src="/sitehero_fallback.jpg"
+            src="/sitehero-fallback.jpg"
             alt=""
             className="w-full h-full object-cover"
             loading="eager"
