@@ -162,9 +162,7 @@ export default function Services({ onNavigate }: ServicesProps) {
               <div className="flex gap-6 relative items-stretch">
                 <div className="relative flex-shrink-0 w-3">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 18px)', height: 'calc(100% - 0.8rem - 30px)' }}>
-                    <line x1="6" y1="0" x2="6" y2="100%" stroke="#cbd5e1" strokeWidth="3" strokeLinecap="round" />
-                  </svg>
+                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-slate-300"></div>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">Every encounter is an interview</h3>
@@ -177,9 +175,7 @@ export default function Services({ onNavigate }: ServicesProps) {
               <div className="flex gap-6 relative items-stretch">
                 <div className="relative flex-shrink-0 w-3">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 18px)', height: 'calc(100% - 0.8rem - 30px)' }}>
-                    <line x1="6" y1="0" x2="6" y2="100%" stroke="#cbd5e1" strokeWidth="3" strokeLinecap="round" />
-                  </svg>
+                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-slate-300"></div>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">We come to the table prepared</h3>
@@ -192,9 +188,7 @@ export default function Services({ onNavigate }: ServicesProps) {
               <div className="flex gap-6 relative items-stretch">
                 <div className="relative flex-shrink-0 w-3">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <svg className="absolute left-0 w-3 overflow-visible" style={{ top: 'calc(0.4rem + 18px)', height: 'calc(100% - 0.8rem - 30px)' }}>
-                    <line x1="6" y1="0" x2="6" y2="100%" stroke="#cbd5e1" strokeWidth="3" strokeLinecap="round" />
-                  </svg>
+                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-slate-300"></div>
                 </div>
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">We make deposits with intention</h3>
