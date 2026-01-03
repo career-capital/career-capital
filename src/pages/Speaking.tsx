@@ -154,7 +154,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
       <section aria-labelledby="speaking-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="speaking-cta-heading" className="text-3xl font-semibold mb-6">
-            Public speaking with purpose: TEDx Chicago
+            Public speaking with purpose: TEDxChicago
           </h2>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
@@ -338,7 +338,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
             <div className="w-full lg:w-[500px] flex-shrink-0">
               <div className="overflow-hidden shadow-xl aspect-[4/3]">
                 <img
-                  src="/dsc00446.jpg"
+                  src="/public-speaking.jpg"
                   alt="Nisaini Rexach presenting at podium"
                   className="w-full h-full object-cover object-[40%_center]"
                   loading="lazy"

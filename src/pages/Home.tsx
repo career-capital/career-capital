@@ -110,7 +110,7 @@ export default function Home({ onNavigate }: HomeProps) {
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
             <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              TEDx Chicago Main Stage Speaker
+              TEDxChicago Main Stage Speaker
             </span>
             <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
               Fortune 100 Experience
@@ -210,7 +210,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
               <h2 id="speaking-heading" className="text-3xl md:text-4xl font-semibold mb-6">
-                TEDx Chicago speaker
+                TEDxChicago speaker
               </h2>
               <p className="text-xl text-trueWhite/90 mb-4 leading-relaxed">
                 "How social wealth can transform your career"
@@ -245,7 +245,7 @@ export default function Home({ onNavigate }: HomeProps) {
               <div className="overflow-hidden shadow-2xl">
                 <img
                   src="/nisaini-tedxchicago-closeup.jpg"
-                  alt="Nisaini Rexach presenting at TEDx Chicago"
+                  alt="Nisaini Rexach presenting at TEDxChicago"
                   className="w-full h-auto"
                   loading="lazy"
                 />
