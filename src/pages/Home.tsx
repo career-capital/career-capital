@@ -126,21 +126,21 @@ export default function Home({ onNavigate }: HomeProps) {
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                onNavigate('services');
+                onNavigate('contact');
               }}
               className="btn-primary-on-dark"
             >
-              Explore Services
+              Let's Talk
               <ArrowRight className="ml-2 w-4 h-4" />
             </button>
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                onNavigate('contact');
+                onNavigate('services');
               }}
               className="btn-secondary-on-dark"
             >
-              Let's Talk
+              Explore Services
             </button>
           </div>
         </div>
