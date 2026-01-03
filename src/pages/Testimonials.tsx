@@ -323,7 +323,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
                     </blockquote>
                     <footer className="text-slate">
                       <p className="font-medium text-ink text-base">{testimonial.author}</p>
-                      <p className="text-sm">{testimonial.company}</p>
+                      <p className="text-base">{testimonial.company}</p>
                     </footer>
                   </div>
                 </article>

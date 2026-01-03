@@ -192,11 +192,11 @@ export default function Home({ onNavigate }: HomeProps) {
                   window.scrollTo(0, 0);
                   onNavigate('testimonials');
                 }}
-                className="inline-flex items-center text-navy hover:text-steel font-medium transition-colors group underline underline-offset-2"
+                className="inline-flex items-center text-base text-navy hover:text-steel font-medium transition-colors group underline underline-offset-2"
                 aria-label="Navigate to testimonials page to see all client reviews"
               >
                 View All Testimonials
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </button>
             </div>
           </>
