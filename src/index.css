@@ -40,7 +40,7 @@
   /* Paragraph spacing for dyslexia-friendliness */
   p {
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.6;
     color: var(--cc-slate);
     max-width: 65ch;
@@ -165,7 +165,7 @@
     text-decoration-thickness: 2px;
   }
 
-  /* Remove underlines from button-styled links */
+  /* Remove underlines from button-styled links and card links */
   a.btn-primary,
   a.btn-secondary,
   a.btn-secondary-transparent,
@@ -173,7 +173,8 @@
   a.btn-secondary-on-dark,
   a.btn-secondary-on-dark-transparent,
   a.btn-outline-light,
-  a.btn-outline-dark {
+  a.btn-outline-dark,
+  a.no-underline {
     text-decoration: none;
   }
 
@@ -184,7 +185,8 @@
   a.btn-secondary-on-dark:hover,
   a.btn-secondary-on-dark-transparent:hover,
   a.btn-outline-light:hover,
-  a.btn-outline-dark:hover {
+  a.btn-outline-dark:hover,
+  a.no-underline:hover {
     text-decoration: none;
   }
 

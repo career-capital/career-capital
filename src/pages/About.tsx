@@ -92,7 +92,7 @@ export default function About({ onNavigate }: AboutProps) {
 
       <section aria-labelledby="philosophy-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="philosophy-heading" className="text-3xl font-light text-ink mb-12">Core philosophy</h2>
+          <h2 id="philosophy-heading" className="text-3xl font-semibold text-ink mb-12">Core Philosophy</h2>
           <div className="grid md:grid-cols-3 gap-12">
             <div className="space-y-4">
               <Heart className="w-12 h-12 text-navy" strokeWidth={1.5} />

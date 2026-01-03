@@ -144,7 +144,7 @@ export default function Services({ onNavigate }: ServicesProps) {
 
       <section aria-labelledby="core-services-heading" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="core-services-heading" className="text-3xl font-light text-ink mb-12">Core services</h2>
+          <h2 id="core-services-heading" className="text-3xl font-semibold text-ink mb-12">Core Services</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {coreServices.map((service, index) => (
               <FlipCard key={index} front={service.front} back={service.back} />
@@ -155,53 +155,53 @@ export default function Services({ onNavigate }: ServicesProps) {
 
       <section aria-labelledby="engagements-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="engagements-heading" className="text-3xl font-light text-ink mb-4">How engagements work</h2>
+          <h2 id="engagements-heading" className="text-3xl font-semibold text-ink mb-4">How Engagements Work</h2>
           <p className="text-xl text-slate mb-12">A clear, collaborative process designed around you.</p>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
-              <div className="flex gap-6 relative">
-                <div className="relative flex-shrink-0">
-                  <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
-                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+              <div className="flex gap-6 relative items-start">
+                <div className="relative flex-shrink-0 mt-1">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
+                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="font-medium text-ink mb-2">Every encounter is an interview</h3>
+                  <h3 className="text-lg text-ink mb-2">Every encounter is an interview</h3>
                   <p className="text-slate leading-relaxed">
                     We start by understanding your organization's context, challenges, and the future you're building toward.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-6 relative">
-                <div className="relative flex-shrink-0">
-                  <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
-                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+              <div className="flex gap-6 relative items-start">
+                <div className="relative flex-shrink-0 mt-1">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
+                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="font-medium text-ink mb-2">We come to the table prepared</h3>
+                  <h3 className="text-lg text-ink mb-2">We come to the table prepared</h3>
                   <p className="text-slate leading-relaxed">
                     Every engagement is customized to your specific needs—because one-size-fits-all doesn't build real capability.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-6 relative">
-                <div className="relative flex-shrink-0">
-                  <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
-                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+              <div className="flex gap-6 relative items-start">
+                <div className="relative flex-shrink-0 mt-1">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
+                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="font-medium text-ink mb-2">We make deposits with intention</h3>
+                  <h3 className="text-lg text-ink mb-2">We make deposits with intention</h3>
                   <p className="text-slate leading-relaxed">
                     We focus on actionable steps and real capability building—not just strategy documents that sit on a shelf.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-6 relative">
-                <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-2"></div>
+              <div className="flex gap-6 relative items-start">
+                <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-1"></div>
                 <div>
-                  <h3 className="font-medium text-ink mb-2">The dividends will surprise you</h3>
+                  <h3 className="text-lg text-ink mb-2">The dividends will surprise you</h3>
                   <p className="text-slate leading-relaxed">
                     Ongoing guidance ensures momentum and addresses challenges as they emerge—relationships that compound over time.
                   </p>
@@ -225,7 +225,7 @@ export default function Services({ onNavigate }: ServicesProps) {
       <section aria-labelledby="addons-heading" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 id="addons-heading" className="text-3xl font-light text-ink mb-4">Add-on services</h2>
+            <h2 id="addons-heading" className="text-3xl font-semibold text-ink mb-4">Add-On Services</h2>
             <p className="text-lg text-slate leading-relaxed max-w-3xl">Complement your core engagement with additional support options designed for sustained momentum and deeper learning.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">

@@ -108,7 +108,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
 
       <section aria-labelledby="formats-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="formats-heading" className="text-3xl font-light text-ink mb-12">Engagement formats</h2>
+          <h2 id="formats-heading" className="text-3xl font-semibold text-ink mb-12">Engagement Formats</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="space-y-4">
               <Mic className="w-12 h-12 text-navy" strokeWidth={1.5} />
@@ -142,7 +142,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
 
       <section aria-labelledby="topics-heading" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="topics-heading" className="text-3xl font-light text-ink mb-12">Speaking topics</h2>
+          <h2 id="topics-heading" className="text-3xl font-semibold text-ink mb-12">Speaking Topics</h2>
           <div className="grid md:grid-cols-2 gap-8 speaking-flip-cards">
             {topics.map((topic, index) => (
               <FlipCard key={index} front={topic.front} back={topic.back} />
@@ -208,114 +208,127 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
         </div>
       </section>
 
-      <section aria-labelledby="publications-heading" className="py-16">
+      <section aria-labelledby="publications-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="publications-heading" className="text-3xl font-light text-ink mb-8 text-center">
-            Featured in
+          <h2 id="publications-heading" className="text-3xl font-semibold text-ink mb-4">
+            Featured In
           </h2>
-          <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
-            <span className="text-xl text-slate font-medium">Chicago Sun-Times</span>
-            <span className="text-slate">•</span>
-            <span className="text-xl text-slate font-medium">Crain's Chicago Business</span>
-            <span className="text-slate">•</span>
-            <span className="text-xl text-slate font-medium">Chi Tech for Good</span>
-          </div>
-          <div className="max-w-3xl mx-auto space-y-4">
-            <a
-              href="https://chicago.suntimes.com/other-views/2024/12/24/philanthropy-more-than-writing-check-teach-for-america-access-kids-young-people-nisaini-rexach"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-start gap-3 p-4 bg-surface hover:bg-border transition-colors group"
-            >
-              <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 mt-1 group-hover:text-steel transition-colors" />
-              <div>
-                <p className="font-medium text-ink group-hover:text-navy transition-colors">
+          <p className="text-lg text-slate mb-12 max-w-3xl">
+            Insights on leadership, social impact, and building meaningful connections.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <article className="card-info group">
+              <a
+                href="https://chicago.suntimes.com/other-views/2024/12/24/philanthropy-more-than-writing-check-teach-for-america-access-kids-young-people-nisaini-rexach"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" />
+                  <span className="text-sm font-medium text-navy uppercase tracking-wide">Chicago Sun-Times</span>
+                </div>
+                <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
                   Philanthropy is about more than writing a check
+                </h3>
+                <p className="text-sm text-slate">
+                  Exploring the deeper meaning of giving back through relationship-building and community engagement.
                 </p>
-                <p className="text-sm text-slate">Chicago Sun-Times</p>
-              </div>
-            </a>
-            <a
-              href="https://www.chicagobusiness.com/people-on-the-move/nisaini-rexach"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-start gap-3 p-4 bg-surface hover:bg-border transition-colors group"
-            >
-              <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 mt-1 group-hover:text-steel transition-colors" />
-              <div>
-                <p className="font-medium text-ink group-hover:text-navy transition-colors">
+              </a>
+            </article>
+
+            <article className="card-info group">
+              <a
+                href="https://www.chicagobusiness.com/people-on-the-move/nisaini-rexach"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" />
+                  <span className="text-sm font-medium text-navy uppercase tracking-wide">Crain's Chicago Business</span>
+                </div>
+                <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
                   Nisaini Rexach at Teach For America
+                </h3>
+                <p className="text-sm text-slate">
+                  Profile highlighting leadership in education and commitment to expanding opportunities for Chicago youth.
                 </p>
-                <p className="text-sm text-slate">Crain's Chicago Business</p>
-              </div>
-            </a>
-            <a
-              href="https://chitechforgood.com/f/nisaini-rexach-pioneering-a-new-era-of-social-impact-in-chicago"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-start gap-3 p-4 bg-surface hover:bg-border transition-colors group"
-            >
-              <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 mt-1 group-hover:text-steel transition-colors" />
-              <div>
-                <p className="font-medium text-ink group-hover:text-navy transition-colors">
+              </a>
+            </article>
+
+            <article className="card-info group">
+              <a
+                href="https://chitechforgood.com/f/nisaini-rexach-pioneering-a-new-era-of-social-impact-in-chicago"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" />
+                  <span className="text-sm font-medium text-navy uppercase tracking-wide">Chi Tech for Good</span>
+                </div>
+                <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
                   Nisaini Rexach: Pioneering a New Era of Social Impact in Chicago
+                </h3>
+                <p className="text-sm text-slate">
+                  Feature on innovative approaches to social change and technology's role in community transformation.
                 </p>
-                <p className="text-sm text-slate">Chi Tech for Good</p>
-              </div>
-            </a>
+              </a>
+            </article>
           </div>
         </div>
       </section>
 
       <section aria-labelledby="differentiators-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="differentiators-heading" className="text-3xl font-light text-ink mb-4">What makes these engagements different</h2>
+          <h2 id="differentiators-heading" className="text-3xl font-semibold text-ink mb-4">What Makes These Engagements Different</h2>
           <p className="text-xl text-slate mb-12">Real partnership built on trust, customization, and lasting capability.</p>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
-              <div className="flex gap-6 relative">
-                <div className="relative flex-shrink-0">
-                  <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
-                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+              <div className="flex gap-6 relative items-start">
+                <div className="relative flex-shrink-0 mt-1">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
+                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="font-medium text-ink mb-2">Relationships first, always</h3>
+                  <h3 className="text-lg text-ink mb-2">Relationships first, always</h3>
                   <p className="text-slate leading-relaxed">
                     This isn't transactional consulting. We build trust and genuine connection alongside technical capability—because lasting transformation happens through people, not just processes.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-6 relative">
-                <div className="relative flex-shrink-0">
-                  <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
-                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+              <div className="flex gap-6 relative items-start">
+                <div className="relative flex-shrink-0 mt-1">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
+                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="font-medium text-ink mb-2">Customized to your reality</h3>
+                  <h3 className="text-lg text-ink mb-2">Customized to your reality</h3>
                   <p className="text-slate leading-relaxed">
                     No templates or cookie-cutter frameworks. Every engagement is shaped around your organization's unique context, culture, and challenges—because what works for one team rarely fits another.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-6 relative">
-                <div className="relative flex-shrink-0">
-                  <div className="w-3 h-3 rounded-full bg-navy mt-2 relative z-10"></div>
-                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+              <div className="flex gap-6 relative items-start">
+                <div className="relative flex-shrink-0 mt-1">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10"></div>
+                  <div className="absolute left-[5px] top-[1.5rem] bottom-[-0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="font-medium text-ink mb-2">Fluency over dependency</h3>
+                  <h3 className="text-lg text-ink mb-2">Fluency over dependency</h3>
                   <p className="text-slate leading-relaxed">
                     The goal is to build your team's lasting capability, not create reliance on outside expertise. We work together to develop the confidence and skills that compound long after our engagement ends.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-6 relative">
-                <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-2"></div>
+              <div className="flex gap-6 relative items-start">
+                <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-1"></div>
                 <div>
-                  <h3 className="font-medium text-ink mb-2">Long-term partnership mindset</h3>
+                  <h3 className="text-lg text-ink mb-2">Long-term partnership mindset</h3>
                   <p className="text-slate leading-relaxed">
                     Quick wins matter, but sustained success matters more. This work is about making strategic deposits that compound over time—building relationships and capabilities that create lasting value.
                   </p>
