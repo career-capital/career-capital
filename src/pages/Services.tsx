@@ -159,7 +159,7 @@ export default function Services({ onNavigate }: ServicesProps) {
           <p className="text-xl text-slate mb-12">A clear, collaborative process designed around you.</p>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
-              <div className="flex gap-6 relative items-start">
+              <div className="flex gap-6 relative items-stretch">
                 <div className="relative flex-shrink-0">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
                   <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
@@ -172,7 +172,7 @@ export default function Services({ onNavigate }: ServicesProps) {
                 </div>
               </div>
 
-              <div className="flex gap-6 relative items-start">
+              <div className="flex gap-6 relative items-stretch">
                 <div className="relative flex-shrink-0">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
                   <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
@@ -185,7 +185,7 @@ export default function Services({ onNavigate }: ServicesProps) {
                 </div>
               </div>
 
-              <div className="flex gap-6 relative items-start">
+              <div className="flex gap-6 relative items-stretch">
                 <div className="relative flex-shrink-0">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
                   <div className="absolute left-[5px] top-[1.9rem] bottom-[-0.5rem] w-0.5 bg-steel"></div>
