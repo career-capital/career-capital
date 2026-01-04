@@ -32,26 +32,24 @@ export default function Contact({ onNavigate }: ContactProps) {
       </section>
 
       <section aria-label="Contact information" className="md:py-16">
-        <div className="bg-navy md:bg-transparent py-16 md:py-0 md:hidden">
+        <div className="bg-surface md:bg-transparent py-16 md:py-0 md:hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-semibold text-trueWhite mb-6">Ready to start a conversation?</h2>
-            <div className="bg-surface border border-border p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <Mail className="w-6 h-6 text-navy flex-shrink-0" />
-                <h3 className="text-xl text-ink">Send us an email</h3>
-              </div>
-              <p className="text-slate leading-relaxed mb-6">
-                Whether you're exploring possibilities or ready to move forward, reach out directly and we'll respond within 1-2 business days.
-              </p>
-              <a
-                href="mailto:info@careercapital.io"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-navy text-trueWhite font-medium hover:bg-steel hover:text-trueWhite transition-colors focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 group no-underline w-full sm:w-auto justify-center"
-                aria-label="Send email to info@careercapital.io (opens in email client)"
-              >
-                <span>info@careercapital.io</span>
-                <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
-              </a>
+            <h2 className="text-2xl font-semibold text-ink mb-6">Ready to start a conversation?</h2>
+            <div className="flex items-center gap-3 mb-6">
+              <Mail className="w-6 h-6 text-navy flex-shrink-0" />
+              <h3 className="text-xl text-ink">Send us an email</h3>
             </div>
+            <p className="text-slate leading-relaxed mb-6">
+              Whether you're exploring possibilities or ready to move forward, reach out directly and we'll respond within 1-2 business days.
+            </p>
+            <a
+              href="mailto:info@careercapital.io"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-navy text-trueWhite font-medium hover:bg-steel hover:text-trueWhite transition-colors focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 group no-underline w-full sm:w-auto justify-center"
+              aria-label="Send email to info@careercapital.io (opens in email client)"
+            >
+              <span>info@careercapital.io</span>
+              <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
+            </a>
           </div>
         </div>
 
