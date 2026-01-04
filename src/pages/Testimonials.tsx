@@ -297,7 +297,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
                 <article key={testimonial.id} className="bg-surface p-8 relative border border-border">
                   <Quote className="absolute top-6 right-6 w-10 h-10 text-navy/10" strokeWidth={1.5} aria-hidden="true" />
                   <div className="relative">
-                    <div className="flex flex-wrap items-center gap-2 mb-4">
+                    <div className="flex flex-wrap items-center gap-2 mb-8">
                       <span className={`text-xs px-2 py-1 font-medium ${
                         testimonial.testimonial_type === 'character_witness'
                           ? 'bg-slate/20 text-slate'
