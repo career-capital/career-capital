@@ -210,7 +210,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
         </div>
       </section>
 
-      <section aria-labelledby="filters-heading" className="pt-20 pb-12">
+      <section aria-labelledby="filters-heading" className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-l-2 border-navy/20 pl-6 py-4 mb-10">
           <h2 id="filters-heading" className="text-base font-medium text-slate mb-6 uppercase tracking-wide">Filter Testimonials</h2>
