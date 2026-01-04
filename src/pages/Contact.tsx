@@ -49,31 +49,7 @@ export default function Contact({ onNavigate }: ContactProps) {
         throw new Error(`Failed to save your submission: ${dbError.message}`);
       }
 
-      console.log('Database insert successful, sending email notification...');
-
-      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/contact-form-handler`;
-
-      try {
-        const emailResponse = await fetch(apiUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-          },
-          body: JSON.stringify(formData),
-        });
-
-        if (emailResponse.ok) {
-          const result = await emailResponse.json();
-          console.log('Email notification sent:', result);
-        } else {
-          console.error('Email notification failed with status:', emailResponse.status);
-        }
-      } catch (emailError) {
-        console.error('Email notification failed:', emailError);
-      }
-
-      console.log('Form submission completed successfully');
+      console.log('Form submission completed successfully - Zapier webhook will be triggered automatically');
       setSubmitted(true);
       setFormData({
         name: '',
