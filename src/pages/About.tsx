@@ -13,28 +13,14 @@ export default function About({ onNavigate }: AboutProps) {
         aria-labelledby="about-heading"
         className="relative overflow-hidden bg-navy"
       >
-        <picture className="absolute inset-0">
-          <source
-            media="(min-width: 1024px)"
-            srcSet="/sitehero_desktop.webp"
-            type="image/webp"
-          />
-          <source
-            media="(min-width: 640px)"
-            srcSet="/sitehero_tablet.webp"
-            type="image/webp"
-          />
-          <source
-            srcSet="/sitehero_mobile.webp"
-            type="image/webp"
-          />
+        <div className="absolute inset-0">
           <img
-            src="/sitehero_fallback.jpg"
+            src="/banner_about_desktop.webp"
             alt=""
             className="w-full h-full object-cover"
             loading="eager"
           />
-        </picture>
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
           <h1 id="about-heading" className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
             About
