@@ -27,7 +27,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     is_active: true,
     featured: true,
     tags: ['Executive Coaching', 'Career Capital', 'Social Wealth'],
-    testimonial_type: 'character_witness',
+    testimonial_type: 'professional_endorsement',
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   },
@@ -40,7 +40,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     is_active: true,
     featured: true,
     tags: ['Public Speaking', 'Leadership Development', 'Relationship Management'],
-    testimonial_type: 'character_witness',
+    testimonial_type: 'professional_endorsement',
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   },
@@ -53,7 +53,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     is_active: true,
     featured: true,
     tags: ['Public Speaking', 'Social Wealth', 'Leadership Development'],
-    testimonial_type: 'character_witness',
+    testimonial_type: 'professional_endorsement',
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   },
@@ -63,7 +63,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedEngagementTypes, setSelectedEngagementTypes] = useState<string[]>([]);
-  const [selectedType, setSelectedType] = useState<'all' | 'client' | 'character_witness'>('all');
+  const [selectedType, setSelectedType] = useState<'all' | 'client' | 'professional_endorsement'>('all');
   const [availableEngagementTypes, setAvailableEngagementTypes] = useState<string[]>([]);
   const [visibleCount, setVisibleCount] = useState(TESTIMONIALS_PER_PAGE);
 
@@ -134,7 +134,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
     setVisibleCount(TESTIMONIALS_PER_PAGE);
   };
 
-  const handleTypeChange = (type: 'all' | 'client' | 'character_witness') => {
+  const handleTypeChange = (type: 'all' | 'client' | 'professional_endorsement') => {
     setSelectedType(type);
     setVisibleCount(TESTIMONIALS_PER_PAGE);
   };
@@ -217,13 +217,13 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
                   Client Testimonials
                 </button>
                 <button
-                  onClick={() => handleTypeChange('character_witness')}
+                  onClick={() => handleTypeChange('professional_endorsement')}
                   className={`px-4 py-2 text-sm border transition-colors ${
-                    selectedType === 'character_witness'
+                    selectedType === 'professional_endorsement'
                       ? 'bg-navy text-trueWhite border-navy'
                       : 'bg-softWhite text-ink border-border hover:bg-steel hover:text-trueWhite hover:border-steel'
                   }`}
-                  aria-pressed={selectedType === 'character_witness'}
+                  aria-pressed={selectedType === 'professional_endorsement'}
                 >
                   Professional Endorsements
                 </button>
@@ -274,11 +274,11 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
                   <div className="relative">
                     <div className="flex flex-wrap items-center gap-2 mb-8">
                       <span className={`text-xs px-2 py-1 font-medium ${
-                        testimonial.testimonial_type === 'character_witness'
+                        testimonial.testimonial_type === 'professional_endorsement'
                           ? 'bg-slate/20 text-slate'
                           : 'bg-navy/10 text-navy'
                       }`}>
-                        {testimonial.testimonial_type === 'character_witness' ? 'Professional Endorsement' : 'Client'}
+                        {testimonial.testimonial_type === 'professional_endorsement' ? 'Professional Endorsement' : 'Client'}
                       </span>
                       {testimonial.tags && testimonial.tags.filter(tag => ENGAGEMENT_TYPES.includes(tag)).length > 0 && (
                         <>

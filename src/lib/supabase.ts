@@ -22,7 +22,7 @@ export interface Testimonial {
   is_active: boolean;
   featured: boolean;
   tags: string[];
-  testimonial_type: 'client' | 'character_witness';
+  testimonial_type: 'client' | 'professional_endorsement';
   created_at: string;
   updated_at: string;
 }

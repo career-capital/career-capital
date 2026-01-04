@@ -48,7 +48,7 @@ export default function Admin() {
     is_active: true,
     featured: false,
     tags: [] as string[],
-    testimonial_type: 'client' as 'client' | 'character_witness',
+    testimonial_type: 'client' as 'client' | 'professional_endorsement',
   });
 
   useEffect(() => {
@@ -533,7 +533,7 @@ export default function Admin() {
                   className="w-full px-4 py-3 border border-border focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-colors"
                 >
                   <option value="client">Client Testimonial</option>
-                  <option value="character_witness">Professional Endorsement</option>
+                  <option value="professional_endorsement">Professional Endorsement</option>
                 </select>
               </div>
 
@@ -715,11 +715,11 @@ export default function Admin() {
                 <div className="flex-1">
                   <div className="flex items-start gap-2 mb-2">
                     <span className={`text-xs px-2 py-1 ${
-                      testimonial.testimonial_type === 'character_witness'
+                      testimonial.testimonial_type === 'professional_endorsement'
                         ? 'bg-slate/20 text-slate'
                         : 'bg-navy/10 text-navy'
                     }`}>
-                      {testimonial.testimonial_type === 'character_witness' ? 'Professional Endorsement' : 'Client'}
+                      {testimonial.testimonial_type === 'professional_endorsement' ? 'Professional Endorsement' : 'Client'}
                     </span>
                     {testimonial.featured && (
                       <span className="text-xs px-2 py-1 bg-navy text-trueWhite font-medium">
