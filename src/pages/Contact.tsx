@@ -31,7 +31,7 @@ export default function Contact({ onNavigate }: ContactProps) {
     console.log('Form submission started', formData);
 
     try {
-      const { data, error: dbError } = await supabase
+      const { error: dbError } = await supabase
         .from('contact_submissions')
         .insert([{
           name: formData.name,
@@ -40,10 +40,9 @@ export default function Contact({ onNavigate }: ContactProps) {
           inquiry_type: formData.inquiryType,
           message: formData.message,
           status: 'new',
-        }])
-        .select();
+        }]);
 
-      console.log('Database response:', { data, error: dbError });
+      console.log('Database response:', { error: dbError });
 
       if (dbError) {
         console.error('Database error:', dbError);
