@@ -123,7 +123,7 @@ export default function Services({ onNavigate }: ServicesProps) {
             Services
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            <strong>Your brand is in the room even when you&apos;re not.</strong> Let&apos;s build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
+            Your brand is in the room even when you&apos;re not. Let&apos;s build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
           </p>
         </div>
       </section>
