@@ -180,18 +180,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
             Testimonials
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Real stories, real transformation.
-          </p>
-        </div>
-      </section>
-
-      <section aria-label="Introduction" className="py-12 border-b border-border">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg text-slate leading-relaxed mb-6">
-            These testimonials come from clients across a range of engagements—from keynote speaking and workshop facilitation to executive coaching and strategic advisory work. Some reflect the impact of specific programs, while others speak to long-term professional relationships.
-          </p>
-          <p className="text-lg text-slate leading-relaxed">
-            You'll also find endorsements from colleagues and professional peers who have observed my work firsthand. Together, they offer a comprehensive view of how I show up, what I deliver, and the value I bring to organizations and individuals alike.
+            Real stories, real transformation. Client testimonials and professional endorsements spanning keynote speaking, workshops, coaching, and strategic partnerships—proof of impact from those who've experienced it firsthand.
           </p>
         </div>
       </section>
