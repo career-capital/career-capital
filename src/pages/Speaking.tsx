@@ -159,7 +159,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
                   window.scrollTo(0, 0);
                   onNavigate('contact');
                 }}
-                className="btn-primary-on-dark"
+                className="btn-primary-on-dark w-full sm:w-auto"
               >
                 Inquire About Availability
                 <ArrowRight className="ml-2 w-4 h-4" />
@@ -337,7 +337,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
               window.scrollTo(0, 0);
               onNavigate('contact');
             }}
-            className="btn-primary-on-dark inline-flex items-center"
+            className="btn-primary-on-dark w-full sm:w-auto"
           >
             Get in Touch
             <ArrowRight className="ml-2 w-4 h-4" />

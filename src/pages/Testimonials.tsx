@@ -358,7 +358,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
                 window.scrollTo(0, 0);
                 onNavigate('contact');
               }}
-              className="btn-primary-on-dark"
+              className="btn-primary-on-dark w-full sm:w-auto"
             >
               Get in Touch
             </button>

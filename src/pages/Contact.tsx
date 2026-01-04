@@ -31,78 +31,103 @@ export default function Contact({ onNavigate }: ContactProps) {
         </div>
       </section>
 
-      <section aria-label="Contact information" className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-2xl font-semibold text-ink mb-6">Ready to start a conversation?</h2>
-              <div className="bg-surface border border-border p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <Mail className="w-6 h-6 text-navy flex-shrink-0" />
-                  <h3 className="text-xl text-ink">Send us an email</h3>
-                </div>
-                <p className="text-slate leading-relaxed mb-6">
-                  Whether you're exploring possibilities or ready to move forward, reach out directly and we'll respond within 1-2 business days.
-                </p>
-                <a
-                  href="mailto:info@careercapital.io"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-navy text-trueWhite font-medium hover:bg-steel hover:text-trueWhite transition-colors focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 group no-underline"
-                  aria-label="Send email to info@careercapital.io (opens in email client)"
-                >
-                  <span>info@careercapital.io</span>
-                  <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
-                </a>
+      <section aria-label="Contact information" className="md:py-16">
+        <div className="bg-navy md:bg-transparent py-16 md:py-0 md:hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-semibold text-trueWhite mb-6">Ready to start a conversation?</h2>
+            <div className="bg-surface border border-border p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <Mail className="w-6 h-6 text-navy flex-shrink-0" />
+                <h3 className="text-xl text-ink">Send us an email</h3>
               </div>
+              <p className="text-slate leading-relaxed mb-6">
+                Whether you're exploring possibilities or ready to move forward, reach out directly and we'll respond within 1-2 business days.
+              </p>
+              <a
+                href="mailto:info@careercapital.io"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-navy text-trueWhite font-medium hover:bg-steel hover:text-trueWhite transition-colors focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 group no-underline w-full sm:w-auto justify-center"
+                aria-label="Send email to info@careercapital.io (opens in email client)"
+              >
+                <span>info@careercapital.io</span>
+                <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
+              </a>
             </div>
+          </div>
+        </div>
 
-            <div>
-              <h2 className="text-2xl font-semibold text-ink mb-8">What to expect</h2>
-              <div className="space-y-6">
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <Mail className="w-5 h-5 text-navy" />
+        <div className="py-16 md:py-0">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="md:grid md:grid-cols-2 md:gap-16">
+              <div className="hidden md:block">
+                <h2 className="text-2xl font-semibold text-ink mb-6">Ready to start a conversation?</h2>
+                <div className="bg-surface border border-border p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <Mail className="w-6 h-6 text-navy flex-shrink-0" />
+                    <h3 className="text-xl text-ink">Send us an email</h3>
                   </div>
-                  <div>
-                    <h3 className="text-lg text-ink mb-2">Response Time</h3>
-                    <p className="text-slate leading-relaxed">
-                      We respond to all inquiries within 1-2 business days.
-                    </p>
-                  </div>
+                  <p className="text-slate leading-relaxed mb-6">
+                    Whether you're exploring possibilities or ready to move forward, reach out directly and we'll respond within 1-2 business days.
+                  </p>
+                  <a
+                    href="mailto:info@careercapital.io"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-navy text-trueWhite font-medium hover:bg-steel hover:text-trueWhite transition-colors focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 group no-underline"
+                    aria-label="Send email to info@careercapital.io (opens in email client)"
+                  >
+                    <span>info@careercapital.io</span>
+                    <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
+                  </a>
                 </div>
+              </div>
 
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <MessageSquare className="w-5 h-5 text-navy" />
+              <div>
+                <h2 className="text-2xl font-semibold text-ink mb-8">What to expect</h2>
+                <div className="space-y-6">
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <Mail className="w-5 h-5 text-navy" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg text-ink mb-2">Response Time</h3>
+                      <p className="text-slate leading-relaxed">
+                        We respond to all inquiries within 1-2 business days.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg text-ink mb-2">Discovery Conversation</h3>
-                    <p className="text-slate leading-relaxed">
-                      We'll schedule a call to discuss your needs, challenges, and goals in detail.
-                    </p>
-                  </div>
-                </div>
 
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <Calendar className="w-5 h-5 text-navy" />
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <MessageSquare className="w-5 h-5 text-navy" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg text-ink mb-2">Discovery Conversation</h3>
+                      <p className="text-slate leading-relaxed">
+                        We'll schedule a call to discuss your needs, challenges, and goals in detail.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg text-ink mb-2">Tailored Proposal</h3>
-                    <p className="text-slate leading-relaxed">
-                      We'll create a customized approach based on your organization's context.
-                    </p>
-                  </div>
-                </div>
 
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <Rocket className="w-5 h-5 text-navy" />
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <Calendar className="w-5 h-5 text-navy" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg text-ink mb-2">Tailored Proposal</h3>
+                      <p className="text-slate leading-relaxed">
+                        We'll create a customized approach based on your organization's context.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg text-ink mb-2">Project Launch</h3>
-                    <p className="text-slate leading-relaxed">
-                      It's time to lock in the scope, align on expectations, and get to work.
-                    </p>
+
+                  <div className="flex gap-4 items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <Rocket className="w-5 h-5 text-navy" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg text-ink mb-2">Project Launch</h3>
+                      <p className="text-slate leading-relaxed">
+                        It's time to lock in the scope, align on expectations, and get to work.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -125,7 +150,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                 window.scrollTo(0, 0);
                 onNavigate('services');
               }}
-              className="btn-primary-on-dark"
+              className="btn-primary-on-dark w-full sm:w-auto"
             >
               View Services
               <ArrowRight className="ml-2 w-4 h-4" />

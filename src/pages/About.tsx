@@ -132,7 +132,7 @@ export default function About({ onNavigate }: AboutProps) {
                 window.scrollTo(0, 0);
                 onNavigate('contact');
               }}
-              className="btn-primary-on-dark"
+              className="btn-primary-on-dark w-full sm:w-auto"
             >
               Get in Touch
               <ArrowRight className="ml-2 w-4 h-4" />

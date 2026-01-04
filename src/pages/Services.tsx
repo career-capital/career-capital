@@ -236,7 +236,7 @@ export default function Services({ onNavigate }: ServicesProps) {
                 window.scrollTo(0, 0);
                 onNavigate('contact');
               }}
-              className="btn-primary-on-dark"
+              className="btn-primary-on-dark w-full sm:w-auto"
             >
               Start a Conversation
               <ArrowRight className="ml-2 w-4 h-4" />
