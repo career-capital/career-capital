@@ -269,39 +269,40 @@
   /* ===== FLIP CARD COMPONENTS ===== */
   .flip-card-container {
     perspective: 1000px;
-    height: 280px;
+    min-height: 280px;
   }
 
   @media (max-width: 640px) {
     .flip-card-container {
-      height: 340px;
+      min-height: auto;
     }
   }
 
   @media (min-width: 641px) and (max-width: 1023px) {
     .flip-card-container {
-      height: 320px;
+      min-height: 300px;
     }
   }
 
   .speaking-flip-cards .flip-card-container {
-    height: 240px;
+    min-height: 240px;
   }
 
   @media (max-width: 640px) {
     .speaking-flip-cards .flip-card-container {
-      height: 320px;
+      min-height: auto;
     }
   }
 
   @media (min-width: 641px) and (max-width: 1023px) {
     .speaking-flip-cards .flip-card-container {
-      height: 280px;
+      min-height: 260px;
     }
   }
 
   .flip-card {
-    @apply relative w-full h-full cursor-pointer;
+    @apply relative w-full cursor-pointer;
+    min-height: 100%;
     transform-style: preserve-3d;
   }
 
@@ -310,7 +311,8 @@
   }
 
   .flip-card-inner {
-    @apply relative w-full h-full;
+    @apply relative w-full;
+    min-height: 100%;
     transition: transform 0.6s ease-in-out;
     transform-style: preserve-3d;
   }
@@ -331,23 +333,21 @@
 
   .flip-card-front,
   .flip-card-back {
-    @apply absolute w-full h-full bg-trueWhite border-2 border-border rounded-lg;
+    @apply w-full bg-trueWhite border-2 border-border rounded-lg;
     padding: 1.5rem;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
-    overflow-y: auto;
-    overflow-x: hidden;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
-    -webkit-overflow-scrolling: touch;
+    min-height: 280px;
   }
 
   @media (max-width: 640px) {
     .flip-card-front,
     .flip-card-back {
-      padding: 1.5rem;
+      min-height: auto;
     }
   }
 
@@ -355,6 +355,7 @@
     .flip-card-front,
     .flip-card-back {
       padding: 2rem;
+      min-height: 300px;
     }
   }
 
@@ -362,6 +363,7 @@
     .flip-card-front,
     .flip-card-back {
       padding: 2rem;
+      min-height: 280px;
     }
   }
 
@@ -375,28 +377,13 @@
 
   .flip-card-back {
     transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
-  /* Custom scrollbar for flip cards */
-  .flip-card-front::-webkit-scrollbar,
-  .flip-card-back::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .flip-card-front::-webkit-scrollbar-track,
-  .flip-card-back::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .flip-card-front::-webkit-scrollbar-thumb,
-  .flip-card-back::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 3px;
-  }
-
-  .flip-card-front::-webkit-scrollbar-thumb:hover,
-  .flip-card-back::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+  .flip-card-front {
+    position: relative;
   }
 }
 
