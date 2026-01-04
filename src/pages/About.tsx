@@ -64,10 +64,10 @@ export default function About({ onNavigate }: AboutProps) {
                 Her signature framework, Social Wealth, draws from lived experiences spanning Chicago's public housing to Fortune 500 boardrooms. It's a reminder that every encounter is an interview, every relationship is an asset, and every moment is an opportunity to shape how others experience you.
               </p>
               <p>
-                Through Career Capital, Nis brings curiosity, structural agility, and relationship management to every engagement. She helps clients communicate with precision, strengthen their professional presence, and build the relational capital needed to thrive in an AI‑accelerating world.
+                Through Career Capital, Nisaini brings curiosity, structural agility, and relationship management to every engagement. She helps clients communicate with precision, strengthen their professional presence, and build the relational capital needed to thrive in an AI‑accelerating world.
               </p>
               <p>
-                Whether she's coaching emerging leaders, advising executives, or speaking on national stages, Nis is committed to one thing: helping people show up with clarity, confidence, and purpose—so their work, their voice, and their impact carry further.
+                Whether she's coaching emerging leaders, advising executives, or speaking on national stages, Nisaini is committed to one thing: helping people show up with clarity, confidence, and purpose—so their work, their voice, and their impact carry further.
               </p>
             </div>
           </div>
