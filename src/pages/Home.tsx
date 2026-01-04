@@ -129,7 +129,7 @@ export default function Home({ onNavigate }: HomeProps) {
               Explore Services
             </button>
           </div>
-          <div className="flex flex-wrap gap-3 mt-16">
+          <div className="flex flex-wrap gap-3 mt-24">
             <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
               TEDxChicago Main Stage Speaker
             </span>
