@@ -356,8 +356,7 @@
   @media (max-width: 640px) {
     .flip-card-front,
     .flip-card-back {
-      min-height: auto;
-      height: auto;
+      min-height: 320px;
       padding: 1.5rem;
     }
   }
@@ -396,7 +395,9 @@
   }
 
   .flip-card-front {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
