@@ -168,27 +168,16 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
                 <strong className="text-trueWhite">Key insight:</strong> Your network doesn't just open doors—it underwrites your next opportunity.
                 Every encounter is an interview, and investing in genuine relationships compounds over time.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => {
-                    window.scrollTo(0, 0);
-                    onNavigate('contact');
-                  }}
-                  className="btn-primary-on-dark"
-                >
-                  Inquire About Availability
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </button>
-                <a
-                  href="https://youtu.be/vT3fUJ1-BvA?si=VM77gHpuH9371MAY"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary-on-dark"
-                >
-                  Watch the Talk
-                  <ExternalLink className="ml-2 w-4 h-4" />
-                </a>
-              </div>
+              <button
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  onNavigate('contact');
+                }}
+                className="btn-primary-on-dark"
+              >
+                Inquire About Availability
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </button>
             </div>
             <div className="w-full lg:w-[500px] flex-shrink-0">
               <div className="rounded-lg overflow-hidden shadow-2xl">

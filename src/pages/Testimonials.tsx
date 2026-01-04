@@ -9,7 +9,7 @@ interface TestimonialsProps {
 }
 
 const ENGAGEMENT_TYPES = [
-  'Keynote Speaking',
+  'Public Speaking',
   'Workshop Facilitation',
   'Executive Coaching',
   'Strategy & Roadmap',
@@ -39,7 +39,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     display_order: 2,
     is_active: true,
     featured: true,
-    tags: ['Keynote Speaking', 'Leadership Development', 'Relationship Management'],
+    tags: ['Public Speaking', 'Leadership Development', 'Relationship Management'],
     testimonial_type: 'character_witness',
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
@@ -52,7 +52,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     display_order: 3,
     is_active: true,
     featured: true,
-    tags: ['Keynote Speaking', 'Social Wealth', 'Leadership Development'],
+    tags: ['Public Speaking', 'Social Wealth', 'Leadership Development'],
     testimonial_type: 'character_witness',
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),

@@ -31,7 +31,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     display_order: 2,
     is_active: true,
     featured: true,
-    tags: ['Keynote Speaking', 'Leadership Development', 'Relationship Management'],
+    tags: ['Public Speaking', 'Leadership Development', 'Relationship Management'],
     testimonial_type: 'character_witness',
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
@@ -44,7 +44,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     display_order: 3,
     is_active: true,
     featured: true,
-    tags: ['Keynote Speaking', 'Social Wealth', 'Leadership Development'],
+    tags: ['Public Speaking', 'Social Wealth', 'Leadership Development'],
     testimonial_type: 'character_witness',
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
@@ -108,18 +108,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
             Strategic guidance for organizations building AI readiness while elevating the human side of work.
           </p>
-          <div className="flex flex-wrap gap-3 mb-8">
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              TEDxChicago Main Stage Speaker
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              Fortune 100 Experience
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              Social Impact Leader
-            </span>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
@@ -139,6 +128,17 @@ export default function Home({ onNavigate }: HomeProps) {
             >
               Explore Services
             </button>
+          </div>
+          <div className="flex flex-wrap gap-3 mt-8">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
+              TEDxChicago Main Stage Speaker
+            </span>
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
+              Fortune 100 Experience
+            </span>
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
+              Social Impact Leader
+            </span>
           </div>
         </div>
       </section>

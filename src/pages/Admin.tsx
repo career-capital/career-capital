@@ -15,7 +15,7 @@ interface ContactSubmission {
 }
 
 const ENGAGEMENT_TYPE_TAGS = [
-  'Keynote Speaking',
+  'Public Speaking',
   'Workshop Facilitation',
   'Executive Coaching',
   'Strategy & Roadmap',
@@ -490,7 +490,7 @@ export default function Admin() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="author" className="block text-base font-medium text-ink mb-2">
-                    Author (First Name, Last Initial) *
+                    Author (First Name, Last Name) *
                   </label>
                   <input
                     type="text"
@@ -499,10 +499,9 @@ export default function Admin() {
                     required
                     value={formData.author}
                     onChange={handleChange}
-                    placeholder="e.g., Gabriela S"
+                    placeholder="e.g., Gabriela Smith"
                     className="w-full px-4 py-3 border border-border focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-colors"
                   />
-                  <p className="text-sm text-slate mt-1">Period will be added automatically after last initial</p>
                 </div>
 
                 <div>

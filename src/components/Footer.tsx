@@ -16,11 +16,8 @@ export default function Footer({ onNavigate }: FooterProps) {
             <div className="mb-6">
               <Logo variant="stacked" color="dark" className="h-20 w-auto" />
             </div>
-            <p className="text-base text-slate mb-4 font-medium">
-              The currency of the future
-            </p>
-            <p className="text-base text-slate">
-              Building AI fluency and social wealth for lasting career impact.
+            <p className="text-base text-slate font-medium">
+              The currency of the future.<sup className="text-xs">™</sup>
             </p>
           </div>
 
