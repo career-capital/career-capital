@@ -36,7 +36,7 @@ export default function Contact({ onNavigate }: ContactProps) {
           <div className="grid md:grid-cols-2 gap-16">
             <div>
               <h2 className="text-2xl font-light text-ink mb-6">Ready to start a conversation?</h2>
-              <div className="bg-surface border border-border p-8 mb-8">
+              <div className="bg-surface border border-border p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <Mail className="w-6 h-6 text-navy flex-shrink-0" />
                   <h3 className="text-xl text-ink">Send us an email</h3>
@@ -46,21 +46,12 @@ export default function Contact({ onNavigate }: ContactProps) {
                 </p>
                 <a
                   href="mailto:info@careercapital.io"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-trueWhite font-medium hover:bg-ink transition-colors focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 group"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-trueWhite font-medium hover:bg-steel transition-colors focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 group"
                   aria-label="Send email to info@careercapital.io (opens in email client)"
                 >
                   <span>info@careercapital.io</span>
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
                 </a>
-                <p className="text-sm text-slate/70 mt-3">
-                  This will open in your email client
-                </p>
-              </div>
-
-              <div className="bg-softWhite border border-border/50 p-6">
-                <p className="text-sm text-slate leading-relaxed">
-                  <strong className="text-ink">A note on context:</strong> The more you share about your organization, your challenges, and what you're hoping to achieve, the more tailored and useful our initial conversation will be.
-                </p>
               </div>
             </div>
 
