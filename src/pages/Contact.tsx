@@ -35,7 +35,7 @@ export default function Contact({ onNavigate }: ContactProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-2xl font-light text-ink mb-6">Ready to start a conversation?</h2>
+              <h2 className="text-2xl font-semibold text-ink mb-6">Ready to start a conversation?</h2>
               <div className="bg-surface border border-border p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <Mail className="w-6 h-6 text-navy flex-shrink-0" />
@@ -56,7 +56,7 @@ export default function Contact({ onNavigate }: ContactProps) {
             </div>
 
             <div>
-              <h2 className="text-2xl font-light text-ink mb-8">What to expect</h2>
+              <h2 className="text-2xl font-semibold text-ink mb-8">What to expect</h2>
               <div className="space-y-6">
                 <div className="flex gap-4 items-start">
                   <div className="flex-shrink-0 mt-1">
