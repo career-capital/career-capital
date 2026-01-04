@@ -180,7 +180,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
             Testimonials
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Real stories, real transformation. Client testimonials and professional endorsements spanning keynote speaking, workshops, coaching, and strategic partnerships—proof of impact from those who've experienced it firsthand.
+            Real stories, real transformation. Client testimonials and professional endorsements spanning public speaking, workshops, coaching, and strategic partnerships—proof of impact from those who've experienced it firsthand.
           </p>
         </div>
       </section>
