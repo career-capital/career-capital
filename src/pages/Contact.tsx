@@ -46,7 +46,7 @@ export default function Contact({ onNavigate }: ContactProps) {
                 </p>
                 <a
                   href="mailto:info@careercapital.io"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-trueWhite font-medium hover:bg-steel hover:text-trueWhite transition-colors focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 group no-underline"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-navy text-trueWhite font-medium hover:bg-steel hover:text-trueWhite transition-colors focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 group no-underline"
                   aria-label="Send email to info@careercapital.io (opens in email client)"
                 >
                   <span>info@careercapital.io</span>
