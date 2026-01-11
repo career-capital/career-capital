@@ -110,11 +110,11 @@ export default function Speaking() {
 
       <section aria-labelledby="topics-heading" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="topics-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Speaking Topics</h2>
-          <div className="max-w-4xl mx-auto">
-          <p className="text-lg text-slate mb-12 leading-relaxed text-center">
+          <h2 id="topics-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-3">Speaking Topics</h2>
+          <p className="text-lg text-slate mb-12 leading-relaxed">
             Customizable keynotes and workshops designed to build AI fluency and strengthen relationships.
           </p>
+          <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
             {topics.map((topic, index) => {
               const isExpanded = expandedIndices.has(index);

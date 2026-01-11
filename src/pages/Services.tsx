@@ -245,11 +245,11 @@ export default function Services() {
 
       <section aria-labelledby="services-heading-main" className="py-16 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="services-heading-main" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Our Services</h2>
-          <div className="max-w-4xl mx-auto">
-          <p className="text-lg text-slate mb-12 leading-relaxed text-center">
+          <h2 id="services-heading-main" className="text-4xl md:text-5xl font-semibold text-ink mb-3">Our Services</h2>
+          <p className="text-lg text-slate mb-12 leading-relaxed">
             Build the mindset, relationships, and AI fluency needed to thrive in the future of work.
           </p>
+          <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
             {services.map((service, index) => {
               const isExpanded = expandedIndices.has(index);
@@ -353,8 +353,8 @@ export default function Services() {
           </div>
 
           <div className="mt-16">
-            <h3 id="addon-services-heading" className="text-2xl font-semibold text-ink mb-12">Add-On Services</h3>
-            <p className="text-lg text-slate mb-12 leading-relaxed text-center">
+            <h3 id="addon-services-heading" className="text-2xl font-semibold text-ink mb-3">Add-On Services</h3>
+            <p className="text-lg text-slate mb-12 leading-relaxed">
               Complement your core engagement with additional support options designed for sustained momentum and deeper learning.
             </p>
             <div className="space-y-4">
