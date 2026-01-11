@@ -104,23 +104,9 @@ export default function Home() {
           <p className="text-xl text-trueWhite/95 mb-4 leading-relaxed drop-shadow-md">
             Helping individuals and teams build the capital that matters most in the future of work.
           </p>
-          <p className="text-lg text-trueWhite/90 mb-6 leading-relaxed drop-shadow-md max-w-3xl">
+          <p className="text-lg text-trueWhite/90 mb-8 leading-relaxed drop-shadow-md max-w-3xl">
             In a world reshaped by AI, your greatest advantage is the mindset and relationships you cultivate. We help people, leaders, and organizations develop the human and strategic capacity needed to adapt, grow, and thrive.
           </p>
-          <div className="flex flex-wrap gap-3 mb-10">
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/30 text-trueWhite text-sm font-medium rounded-full">
-              AI Fluency
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/30 text-trueWhite text-sm font-medium rounded-full">
-              Leadership Coaching
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/30 text-trueWhite text-sm font-medium rounded-full">
-              Relationship Management
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/30 text-trueWhite text-sm font-medium rounded-full">
-              Strategic Guidance
-            </span>
-          </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={() => {
