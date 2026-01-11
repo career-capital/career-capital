@@ -228,7 +228,7 @@ export default function Services({ onNavigate }: ServicesProps) {
                           window.scrollTo(0, 0);
                           onNavigate('contact');
                         }}
-                        className="btn-outline-dark"
+                        className="btn-secondary"
                       >
                         {service.cta}
                         <ArrowRight className="ml-2 w-4 h-4" />

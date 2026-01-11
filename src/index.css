@@ -213,7 +213,7 @@
 
   /* Secondary button on light backgrounds - SOLID FILL (recommended for accessibility on busy backgrounds) */
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy bg-softWhite text-navy text-base hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-border bg-softWhite text-navy text-base hover:border-steel transition-colors;
   }
 
   /* Secondary button TRANSPARENT variant - use only on clean, simple backgrounds */
