@@ -173,7 +173,7 @@ export default function Services() {
 
       <section aria-labelledby="services-heading-main" className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="services-heading-main" className="text-3xl font-semibold text-ink mb-3">Our Services</h2>
+          <h2 id="services-heading-main" className="text-4xl md:text-5xl font-semibold text-ink mb-3">Our Services</h2>
           <p className="text-lg text-slate mb-12 leading-relaxed">
             Build the mindset, relationships, and AI fluency needed to thrive in the future of work.
           </p>
@@ -280,7 +280,7 @@ export default function Services() {
           </div>
 
           <div className="mt-16">
-            <h3 id="addon-services-heading" className="text-3xl font-semibold text-ink mb-3">Add-On Services</h3>
+            <h3 id="addon-services-heading" className="text-2xl font-semibold text-ink mb-3">Add-On Services</h3>
             <p className="text-lg text-slate mb-12 leading-relaxed">
               Complement your core engagement with additional support options designed for sustained momentum and deeper learning.
             </p>
@@ -382,7 +382,7 @@ export default function Services() {
 
       <section aria-labelledby="how-engagements-work-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="how-engagements-work-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-4">
+          <h2 id="how-engagements-work-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">
             How Engagements Work
           </h2>
           <p className="text-xl text-slate mb-12 leading-relaxed">
@@ -455,7 +455,7 @@ export default function Services() {
 
       <section aria-labelledby="who-we-work-with-heading" className="bg-softWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="who-we-work-with-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
+          <h2 id="who-we-work-with-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-6">
             Who We Work With
           </h2>
           <div className="text-lg text-slate leading-relaxed max-w-4xl space-y-4">

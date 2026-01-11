@@ -208,7 +208,7 @@ export default function Home() {
 
       <section aria-labelledby="why-cc-heading" className="bg-surface py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="why-cc-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-8">
+          <h2 id="why-cc-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-8">
             Why Career Capital
           </h2>
           <div className="space-y-6 max-w-4xl">
@@ -235,7 +235,7 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="testimonials-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-12 text-center">
+        <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12 text-center">
           What People Say
         </h2>
 {testimonials.length > 0 ? (
@@ -264,7 +264,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
-              <h2 id="speaking-heading" className="text-3xl md:text-4xl font-semibold mb-6">
+              <h2 id="speaking-heading" className="text-4xl md:text-5xl font-semibold mb-6">
                 TEDxChicago Speaker
               </h2>
               <p className="text-xl text-trueWhite/90 mb-4 leading-relaxed">

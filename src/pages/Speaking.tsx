@@ -76,7 +76,7 @@ export default function Speaking() {
 
       <section aria-labelledby="formats-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="formats-heading" className="text-3xl font-semibold text-ink mb-12">Engagement Formats</h2>
+          <h2 id="formats-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Engagement Formats</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="space-y-4">
               <Mic className="w-12 h-12 text-navy" strokeWidth={1.5} />
@@ -110,7 +110,7 @@ export default function Speaking() {
 
       <section aria-labelledby="topics-heading" className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="topics-heading" className="text-3xl font-semibold text-ink mb-12">Speaking Topics</h2>
+          <h2 id="topics-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Speaking Topics</h2>
           <div className="space-y-4">
             {topics.map((topic, index) => {
               const isExpanded = expandedIndices.has(index);
@@ -184,7 +184,7 @@ export default function Speaking() {
 
       <section aria-labelledby="speaking-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="speaking-cta-heading" className="text-3xl font-semibold mb-6">
+          <h2 id="speaking-cta-heading" className="text-4xl md:text-5xl font-semibold mb-6">
             Public speaking with purpose: TEDxChicago
           </h2>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -230,7 +230,7 @@ export default function Speaking() {
 
       <section aria-labelledby="publications-heading" className="bg-softWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="publications-heading" className="text-3xl font-semibold text-ink mb-4">
+          <h2 id="publications-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">
             Featured In
           </h2>
           <p className="text-lg text-slate mb-12 max-w-3xl">
@@ -302,7 +302,7 @@ export default function Speaking() {
 
       <section aria-labelledby="differentiators-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="differentiators-heading" className="text-3xl font-semibold text-ink mb-4">What Makes These Engagements Different</h2>
+          <h2 id="differentiators-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">What Makes These Engagements Different</h2>
           <p className="text-xl text-slate mb-12">Real partnership built on trust, customization, and lasting capability.</p>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">

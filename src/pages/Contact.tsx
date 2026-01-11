@@ -133,7 +133,7 @@ export default function Contact() {
       <section aria-labelledby="services-cta-heading" className="bg-navy text-trueWhite py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 id="services-cta-heading" className="text-3xl md:text-4xl font-light mb-6">
+            <h2 id="services-cta-heading" className="text-4xl md:text-5xl font-light mb-6">
               Not sure where to start?
             </h2>
             <p className="text-xl text-trueWhite/90 mb-8 leading-relaxed">
