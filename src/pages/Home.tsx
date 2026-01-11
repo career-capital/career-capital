@@ -155,14 +155,16 @@ export default function Home() {
             <p className="text-lg text-slate leading-relaxed">
               We offer coaching, workshops, and strategic guidance that build the human and relational capital needed to navigate change with clarity and confidence.
             </p>
-            <p className="text-xl text-ink leading-relaxed font-medium">
-              Building AI fluency and social wealth for lasting career impact.
-            </p>
           </div>
 
-          <p className="text-lg text-slate leading-relaxed mb-8 max-w-4xl">
-            We help individuals and teams build their:
-          </p>
+          <div className="space-y-3 max-w-4xl mb-8">
+            <p className="text-lg text-slate leading-relaxed font-medium">
+              Through our work, we help individuals and teams build AI fluency and social wealth for lasting career impact.
+            </p>
+            <p className="text-lg text-slate leading-relaxed">
+              We help individuals and teams build their:
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             <div>
