@@ -144,7 +144,7 @@ export default function Home() {
 
       <section aria-labelledby="what-we-do-heading" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
+          <div className="mb-12">
             <h2 id="what-we-do-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-6">
               Building AI fluency and social wealth for lasting career impact
             </h2>
@@ -153,7 +153,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mt-12">
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
