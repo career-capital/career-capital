@@ -187,7 +187,7 @@ export default function Testimonials() {
           <p className="text-lg text-slate mb-12 leading-relaxed">
             Insights from clients and professional partners who've experienced the impact firsthand.
           </p>
-          <div className="border-l-2 border-navy/20 pl-6 py-4 mb-10">
+          <div className="bg-trueWhite border border-border p-6 mb-10">
           <h3 className="text-base font-medium text-slate mb-6 uppercase tracking-wide">Filter Testimonials</h3>
 
           <div className="space-y-6">
