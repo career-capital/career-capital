@@ -74,7 +74,7 @@ export default function Home() {
 
   return (
     <div className="bg-softWhite">
-      <section aria-label="Introduction and main message" className="relative overflow-hidden bg-navy min-h-[600px]">
+      <section aria-label="Introduction and main message" className="relative overflow-hidden bg-navy min-h-[600px] flex items-center">
         <picture className="absolute inset-0">
           <source
             media="(min-width: 1024px)"
@@ -97,7 +97,7 @@ export default function Home() {
             loading="eager"
           />
         </picture>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-36">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <h1 className="text-5xl md:text-6xl font-semibold text-trueWhite mb-6 leading-tight drop-shadow-lg">
             Career Capital for the AI Era
           </h1>
