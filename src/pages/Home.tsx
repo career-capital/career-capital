@@ -270,7 +270,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
-              <h2 id="speaking-heading" className="text-4xl md:text-5xl font-semibold leading-tight text-softWhite mb-6">
+              <h2 id="speaking-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
                 TEDxChicago Speaker
               </h2>
               <p className="text-xl text-trueWhite/90 mb-4 leading-relaxed">

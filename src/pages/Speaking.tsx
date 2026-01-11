@@ -189,7 +189,7 @@ export default function Speaking() {
 
       <section aria-labelledby="speaking-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="speaking-cta-heading" className="text-4xl md:text-5xl font-semibold leading-tight text-softWhite mb-6">
+          <h2 id="speaking-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
             Public speaking with purpose: TEDxChicago
           </h2>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -376,7 +376,7 @@ export default function Speaking() {
 
       <section aria-labelledby="final-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="final-cta-heading" className="text-4xl md:text-5xl font-semibold leading-tight text-softWhite mb-6">
+          <h2 id="final-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
             Ready to bring this insight to your organization?
           </h2>
           <p className="text-xl text-trueWhite/90 leading-relaxed mb-8">
