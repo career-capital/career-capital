@@ -30,7 +30,7 @@ export default function Contact() {
       <section aria-label="Contact information" className="md:py-16">
         <div className="bg-surface md:bg-transparent py-16 md:py-0 md:hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-semibold text-ink mb-6">Ready to start a conversation?</h2>
+            <h2 className="text-4xl font-semibold leading-tight text-navy mb-6">Ready to start the conversation?</h2>
             <div className="flex items-center gap-3 mb-6">
               <Mail className="w-6 h-6 text-navy flex-shrink-0" />
               <h3 className="text-xl text-ink">Send us an email</h3>
@@ -53,7 +53,7 @@ export default function Contact() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-2 md:gap-16">
               <div className="hidden md:block">
-                <h2 className="text-2xl font-semibold text-ink mb-6">Ready to start a conversation?</h2>
+                <h2 className="text-4xl font-semibold leading-tight text-navy mb-6">Ready to start the conversation?</h2>
                 <div className="bg-surface border border-border p-8">
                   <div className="flex items-center gap-3 mb-6">
                     <Mail className="w-6 h-6 text-navy flex-shrink-0" />
@@ -74,7 +74,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-semibold text-ink mb-8">What to expect</h2>
+                <h2 className="text-4xl font-semibold leading-tight text-navy mb-8">What to expect</h2>
                 <div className="space-y-6">
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
@@ -133,7 +133,7 @@ export default function Contact() {
       <section aria-labelledby="services-cta-heading" className="bg-navy text-trueWhite py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 id="services-cta-heading" className="text-4xl md:text-5xl font-light mb-6">
+            <h2 id="services-cta-heading" className="text-4xl font-semibold leading-tight text-softWhite mb-6">
               Not sure where to start?
             </h2>
             <p className="text-xl text-trueWhite/90 mb-8 leading-relaxed">

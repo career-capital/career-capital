@@ -336,7 +336,7 @@ export default function Testimonials() {
       <section aria-labelledby="testimonials-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 id="testimonials-cta-heading" className="text-3xl font-light mb-6">
+            <h2 id="testimonials-cta-heading" className="text-4xl font-semibold leading-tight text-softWhite mb-6">
               Ready to experience these results in your organization?
             </h2>
             <p className="text-lg text-trueWhite/90 mb-8">
