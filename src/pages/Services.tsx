@@ -183,7 +183,7 @@ export default function Services() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <Users className="w-10 h-10 text-navy" aria-hidden="true" />
+                  <Users className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">Individuals</h3>
                 <p className="text-base text-slate leading-relaxed">
@@ -195,7 +195,7 @@ export default function Services() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <Lightbulb className="w-10 h-10 text-navy" aria-hidden="true" />
+                  <Lightbulb className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">Leaders</h3>
                 <p className="text-base text-slate leading-relaxed">
@@ -207,7 +207,7 @@ export default function Services() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <Network className="w-10 h-10 text-navy" aria-hidden="true" />
+                  <Network className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">Teams</h3>
                 <p className="text-base text-slate leading-relaxed">
@@ -219,7 +219,7 @@ export default function Services() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <Building2 className="w-10 h-10 text-navy" aria-hidden="true" />
+                  <Building2 className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">Organizations</h3>
                 <p className="text-base text-slate leading-relaxed">
