@@ -249,7 +249,7 @@ export default function Services() {
           <p className="text-xl text-slate mb-12 leading-relaxed">
             Build the mindset, relationships, and AI fluency needed to thrive in the future of work.
           </p>
-          <div className="max-w-4xl">
+          <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
             {services.map((service, index) => {
               const isExpanded = expandedIndices.has(index);
@@ -351,12 +351,14 @@ export default function Services() {
               );
             })}
           </div>
+          </div>
 
           <div className="mt-16">
             <h2 id="addon-services-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">Add-On Services</h2>
             <p className="text-xl text-slate mb-12 leading-relaxed">
               Complement your core engagement with additional support options designed for sustained momentum and deeper learning.
             </p>
+            <div className="max-w-4xl mx-auto">
             <div className="space-y-4">
             {addonServices.map((service, index) => {
               const isExpanded = expandedAddonIndices.has(index);
@@ -449,8 +451,8 @@ export default function Services() {
               );
             })}
             </div>
+            </div>
           </div>
-        </div>
         </div>
       </section>
 
