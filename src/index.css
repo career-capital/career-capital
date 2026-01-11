@@ -165,7 +165,7 @@
     text-decoration-thickness: 2px;
   }
 
-  /* Remove underlines from button-styled links and card links */
+  /* Remove underlines from button-styled links, card links, and nav links */
   a.btn-primary,
   a.btn-secondary,
   a.btn-secondary-transparent,
@@ -174,7 +174,8 @@
   a.btn-secondary-on-dark-transparent,
   a.btn-outline-light,
   a.btn-outline-dark,
-  a.no-underline {
+  a.no-underline,
+  .nav-link {
     text-decoration: none;
   }
 
@@ -186,7 +187,8 @@
   a.btn-secondary-on-dark-transparent:hover,
   a.btn-outline-light:hover,
   a.btn-outline-dark:hover,
-  a.no-underline:hover {
+  a.no-underline:hover,
+  .nav-link:hover {
     text-decoration: none;
   }
 
