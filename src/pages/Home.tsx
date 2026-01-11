@@ -125,19 +125,19 @@ export default function Home() {
             </button>
           </div>
           <div className="flex flex-wrap gap-3">
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/5 border border-trueWhite/20 text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border border-trueWhite/30 text-trueWhite text-sm font-medium">
               AI Fluency
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/5 border border-trueWhite/20 text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border border-trueWhite/30 text-trueWhite text-sm font-medium">
               Leadership Coaching
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/5 border border-trueWhite/20 text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border border-trueWhite/30 text-trueWhite text-sm font-medium">
               Relationship Management
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/5 border border-trueWhite/20 text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border border-trueWhite/30 text-trueWhite text-sm font-medium">
               Strategic Guidance
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/5 border border-trueWhite/20 text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border border-trueWhite/30 text-trueWhite text-sm font-medium">
               Keynote Speaking
             </span>
           </div>
