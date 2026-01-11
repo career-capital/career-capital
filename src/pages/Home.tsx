@@ -130,13 +130,16 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap gap-3">
             <span className="inline-flex items-center px-4 py-2 bg-trueWhite/5 border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              TEDxChicago Main Stage Speaker
+              AI Fluency
             </span>
             <span className="inline-flex items-center px-4 py-2 bg-trueWhite/5 border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              Fortune 100 Experience
+              Leadership Coaching
             </span>
             <span className="inline-flex items-center px-4 py-2 bg-trueWhite/5 border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              Social Impact Leader
+              Relationship Management
+            </span>
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/5 border border-trueWhite/20 text-trueWhite text-sm font-medium">
+              Strategic Guidance
             </span>
           </div>
         </div>
