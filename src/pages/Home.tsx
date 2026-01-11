@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Users, Sparkles, TrendingUp, ExternalLink } from 'lucide-react';
+import { ArrowRight, Users, Sparkles, TrendingUp, ExternalLink, MessageCircle, Presentation, Compass } from 'lucide-react';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import { supabase, Testimonial } from '../lib/supabase';
 
@@ -142,7 +142,7 @@ export default function Home() {
               Career Capital blends strategic AI guidance, mindset development, and relationship management to help individuals and teams thrive in a rapidly evolving world.
             </p>
             <p className="text-lg text-slate leading-relaxed">
-              We offer coaching, workshops, and strategic guidance that build the human and relational capital needed to navigate change with clarity and confidence. We help individuals and teams build their:
+              We offer coaching, workshops, and strategic guidance that build the human and relational capital needed to navigate change with clarity and confidence:
             </p>
           </div>
 
@@ -150,13 +150,13 @@ export default function Home() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <Sparkles className="w-10 h-10 text-navy" aria-hidden="true" />
+                  <MessageCircle className="w-10 h-10 text-navy" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
-                  AI fluency
+                  Coaching
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Build organizational confidence and capability around AI through strategic guidance and practical enablement.
+                  One-on-one and small group coaching to develop strategic thinking, build confidence, and navigate career transitions in the AI era.
                 </p>
               </div>
             </div>
@@ -164,13 +164,13 @@ export default function Home() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <Users className="w-10 h-10 text-navy" aria-hidden="true" />
+                  <Presentation className="w-10 h-10 text-navy" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
-                  Relationship management
+                  Workshops
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Strengthen the human connections that drive business success, even as technology evolves.
+                  Interactive sessions that equip teams with practical tools for AI fluency, relationship building, and adaptive mindsets.
                 </p>
               </div>
             </div>
@@ -178,13 +178,13 @@ export default function Home() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <TrendingUp className="w-10 h-10 text-navy" aria-hidden="true" />
+                  <Compass className="w-10 h-10 text-navy" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
-                  Mindset shifts
+                  Strategic Guidance
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Transform how leaders think about AI—from threat to tool, from confusion to clarity.
+                  Organizational consulting to integrate AI strategy, strengthen culture, and build leadership capacity for the future of work.
                 </p>
               </div>
             </div>
@@ -197,7 +197,7 @@ export default function Home() {
           <h2 id="why-cc-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-8">
             Why Career Capital
           </h2>
-          <div className="space-y-6 max-w-4xl">
+          <div className="space-y-6 max-w-4xl mb-12">
             <p className="text-xl text-ink leading-relaxed font-medium">
               Your career capital is the combination of your mindset, relationships, and AI fluency — the assets that shape your opportunities in a rapidly evolving world.
             </p>
@@ -205,6 +205,51 @@ export default function Home() {
               Career Capital helps you grow these assets with clarity, confidence, and humanity.
             </p>
           </div>
+
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-12">
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-4">
+                  <Sparkles className="w-8 h-8 text-navy" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-semibold text-ink mb-3">
+                  AI Fluency
+                </h3>
+                <p className="text-base text-slate leading-relaxed">
+                  Build confidence and capability around AI through strategic guidance and practical enablement.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-4">
+                  <Users className="w-8 h-8 text-navy" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-semibold text-ink mb-3">
+                  Relationship Management
+                </h3>
+                <p className="text-base text-slate leading-relaxed">
+                  Strengthen the human connections that drive business success, even as technology evolves.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-4">
+                  <TrendingUp className="w-8 h-8 text-navy" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-semibold text-ink mb-3">
+                  Mindset Shifts
+                </h3>
+                <p className="text-base text-slate leading-relaxed">
+                  Transform how leaders think about AI—from threat to tool, from confusion to clarity.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="mt-12">
             <button
               onClick={() => {
