@@ -183,8 +183,10 @@ export default function Testimonials() {
 
       <section aria-labelledby="feedback-heading" className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="feedback-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Client Stories & Endorsements</h2>
-          <div className="max-w-4xl mx-auto">
+          <h2 id="feedback-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-3">Client Stories & Endorsements</h2>
+          <p className="text-lg text-slate mb-12 leading-relaxed">
+            Insights from clients and professional partners who've experienced the impact firsthand.
+          </p>
           <div className="border-l-2 border-navy/20 pl-6 py-4 mb-10">
           <h3 className="text-base font-medium text-slate mb-6 uppercase tracking-wide">Filter Testimonials</h3>
 
@@ -267,7 +269,7 @@ export default function Testimonials() {
           {filteredTestimonials.length > 0 ? (
             <>
               {visibleTestimonials.map((testimonial) => (
-                <article key={testimonial.id} className="bg-surface p-8 relative border border-border">
+                <article key={testimonial.id} className="bg-trueWhite p-8 relative border border-border">
                   <Quote className="absolute top-6 right-6 w-10 h-10 text-navy/10" strokeWidth={1.5} aria-hidden="true" />
                   <div className="relative">
                     <div className="flex flex-wrap items-center gap-2 mb-8">
@@ -317,7 +319,7 @@ export default function Testimonials() {
               )}
             </>
           ) : (
-            <div className="text-center py-12 bg-surface border border-border" role="status">
+            <div className="text-center py-12 bg-trueWhite border border-border" role="status">
               <p className="text-slate">No testimonials match your selected filters.</p>
             </div>
           )}
@@ -327,7 +329,6 @@ export default function Testimonials() {
               : 'No testimonials match your selected filters.'
             }
           </div>
-        </div>
         </div>
         </div>
       </section>
