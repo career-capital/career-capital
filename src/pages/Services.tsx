@@ -170,7 +170,7 @@ export default function Services({ onNavigate }: ServicesProps) {
             Services
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md max-w-4xl">
-            Build the mindset, relationships, and AI fluency needed to thrive in the future of work.
+            Your brand is in the room even when you're not. Let's build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
           </p>
         </div>
       </section>
@@ -179,7 +179,7 @@ export default function Services({ onNavigate }: ServicesProps) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="services-heading-main" className="text-3xl font-semibold text-ink mb-3">Our Services</h2>
           <p className="text-lg text-slate mb-12 leading-relaxed">
-            Your brand is in the room even when you're not. Let's build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
+            Build the mindset, relationships, and AI fluency needed to thrive in the future of work.
           </p>
           <div className="space-y-4">
             {services.map((service, index) => {
