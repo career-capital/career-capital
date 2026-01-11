@@ -97,7 +97,7 @@ export default function Home() {
             loading="eager"
           />
         </picture>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-36">
           <h1 className="text-5xl md:text-6xl font-semibold text-trueWhite mb-6 leading-tight drop-shadow-lg">
             Career Capital for the AI Era
           </h1>
@@ -107,7 +107,7 @@ export default function Home() {
           <p className="text-lg text-trueWhite/90 mb-10 leading-relaxed drop-shadow-md max-w-3xl">
             In a world reshaped by AI, your greatest advantage is the mindset and relationships you cultivate. We help people, leaders, and organizations develop the human and strategic capacity needed to adapt, grow, and thrive.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 mb-28">
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
