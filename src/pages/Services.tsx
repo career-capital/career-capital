@@ -20,6 +20,7 @@ interface Service {
 
 export default function Services({ onNavigate }: ServicesProps) {
   const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
+  const [expandedAddonIndices, setExpandedAddonIndices] = useState<Set<number>>(new Set());
 
   const services: Service[] = [
     {
@@ -108,6 +109,45 @@ export default function Services({ onNavigate }: ServicesProps) {
       ],
       includesLabel: 'Focus Areas',
       cta: 'Start Coaching',
+    },
+  ];
+
+  const addonServices: Service[] = [
+    {
+      title: 'Executive Coaching for Leaders',
+      subtitle: 'Make deposits with care. One-on-one guidance for executives who want to champion their teams through AI transformation while strengthening the relationships that drive real results.',
+      idealFor: 'Executives leading through complex change',
+      delivers: [
+        'AI fluency',
+        'Strategic communication',
+        'Relationship management',
+      ],
+      includes: [
+        'One-on-one coaching sessions',
+        'Executive AI fluency building',
+        'Leadership communication strategies',
+        'Stakeholder buy-in navigation',
+        'Personal leadership development',
+      ],
+      cta: 'Schedule a Session',
+    },
+    {
+      title: 'Office Hours',
+      subtitle: 'When people feel seen, they remember. Regular access for questions, guidance, and strategic thinking—a space where challenges become clarity.',
+      idealFor: 'Teams seeking ongoing support and guidance',
+      delivers: [
+        'Continuous support',
+        'Real-time guidance',
+        'Team connection',
+      ],
+      includes: [
+        'Scheduled open sessions',
+        'Ad-hoc questions and guidance',
+        'Real-time problem-solving',
+        'Cross-team connection point',
+        'Continuous learning and sharing',
+      ],
+      cta: 'Learn About Office Hours',
     },
   ];
 
@@ -242,7 +282,108 @@ export default function Services({ onNavigate }: ServicesProps) {
         </div>
       </section>
 
-      <section aria-labelledby="who-we-work-with-heading" className="bg-surface py-16">
+      <section aria-labelledby="addon-services-heading" className="bg-surface py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="addon-services-heading" className="text-3xl font-semibold text-ink mb-3">Add-On Services</h2>
+          <p className="text-lg text-slate mb-12 leading-relaxed">
+            Complement your core engagement with additional support options designed for sustained momentum and deeper learning.
+          </p>
+          <div className="space-y-4">
+            {addonServices.map((service, index) => {
+              const isExpanded = expandedAddonIndices.has(index);
+              const toggleExpanded = () => {
+                const newSet = new Set(expandedAddonIndices);
+                if (isExpanded) {
+                  newSet.delete(index);
+                } else {
+                  newSet.add(index);
+                }
+                setExpandedAddonIndices(newSet);
+              };
+              return (
+                <div
+                  key={index}
+                  className="bg-trueWhite border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-md"
+                >
+                  <button
+                    onClick={toggleExpanded}
+                    className="w-full text-left px-6 py-5 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-inset"
+                    aria-expanded={isExpanded}
+                    aria-controls={`addon-service-details-${index}`}
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-ink mb-2">
+                          {service.title}
+                        </h3>
+                        <p className="text-base text-slate mb-4 leading-relaxed">
+                          {service.subtitle}
+                        </p>
+                        <p className="text-sm text-steel mb-3">
+                          <span className="font-medium">Ideal For:</span> {service.idealFor}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {service.delivers.map((item, i) => (
+                            <span
+                              key={i}
+                              className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-navy/5 text-navy"
+                            >
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <ChevronDown
+                        className={`w-6 h-6 text-steel flex-shrink-0 transition-transform duration-200 ${
+                          isExpanded ? 'rotate-180' : ''
+                        }`}
+                        aria-hidden="true"
+                      />
+                    </div>
+                  </button>
+
+                  <div
+                    id={`addon-service-details-${index}`}
+                    className={`overflow-hidden transition-all duration-300 ${
+                      isExpanded ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                    aria-hidden={!isExpanded}
+                  >
+                    <div className="px-6 pb-6 pt-2 border-t border-gray-100">
+                      <div className="mb-6">
+                        <h4 className="text-sm font-semibold text-steel mb-3">
+                          {service.includesLabel || 'What\'s Included'}
+                        </h4>
+                        <ul className="space-y-2">
+                          {service.includes.map((item, i) => (
+                            <li key={i} className="flex gap-3 text-slate leading-relaxed">
+                              <span className="text-steel font-medium flex-shrink-0 mt-1">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <button
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                          onNavigate('contact');
+                        }}
+                        className="btn-secondary"
+                      >
+                        {service.cta}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="who-we-work-with-heading" className="bg-softWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="who-we-work-with-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
             Who We Work With
