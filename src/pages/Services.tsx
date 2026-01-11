@@ -19,7 +19,7 @@ interface Service {
 }
 
 export default function Services({ onNavigate }: ServicesProps) {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
 
   const services: Service[] = [
     {
@@ -140,14 +140,23 @@ export default function Services({ onNavigate }: ServicesProps) {
           <h2 id="services-heading-main" className="text-3xl font-semibold text-ink mb-12">Our Services</h2>
           <div className="space-y-4">
             {services.map((service, index) => {
-              const isExpanded = expandedIndex === index;
+              const isExpanded = expandedIndices.has(index);
+              const toggleExpanded = () => {
+                const newSet = new Set(expandedIndices);
+                if (isExpanded) {
+                  newSet.delete(index);
+                } else {
+                  newSet.add(index);
+                }
+                setExpandedIndices(newSet);
+              };
               return (
                 <div
                   key={index}
                   className="bg-trueWhite border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-md"
                 >
                   <button
-                    onClick={() => setExpandedIndex(isExpanded ? null : index)}
+                    onClick={toggleExpanded}
                     className="w-full text-left px-6 py-5 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-inset"
                     aria-expanded={isExpanded}
                     aria-controls={`service-details-${index}`}
@@ -219,7 +228,7 @@ export default function Services({ onNavigate }: ServicesProps) {
                           window.scrollTo(0, 0);
                           onNavigate('contact');
                         }}
-                        className="btn-primary"
+                        className="btn-outline-dark"
                       >
                         {service.cta}
                         <ArrowRight className="ml-2 w-4 h-4" />
