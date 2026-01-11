@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, Users, Lightbulb, Building2, Network } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -171,7 +171,87 @@ export default function Services() {
         </div>
       </section>
 
-      <section aria-labelledby="services-heading-main" className="py-16">
+      <section aria-labelledby="who-we-work-with-heading" className="bg-softWhite py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="who-we-work-with-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">
+            Who We Work With
+          </h2>
+          <p className="text-xl text-slate mb-12 leading-relaxed max-w-4xl">
+            Career Capital partners with forward-thinking individuals and organizations committed to building capability in an AI-driven world.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl">
+            <div className="bg-trueWhite p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center group-hover:bg-navy/20 transition-colors duration-200">
+                  <Users className="w-6 h-6 text-navy" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-ink mb-2">Individuals</h3>
+                  <p className="text-slate leading-relaxed">
+                    Professionals building future-ready mindsets and relationships to navigate career transitions and industry change.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-trueWhite p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center group-hover:bg-navy/20 transition-colors duration-200">
+                  <Lightbulb className="w-6 h-6 text-navy" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-ink mb-2">Leaders</h3>
+                  <p className="text-slate leading-relaxed">
+                    Executives and managers navigating AI-driven change while maintaining team trust and organizational stability.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-trueWhite p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center group-hover:bg-navy/20 transition-colors duration-200">
+                  <Network className="w-6 h-6 text-navy" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-ink mb-2">Teams</h3>
+                  <p className="text-slate leading-relaxed">
+                    Workgroups adopting AI tools and new ways of working while building confidence and competence together.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-trueWhite p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center group-hover:bg-navy/20 transition-colors duration-200">
+                  <Building2 className="w-6 h-6 text-navy" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-ink mb-2">Organizations</h3>
+                  <p className="text-slate leading-relaxed">
+                    Companies strengthening communication, culture, and adaptability to thrive in rapid technological change.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 max-w-5xl">
+            <button
+              onClick={() => {
+                window.scrollTo(0, 0);
+                navigate('/contact');
+              }}
+              className="btn-primary"
+            >
+              Let's Talk
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="services-heading-main" className="py-16 bg-surface">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="services-heading-main" className="text-4xl md:text-5xl font-semibold text-ink mb-3">Our Services</h2>
           <p className="text-lg text-slate mb-12 leading-relaxed">
@@ -448,47 +528,6 @@ export default function Services() {
                   loading="lazy"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="who-we-work-with-heading" className="bg-softWhite py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="who-we-work-with-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-6">
-            Who We Work With
-          </h2>
-          <div className="text-lg text-slate leading-relaxed max-w-4xl space-y-4">
-            <p>Career Capital partners with:</p>
-            <ul className="space-y-3 ml-6">
-              <li className="flex gap-3">
-                <span className="text-steel font-medium flex-shrink-0 mt-1">•</span>
-                <span>Individuals building future-ready mindsets and relationships</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-steel font-medium flex-shrink-0 mt-1">•</span>
-                <span>Leaders navigating AI-driven change</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-steel font-medium flex-shrink-0 mt-1">•</span>
-                <span>Teams adopting AI tools and new ways of working</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-steel font-medium flex-shrink-0 mt-1">•</span>
-                <span>Organizations strengthening communication, culture, and adaptability</span>
-              </li>
-            </ul>
-            <div className="pt-6">
-              <button
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                  navigate('/contact');
-                }}
-                className="btn-primary"
-              >
-                Let's Talk
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
             </div>
           </div>
         </div>
