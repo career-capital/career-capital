@@ -123,6 +123,12 @@ export default function FlipCard({ front, back, onCtaClick }: FlipCardProps) {
                   {back.cta}
                 </button>
               )}
+              <p className="text-xs text-slate/70 mt-3 hidden sm:block">
+                Click to see overview
+              </p>
+              <p className="text-xs text-slate/70 mt-3 sm:hidden">
+                Tap to see overview
+              </p>
             </div>
           </div>
         </div>
