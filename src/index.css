@@ -401,20 +401,23 @@
 
   .services-flip-cards .flip-card-front,
   .services-flip-cards .flip-card-back {
-    min-height: 360px;
+    height: 360px;
+    overflow-y: auto;
   }
 
   @media (max-width: 640px) {
     .services-flip-cards .flip-card-front,
     .services-flip-cards .flip-card-back {
       height: 400px;
+      overflow-y: auto;
     }
   }
 
   @media (min-width: 641px) and (max-width: 1023px) {
     .services-flip-cards .flip-card-front,
     .services-flip-cards .flip-card-back {
-      min-height: 380px;
+      height: 380px;
+      overflow-y: auto;
     }
   }
 

@@ -55,8 +55,8 @@ export default function FlipCard({ front, back, onCtaClick }: FlipCardProps) {
               </h3>
               <RotateCw className="w-5 h-5 text-steel flex-shrink-0 transition-transform duration-300" aria-hidden="true" />
             </div>
-            <div className="mb-4">
-              <p className="text-sm font-medium text-steel mb-0.5">Ideal For</p>
+            <div className="mb-6">
+              <p className="text-sm font-medium text-steel mb-2">Ideal For</p>
               <p className="text-slate leading-relaxed text-base">
                 {front.idealFor}
               </p>
