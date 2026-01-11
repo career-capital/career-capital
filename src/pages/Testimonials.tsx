@@ -190,7 +190,7 @@ export default function Testimonials() {
           <div className="bg-trueWhite border border-border p-6 mb-10">
           <h3 className="text-base font-medium text-slate mb-6 uppercase tracking-wide">Filter Testimonials</h3>
 
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium text-steel mb-3">Testimonial Source</label>
               <div className="flex flex-wrap gap-2" role="group" aria-label="Testimonial source filter">
