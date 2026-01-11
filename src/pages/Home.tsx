@@ -216,7 +216,7 @@ export default function Home() {
           </h2>
           <div className="space-y-6 max-w-4xl mb-12">
             <p className="text-xl text-ink leading-relaxed font-medium">
-              Your career capital is the combination of your mindset, relationships, and AI fluency—\u00A0the assets that shape your opportunities in a rapidly evolving world.
+              Your career capital is the combination of your mindset, relationships, and AI fluency—the assets that shape your opportunities in a rapidly evolving world.
             </p>
             <p className="text-lg text-slate leading-relaxed">
               Career Capital helps you grow these assets with clarity, confidence, and humanity.
@@ -273,7 +273,7 @@ export default function Home() {
                 window.scrollTo(0, 0);
                 navigate('/about');
               }}
-              className="btn-primary"
+              className="inline-flex items-center justify-center px-8 py-4 bg-navy text-trueWhite text-base hover:bg-steel transition-colors font-semibold"
             >
               Learn More About Us
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
