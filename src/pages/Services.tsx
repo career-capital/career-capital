@@ -383,7 +383,80 @@ export default function Services({ onNavigate }: ServicesProps) {
         </div>
       </section>
 
-      <section aria-labelledby="who-we-work-with-heading" className="bg-softWhite py-16">
+      <section aria-labelledby="how-engagements-work-heading" className="bg-softWhite py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="how-engagements-work-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-4">
+            How Engagements Work
+          </h2>
+          <p className="text-xl text-slate mb-12 leading-relaxed">
+            A clear, collaborative process designed around you.
+          </p>
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
+            <div className="flex-1">
+              <div className="flex gap-6 relative items-stretch">
+                <div className="relative flex-shrink-0 w-3">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
+                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+                </div>
+                <div className="pb-8">
+                  <h3 className="text-lg font-semibold text-ink mb-2">Every encounter is an interview</h3>
+                  <p className="text-slate leading-relaxed">
+                    We start by understanding your organization's context, challenges, and the future you're building toward.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6 relative items-stretch">
+                <div className="relative flex-shrink-0 w-3">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
+                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+                </div>
+                <div className="pb-8">
+                  <h3 className="text-lg font-semibold text-ink mb-2">We come to the table prepared</h3>
+                  <p className="text-slate leading-relaxed">
+                    Every engagement is customized to your specific needs—because one-size-fits-all doesn't build real capability.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6 relative items-stretch">
+                <div className="relative flex-shrink-0 w-3">
+                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
+                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
+                </div>
+                <div className="pb-8">
+                  <h3 className="text-lg font-semibold text-ink mb-2">We make deposits with intention</h3>
+                  <p className="text-slate leading-relaxed">
+                    We focus on actionable steps and real capability building—not just strategy documents that sit on a shelf.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6 relative items-start">
+                <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-[0.4rem]"></div>
+                <div>
+                  <h3 className="text-lg font-semibold text-ink mb-2">The dividends will surprise you</h3>
+                  <p className="text-slate leading-relaxed">
+                    Ongoing guidance ensures momentum and addresses challenges as they emerge—relationships that compound over time.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-full lg:w-[500px] flex-shrink-0">
+              <div className="overflow-hidden shadow-xl aspect-[4/3]">
+                <img
+                  src="/workshop-facilitation.webp"
+                  alt="Workshop facilitation session"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="who-we-work-with-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="who-we-work-with-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
             Who We Work With
