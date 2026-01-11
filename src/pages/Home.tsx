@@ -78,22 +78,22 @@ export default function Home() {
         <picture className="absolute inset-0">
           <source
             media="(min-width: 1024px)"
-            srcSet="/sitehero-desktop.webp"
+            srcSet="/sitehero_desktop.webp"
             type="image/webp"
           />
           <source
             media="(min-width: 640px)"
-            srcSet="/sitehero-tablet.webp"
+            srcSet="/sitehero_tablet.webp"
             type="image/webp"
           />
           <source
-            srcSet="/sitehero-mobile.webp"
+            srcSet="/sitehero_tablet.webp"
             type="image/webp"
           />
           <img
-            src="/sitehero-fallback.jpg"
+            src="/sitehero_fallback.jpg"
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-right sm:object-center"
             loading="eager"
           />
         </picture>
