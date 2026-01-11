@@ -146,7 +146,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      <section aria-labelledby="what-we-do-heading" className="bg-surface py-20">
+      <section aria-labelledby="what-we-do-heading" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="what-we-do-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
             What We Do
@@ -160,7 +160,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      <section aria-labelledby="why-cc-heading" className="py-20">
+      <section aria-labelledby="why-cc-heading" className="bg-surface py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="why-cc-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
             Why Career Capital
@@ -176,7 +176,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
       <section aria-labelledby="testimonials-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-12 text-center">
-          What people say
+          What People Say
         </h2>
 {testimonials.length > 0 ? (
           <>
