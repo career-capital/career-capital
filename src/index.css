@@ -375,9 +375,8 @@
   @media (max-width: 640px) {
     .flip-card-front,
     .flip-card-back {
-      height: 320px;
+      height: 380px;
       padding: 1.5rem;
-      overflow-y: auto;
     }
   }
 
@@ -385,8 +384,7 @@
     .flip-card-front,
     .flip-card-back {
       padding: 2rem;
-      min-height: 300px;
-      height: auto;
+      height: 400px;
     }
   }
 
@@ -394,30 +392,26 @@
     .flip-card-front,
     .flip-card-back {
       padding: 2rem;
-      min-height: 280px;
-      height: auto;
+      height: 380px;
     }
   }
 
   .services-flip-cards .flip-card-front,
   .services-flip-cards .flip-card-back {
-    height: 360px;
-    overflow-y: auto;
+    height: 480px;
   }
 
   @media (max-width: 640px) {
     .services-flip-cards .flip-card-front,
     .services-flip-cards .flip-card-back {
-      height: 400px;
-      overflow-y: auto;
+      height: 520px;
     }
   }
 
   @media (min-width: 641px) and (max-width: 1023px) {
     .services-flip-cards .flip-card-front,
     .services-flip-cards .flip-card-back {
-      height: 380px;
-      overflow-y: auto;
+      height: 500px;
     }
   }
 

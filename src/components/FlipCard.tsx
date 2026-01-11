@@ -111,7 +111,7 @@ export default function FlipCard({ front, back, onCtaClick }: FlipCardProps) {
             <div className="mt-auto">
               {back.credibility && (
                 <p className="text-sm text-slate/80 italic mb-4">
-                  <span className="font-medium text-steel">Credibility:</span> {back.credibility}
+                  <span className="font-medium text-steel">Track Record:</span> {back.credibility}
                 </p>
               )}
               {back.cta && (
