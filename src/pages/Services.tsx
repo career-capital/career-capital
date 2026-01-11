@@ -177,7 +177,10 @@ export default function Services({ onNavigate }: ServicesProps) {
 
       <section aria-labelledby="services-heading-main" className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="services-heading-main" className="text-3xl font-semibold text-ink mb-12">Our Services</h2>
+          <h2 id="services-heading-main" className="text-3xl font-semibold text-ink mb-3">Our Services</h2>
+          <p className="text-lg text-slate mb-12 leading-relaxed">
+            Your brand is in the room even when you're not. Let's build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
+          </p>
           <div className="space-y-4">
             {services.map((service, index) => {
               const isExpanded = expandedIndices.has(index);
@@ -279,16 +282,13 @@ export default function Services({ onNavigate }: ServicesProps) {
               );
             })}
           </div>
-        </div>
-      </section>
 
-      <section aria-labelledby="addon-services-heading" className="bg-surface py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="addon-services-heading" className="text-3xl font-semibold text-ink mb-3">Add-On Services</h2>
-          <p className="text-lg text-slate mb-12 leading-relaxed">
-            Complement your core engagement with additional support options designed for sustained momentum and deeper learning.
-          </p>
-          <div className="space-y-4">
+          <div className="mt-16">
+            <h3 id="addon-services-heading" className="text-3xl font-semibold text-ink mb-3">Add-On Services</h3>
+            <p className="text-lg text-slate mb-12 leading-relaxed">
+              Complement your core engagement with additional support options designed for sustained momentum and deeper learning.
+            </p>
+            <div className="space-y-4">
             {addonServices.map((service, index) => {
               const isExpanded = expandedAddonIndices.has(index);
               const toggleExpanded = () => {
@@ -379,11 +379,12 @@ export default function Services({ onNavigate }: ServicesProps) {
                 </div>
               );
             })}
+            </div>
           </div>
         </div>
       </section>
 
-      <section aria-labelledby="how-engagements-work-heading" className="bg-softWhite py-16">
+      <section aria-labelledby="how-engagements-work-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="how-engagements-work-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-4">
             How Engagements Work
@@ -456,7 +457,7 @@ export default function Services({ onNavigate }: ServicesProps) {
         </div>
       </section>
 
-      <section aria-labelledby="who-we-work-with-heading" className="bg-surface py-16">
+      <section aria-labelledby="who-we-work-with-heading" className="bg-softWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="who-we-work-with-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
             Who We Work With
