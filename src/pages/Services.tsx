@@ -1,5 +1,5 @@
-import { ArrowRight } from 'lucide-react';
-import FlipCard from '../components/FlipCard';
+import { ArrowRight, ChevronDown } from 'lucide-react';
+import { useState } from 'react';
 
 type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
 
@@ -7,109 +7,101 @@ interface ServicesProps {
   onNavigate: (page: Page) => void;
 }
 
+interface Service {
+  title: string;
+  idealFor: string;
+  delivers: string[];
+  includes: string[];
+  includesLabel?: string;
+  credibility?: string;
+  cta: string;
+}
+
 export default function Services({ onNavigate }: ServicesProps) {
-  const services = [
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const services: Service[] = [
     {
-      front: {
-        title: 'AI Enablement & Adoption Workshops',
-        idealFor: 'Teams adopting AI tools',
-        delivers: [
-          'Hands-on training',
-          'Real use cases',
-          'Responsible AI guidance',
-        ],
-      },
-      back: {
-        includes: [
-          'Interactive workshops tailored to team roles',
-          'Hands-on demonstrations of AI tools and use cases',
-          'Guidance on responsible use and change readiness',
-          'Confidence-building exercises',
-          'Optional team-specific AI playbooks',
-        ],
-        credibility: '75+ AI enablement sessions delivered across industries.',
-        cta: 'Book a Workshop',
-      },
+      title: 'AI Enablement & Adoption Workshops',
+      idealFor: 'Teams adopting AI tools',
+      delivers: [
+        'Hands-on training',
+        'Real use cases',
+        'Responsible AI guidance',
+      ],
+      includes: [
+        'Interactive workshops tailored to team roles',
+        'Hands-on demonstrations of AI tools and use cases',
+        'Guidance on responsible use and change readiness',
+        'Confidence-building exercises',
+        'Optional team-specific AI playbooks',
+      ],
+      credibility: '75+ AI enablement sessions delivered across industries.',
+      cta: 'Book a Workshop',
     },
     {
-      front: {
-        title: 'AI-Ready Communication Lab',
-        idealFor: 'Leaders and teams navigating AI adoption and internal messaging',
-        delivers: [
-          'Messaging frameworks',
-          'Talking points',
-          'Clarity for internal communication',
-        ],
-      },
-      back: {
-        includes: [
-          'Discovery session to understand communication gaps',
-          'Custom framework for talking about AI with clarity and empathy',
-          'Messaging templates and talking points',
-          'Follow-up refinement session',
-        ],
-        cta: 'Start a Lab Session',
-      },
+      title: 'AI-Ready Communication Lab',
+      idealFor: 'Leaders and teams navigating AI adoption and internal messaging',
+      delivers: [
+        'Messaging frameworks',
+        'Talking points',
+        'Clarity for internal communication',
+      ],
+      includes: [
+        'Discovery session to understand communication gaps',
+        'Custom framework for talking about AI with clarity and empathy',
+        'Messaging templates and talking points',
+        'Follow-up refinement session',
+      ],
+      cta: 'Start a Lab Session',
     },
     {
-      front: {
-        title: 'Social Wealth Workshops & Coaching',
-        idealFor: 'Coaching and workshops that build relationship capital as a strategic asset',
-        delivers: [
-          'Relationship mapping',
-          'Trust-building tools',
-          'Influence development',
-        ],
-      },
-      back: {
-        includes: [
-          'TEDx-inspired keynote on Social Wealth',
-          'Relational mapping exercises',
-          'Tools for trust-building and influence',
-          'Optional cohort or team coaching',
-        ],
-        cta: 'Build Social Wealth',
-      },
+      title: 'Social Wealth Workshops & Coaching',
+      idealFor: 'Coaching and workshops that build relationship capital as a strategic asset',
+      delivers: [
+        'Relationship mapping',
+        'Trust-building tools',
+        'Influence development',
+      ],
+      includes: [
+        'TEDx-inspired keynote on Social Wealth',
+        'Relational mapping exercises',
+        'Tools for trust-building and influence',
+        'Optional cohort or team coaching',
+      ],
+      cta: 'Build Social Wealth',
     },
     {
-      front: {
-        title: 'Future-of-Work Keynotes & Strategy Sessions',
-        idealFor: 'High-impact talks paired with actionable strategy for leaders and teams',
-        delivers: [
-          'High-impact insights',
-          'Actionable next steps',
-        ],
-      },
-      back: {
-        includes: [
-          'Keynote on AI readiness, mindset, and human-centered leadership',
-          'Strategy session to translate insights into next steps',
-          'Optional rollout plan or messaging guide',
-        ],
-        cta: 'Book a Speaking Engagement',
-      },
+      title: 'Future-of-Work Keynotes & Strategy Sessions',
+      idealFor: 'High-impact talks paired with actionable strategy for leaders and teams',
+      delivers: [
+        'High-impact insights',
+        'Actionable next steps',
+      ],
+      includes: [
+        'Keynote on AI readiness, mindset, and human-centered leadership',
+        'Strategy session to translate insights into next steps',
+        'Optional rollout plan or messaging guide',
+      ],
+      cta: 'Book a Speaking Engagement',
     },
     {
-      front: {
-        title: 'Coaching for Individuals & Leaders',
-        idealFor: 'One-on-one coaching that strengthens AI-ready mindsets, communication, and relational influence',
-        delivers: [
-          'AI fluency',
-          'Mindset development',
-          'Communication',
-          'Career strategy',
-        ],
-      },
-      back: {
-        includes: [
-          'AI fluency and mindset development',
-          'Leadership communication',
-          'Navigating change and uncertainty',
-          'Building Social Wealth for career mobility',
-        ],
-        includesLabel: 'Focus Areas',
-        cta: 'Start Coaching',
-      },
+      title: 'Coaching for Individuals & Leaders',
+      idealFor: 'One-on-one coaching that strengthens AI-ready mindsets, communication, and relational influence',
+      delivers: [
+        'AI fluency',
+        'Mindset development',
+        'Communication',
+        'Career strategy',
+      ],
+      includes: [
+        'AI fluency and mindset development',
+        'Leadership communication',
+        'Navigating change and uncertainty',
+        'Building Social Wealth for career mobility',
+      ],
+      includesLabel: 'Focus Areas',
+      cta: 'Start Coaching',
     },
   ];
 
@@ -138,20 +130,96 @@ export default function Services({ onNavigate }: ServicesProps) {
       </section>
 
       <section aria-labelledby="services-heading-main" className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="services-heading-main" className="text-3xl font-semibold text-ink mb-12">Our Services</h2>
-          <div className="services-flip-cards grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <FlipCard
-                key={index}
-                front={service.front}
-                back={service.back}
-                onCtaClick={() => {
-                  window.scrollTo(0, 0);
-                  onNavigate('contact');
-                }}
-              />
-            ))}
+          <div className="space-y-4">
+            {services.map((service, index) => {
+              const isExpanded = expandedIndex === index;
+              return (
+                <div
+                  key={index}
+                  className="bg-trueWhite border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-md"
+                >
+                  <button
+                    onClick={() => setExpandedIndex(isExpanded ? null : index)}
+                    className="w-full text-left px-6 py-5 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-inset"
+                    aria-expanded={isExpanded}
+                    aria-controls={`service-details-${index}`}
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-ink mb-2">
+                          {service.title}
+                        </h3>
+                        <p className="text-sm text-steel mb-3">
+                          <span className="font-medium">Ideal For:</span> {service.idealFor}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {service.delivers.map((item, i) => (
+                            <span
+                              key={i}
+                              className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-navy/5 text-navy"
+                            >
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <ChevronDown
+                        className={`w-6 h-6 text-steel flex-shrink-0 transition-transform duration-200 ${
+                          isExpanded ? 'rotate-180' : ''
+                        }`}
+                        aria-hidden="true"
+                      />
+                    </div>
+                  </button>
+
+                  <div
+                    id={`service-details-${index}`}
+                    className={`overflow-hidden transition-all duration-300 ${
+                      isExpanded ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                    aria-hidden={!isExpanded}
+                  >
+                    <div className="px-6 pb-6 pt-2 border-t border-gray-100">
+                      <div className="mb-6">
+                        <h4 className="text-sm font-semibold text-steel mb-3">
+                          {service.includesLabel || 'What\'s Included'}
+                        </h4>
+                        <ul className="space-y-2">
+                          {service.includes.map((item, i) => (
+                            <li key={i} className="flex gap-3 text-slate leading-relaxed">
+                              <span className="text-steel font-medium flex-shrink-0 mt-1">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {service.credibility && (
+                        <div className="mb-6 p-4 bg-navy/5 rounded-lg">
+                          <p className="text-sm text-slate">
+                            <span className="font-semibold text-navy">Track Record:</span>{' '}
+                            {service.credibility}
+                          </p>
+                        </div>
+                      )}
+
+                      <button
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                          onNavigate('contact');
+                        }}
+                        className="btn-primary"
+                      >
+                        {service.cta}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
