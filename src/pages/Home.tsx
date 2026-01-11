@@ -99,10 +99,10 @@ export default function Home() {
         </picture>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-36">
           <h1 className="text-5xl md:text-6xl font-semibold text-trueWhite mb-6 leading-tight drop-shadow-lg">
-            Building Real Momentum in the AI Era
+            Don't just adapt to AI. Lead with it
           </h1>
           <p className="text-xl text-trueWhite/95 mb-4 leading-relaxed drop-shadow-md">
-            Helping individuals and teams build the capital that matters most in the future of work.
+            We turn AI awareness into AI advantage
           </p>
           <p className="text-lg text-trueWhite/90 mb-10 leading-relaxed drop-shadow-md max-w-3xl">
             In a world reshaped by AI, your greatest advantage is the mindset and relationships you cultivate. We help people, leaders, and organizations develop the human and strategic capacity needed to adapt, grow, and thrive.
