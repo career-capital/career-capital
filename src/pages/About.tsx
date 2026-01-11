@@ -69,6 +69,17 @@ export default function About() {
               <p>
                 Whether she's coaching emerging leaders, advising executives, or speaking on national stages, Nisaini is committed to one thing: helping people show up with clarity, confidence, and purpose—so their work, their voice, and their impact carry further.
               </p>
+              <div className="flex flex-wrap gap-3 mt-8">
+                <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
+                  TEDxChicago Main Stage Speaker
+                </span>
+                <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
+                  Fortune 100 Experience
+                </span>
+                <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
+                  Social Impact Leader
+                </span>
+              </div>
             </div>
           </div>
 

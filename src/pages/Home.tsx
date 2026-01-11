@@ -107,7 +107,7 @@ export default function Home() {
           <p className="text-lg text-trueWhite/90 mb-8 leading-relaxed drop-shadow-md max-w-3xl">
             In a world reshaped by AI, your greatest advantage is the mindset and relationships you cultivate. Career Capital helps people, leaders, and organizations develop the human and strategic capacity needed to adapt, grow, and thrive.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
@@ -128,17 +128,6 @@ export default function Home() {
               Explore Services
             </button>
           </div>
-          <div className="flex flex-wrap gap-3 mt-24">
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              TEDxChicago Main Stage Speaker
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              Fortune 100 Experience
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-sm border border-trueWhite/20 text-trueWhite text-sm font-medium">
-              Social Impact Leader
-            </span>
-          </div>
         </div>
       </section>
 
@@ -153,16 +142,7 @@ export default function Home() {
               Career Capital blends strategic AI guidance, mindset development, and relationship management to help individuals and teams thrive in a rapidly evolving world.
             </p>
             <p className="text-lg text-slate leading-relaxed">
-              We offer coaching, workshops, and strategic guidance that build the human and relational capital needed to navigate change with clarity and confidence.
-            </p>
-          </div>
-
-          <div className="space-y-3 max-w-4xl mb-8">
-            <p className="text-lg text-slate leading-relaxed font-medium">
-              Through our work, we help individuals and teams build AI fluency and social wealth for lasting career impact.
-            </p>
-            <p className="text-lg text-slate leading-relaxed">
-              We help individuals and teams build their:
+              We offer coaching, workshops, and strategic guidance that build the human and relational capital needed to navigate change with clarity and confidence. We help individuals and teams build their:
             </p>
           </div>
 
