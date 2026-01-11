@@ -41,7 +41,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'fallback-3',
-    quote: 'The future of work belongs to those who understand the power of relationships, and Nisaini stands apart by pairing deep lived experience with countless real-world examples from her own community—\u00A0and a rare gift for using powerful, accessible language to give people the tools, confidence, and clarity to practice meaningful, intentional connection in their work and lives.',
+    quote: 'The future of work belongs to those who understand the power of relationships, and Nisaini stands apart by pairing deep lived experience with countless real-world examples from her own community\u00A0—\u00A0and a rare gift for using powerful, accessible language to give people the tools, confidence, and clarity to practice meaningful, intentional connection in their work and lives.',
     author: 'Kelly F.',
     company: 'TEDxChicago',
     display_order: 3,
@@ -176,7 +176,7 @@ export default function Testimonials() {
             Testimonials
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Real stories, real transformation. Client testimonials and professional endorsements spanning public speaking, workshops, coaching, and strategic partnerships—proof\u00A0of impact from those who've experienced it firsthand.
+            Real stories, real transformation. Client testimonials and professional endorsements spanning public speaking, workshops, coaching, and strategic partnerships\u00A0—\u00A0proof of impact from those who've experienced it firsthand.
           </p>
         </div>
       </section>

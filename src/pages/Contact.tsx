@@ -137,7 +137,7 @@ export default function Contact() {
               Not sure where to start?
             </h2>
             <p className="text-xl text-trueWhite/90 mb-8 leading-relaxed">
-              Browse the full range of services—from\u00A0strategic advisory and AI enablement to speaking engagements and workshops. Understanding what's possible can help frame our conversation.
+              Browse the full range of services\u00A0—\u00A0from strategic advisory and AI enablement to speaking engagements and workshops. Understanding what's possible can help frame our conversation.
             </p>
             <button
               onClick={() => {

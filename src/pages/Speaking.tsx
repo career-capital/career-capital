@@ -19,7 +19,7 @@ export default function Speaking() {
     },
     {
       title: 'AI Fluency as Leadership Imperative',
-      description: 'Leaders must understand AI—not\u00A0as technologists, but as strategic thinkers who can guide their teams through transformation.',
+      description: 'Leaders must understand AI\u00A0—\u00A0not as technologists, but as strategic thinkers who can guide their teams through transformation.',
       content: [
         'AI fluency for executives (no coding required)',
         'Evaluating opportunities and risks',
@@ -203,7 +203,7 @@ export default function Speaking() {
                 how your supporters become the foundation for every career move you make.
               </p>
               <p className="text-lg text-trueWhite/90 leading-relaxed mb-8">
-                <strong className="text-trueWhite">Key insight:</strong> Your network doesn't just open doors—it\u00A0underwrites your next opportunity.
+                <strong className="text-trueWhite">Key insight:</strong> Your network doesn't just open doors\u00A0—\u00A0it underwrites your next opportunity.
                 Every encounter is an interview, and investing in genuine relationships compounds over time.
               </p>
               <button
@@ -323,7 +323,7 @@ export default function Speaking() {
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">Relationships first, always</h3>
                   <p className="text-slate leading-relaxed">
-                    This isn't transactional consulting. We build trust and genuine connection alongside technical capability—because\u00A0lasting transformation happens through people, not just processes.
+                    This isn't transactional consulting. We build trust and genuine connection alongside technical capability\u00A0—\u00A0because lasting transformation happens through people, not just processes.
                   </p>
                 </div>
               </div>
@@ -336,7 +336,7 @@ export default function Speaking() {
                 <div className="pb-8">
                   <h3 className="text-lg text-ink mb-2">Customized to your reality</h3>
                   <p className="text-slate leading-relaxed">
-                    No templates or cookie-cutter frameworks. Every engagement is shaped around your organization's unique context, culture, and challenges—because\u00A0what works for one team rarely fits another.
+                    No templates or cookie-cutter frameworks. Every engagement is shaped around your organization's unique context, culture, and challenges\u00A0—\u00A0because what works for one team rarely fits another.
                   </p>
                 </div>
               </div>
@@ -359,7 +359,7 @@ export default function Speaking() {
                 <div>
                   <h3 className="text-lg text-ink mb-2">Long-term partnership mindset</h3>
                   <p className="text-slate leading-relaxed">
-                    Quick wins matter, but sustained success matters more. This work is about making strategic deposits that compound over time—building\u00A0relationships and capabilities that create lasting value.
+                    Quick wins matter, but sustained success matters more. This work is about making strategic deposits that compound over time\u00A0—\u00A0building relationships and capabilities that create lasting value.
                   </p>
                 </div>
               </div>

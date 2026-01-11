@@ -39,7 +39,7 @@ export default function About() {
             Teams are unsure what AI means for their roles. Leaders struggle to communicate change with empathy. Individuals feel pressure to stay relevant without a roadmap. Organizations want to modernize without losing their culture.
           </p>
           <p className="text-lg text-slate leading-relaxed max-w-4xl">
-            Career Capital helps build the mindsets, relationships, and AI fluency needed to navigate this shift—\u00A0without losing the human side of work.
+            Career Capital helps build the mindsets, relationships, and AI fluency needed to navigate this shift\u00A0—\u00A0without losing the human side of work.
           </p>
         </div>
       </section>
@@ -69,7 +69,7 @@ export default function About() {
                   className="font-medium text-navy hover:text-steel"
                 >
                   Nisaini Rexach
-                </a> is a strategic communicator, mentor, and main stage TEDxChicago speaker whose work sits at the intersection of relationship‑driven growth and AI‑ready communication. Her philosophy is rooted in the belief that careers accelerate when clarity, connection, and credibility work together—and\u00A0she helps individuals and organizations build all three with intention.
+                </a> is a strategic communicator, mentor, and main stage TEDxChicago speaker whose work sits at the intersection of relationship‑driven growth and AI‑ready communication. Her philosophy is rooted in the belief that careers accelerate when clarity, connection, and credibility work together\u00A0—\u00A0and she helps individuals and organizations build all three with intention.
               </p>
               <p>
                 Her signature framework, Social Wealth, draws from lived experiences spanning Chicago's public housing to Fortune 500 boardrooms. It's a reminder that every encounter is an interview, every relationship is an asset, and every moment is an opportunity to shape how others experience you.
@@ -78,7 +78,7 @@ export default function About() {
                 Through Career Capital, Nisaini brings curiosity, structural agility, and relationship management to every engagement. She helps clients communicate with precision, strengthen their professional presence, and build the relational capital needed to thrive in an AI‑accelerating world.
               </p>
               <p>
-                Whether she's coaching emerging leaders, advising executives, or speaking on national stages, Nisaini is committed to one thing: helping people show up with clarity, confidence, and purpose—so\u00A0their work, their voice, and their impact carry further.
+                Whether she's coaching emerging leaders, advising executives, or speaking on national stages, Nisaini is committed to one thing: helping people show up with clarity, confidence, and purpose\u00A0—\u00A0so their work, their voice, and their impact carry further.
               </p>
             </div>
           </div>

@@ -40,7 +40,7 @@ export default function Services() {
     },
     {
       title: 'AI-Ready Communication Lab',
-      subtitle: 'Transform how your organization talks about AI—reducing\u00A0anxiety and building trust during transitions.',
+      subtitle: 'Transform how your organization talks about AI\u00A0—\u00A0reducing anxiety and building trust during transitions.',
       idealFor: 'Organizations struggling to explain AI changes to employees without causing anxiety or confusion',
       delivers: [
         'Messaging frameworks',
@@ -129,7 +129,7 @@ export default function Services() {
     },
     {
       title: 'Office Hours',
-      subtitle: 'When people feel seen, they remember. Regular access for questions, guidance, and strategic thinking—a\u00A0space where challenges become clarity.',
+      subtitle: 'When people feel seen, they remember. Regular access for questions, guidance, and strategic thinking\u00A0—\u00A0a space where challenges become clarity.',
       idealFor: 'Teams seeking ongoing support and guidance',
       delivers: [
         'Continuous support',
@@ -166,7 +166,7 @@ export default function Services() {
             Services
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md max-w-4xl">
-            Your brand is in the room even when you're not. Let's build AI fluency that compounds over time—strategic,\u00A0practical guidance for organizations ready to invest in capability without losing their humanity.
+            Your brand is in the room even when you're not. Let's build AI fluency that compounds over time\u00A0—\u00A0strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
           </p>
         </div>
       </section>
@@ -487,7 +487,7 @@ export default function Services() {
                 <div className="pb-8">
                   <h3 className="text-lg font-semibold text-ink mb-2">We come to the table prepared</h3>
                   <p className="text-slate leading-relaxed">
-                    Every engagement is customized to your specific needs—because\u00A0one-size-fits-all doesn't build real capability.
+                    Every engagement is customized to your specific needs\u00A0—\u00A0because one-size-fits-all doesn't build real capability.
                   </p>
                 </div>
               </div>
@@ -500,7 +500,7 @@ export default function Services() {
                 <div className="pb-8">
                   <h3 className="text-lg font-semibold text-ink mb-2">We make deposits with intention</h3>
                   <p className="text-slate leading-relaxed">
-                    We focus on actionable steps and real capability building—not\u00A0just strategy documents that sit on a shelf.
+                    We focus on actionable steps and real capability building\u00A0—\u00A0not just strategy documents that sit on a shelf.
                   </p>
                 </div>
               </div>
@@ -510,7 +510,7 @@ export default function Services() {
                 <div>
                   <h3 className="text-lg font-semibold text-ink mb-2">The dividends will surprise you</h3>
                   <p className="text-slate leading-relaxed">
-                    Ongoing guidance ensures momentum and addresses challenges as they emerge—relationships\u00A0that compound over time.
+                    Ongoing guidance ensures momentum and addresses challenges as they emerge\u00A0—\u00A0relationships that compound over time.
                   </p>
                 </div>
               </div>
