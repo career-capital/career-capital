@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Navigation</h3>
+            <h3 className="text-xl font-semibold mb-6">Navigation</h3>
             <nav aria-label="Footer navigation">
               <ul className="space-y-3 text-base">
                 <li>
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Connect</h3>
+            <h3 className="text-xl font-semibold mb-6">Connect</h3>
             <div className="space-y-4">
               <a
                 href="mailto:info@careercapital.io"
