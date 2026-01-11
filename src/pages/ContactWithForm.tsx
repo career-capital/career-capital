@@ -1,14 +1,10 @@
 import { Mail, MessageSquare, Calendar, Rocket, ArrowRight } from 'lucide-react';
 import { useState, FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 
-type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
-
-interface ContactProps {
-  onNavigate: (page: Page) => void;
-}
-
-export default function Contact({ onNavigate }: ContactProps) {
+export default function Contact() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -317,7 +313,7 @@ export default function Contact({ onNavigate }: ContactProps) {
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                onNavigate('services');
+                navigate('/services');
               }}
               className="btn-primary-on-dark"
             >

@@ -1,11 +1,6 @@
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-
-type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
-
-interface ServicesProps {
-  onNavigate: (page: Page) => void;
-}
+import { useNavigate } from 'react-router-dom';
 
 interface Service {
   title: string;
@@ -18,7 +13,8 @@ interface Service {
   cta: string;
 }
 
-export default function Services({ onNavigate }: ServicesProps) {
+export default function Services() {
+  const navigate = useNavigate();
   const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
   const [expandedAddonIndices, setExpandedAddonIndices] = useState<Set<number>>(new Set());
 
@@ -269,7 +265,7 @@ export default function Services({ onNavigate }: ServicesProps) {
                       <button
                         onClick={() => {
                           window.scrollTo(0, 0);
-                          onNavigate('contact');
+                          navigate('/contact');
                         }}
                         className="btn-secondary"
                       >
@@ -367,7 +363,7 @@ export default function Services({ onNavigate }: ServicesProps) {
                       <button
                         onClick={() => {
                           window.scrollTo(0, 0);
-                          onNavigate('contact');
+                          navigate('/contact');
                         }}
                         className="btn-secondary"
                       >
@@ -486,7 +482,7 @@ export default function Services({ onNavigate }: ServicesProps) {
               <button
                 onClick={() => {
                   window.scrollTo(0, 0);
-                  onNavigate('contact');
+                  navigate('/contact');
                 }}
                 className="btn-primary"
               >
@@ -510,7 +506,7 @@ export default function Services({ onNavigate }: ServicesProps) {
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                onNavigate('contact');
+                navigate('/contact');
               }}
               className="btn-primary-on-dark w-full sm:w-auto"
             >

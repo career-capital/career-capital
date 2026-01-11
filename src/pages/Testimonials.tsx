@@ -1,12 +1,7 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Quote } from 'lucide-react';
 import { supabase, Testimonial } from '../lib/supabase';
-
-type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
-
-interface TestimonialsProps {
-  onNavigate: (page: Page) => void;
-}
 
 const ENGAGEMENT_TYPES = [
   'Public Speaking',
@@ -59,7 +54,8 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-export default function Testimonials({ onNavigate }: TestimonialsProps) {
+export default function Testimonials() {
+  const navigate = useNavigate();
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedEngagementTypes, setSelectedEngagementTypes] = useState<string[]>([]);
@@ -345,7 +341,7 @@ export default function Testimonials({ onNavigate }: TestimonialsProps) {
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                onNavigate('contact');
+                navigate('/contact');
               }}
               className="btn-primary-on-dark w-full sm:w-auto"
             >

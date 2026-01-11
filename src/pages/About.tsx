@@ -1,12 +1,8 @@
 import { Heart, Target, Compass, ExternalLink, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
-
-interface AboutProps {
-  onNavigate: (page: Page) => void;
-}
-
-export default function About({ onNavigate }: AboutProps) {
+export default function About() {
+  const navigate = useNavigate();
   return (
     <div className="bg-softWhite">
       <section
@@ -147,7 +143,7 @@ export default function About({ onNavigate }: AboutProps) {
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                onNavigate('contact');
+                navigate('/contact');
               }}
               className="btn-primary-on-dark w-full sm:w-auto"
             >

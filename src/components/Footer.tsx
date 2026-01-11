@@ -1,13 +1,8 @@
 import { Linkedin, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
-type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
-
-interface FooterProps {
-  onNavigate?: (page: Page) => void;
-}
-
-export default function Footer({ onNavigate }: FooterProps) {
+export default function Footer() {
   return (
     <footer role="contentinfo" className="bg-softWhite text-ink border-t border-border py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,70 +21,52 @@ export default function Footer({ onNavigate }: FooterProps) {
             <nav aria-label="Footer navigation">
               <ul className="space-y-3 text-base">
                 <li>
-                  <button
-                    onClick={() => {
-                      window.scrollTo(0, 0);
-                      onNavigate?.('home');
-                    }}
+                  <Link
+                    to="/"
                     className="text-slate hover:text-navy transition-colors"
                   >
                     Home
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => {
-                      window.scrollTo(0, 0);
-                      onNavigate?.('services');
-                    }}
+                  <Link
+                    to="/services"
                     className="text-slate hover:text-navy transition-colors"
                   >
                     Services
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => {
-                      window.scrollTo(0, 0);
-                      onNavigate?.('speaking');
-                    }}
+                  <Link
+                    to="/speaking"
                     className="text-slate hover:text-navy transition-colors"
                   >
                     Speaking
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => {
-                      window.scrollTo(0, 0);
-                      onNavigate?.('about');
-                    }}
+                  <Link
+                    to="/about"
                     className="text-slate hover:text-navy transition-colors"
                   >
                     About
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => {
-                      window.scrollTo(0, 0);
-                      onNavigate?.('testimonials');
-                    }}
+                  <Link
+                    to="/testimonials"
                     className="text-slate hover:text-navy transition-colors"
                   >
                     Testimonials
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => {
-                      window.scrollTo(0, 0);
-                      onNavigate?.('contact');
-                    }}
+                  <Link
+                    to="/contact"
                     className="text-slate hover:text-navy transition-colors"
                   >
                     Contact
-                  </button>
+                  </Link>
                 </li>
               </ul>
             </nav>

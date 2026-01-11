@@ -1,13 +1,9 @@
 import { Users, Lightbulb, ArrowRight, ExternalLink, Mic, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
-
-interface SpeakingProps {
-  onNavigate: (page: Page) => void;
-}
-
-export default function Speaking({ onNavigate }: SpeakingProps) {
+export default function Speaking() {
+  const navigate = useNavigate();
   const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
 
   const topics = [
@@ -206,7 +202,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
               <button
                 onClick={() => {
                   window.scrollTo(0, 0);
-                  onNavigate('contact');
+                  navigate('/contact');
                 }}
                 className="btn-primary-on-dark w-full sm:w-auto"
               >
@@ -384,7 +380,7 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
           <button
             onClick={() => {
               window.scrollTo(0, 0);
-              onNavigate('contact');
+              navigate('/contact');
             }}
             className="btn-primary-on-dark w-full sm:w-auto"
           >

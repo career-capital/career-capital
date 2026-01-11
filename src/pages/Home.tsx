@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Users, Sparkles, TrendingUp, ExternalLink } from 'lucide-react';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import { supabase, Testimonial } from '../lib/supabase';
-
-type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
-
-interface HomeProps {
-  onNavigate: (page: Page) => void;
-}
 
 const FALLBACK_TESTIMONIALS: Testimonial[] = [
   {
@@ -51,7 +46,8 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-export default function Home({ onNavigate }: HomeProps) {
+export default function Home() {
+  const navigate = useNavigate();
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
 
   useEffect(() => {
@@ -115,7 +111,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                onNavigate('contact');
+                navigate('/contact');
               }}
               className="btn-primary-on-dark"
             >
@@ -125,7 +121,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                onNavigate('services');
+                navigate('/services');
               }}
               className="btn-secondary-on-dark"
             >
@@ -185,7 +181,7 @@ export default function Home({ onNavigate }: HomeProps) {
               <button
                 onClick={() => {
                   window.scrollTo(0, 0);
-                  onNavigate('testimonials');
+                  navigate('/testimonials');
                 }}
                 className="inline-flex items-center text-base text-navy hover:text-steel font-medium transition-colors group underline underline-offset-2"
                 aria-label="Navigate to testimonials page to see all client reviews"
@@ -218,7 +214,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 <button
                   onClick={() => {
                     window.scrollTo(0, 0);
-                    onNavigate('contact');
+                    navigate('/contact');
                   }}
                   className="btn-primary-on-dark"
                 >

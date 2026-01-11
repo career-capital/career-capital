@@ -1,12 +1,8 @@
 import { Mail, MessageSquare, Calendar, Rocket, ArrowRight, ExternalLink } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
-
-interface ContactProps {
-  onNavigate: (page: Page) => void;
-}
-
-export default function Contact({ onNavigate }: ContactProps) {
+export default function Contact() {
+  const navigate = useNavigate();
   return (
     <div className="bg-softWhite">
       <section
@@ -146,7 +142,7 @@ export default function Contact({ onNavigate }: ContactProps) {
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                onNavigate('services');
+                navigate('/services');
               }}
               className="btn-primary-on-dark w-full sm:w-auto"
             >

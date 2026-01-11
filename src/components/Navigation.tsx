@@ -1,19 +1,14 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useFocusTrap } from '../hooks/useFocusTrap';
 import Logo from './Logo';
 
-type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
-
-interface NavigationProps {
-  currentPage: Page;
-  onNavigate: (page: Page) => void;
-}
-
-export default function Navigation({ currentPage, onNavigate }: NavigationProps) {
+export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const focusTrapRef = useFocusTrap(mobileMenuOpen);
+  const location = useLocation();
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -40,22 +35,16 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
 
   useEffect(() => {
     setMobileMenuOpen(false);
-  }, [currentPage]);
+  }, [location.pathname]);
 
   const links = [
-    { id: 'home' as Page, label: 'Home' },
-    { id: 'services' as Page, label: 'Services' },
-    { id: 'speaking' as Page, label: 'Speaking' },
-    { id: 'about' as Page, label: 'About' },
-    { id: 'testimonials' as Page, label: 'Testimonials' },
-    { id: 'contact' as Page, label: 'Contact' },
+    { path: '/', label: 'Home' },
+    { path: '/services', label: 'Services' },
+    { path: '/speaking', label: 'Speaking' },
+    { path: '/about', label: 'About' },
+    { path: '/testimonials', label: 'Testimonials' },
+    { path: '/contact', label: 'Contact' },
   ];
-
-  const handleNavClick = (page: Page) => {
-    onNavigate(page);
-    setMobileMenuOpen(false);
-    window.scrollTo(0, 0);
-  };
 
   return (
     <>
@@ -74,28 +63,29 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-28">
-            <button
-              onClick={() => handleNavClick('home')}
+            <NavLink
+              to="/"
               className="flex items-center h-16"
               aria-label="Career Capital home"
             >
               <Logo variant="stacked" color="dark" className="h-full w-auto" />
-            </button>
+            </NavLink>
 
             <div className="hidden md:flex items-center space-x-8">
               {links.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => handleNavClick(link.id)}
-                  className={`nav-link transition-all relative pb-1 ${
-                    currentPage === link.id
-                      ? 'text-navy after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-steel'
-                      : 'text-navy hover:text-steel after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-steel after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200'
-                  }`}
-                  aria-current={currentPage === link.id ? 'page' : undefined}
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `nav-link transition-all relative pb-1 ${
+                      isActive
+                        ? 'text-navy after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-steel'
+                        : 'text-navy hover:text-steel after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-steel after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200'
+                    }`
+                  }
                 >
                   {link.label}
-                </button>
+                </NavLink>
               ))}
             </div>
 
@@ -121,18 +111,19 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
           >
             <div className="px-6 py-8 space-y-1">
               {links.map((link, index) => (
-                <button
-                  key={link.id}
-                  onClick={() => handleNavClick(link.id)}
-                  className={`nav-link block w-full text-left text-xl py-4 px-5 transition-all duration-200 menu-item-${index + 1} ${
-                    currentPage === link.id
-                      ? 'text-navy border-l-4 border-steel bg-steel/10'
-                      : 'text-navy border-l-4 border-transparent hover:bg-steel/20 hover:text-steel active:bg-steel/25'
-                  }`}
-                  aria-current={currentPage === link.id ? 'page' : undefined}
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `nav-link block w-full text-left text-xl py-4 px-5 transition-all duration-200 menu-item-${index + 1} ${
+                      isActive
+                        ? 'text-navy border-l-4 border-steel bg-steel/10'
+                        : 'text-navy border-l-4 border-transparent hover:bg-steel/20 hover:text-steel active:bg-steel/25'
+                    }`
+                  }
                 >
                   {link.label}
-                </button>
+                </NavLink>
               ))}
             </div>
           </div>
