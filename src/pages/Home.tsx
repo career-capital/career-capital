@@ -33,7 +33,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'fallback-3',
-    quote: 'The future of work belongs to those who understand the power of relationships, and Nisaini stands apart by pairing deep lived experience with countless real-world examples from her own community\u00A0—\u00A0and a rare gift for using powerful, accessible language to give people the tools, confidence, and clarity to practice meaningful, intentional connection in their work and lives.',
+    quote: 'The future of work belongs to those who understand the power of relationships, and Nisaini stands apart by pairing deep lived experience with countless real-world examples from her own community—and a rare gift for using powerful, accessible language to give people the tools, confidence, and clarity to practice meaningful, intentional connection in their work and lives.',
     author: 'Kelly F.',
     company: 'TEDxChicago',
     display_order: 3,
@@ -257,7 +257,7 @@ export default function Home() {
                   Mindset Shifts
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Transform how leaders think about AI\u00A0—\u00A0from threat to tool, from confusion to clarity.
+                  Transform how leaders think about AI—from threat to tool, from confusion to clarity.
                 </p>
               </div>
             </div>
@@ -315,7 +315,7 @@ export default function Home() {
                 "How social wealth can transform your career"
               </p>
               <p className="text-lg text-trueWhite/80 mb-8 leading-relaxed">
-                Relationships are career capital. When you invest in building genuine connections\u00A0—\u00A0your "social wealth"\u00A0—\u00A0your network becomes the foundation that underwrites your next opportunity.
+                Relationships are career capital. When you invest in building genuine connections—your "social wealth"—your network becomes the foundation that underwrites your next opportunity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
