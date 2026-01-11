@@ -1,5 +1,5 @@
-import { Users, Lightbulb, ArrowRight, ExternalLink, Mic } from 'lucide-react';
-import FlipCard from '../components/FlipCard';
+import { Users, Lightbulb, ArrowRight, ExternalLink, Mic, ChevronDown } from 'lucide-react';
+import { useState } from 'react';
 
 type Page = 'home' | 'services' | 'speaking' | 'about' | 'testimonials' | 'contact';
 
@@ -8,62 +8,48 @@ interface SpeakingProps {
 }
 
 export default function Speaking({ onNavigate }: SpeakingProps) {
+  const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
+
   const topics = [
     {
-      front: {
-        title: 'Social Wealth: Building Career Capital',
-        description: 'Your network underwrites your next move. Learn how intentional relationship-building creates opportunities traditional networking never could.',
-      },
-      back: {
-        content: [
-          'Strategic investment vs transactional networking',
-          'How "social wealth" compounds over time',
-          'Practical relationship-building frameworks',
-          'Every encounter is an interview',
-        ],
-      },
+      title: 'Social Wealth: Building Career Capital',
+      description: 'Your network underwrites your next move. Learn how intentional relationship-building creates opportunities traditional networking never could.',
+      content: [
+        'Strategic investment vs transactional networking',
+        'How "social wealth" compounds over time',
+        'Practical relationship-building frameworks',
+        'Every encounter is an interview',
+      ],
     },
     {
-      front: {
-        title: 'AI Fluency as Leadership Imperative',
-        description: 'Leaders must understand AI—not as technologists, but as strategic thinkers who can guide their teams through transformation.',
-      },
-      back: {
-        content: [
-          'AI fluency for executives (no coding required)',
-          'Evaluating opportunities and risks',
-          'Building confidence through hands-on experience',
-          'Navigating the hype cycle with clarity',
-        ],
-      },
+      title: 'AI Fluency as Leadership Imperative',
+      description: 'Leaders must understand AI—not as technologists, but as strategic thinkers who can guide their teams through transformation.',
+      content: [
+        'AI fluency for executives (no coding required)',
+        'Evaluating opportunities and risks',
+        'Building confidence through hands-on experience',
+        'Navigating the hype cycle with clarity',
+      ],
     },
     {
-      front: {
-        title: 'Relationship Management in AI Age',
-        description: 'Human connection becomes more valuable as AI handles routine tasks. Strengthen collaboration as technology transforms the workplace.',
-      },
-      back: {
-        content: [
-          'Why relationships matter more, not less',
-          'Balancing technology with culture and trust',
-          'Maintaining connection in digital workplaces',
-          'Leading teams through change with empathy',
-        ],
-      },
+      title: 'Relationship Management in AI Age',
+      description: 'Human connection becomes more valuable as AI handles routine tasks. Strengthen collaboration as technology transforms the workplace.',
+      content: [
+        'Why relationships matter more, not less',
+        'Balancing technology with culture and trust',
+        'Maintaining connection in digital workplaces',
+        'Leading teams through change with empathy',
+      ],
     },
     {
-      front: {
-        title: 'Building AI Readiness With Humanity',
-        description: 'Create technical capability while maintaining your values. Practical roadmaps that balance quick wins with long-term organizational health.',
-      },
-      back: {
-        content: [
-          'Assess readiness: culture, skills, and strategy',
-          'Practical roadmaps with quick wins',
-          'Navigate ethical considerations',
-          'Build psychological safety for learning',
-        ],
-      },
+      title: 'Building AI Readiness With Humanity',
+      description: 'Create technical capability while maintaining your values. Practical roadmaps that balance quick wins with long-term organizational health.',
+      content: [
+        'Assess readiness: culture, skills, and strategy',
+        'Practical roadmaps with quick wins',
+        'Navigate ethical considerations',
+        'Build psychological safety for learning',
+      ],
     },
   ];
 
@@ -127,12 +113,75 @@ export default function Speaking({ onNavigate }: SpeakingProps) {
       </section>
 
       <section aria-labelledby="topics-heading" className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="topics-heading" className="text-3xl font-semibold text-ink mb-12">Speaking Topics</h2>
-          <div className="grid md:grid-cols-2 gap-8 speaking-flip-cards">
-            {topics.map((topic, index) => (
-              <FlipCard key={index} front={topic.front} back={topic.back} />
-            ))}
+          <div className="space-y-4">
+            {topics.map((topic, index) => {
+              const isExpanded = expandedIndices.has(index);
+              const toggleExpanded = () => {
+                const newSet = new Set(expandedIndices);
+                if (isExpanded) {
+                  newSet.delete(index);
+                } else {
+                  newSet.add(index);
+                }
+                setExpandedIndices(newSet);
+              };
+              return (
+                <div
+                  key={index}
+                  className="bg-trueWhite border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-md"
+                >
+                  <button
+                    onClick={toggleExpanded}
+                    className="w-full text-left px-6 py-5 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-inset"
+                    aria-expanded={isExpanded}
+                    aria-controls={`topic-details-${index}`}
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-ink mb-2">
+                          {topic.title}
+                        </h3>
+                        <p className="text-base text-slate leading-relaxed">
+                          {topic.description}
+                        </p>
+                      </div>
+                      <ChevronDown
+                        className={`w-6 h-6 text-steel flex-shrink-0 transition-transform duration-200 ${
+                          isExpanded ? 'rotate-180' : ''
+                        }`}
+                        aria-hidden="true"
+                      />
+                    </div>
+                  </button>
+
+                  <div
+                    id={`topic-details-${index}`}
+                    className={`overflow-hidden transition-all duration-300 ${
+                      isExpanded ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                    aria-hidden={!isExpanded}
+                  >
+                    <div className="px-6 pb-6 pt-2 border-t border-gray-100">
+                      <div className="mb-4">
+                        <h4 className="text-sm font-semibold text-steel mb-3">
+                          Key Themes
+                        </h4>
+                        <ul className="space-y-2">
+                          {topic.content.map((item, i) => (
+                            <li key={i} className="flex gap-3 text-slate leading-relaxed">
+                              <span className="text-steel font-medium flex-shrink-0 mt-1">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
