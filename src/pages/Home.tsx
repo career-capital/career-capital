@@ -148,7 +148,23 @@ export default function Home() {
             What We Do
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-12">
+          <div className="space-y-6 max-w-4xl mb-12">
+            <p className="text-lg text-slate leading-relaxed">
+              Career Capital blends strategic AI guidance, mindset development, and relationship management to help individuals and teams thrive in a rapidly evolving world.
+            </p>
+            <p className="text-lg text-slate leading-relaxed">
+              We offer coaching, workshops, and strategic guidance that build the human and relational capital needed to navigate change with clarity and confidence.
+            </p>
+            <p className="text-xl text-ink leading-relaxed font-medium">
+              Building AI fluency and social wealth for lasting career impact.
+            </p>
+          </div>
+
+          <p className="text-lg text-slate leading-relaxed mb-8 max-w-4xl">
+            We help individuals and teams build their:
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
@@ -190,18 +206,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
-
-          <div className="space-y-6 max-w-4xl">
-            <p className="text-xl text-ink leading-relaxed font-medium">
-              Building AI fluency and social wealth for lasting career impact.
-            </p>
-            <p className="text-lg text-slate leading-relaxed">
-              Career Capital blends strategic AI guidance, mindset development, and relationship management to help individuals and teams thrive in a rapidly evolving world.
-            </p>
-            <p className="text-lg text-slate leading-relaxed">
-              We offer coaching, workshops, and strategic guidance that build the human and relational capital needed to navigate change with clarity and confidence.
-            </p>
           </div>
         </div>
       </section>
