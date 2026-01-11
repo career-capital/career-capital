@@ -46,7 +46,7 @@ export default function About() {
 
       <section aria-labelledby="nisaini-heading" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="nisaini-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Meet Nisaini</h2>
+          <h2 id="nisaini-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Meet the Founder</h2>
           <div className="grid lg:grid-cols-[1fr_400px] gap-8 lg:gap-12 items-start">
           <div>
             <div className="space-y-6 text-lg text-slate leading-relaxed">

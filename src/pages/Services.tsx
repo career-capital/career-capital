@@ -244,8 +244,9 @@ export default function Services() {
       </section>
 
       <section aria-labelledby="services-heading-main" className="py-16 bg-surface">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="services-heading-main" className="text-4xl md:text-5xl font-semibold text-ink mb-3">Our Services</h2>
+          <div className="max-w-4xl mx-auto">
           <p className="text-lg text-slate mb-12 leading-relaxed">
             Build the mindset, relationships, and AI fluency needed to thrive in the future of work.
           </p>
@@ -449,6 +450,7 @@ export default function Services() {
             })}
             </div>
           </div>
+        </div>
         </div>
       </section>
 

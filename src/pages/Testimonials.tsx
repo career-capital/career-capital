@@ -181,10 +181,12 @@ export default function Testimonials() {
         </div>
       </section>
 
-      <section aria-labelledby="filters-heading" className="py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section aria-labelledby="feedback-heading" className="py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="feedback-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Client Stories & Endorsements</h2>
+          <div className="max-w-4xl mx-auto">
           <div className="border-l-2 border-navy/20 pl-6 py-4 mb-10">
-          <h2 id="filters-heading" className="text-base font-medium text-slate mb-6 uppercase tracking-wide">Filter Testimonials</h2>
+          <h3 className="text-base font-medium text-slate mb-6 uppercase tracking-wide">Filter Testimonials</h3>
 
           <div className="space-y-6">
             <div>
@@ -261,7 +263,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="space-y-6" role="region" aria-live="polite" aria-atomic="false">
+        <div className="space-y-6 max-w-4xl mx-auto" role="region" aria-live="polite" aria-atomic="false">
           {filteredTestimonials.length > 0 ? (
             <>
               {visibleTestimonials.map((testimonial) => (
@@ -325,6 +327,7 @@ export default function Testimonials() {
               : 'No testimonials match your selected filters.'
             }
           </div>
+        </div>
         </div>
         </div>
       </section>
