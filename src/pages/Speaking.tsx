@@ -309,7 +309,7 @@ export default function Speaking() {
 
       <section aria-labelledby="differentiators-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
+          <div className="max-w-md">
             <h2 id="differentiators-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">What Makes These Engagements Different</h2>
           </div>
           <p className="text-xl text-slate mb-12">Real partnership built on trust, customization, and lasting capability.</p>
