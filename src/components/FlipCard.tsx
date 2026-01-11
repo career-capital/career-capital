@@ -8,10 +8,13 @@ interface FlipCardProps {
   };
   back: {
     content: string[];
+    credibility?: string;
+    cta?: string;
   };
+  onCtaClick?: () => void;
 }
 
-export default function FlipCard({ front, back }: FlipCardProps) {
+export default function FlipCard({ front, back, onCtaClick }: FlipCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleToggle = () => {
@@ -22,6 +25,13 @@ export default function FlipCard({ front, back }: FlipCardProps) {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       handleToggle();
+    }
+  };
+
+  const handleCtaClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (onCtaClick) {
+      onCtaClick();
     }
   };
 
@@ -62,7 +72,7 @@ export default function FlipCard({ front, back }: FlipCardProps) {
               </h3>
               <RotateCw className="w-5 h-5 text-steel flex-shrink-0" aria-hidden="true" />
             </div>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-4">
               {back.content.map((item, index) => (
                 <li key={index} className="flex gap-3 text-base text-slate leading-relaxed">
                   <span className="text-steel font-medium flex-shrink-0 mt-0.5">•</span>
@@ -70,6 +80,19 @@ export default function FlipCard({ front, back }: FlipCardProps) {
                 </li>
               ))}
             </ul>
+            {back.credibility && (
+              <p className="text-sm text-slate/80 italic mb-4">
+                {back.credibility}
+              </p>
+            )}
+            {back.cta && (
+              <button
+                onClick={handleCtaClick}
+                className="text-navy hover:text-steel font-medium text-base underline underline-offset-2 hover:underline-offset-4 transition-all"
+              >
+                {back.cta}
+              </button>
+            )}
           </div>
         </div>
       </div>

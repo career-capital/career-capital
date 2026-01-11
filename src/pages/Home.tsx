@@ -103,10 +103,13 @@ export default function Home({ onNavigate }: HomeProps) {
         </picture>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
           <h1 className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
-            AI Fluency + Social Wealth = Your New Competitive Edge
+            Career Capital for the AI Era
           </h1>
-          <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Strategic guidance for organizations building AI readiness while elevating the human side of work.
+          <p className="text-xl text-trueWhite/95 mb-4 leading-relaxed drop-shadow-md">
+            Helping individuals and teams build the capital that matters most in the future of work.
+          </p>
+          <p className="text-lg text-trueWhite/90 mb-8 leading-relaxed drop-shadow-md max-w-3xl">
+            In a world reshaped by AI, your greatest advantage is the mindset and relationships you cultivate. Career Capital helps people, leaders, and organizations develop the human and strategic capacity needed to adapt, grow, and thrive.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <button
@@ -116,7 +119,7 @@ export default function Home({ onNavigate }: HomeProps) {
               }}
               className="btn-primary-on-dark"
             >
-              Let's Talk
+              Work With Us
               <ArrowRight className="ml-2 w-4 h-4" />
             </button>
             <button
@@ -143,39 +146,31 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      <section aria-labelledby="capabilities-heading" className="bg-surface py-20">
+      <section aria-labelledby="what-we-do-heading" className="bg-surface py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="capabilities-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-12">
-            Building AI fluency and social wealth for lasting career impact
+          <h2 id="what-we-do-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
+            What We Do
           </h2>
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="flex flex-col space-y-4">
-              <Sparkles className="w-12 h-12 text-navy" strokeWidth={1.5} />
-              <h3 className="text-xl font-medium text-ink">AI fluency</h3>
-              <p className="text-slate leading-relaxed">
-                Build organizational confidence and capability around AI through strategic
-                guidance and practical enablement.
-              </p>
-            </div>
+          <p className="text-lg text-slate leading-relaxed mb-12 max-w-4xl">
+            Career Capital blends AI fluency, mindset development, and Social Wealth to help individuals and teams thrive in a rapidly evolving world.
+          </p>
+          <p className="text-lg text-slate leading-relaxed max-w-4xl">
+            We offer coaching, workshops, and strategic guidance that build the human and relational capital needed to navigate change with clarity and confidence.
+          </p>
+        </div>
+      </section>
 
-            <div className="flex flex-col space-y-4">
-              <Users className="w-12 h-12 text-navy" strokeWidth={1.5} />
-              <h3 className="text-xl font-medium text-ink">Relationship management</h3>
-              <p className="text-slate leading-relaxed">
-                Strengthen the human connections that drive business success, even as
-                technology evolves.
-              </p>
-            </div>
-
-            <div className="flex flex-col space-y-4">
-              <TrendingUp className="w-12 h-12 text-navy" strokeWidth={1.5} />
-              <h3 className="text-xl font-medium text-ink">Mindset shifts</h3>
-              <p className="text-slate leading-relaxed">
-                Transform how leaders think about AI—from threat to tool, from confusion
-                to clarity.
-              </p>
-            </div>
-          </div>
+      <section aria-labelledby="why-cc-heading" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="why-cc-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
+            Why Career Capital
+          </h2>
+          <p className="text-lg text-slate leading-relaxed mb-8 max-w-4xl">
+            Your career capital is the combination of your mindset, relationships, and AI fluency — the assets that shape your opportunities in a rapidly evolving world.
+          </p>
+          <p className="text-lg text-slate leading-relaxed max-w-4xl">
+            Career Capital helps you grow these assets with clarity, confidence, and humanity.
+          </p>
         </div>
       </section>
 

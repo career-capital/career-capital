@@ -31,6 +31,23 @@ export default function About({ onNavigate }: AboutProps) {
         </div>
       </section>
 
+      <section aria-labelledby="problem-heading" className="py-16 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="problem-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
+            The Problem We Solve
+          </h2>
+          <p className="text-lg text-slate leading-relaxed mb-6 max-w-4xl">
+            AI is reshaping work faster than most people and organizations can adapt.
+          </p>
+          <p className="text-lg text-slate leading-relaxed mb-6 max-w-4xl">
+            Teams are unsure what AI means for their roles. Leaders struggle to communicate change with empathy. Individuals feel pressure to stay relevant without a roadmap. Organizations want to modernize without losing their culture.
+          </p>
+          <p className="text-lg text-slate leading-relaxed max-w-4xl">
+            Career Capital helps build the mindsets, relationships, and AI fluency needed to navigate this shift — without losing the human side of work.
+          </p>
+        </div>
+      </section>
+
       <section aria-label="About Nisaini Rexach" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_400px] gap-8 lg:gap-12 items-start">

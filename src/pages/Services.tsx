@@ -8,98 +8,81 @@ interface ServicesProps {
 }
 
 export default function Services({ onNavigate }: ServicesProps) {
-  const coreServices = [
+  const services = [
     {
       front: {
-        title: 'AI Readiness Assessment',
-        description: "Every encounter is an opportunity to level up. We'll evaluate where your organization stands today—technically, culturally, and strategically—so you can invest your energy where it matters most.",
+        title: 'AI Enablement & Adoption Workshops',
+        description: 'Practical, human-centered training for teams learning to work alongside AI.',
       },
       back: {
         content: [
-          'Technical infrastructure evaluation',
-          'Cultural readiness assessment',
-          'Leadership fluency gap analysis',
-          'Strategic alignment review',
-          'Prioritized recommendations report',
+          'Interactive workshops tailored to team roles',
+          'Hands-on demonstrations of AI tools and use cases',
+          'Guidance on responsible use and change readiness',
+          'Confidence-building exercises',
+          'Optional team-specific AI playbooks',
         ],
+        credibility: '75+ AI enablement sessions delivered across industries.',
+        cta: 'Book a Workshop',
       },
     },
     {
       front: {
-        title: 'AI Strategy & Roadmap Development',
-        description: "Small, consistent deposits yield bigger returns. Together, we'll build a practical roadmap that compounds over time—quick wins now, long-term capability later.",
+        title: 'AI-Ready Communication Lab',
+        description: 'For leaders and teams navigating AI adoption and internal messaging.',
       },
       back: {
         content: [
-          'Custom AI strategy development',
-          'Phased implementation roadmap',
-          'Use case prioritization framework',
-          'ROI modeling and success metrics',
-          'Tailored change management approach',
+          'Discovery session to understand communication gaps',
+          'Custom framework for talking about AI with clarity and empathy',
+          'Messaging templates and talking points',
+          'Follow-up refinement session',
         ],
+        cta: 'Start a Lab Session',
       },
     },
     {
       front: {
-        title: 'Ongoing Advisory',
-        description: 'Your network underwrites your next opportunity. Regular strategic guidance keeps momentum strong as you navigate challenges, course-correct, and build the future you envision.',
+        title: 'Social Wealth Workshops & Coaching',
+        description: 'Coaching and workshops that build relationship capital as a strategic asset.',
       },
       back: {
         content: [
-          'Regular strategic check-ins',
-          'Real-time guidance on AI opportunities',
-          'Leadership decision-making support',
-          'Course-correction and roadmap adjustments',
-          'Thought partnership for transformation',
+          'TEDx-inspired keynote on Social Wealth',
+          'Relational mapping exercises',
+          'Tools for trust-building and influence',
+          'Optional cohort or team coaching',
         ],
+        cta: 'Build Social Wealth',
       },
     },
     {
       front: {
-        title: 'AI Enablement Support',
-        description: "Let's live the learning. Hands-on support that builds real confidence in your teams—because AI fluency isn't just about tools, it's about transforming how people think and work.",
+        title: 'Future-of-Work Keynotes & Strategy Sessions',
+        description: 'High-impact talks paired with actionable strategy for leaders and teams.',
       },
       back: {
         content: [
-          'Hands-on training programs',
-          'Custom workshops and skill-building',
-          'Pilot project and POC support',
-          'Best practices documentation',
-          'Internal champions development',
+          'Keynote on AI readiness, mindset, and human-centered leadership',
+          'Strategy session to translate insights into next steps',
+          'Optional rollout plan or messaging guide',
         ],
-      },
-    },
-  ];
-
-  const addOns = [
-    {
-      front: {
-        title: 'Executive Coaching for Leaders',
-        description: 'Make deposits with care. One-on-one guidance for executives who want to champion their teams through AI transformation while strengthening the relationships that drive real results.',
-      },
-      back: {
-        content: [
-          'One-on-one coaching sessions',
-          'Executive AI fluency building',
-          'Leadership communication strategies',
-          'Stakeholder buy-in navigation',
-          'Personal leadership development',
-        ],
+        cta: 'Book a Speaking Engagement',
       },
     },
     {
       front: {
-        title: 'Office Hours',
-        description: 'When people feel seen, they remember. Regular access for questions, guidance, and strategic thinking—a space where challenges become clarity.',
+        title: 'Coaching for Individuals & Leaders',
+        description: 'One-on-one coaching that strengthens AI-ready mindsets, communication, and relational influence.',
       },
       back: {
         content: [
-          'Scheduled open sessions',
-          'Ad-hoc questions and guidance',
-          'Real-time problem-solving',
-          'Cross-team connection point',
-          'Continuous learning and sharing',
+          'AI fluency and mindset development',
+          'Leadership communication',
+          'Navigating change and uncertainty',
+          'Building Social Wealth for career mobility',
         ],
+        cta: 'Start Coaching',
       },
     },
   ];
@@ -122,102 +105,68 @@ export default function Services({ onNavigate }: ServicesProps) {
           <h1 id="services-heading" className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
             Services
           </h1>
-          <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Your brand is in the room even when you&apos;re not. Let&apos;s build AI fluency that compounds over time—strategic, practical guidance for organizations ready to invest in capability without losing their humanity.
+          <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md max-w-4xl">
+            Build the mindset, relationships, and AI fluency needed to thrive in the future of work.
           </p>
         </div>
       </section>
 
-      <section aria-labelledby="core-services-heading" className="py-16">
+      <section aria-labelledby="services-heading-main" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="core-services-heading" className="text-3xl font-semibold text-ink mb-12">Core Services</h2>
+          <h2 id="services-heading-main" className="text-3xl font-semibold text-ink mb-12">Our Services</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {coreServices.map((service, index) => (
-              <FlipCard key={index} front={service.front} back={service.back} />
+            {services.map((service, index) => (
+              <FlipCard
+                key={index}
+                front={service.front}
+                back={service.back}
+                onCtaClick={() => {
+                  window.scrollTo(0, 0);
+                  onNavigate('contact');
+                }}
+              />
             ))}
           </div>
         </div>
       </section>
 
-      <section aria-labelledby="engagements-heading" className="bg-surface py-16">
+      <section aria-labelledby="who-we-work-with-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="engagements-heading" className="text-3xl font-semibold text-ink mb-4">How Engagements Work</h2>
-          <p className="text-xl text-slate mb-12">A clear, collaborative process designed around you.</p>
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
-            <div className="flex-1">
-              <div className="flex gap-6 relative items-stretch">
-                <div className="relative flex-shrink-0 w-3">
-                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
-                </div>
-                <div className="pb-8">
-                  <h3 className="text-lg text-ink mb-2">Every encounter is an interview</h3>
-                  <p className="text-slate leading-relaxed">
-                    We start by understanding your organization's context, challenges, and the future you're building toward.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-6 relative items-stretch">
-                <div className="relative flex-shrink-0 w-3">
-                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
-                </div>
-                <div className="pb-8">
-                  <h3 className="text-lg text-ink mb-2">We come to the table prepared</h3>
-                  <p className="text-slate leading-relaxed">
-                    Every engagement is customized to your specific needs—because one-size-fits-all doesn't build real capability.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-6 relative items-stretch">
-                <div className="relative flex-shrink-0 w-3">
-                  <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
-                  <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
-                </div>
-                <div className="pb-8">
-                  <h3 className="text-lg text-ink mb-2">We make deposits with intention</h3>
-                  <p className="text-slate leading-relaxed">
-                    We focus on actionable steps and real capability building—not just strategy documents that sit on a shelf.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-6 relative items-start">
-                <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-[0.4rem]"></div>
-                <div>
-                  <h3 className="text-lg text-ink mb-2">The dividends will surprise you</h3>
-                  <p className="text-slate leading-relaxed">
-                    Ongoing guidance ensures momentum and addresses challenges as they emerge—relationships that compound over time.
-                  </p>
-                </div>
-              </div>
+          <h2 id="who-we-work-with-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
+            Who We Work With
+          </h2>
+          <div className="text-lg text-slate leading-relaxed max-w-4xl space-y-4">
+            <p>Career Capital partners with:</p>
+            <ul className="space-y-3 ml-6">
+              <li className="flex gap-3">
+                <span className="text-steel font-medium flex-shrink-0 mt-1">•</span>
+                <span>Individuals building future-ready mindsets and relationships</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-steel font-medium flex-shrink-0 mt-1">•</span>
+                <span>Leaders navigating AI-driven change</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-steel font-medium flex-shrink-0 mt-1">•</span>
+                <span>Teams adopting AI tools and new ways of working</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-steel font-medium flex-shrink-0 mt-1">•</span>
+                <span>Organizations strengthening communication, culture, and adaptability</span>
+              </li>
+            </ul>
+            <div className="pt-6">
+              <button
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  onNavigate('contact');
+                }}
+                className="btn-primary"
+              >
+                Let's Talk
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </button>
             </div>
-            <div className="w-full lg:w-[500px] flex-shrink-0">
-              <div className="overflow-hidden shadow-xl aspect-[4/3]">
-                <img
-                  src="/workshop-facilitation.webp"
-                  alt="Workshop facilitation and team collaboration"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="addons-heading" className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <h2 id="addons-heading" className="text-3xl font-semibold text-ink mb-4">Add-On Services</h2>
-            <p className="text-lg text-slate leading-relaxed max-w-3xl">Complement your core engagement with additional support options designed for sustained momentum and deeper learning.</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {addOns.map((addon, index) => (
-              <FlipCard key={index} front={addon.front} back={addon.back} />
-            ))}
           </div>
         </div>
       </section>
@@ -226,10 +175,10 @@ export default function Services({ onNavigate }: ServicesProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <h2 id="services-cta-heading" className="text-3xl font-light mb-6">
-              Ready to build AI capability in your organization?
+              Ready to build your career capital?
             </h2>
             <p className="text-lg text-trueWhite/90 mb-8">
-              Let's discuss what approach makes sense for your team.
+              Let's discuss how we can help you or your team thrive in the AI era.
             </p>
             <button
               onClick={() => {
