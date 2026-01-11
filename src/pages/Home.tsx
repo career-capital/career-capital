@@ -99,7 +99,7 @@ export default function Home() {
         </picture>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-36">
           <h1 className="text-5xl md:text-6xl font-semibold text-trueWhite mb-6 leading-tight drop-shadow-lg">
-            Career Capital for the AI Era
+            Building Real Momentum in the AI Era
           </h1>
           <p className="text-xl text-trueWhite/95 mb-4 leading-relaxed drop-shadow-md">
             Helping individuals and teams build the capital that matters most in the future of work.
