@@ -287,6 +287,25 @@
     }
   }
 
+  .services-flip-cards .flip-card-container {
+    min-height: 360px;
+    height: auto;
+  }
+
+  @media (max-width: 640px) {
+    .services-flip-cards .flip-card-container {
+      min-height: auto;
+      height: 400px;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .services-flip-cards .flip-card-container {
+      min-height: 380px;
+      height: auto;
+    }
+  }
+
   .speaking-flip-cards .flip-card-container {
     min-height: 240px;
     height: auto;
@@ -377,6 +396,25 @@
       padding: 2rem;
       min-height: 280px;
       height: auto;
+    }
+  }
+
+  .services-flip-cards .flip-card-front,
+  .services-flip-cards .flip-card-back {
+    min-height: 360px;
+  }
+
+  @media (max-width: 640px) {
+    .services-flip-cards .flip-card-front,
+    .services-flip-cards .flip-card-back {
+      height: 400px;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .services-flip-cards .flip-card-front,
+    .services-flip-cards .flip-card-back {
+      min-height: 380px;
     }
   }
 
