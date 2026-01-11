@@ -376,7 +376,7 @@ export default function Speaking() {
 
       <section aria-labelledby="final-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="final-cta-heading" className="text-4xl font-light mb-6">
+          <h2 id="final-cta-heading" className="text-4xl font-semibold leading-tight text-softWhite mb-6">
             Ready to bring this insight to your organization?
           </h2>
           <p className="text-xl text-trueWhite/90 leading-relaxed mb-8">
