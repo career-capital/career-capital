@@ -142,31 +142,102 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-labelledby="what-we-do-heading" className="py-20">
+      <section aria-labelledby="what-we-do-heading" className="py-24 bg-gradient-to-b from-softWhite to-surface/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="what-we-do-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
-            What We Do
-          </h2>
-          <p className="text-lg text-slate leading-relaxed mb-12 max-w-4xl">
-            Career Capital blends AI fluency, mindset development, and Social Wealth to help individuals and teams thrive in a rapidly evolving world.
-          </p>
-          <p className="text-lg text-slate leading-relaxed max-w-4xl">
-            We offer coaching, workshops, and strategic guidance that build the human and relational capital needed to navigate change with clarity and confidence.
-          </p>
+          <div className="text-center mb-16">
+            <h2 id="what-we-do-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-6">
+              Building AI fluency and social wealth for lasting career impact
+            </h2>
+            <p className="text-lg text-slate leading-relaxed max-w-3xl mx-auto">
+              Career Capital blends strategic AI guidance, mindset development, and relationship management to help individuals and teams thrive in a rapidly evolving world.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mt-12">
+            <div className="group">
+              <div className="bg-trueWhite p-8 h-full border-2 border-slate/10 hover:border-navy/20 transition-all duration-300 hover:shadow-lg">
+                <div className="flex flex-col items-start h-full">
+                  <div className="mb-6 p-3 bg-navy/5 group-hover:bg-navy/10 transition-colors duration-300">
+                    <Sparkles className="w-10 h-10 text-navy" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-ink mb-4">
+                    AI fluency
+                  </h3>
+                  <p className="text-base text-slate leading-relaxed flex-grow">
+                    Build organizational confidence and capability around AI through strategic guidance and practical enablement.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group">
+              <div className="bg-trueWhite p-8 h-full border-2 border-slate/10 hover:border-navy/20 transition-all duration-300 hover:shadow-lg">
+                <div className="flex flex-col items-start h-full">
+                  <div className="mb-6 p-3 bg-navy/5 group-hover:bg-navy/10 transition-colors duration-300">
+                    <Users className="w-10 h-10 text-navy" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-ink mb-4">
+                    Relationship management
+                  </h3>
+                  <p className="text-base text-slate leading-relaxed flex-grow">
+                    Strengthen the human connections that drive business success, even as technology evolves.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group">
+              <div className="bg-trueWhite p-8 h-full border-2 border-slate/10 hover:border-navy/20 transition-all duration-300 hover:shadow-lg">
+                <div className="flex flex-col items-start h-full">
+                  <div className="mb-6 p-3 bg-navy/5 group-hover:bg-navy/10 transition-colors duration-300">
+                    <TrendingUp className="w-10 h-10 text-navy" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-ink mb-4">
+                    Mindset shifts
+                  </h3>
+                  <p className="text-base text-slate leading-relaxed flex-grow">
+                    Transform how leaders think about AI—from threat to tool, from confusion to clarity.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-slate leading-relaxed max-w-3xl mx-auto">
+              We offer coaching, workshops, and strategic guidance that build the human and relational capital needed to navigate change with clarity and confidence.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section aria-labelledby="why-cc-heading" className="bg-surface py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="why-cc-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-6">
-            Why Career Capital
-          </h2>
-          <p className="text-lg text-slate leading-relaxed mb-8 max-w-4xl">
-            Your career capital is the combination of your mindset, relationships, and AI fluency — the assets that shape your opportunities in a rapidly evolving world.
-          </p>
-          <p className="text-lg text-slate leading-relaxed max-w-4xl">
-            Career Capital helps you grow these assets with clarity, confidence, and humanity.
-          </p>
+      <section aria-labelledby="why-cc-heading" className="bg-surface py-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 id="why-cc-heading" className="text-3xl md:text-4xl font-semibold text-ink mb-8">
+              Why Career Capital
+            </h2>
+            <div className="space-y-6">
+              <p className="text-xl text-ink leading-relaxed font-medium">
+                Your career capital is the combination of your mindset, relationships, and AI fluency — the assets that shape your opportunities in a rapidly evolving world.
+              </p>
+              <p className="text-lg text-slate leading-relaxed">
+                Career Capital helps you grow these assets with clarity, confidence, and humanity.
+              </p>
+            </div>
+            <div className="mt-12">
+              <button
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  navigate('/about');
+                }}
+                className="inline-flex items-center px-6 py-3 bg-navy text-trueWhite font-medium hover:bg-steel transition-colors duration-200"
+              >
+                Learn More About Us
+                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
