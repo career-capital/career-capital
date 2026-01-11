@@ -4,7 +4,7 @@ import { RotateCw } from 'lucide-react';
 interface FlipCardProps {
   front: {
     title: string;
-    description: string;
+    idealFor: string;
   };
   back: {
     content: string[];
@@ -54,9 +54,12 @@ export default function FlipCard({ front, back, onCtaClick }: FlipCardProps) {
               </h3>
               <RotateCw className="w-5 h-5 text-steel flex-shrink-0 transition-transform duration-300" aria-hidden="true" />
             </div>
-            <p className="text-slate leading-relaxed text-base mb-4">
-              {front.description}
-            </p>
+            <div className="mb-4">
+              <p className="text-sm font-medium text-steel mb-2">Ideal For</p>
+              <p className="text-slate leading-relaxed text-base">
+                {front.idealFor}
+              </p>
+            </div>
             <p className="text-sm text-slate/70 mt-auto hidden sm:block">
               Click for details
             </p>
@@ -72,14 +75,17 @@ export default function FlipCard({ front, back, onCtaClick }: FlipCardProps) {
               </h3>
               <RotateCw className="w-5 h-5 text-steel flex-shrink-0" aria-hidden="true" />
             </div>
-            <ul className="space-y-2 mb-4">
-              {back.content.map((item, index) => (
-                <li key={index} className="flex gap-3 text-base text-slate leading-relaxed">
-                  <span className="text-steel font-medium flex-shrink-0 mt-0.5">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="mb-4">
+              <p className="text-sm font-medium text-steel mb-2">What It Delivers</p>
+              <ul className="space-y-2">
+                {back.content.map((item, index) => (
+                  <li key={index} className="flex gap-3 text-base text-slate leading-relaxed">
+                    <span className="text-steel font-medium flex-shrink-0 mt-0.5">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             {back.credibility && (
               <p className="text-sm text-slate/80 italic mb-4">
                 {back.credibility}

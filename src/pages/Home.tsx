@@ -205,7 +205,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
               <h2 id="speaking-heading" className="text-3xl md:text-4xl font-semibold mb-6">
-                TEDxChicago speaker
+                TEDxChicago Speaker
               </h2>
               <p className="text-xl text-trueWhite/90 mb-4 leading-relaxed">
                 "How social wealth can transform your career"

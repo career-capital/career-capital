@@ -12,15 +12,13 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       front: {
         title: 'AI Enablement & Adoption Workshops',
-        description: 'Practical, human-centered training for teams learning to work alongside AI.',
+        idealFor: 'Teams adopting AI tools',
       },
       back: {
         content: [
-          'Interactive workshops tailored to team roles',
-          'Hands-on demonstrations of AI tools and use cases',
-          'Guidance on responsible use and change readiness',
-          'Confidence-building exercises',
-          'Optional team-specific AI playbooks',
+          'Hands-on training',
+          'Real use cases',
+          'Responsible AI guidance',
         ],
         credibility: '75+ AI enablement sessions delivered across industries.',
         cta: 'Book a Workshop',
@@ -29,14 +27,13 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       front: {
         title: 'AI-Ready Communication Lab',
-        description: 'For leaders and teams navigating AI adoption and internal messaging.',
+        idealFor: 'Leaders & organizations',
       },
       back: {
         content: [
-          'Discovery session to understand communication gaps',
-          'Custom framework for talking about AI with clarity and empathy',
-          'Messaging templates and talking points',
-          'Follow-up refinement session',
+          'Messaging frameworks',
+          'Talking points',
+          'Clarity for internal communication',
         ],
         cta: 'Start a Lab Session',
       },
@@ -44,14 +41,13 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       front: {
         title: 'Social Wealth Workshops & Coaching',
-        description: 'Coaching and workshops that build relationship capital as a strategic asset.',
+        idealFor: 'Individuals, leaders, teams',
       },
       back: {
         content: [
-          'TEDx-inspired keynote on Social Wealth',
-          'Relational mapping exercises',
-          'Tools for trust-building and influence',
-          'Optional cohort or team coaching',
+          'Relationship mapping',
+          'Trust-building tools',
+          'Influence development',
         ],
         cta: 'Build Social Wealth',
       },
@@ -59,13 +55,12 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       front: {
         title: 'Future-of-Work Keynotes & Strategy Sessions',
-        description: 'High-impact talks paired with actionable strategy for leaders and teams.',
+        idealFor: 'Executive teams, org-wide events',
       },
       back: {
         content: [
-          'Keynote on AI readiness, mindset, and human-centered leadership',
-          'Strategy session to translate insights into next steps',
-          'Optional rollout plan or messaging guide',
+          'High-impact insights',
+          'Actionable next steps',
         ],
         cta: 'Book a Speaking Engagement',
       },
@@ -73,14 +68,14 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       front: {
         title: 'Coaching for Individuals & Leaders',
-        description: 'One-on-one coaching that strengthens AI-ready mindsets, communication, and relational influence.',
+        idealFor: 'Professionals navigating growth or change',
       },
       back: {
         content: [
-          'AI fluency and mindset development',
-          'Leadership communication',
-          'Navigating change and uncertainty',
-          'Building Social Wealth for career mobility',
+          'AI fluency',
+          'Mindset development',
+          'Communication',
+          'Career strategy',
         ],
         cta: 'Start Coaching',
       },
