@@ -77,10 +77,10 @@ export default function Navigation() {
                   key={link.path}
                   to={link.path}
                   className={({ isActive }) =>
-                    `nav-link transition-all relative pb-1 ${
+                    `nav-link transition-all relative pb-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-steel after:transition-transform after:duration-200 ${
                       isActive
-                        ? 'text-navy after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-steel'
-                        : 'text-navy hover:text-steel after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-steel after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200'
+                        ? 'text-navy after:scale-x-100'
+                        : 'text-navy hover:text-steel after:scale-x-0 hover:after:scale-x-100'
                     }`
                   }
                 >
