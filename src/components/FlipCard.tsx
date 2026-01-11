@@ -5,9 +5,10 @@ interface FlipCardProps {
   front: {
     title: string;
     idealFor: string;
+    delivers: string[];
   };
   back: {
-    content: string[];
+    includes: string[];
     credibility?: string;
     cta?: string;
   };
@@ -54,17 +55,36 @@ export default function FlipCard({ front, back, onCtaClick }: FlipCardProps) {
               </h3>
               <RotateCw className="w-5 h-5 text-steel flex-shrink-0 transition-transform duration-300" aria-hidden="true" />
             </div>
-            <div className="mb-4">
-              <p className="text-sm font-medium text-steel mb-2">Ideal For</p>
+            <div className="mb-3">
+              <p className="text-sm font-medium text-steel mb-1">Ideal For</p>
               <p className="text-slate leading-relaxed text-base">
                 {front.idealFor}
               </p>
             </div>
-            <p className="text-sm text-slate/70 mt-auto hidden sm:block">
-              Click for details
+            <div className="mb-4">
+              <p className="text-sm font-medium text-steel mb-2">What It Delivers</p>
+              <ul className="space-y-1">
+                {front.delivers.map((item, index) => (
+                  <li key={index} className="flex gap-2 text-base text-slate leading-relaxed">
+                    <span className="text-steel font-medium flex-shrink-0 mt-0.5">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {back.cta && (
+              <button
+                onClick={handleCtaClick}
+                className="text-navy hover:text-steel font-medium text-base underline underline-offset-2 hover:underline-offset-4 transition-all mt-auto"
+              >
+                {back.cta}
+              </button>
+            )}
+            <p className="text-xs text-slate/70 mt-3 hidden sm:block">
+              Click for more details
             </p>
-            <p className="text-sm text-slate/70 mt-auto sm:hidden">
-              Tap for details
+            <p className="text-xs text-slate/70 mt-3 sm:hidden">
+              Tap for more details
             </p>
           </div>
 
@@ -76,9 +96,9 @@ export default function FlipCard({ front, back, onCtaClick }: FlipCardProps) {
               <RotateCw className="w-5 h-5 text-steel flex-shrink-0" aria-hidden="true" />
             </div>
             <div className="mb-4">
-              <p className="text-sm font-medium text-steel mb-2">What It Delivers</p>
+              <p className="text-sm font-medium text-steel mb-2">Includes</p>
               <ul className="space-y-2">
-                {back.content.map((item, index) => (
+                {back.includes.map((item, index) => (
                   <li key={index} className="flex gap-3 text-base text-slate leading-relaxed">
                     <span className="text-steel font-medium flex-shrink-0 mt-0.5">•</span>
                     <span>{item}</span>
@@ -88,7 +108,7 @@ export default function FlipCard({ front, back, onCtaClick }: FlipCardProps) {
             </div>
             {back.credibility && (
               <p className="text-sm text-slate/80 italic mb-4">
-                {back.credibility}
+                <span className="font-medium text-steel">Credibility:</span> {back.credibility}
               </p>
             )}
             {back.cta && (

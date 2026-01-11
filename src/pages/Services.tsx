@@ -13,12 +13,19 @@ export default function Services({ onNavigate }: ServicesProps) {
       front: {
         title: 'AI Enablement & Adoption Workshops',
         idealFor: 'Teams adopting AI tools',
-      },
-      back: {
-        content: [
+        delivers: [
           'Hands-on training',
           'Real use cases',
           'Responsible AI guidance',
+        ],
+      },
+      back: {
+        includes: [
+          'Interactive workshops tailored to team roles',
+          'Hands-on demonstrations of AI tools and use cases',
+          'Guidance on responsible use and change readiness',
+          'Confidence-building exercises',
+          'Optional team-specific AI playbooks',
         ],
         credibility: '75+ AI enablement sessions delivered across industries.',
         cta: 'Book a Workshop',
@@ -28,9 +35,14 @@ export default function Services({ onNavigate }: ServicesProps) {
       front: {
         title: 'AI-Ready Communication Lab',
         idealFor: 'Leaders & organizations',
+        delivers: [
+          'Messaging frameworks',
+          'Talking points',
+          'Clarity for internal communication',
+        ],
       },
       back: {
-        content: [
+        includes: [
           'Messaging frameworks',
           'Talking points',
           'Clarity for internal communication',
@@ -42,9 +54,14 @@ export default function Services({ onNavigate }: ServicesProps) {
       front: {
         title: 'Social Wealth Workshops & Coaching',
         idealFor: 'Individuals, leaders, teams',
+        delivers: [
+          'Relationship mapping',
+          'Trust-building tools',
+          'Influence development',
+        ],
       },
       back: {
-        content: [
+        includes: [
           'Relationship mapping',
           'Trust-building tools',
           'Influence development',
@@ -56,9 +73,13 @@ export default function Services({ onNavigate }: ServicesProps) {
       front: {
         title: 'Future-of-Work Keynotes & Strategy Sessions',
         idealFor: 'Executive teams, org-wide events',
+        delivers: [
+          'High-impact insights',
+          'Actionable next steps',
+        ],
       },
       back: {
-        content: [
+        includes: [
           'High-impact insights',
           'Actionable next steps',
         ],
@@ -69,9 +90,15 @@ export default function Services({ onNavigate }: ServicesProps) {
       front: {
         title: 'Coaching for Individuals & Leaders',
         idealFor: 'Professionals navigating growth or change',
+        delivers: [
+          'AI fluency',
+          'Mindset development',
+          'Communication',
+          'Career strategy',
+        ],
       },
       back: {
-        content: [
+        includes: [
           'AI fluency',
           'Mindset development',
           'Communication',
