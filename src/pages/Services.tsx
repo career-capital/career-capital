@@ -9,6 +9,7 @@ interface ServicesProps {
 
 interface Service {
   title: string;
+  subtitle: string;
   idealFor: string;
   delivers: string[];
   includes: string[];
@@ -23,6 +24,7 @@ export default function Services({ onNavigate }: ServicesProps) {
   const services: Service[] = [
     {
       title: 'AI Enablement & Adoption Workshops',
+      subtitle: 'Practical, human-centered training for teams learning to work alongside AI.',
       idealFor: 'Teams adopting AI tools',
       delivers: [
         'Hands-on training',
@@ -41,6 +43,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: 'AI-Ready Communication Lab',
+      subtitle: 'For leaders and teams navigating AI adoption and internal messaging.',
       idealFor: 'Leaders and teams navigating AI adoption and internal messaging',
       delivers: [
         'Messaging frameworks',
@@ -57,6 +60,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: 'Social Wealth Workshops & Coaching',
+      subtitle: 'Coaching and workshops that build relationship capital as a strategic asset.',
       idealFor: 'Coaching and workshops that build relationship capital as a strategic asset',
       delivers: [
         'Relationship mapping',
@@ -73,6 +77,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: 'Future-of-Work Keynotes & Strategy Sessions',
+      subtitle: 'High-impact talks paired with actionable strategy for leaders and teams.',
       idealFor: 'High-impact talks paired with actionable strategy for leaders and teams',
       delivers: [
         'High-impact insights',
@@ -87,6 +92,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: 'Coaching for Individuals & Leaders',
+      subtitle: 'One-on-one coaching that strengthens AI-ready mindsets, communication, and relational influence.',
       idealFor: 'One-on-one coaching that strengthens AI-ready mindsets, communication, and relational influence',
       delivers: [
         'AI fluency',
@@ -151,6 +157,9 @@ export default function Services({ onNavigate }: ServicesProps) {
                         <h3 className="text-xl font-semibold text-ink mb-2">
                           {service.title}
                         </h3>
+                        <p className="text-base text-slate mb-4 leading-relaxed">
+                          {service.subtitle}
+                        </p>
                         <p className="text-sm text-steel mb-3">
                           <span className="font-medium">Ideal For:</span> {service.idealFor}
                         </p>
