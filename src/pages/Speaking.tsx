@@ -76,7 +76,7 @@ export default function Speaking() {
 
       <section aria-labelledby="formats-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="formats-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Engagement Formats</h2>
+          <h2 id="formats-heading" className="text-4xl md:text-5xl font-medium text-ink mb-12">Engagement Formats</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="space-y-4">
               <Mic className="w-12 h-12 text-navy" strokeWidth={1.5} />
@@ -110,7 +110,7 @@ export default function Speaking() {
 
       <section aria-labelledby="topics-heading" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="topics-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-3">Speaking Topics</h2>
+          <h2 id="topics-heading" className="text-4xl md:text-5xl font-medium text-ink mb-3">Speaking Topics</h2>
           <p className="text-lg text-slate mb-12 leading-relaxed">
             Customizable keynotes and workshops designed to build AI fluency and strengthen relationships.
           </p>
@@ -190,7 +190,7 @@ export default function Speaking() {
       <section aria-labelledby="speaking-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 id="speaking-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
+            <h2 id="speaking-cta-heading" className="text-4xl md:text-5xl font-medium text-softWhite mb-6">
               Public speaking with purpose: TEDxChicago
             </h2>
           </div>
@@ -237,7 +237,7 @@ export default function Speaking() {
 
       <section aria-labelledby="publications-heading" className="bg-softWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="publications-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">
+          <h2 id="publications-heading" className="text-4xl md:text-5xl font-medium text-ink mb-4">
             Featured In
           </h2>
           <p className="text-lg text-slate mb-12 max-w-3xl">
@@ -310,7 +310,7 @@ export default function Speaking() {
       <section aria-labelledby="differentiators-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-md">
-            <h2 id="differentiators-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">What Makes These Engagements Different</h2>
+            <h2 id="differentiators-heading" className="text-4xl md:text-5xl font-medium text-ink mb-4">What Makes This Different</h2>
           </div>
           <p className="text-xl text-slate mb-12">Real partnership built on trust, customization, and lasting capability.</p>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -381,7 +381,7 @@ export default function Speaking() {
       <section aria-labelledby="final-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 id="final-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
+            <h2 id="final-cta-heading" className="text-4xl md:text-5xl font-medium text-softWhite mb-6">
               Ready to bring this insight to your organization?
             </h2>
             <p className="text-xl text-trueWhite/90 leading-relaxed mb-8">
