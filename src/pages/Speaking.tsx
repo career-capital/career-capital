@@ -189,9 +189,11 @@ export default function Speaking() {
 
       <section aria-labelledby="speaking-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="speaking-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
-            Public speaking with purpose: TEDxChicago
-          </h2>
+          <div className="max-w-2xl">
+            <h2 id="speaking-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
+              Public speaking with purpose: TEDxChicago
+            </h2>
+          </div>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
               <p className="text-lg text-trueWhite/90 leading-relaxed mb-4">
@@ -376,22 +378,24 @@ export default function Speaking() {
 
       <section aria-labelledby="final-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="final-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
-            Ready to bring this insight to your organization?
-          </h2>
-          <p className="text-xl text-trueWhite/90 leading-relaxed mb-8">
-            Let's discuss how a keynote, workshop, or facilitated session can help your team build the relationships and capabilities that drive lasting success.
-          </p>
-          <button
-            onClick={() => {
-              window.scrollTo(0, 0);
-              navigate('/contact');
-            }}
-            className="btn-primary-on-dark w-full sm:w-auto"
-          >
-            Get in Touch
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </button>
+          <div className="max-w-2xl">
+            <h2 id="final-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
+              Ready to bring this insight to your organization?
+            </h2>
+            <p className="text-xl text-trueWhite/90 leading-relaxed mb-8">
+              Let's discuss how a keynote, workshop, or facilitated session can help your team build the relationships and capabilities that drive lasting success.
+            </p>
+            <button
+              onClick={() => {
+                window.scrollTo(0, 0);
+                navigate('/contact');
+              }}
+              className="btn-primary-on-dark w-full sm:w-auto"
+            >
+              Get in Touch
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </button>
+          </div>
         </div>
       </section>
     </div>
