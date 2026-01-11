@@ -46,7 +46,18 @@ export default function About() {
 
       <section aria-labelledby="nisaini-heading" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="nisaini-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Meet the Founder</h2>
+          <h2 id="nisaini-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-8">Meet the Founder</h2>
+          <div className="flex flex-wrap gap-3 mb-12">
+            <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
+              TEDxChicago Main Stage Speaker
+            </span>
+            <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
+              Fortune 100 Experience
+            </span>
+            <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
+              Social Impact Leader
+            </span>
+          </div>
           <div className="grid lg:grid-cols-[1fr_400px] gap-8 lg:gap-12 items-start">
           <div>
             <div className="space-y-6 text-lg text-slate leading-relaxed">
@@ -69,17 +80,6 @@ export default function About() {
               <p>
                 Whether she's coaching emerging leaders, advising executives, or speaking on national stages, Nisaini is committed to one thing: helping people show up with clarity, confidence, and purpose—so their work, their voice, and their impact carry further.
               </p>
-              <div className="flex flex-wrap gap-3 mt-8">
-                <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
-                  TEDxChicago Main Stage Speaker
-                </span>
-                <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
-                  Fortune 100 Experience
-                </span>
-                <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
-                  Social Impact Leader
-                </span>
-              </div>
             </div>
           </div>
 
