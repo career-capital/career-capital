@@ -192,7 +192,7 @@ export default function Testimonials() {
 
           <div className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-slate mb-3">Testimonial Source</label>
+              <label className="block text-sm font-medium text-steel mb-3">Testimonial Source</label>
               <div className="flex flex-wrap gap-2" role="group" aria-label="Testimonial source filter">
                 <button
                   onClick={() => handleTypeChange('all')}
@@ -232,7 +232,7 @@ export default function Testimonials() {
 
             {availableEngagementTypes.length > 0 && (
               <div>
-                <label className="block text-sm font-medium text-slate mb-3">
+                <label className="block text-sm font-medium text-steel mb-3">
                   Engagement Type
                 </label>
                 <div className="flex flex-wrap gap-2" role="group" aria-label="Engagement type filter">
