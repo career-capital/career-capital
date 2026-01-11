@@ -24,7 +24,7 @@ export default function Services({ onNavigate }: ServicesProps) {
   const services: Service[] = [
     {
       title: 'AI Enablement & Adoption Workshops',
-      subtitle: 'Interactive workshops with hands-on AI tool demonstrations, responsible use guidance, and team-specific playbooks.',
+      subtitle: 'Build team confidence and competence with AI through practical training designed for real-world application.',
       idealFor: 'Teams facing uncertainty about where to start with AI in their workflow',
       delivers: [
         'Hands-on training',
@@ -43,7 +43,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: 'AI-Ready Communication Lab',
-      subtitle: 'Custom messaging frameworks and talking points to help organizations communicate AI adoption with clarity and empathy.',
+      subtitle: 'Transform how your organization talks about AI—reducing anxiety and building trust during transitions.',
       idealFor: 'Organizations struggling to explain AI changes to employees without causing anxiety or confusion',
       delivers: [
         'Messaging frameworks',
@@ -60,7 +60,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: 'Social Wealth Workshops & Coaching',
-      subtitle: 'TEDx-inspired sessions with relational mapping exercises and trust-building tools designed to expand your professional network.',
+      subtitle: 'Turn relationships into your most valuable career asset with a proven framework for building authentic influence.',
       idealFor: 'Professionals who recognize networking matters but need a strategic framework to build authentic connections',
       delivers: [
         'Relationship mapping',
@@ -77,7 +77,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: 'Future-of-Work Keynotes & Strategy Sessions',
-      subtitle: 'Engaging keynotes on AI readiness and human-centered leadership, followed by collaborative strategy workshops.',
+      subtitle: 'Move from inspiration to implementation with talks that energize and sessions that translate ideas into action.',
       idealFor: 'Organizations needing to energize teams around change while translating vision into concrete plans',
       delivers: [
         'High-impact insights',
@@ -92,7 +92,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: 'Coaching for Individuals & Leaders',
-      subtitle: 'One-on-one coaching focused on AI fluency, executive presence, career strategy, and navigating transitions with confidence.',
+      subtitle: 'Personalized support to break through obstacles, clarify your path forward, and lead with confidence during uncertainty.',
       idealFor: 'Leaders and high-performers feeling stuck or overwhelmed by rapid change in their industry',
       delivers: [
         'AI fluency',
