@@ -141,6 +141,9 @@ export default function Home() {
             <span className="inline-flex items-center px-4 py-2 bg-trueWhite/5 border border-trueWhite/20 text-trueWhite text-sm font-medium">
               Strategic Guidance
             </span>
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/5 border border-trueWhite/20 text-trueWhite text-sm font-medium">
+              Keynote Speaking
+            </span>
           </div>
         </div>
       </section>
