@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Quote } from 'lucide-react';
+import { Quote, ArrowRight } from 'lucide-react';
 import { supabase, Testimonial } from '../lib/supabase';
 
 const ENGAGEMENT_TYPES = [
@@ -350,6 +350,7 @@ export default function Testimonials() {
               className="btn-primary-on-dark w-full sm:w-auto"
             >
               Get in Touch
+              <ArrowRight className="ml-2 w-4 h-4" />
             </button>
           </div>
         </div>
