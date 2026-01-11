@@ -105,7 +105,7 @@ export default function Home() {
             Helping individuals and teams build the capital that matters most in the future of work.
           </p>
           <p className="text-lg text-trueWhite/90 mb-8 leading-relaxed drop-shadow-md max-w-3xl">
-            In a world reshaped by AI, your greatest advantage is the mindset and relationships you cultivate. Career Capital helps people, leaders, and organizations develop the human and strategic capacity needed to adapt, grow, and thrive.
+            In a world reshaped by AI, your greatest advantage is the mindset and relationships you cultivate. We help people, leaders, and organizations develop the human and strategic capacity needed to adapt, grow, and thrive.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button
@@ -209,10 +209,10 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-12">
             <div>
               <div className="flex flex-col items-start h-full">
-                <div className="mb-4">
-                  <Sparkles className="w-8 h-8 text-navy" aria-hidden="true" />
+                <div className="mb-6">
+                  <Sparkles className="w-10 h-10 text-navy" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-semibold text-ink mb-3">
+                <h3 className="text-2xl font-semibold text-ink mb-4">
                   AI Fluency
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
@@ -223,10 +223,10 @@ export default function Home() {
 
             <div>
               <div className="flex flex-col items-start h-full">
-                <div className="mb-4">
-                  <Users className="w-8 h-8 text-navy" aria-hidden="true" />
+                <div className="mb-6">
+                  <Users className="w-10 h-10 text-navy" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-semibold text-ink mb-3">
+                <h3 className="text-2xl font-semibold text-ink mb-4">
                   Relationship Management
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
@@ -237,10 +237,10 @@ export default function Home() {
 
             <div>
               <div className="flex flex-col items-start h-full">
-                <div className="mb-4">
-                  <TrendingUp className="w-8 h-8 text-navy" aria-hidden="true" />
+                <div className="mb-6">
+                  <TrendingUp className="w-10 h-10 text-navy" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-semibold text-ink mb-3">
+                <h3 className="text-2xl font-semibold text-ink mb-4">
                   Mindset Shifts
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
