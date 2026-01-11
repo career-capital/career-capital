@@ -172,14 +172,14 @@ export default function Services() {
       </section>
 
       <section aria-labelledby="who-we-work-with-heading" className="bg-softWhite py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="who-we-work-with-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">
             Who We Work With
           </h2>
-          <p className="text-xl text-slate mb-12 leading-relaxed max-w-4xl">
+          <p className="text-xl text-slate mb-12 leading-relaxed">
             Career Capital partners with forward-thinking individuals and organizations committed to building capability in an AI-driven world.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-trueWhite p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-200 group">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center group-hover:bg-navy/20 transition-colors duration-200">
@@ -236,7 +236,7 @@ export default function Services() {
               </div>
             </div>
           </div>
-          <div className="mt-12 max-w-5xl">
+          <div className="mt-12">
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
@@ -461,15 +461,15 @@ export default function Services() {
       </section>
 
       <section aria-labelledby="how-engagements-work-heading" className="bg-surface py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="how-engagements-work-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">
             How Engagements Work
           </h2>
           <p className="text-xl text-slate mb-12 leading-relaxed">
             A clear, collaborative process designed around you.
           </p>
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
-            <div className="flex-1">
+          <div className="space-y-12">
+            <div>
               <div className="flex gap-6 relative items-stretch">
                 <div className="relative flex-shrink-0 w-3">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
@@ -519,15 +519,13 @@ export default function Services() {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-[500px] flex-shrink-0">
-              <div className="overflow-hidden shadow-xl aspect-[4/3]">
-                <img
-                  src="/workshop-facilitation.webp"
-                  alt="Workshop facilitation session"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+            <div className="overflow-hidden shadow-xl aspect-[4/3] rounded-lg">
+              <img
+                src="/workshop-facilitation.webp"
+                alt="Workshop facilitation session"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
