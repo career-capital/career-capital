@@ -17,7 +17,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <Logo variant="stacked" color="dark" className="h-20 w-auto" />
             </div>
             <p className="text-base text-slate font-medium">
-              The currency of the future.<sup className="text-xs">™</sup>
+              Career Capital for the AI Era - helping individuals and teams build the capital that matters most in the future of work.
             </p>
           </div>
 
@@ -40,17 +40,6 @@ export default function Footer({ onNavigate }: FooterProps) {
                   <button
                     onClick={() => {
                       window.scrollTo(0, 0);
-                      onNavigate?.('about');
-                    }}
-                    className="text-slate hover:text-navy transition-colors"
-                  >
-                    About
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => {
-                      window.scrollTo(0, 0);
                       onNavigate?.('services');
                     }}
                     className="text-slate hover:text-navy transition-colors"
@@ -66,7 +55,18 @@ export default function Footer({ onNavigate }: FooterProps) {
                     }}
                     className="text-slate hover:text-navy transition-colors"
                   >
-                    Speaking & Workshops
+                    Speaking
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      onNavigate?.('about');
+                    }}
+                    className="text-slate hover:text-navy transition-colors"
+                  >
+                    About
                   </button>
                 </li>
                 <li>
