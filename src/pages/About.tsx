@@ -18,7 +18,7 @@ export default function About() {
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
-          <h1 id="about-heading" className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
+          <h1 id="about-heading" className="text-5xl md:text-6xl font-semibold text-trueWhite mb-6 leading-tight drop-shadow-lg">
             About
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
@@ -44,8 +44,9 @@ export default function About() {
         </div>
       </section>
 
-      <section aria-label="About Nisaini Rexach" className="py-16">
+      <section aria-labelledby="nisaini-heading" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="nisaini-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Meet Nisaini</h2>
           <div className="grid lg:grid-cols-[1fr_400px] gap-8 lg:gap-12 items-start">
           <div>
             <div className="space-y-6 text-lg text-slate leading-relaxed">

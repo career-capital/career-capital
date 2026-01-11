@@ -162,7 +162,7 @@ export default function Services() {
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
-          <h1 id="services-heading" className="text-5xl md:text-6xl font-light text-trueWhite mb-6 leading-tight drop-shadow-lg">
+          <h1 id="services-heading" className="text-5xl md:text-6xl font-semibold text-trueWhite mb-6 leading-tight drop-shadow-lg">
             Services
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md max-w-4xl">
@@ -172,67 +172,59 @@ export default function Services() {
       </section>
 
       <section aria-labelledby="who-we-work-with-heading" className="bg-softWhite py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="who-we-work-with-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">
             Who We Work With
           </h2>
-          <p className="text-xl text-slate mb-12 leading-relaxed">
+          <p className="text-xl text-slate mb-12 leading-relaxed max-w-4xl">
             Career Capital partners with forward-thinking individuals and organizations committed to building capability in an AI-driven world.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-trueWhite p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-200 group">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center group-hover:bg-navy/20 transition-colors duration-200">
-                  <Users className="w-6 h-6 text-navy" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-6">
+                  <Users className="w-10 h-10 text-navy" aria-hidden="true" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-ink mb-2">Individuals</h3>
-                  <p className="text-slate leading-relaxed">
-                    Professionals building future-ready mindsets and relationships to navigate career transitions and industry change.
-                  </p>
-                </div>
+                <h3 className="text-2xl font-semibold text-ink mb-4">Individuals</h3>
+                <p className="text-base text-slate leading-relaxed">
+                  Professionals building future-ready mindsets and relationships to navigate career transitions and industry change.
+                </p>
               </div>
             </div>
 
-            <div className="bg-trueWhite p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-200 group">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center group-hover:bg-navy/20 transition-colors duration-200">
-                  <Lightbulb className="w-6 h-6 text-navy" />
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-6">
+                  <Lightbulb className="w-10 h-10 text-navy" aria-hidden="true" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-ink mb-2">Leaders</h3>
-                  <p className="text-slate leading-relaxed">
-                    Executives and managers navigating AI-driven change while maintaining team trust and organizational stability.
-                  </p>
-                </div>
+                <h3 className="text-2xl font-semibold text-ink mb-4">Leaders</h3>
+                <p className="text-base text-slate leading-relaxed">
+                  Executives and managers navigating AI-driven change while maintaining team trust and organizational stability.
+                </p>
               </div>
             </div>
 
-            <div className="bg-trueWhite p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-200 group">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center group-hover:bg-navy/20 transition-colors duration-200">
-                  <Network className="w-6 h-6 text-navy" />
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-6">
+                  <Network className="w-10 h-10 text-navy" aria-hidden="true" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-ink mb-2">Teams</h3>
-                  <p className="text-slate leading-relaxed">
-                    Workgroups adopting AI tools and new ways of working while building confidence and competence together.
-                  </p>
-                </div>
+                <h3 className="text-2xl font-semibold text-ink mb-4">Teams</h3>
+                <p className="text-base text-slate leading-relaxed">
+                  Workgroups adopting AI tools and new ways of working while building confidence and competence together.
+                </p>
               </div>
             </div>
 
-            <div className="bg-trueWhite p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-200 group">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center group-hover:bg-navy/20 transition-colors duration-200">
-                  <Building2 className="w-6 h-6 text-navy" />
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-6">
+                  <Building2 className="w-10 h-10 text-navy" aria-hidden="true" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-ink mb-2">Organizations</h3>
-                  <p className="text-slate leading-relaxed">
-                    Companies strengthening communication, culture, and adaptability to thrive in rapid technological change.
-                  </p>
-                </div>
+                <h3 className="text-2xl font-semibold text-ink mb-4">Organizations</h3>
+                <p className="text-base text-slate leading-relaxed">
+                  Companies strengthening communication, culture, and adaptability to thrive in rapid technological change.
+                </p>
               </div>
             </div>
           </div>
@@ -461,15 +453,15 @@ export default function Services() {
       </section>
 
       <section aria-labelledby="how-engagements-work-heading" className="bg-surface py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="how-engagements-work-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">
             How Engagements Work
           </h2>
           <p className="text-xl text-slate mb-12 leading-relaxed">
             A clear, collaborative process designed around you.
           </p>
-          <div className="space-y-12">
-            <div>
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
+            <div className="flex-1">
               <div className="flex gap-6 relative items-stretch">
                 <div className="relative flex-shrink-0 w-3">
                   <div className="w-3 h-3 rounded-full bg-navy relative z-10 mt-[0.4rem]"></div>
@@ -519,13 +511,15 @@ export default function Services() {
                 </div>
               </div>
             </div>
-            <div className="overflow-hidden shadow-xl aspect-[4/3] rounded-lg">
-              <img
-                src="/workshop-facilitation.webp"
-                alt="Workshop facilitation session"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+            <div className="w-full lg:w-[500px] flex-shrink-0">
+              <div className="overflow-hidden shadow-xl aspect-[4/3]">
+                <img
+                  src="/workshop-facilitation.webp"
+                  alt="Workshop facilitation session"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
