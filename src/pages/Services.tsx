@@ -25,7 +25,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       title: 'AI Enablement & Adoption Workshops',
       subtitle: 'Interactive workshops with hands-on AI tool demonstrations, responsible use guidance, and team-specific playbooks.',
-      idealFor: 'Teams adopting AI tools and learning to integrate them effectively',
+      idealFor: 'Teams facing uncertainty about where to start with AI in their workflow',
       delivers: [
         'Hands-on training',
         'Real use cases',
@@ -44,7 +44,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       title: 'AI-Ready Communication Lab',
       subtitle: 'Custom messaging frameworks and talking points to help organizations communicate AI adoption with clarity and empathy.',
-      idealFor: 'Leaders crafting internal messaging around AI transformation',
+      idealFor: 'Organizations struggling to explain AI changes to employees without causing anxiety or confusion',
       delivers: [
         'Messaging frameworks',
         'Talking points',
@@ -60,8 +60,8 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: 'Social Wealth Workshops & Coaching',
-      subtitle: 'TEDx-inspired sessions with relational mapping exercises and trust-building tools to strengthen your network and influence.',
-      idealFor: 'Professionals and teams building relationship capital as a strategic asset',
+      subtitle: 'TEDx-inspired sessions with relational mapping exercises and trust-building tools designed to expand your professional network.',
+      idealFor: 'Professionals who recognize networking matters but need a strategic framework to build authentic connections',
       delivers: [
         'Relationship mapping',
         'Trust-building tools',
@@ -77,8 +77,8 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: 'Future-of-Work Keynotes & Strategy Sessions',
-      subtitle: 'Engaging keynotes on AI readiness and human-centered leadership, paired with strategy sessions to create actionable rollout plans.',
-      idealFor: 'Organizations seeking inspiration and practical next steps for transformation',
+      subtitle: 'Engaging keynotes on AI readiness and human-centered leadership, followed by collaborative strategy workshops.',
+      idealFor: 'Organizations needing to energize teams around change while translating vision into concrete plans',
       delivers: [
         'High-impact insights',
         'Actionable next steps',
@@ -92,8 +92,8 @@ export default function Services({ onNavigate }: ServicesProps) {
     },
     {
       title: 'Coaching for Individuals & Leaders',
-      subtitle: 'Personalized coaching to develop AI fluency, leadership communication, and career strategy while navigating change with confidence.',
-      idealFor: 'Leaders and professionals strengthening their adaptability and influence',
+      subtitle: 'One-on-one coaching focused on AI fluency, executive presence, career strategy, and navigating transitions with confidence.',
+      idealFor: 'Leaders and high-performers feeling stuck or overwhelmed by rapid change in their industry',
       delivers: [
         'AI fluency',
         'Mindset development',
