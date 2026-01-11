@@ -9,6 +9,7 @@ interface FlipCardProps {
   };
   back: {
     includes: string[];
+    includesLabel?: string;
     credibility?: string;
     cta?: string;
   };
@@ -63,7 +64,7 @@ export default function FlipCard({ front, back, onCtaClick }: FlipCardProps) {
             </div>
             <div className="mb-6">
               <p className="text-sm font-medium text-steel mb-2">What It Delivers</p>
-              <ul className="space-y-1">
+              <ul className="space-y-2">
                 {front.delivers.map((item, index) => (
                   <li key={index} className="flex gap-2 text-base text-slate leading-relaxed">
                     <span className="text-steel font-medium flex-shrink-0 mt-0.5">•</span>
@@ -98,7 +99,7 @@ export default function FlipCard({ front, back, onCtaClick }: FlipCardProps) {
               <RotateCw className="w-5 h-5 text-steel flex-shrink-0" aria-hidden="true" />
             </div>
             <div className="mb-6">
-              <p className="text-sm font-medium text-steel mb-2">Includes</p>
+              <p className="text-sm font-medium text-steel mb-2">{back.includesLabel || 'Includes'}</p>
               <ul className="space-y-2">
                 {back.includes.map((item, index) => (
                   <li key={index} className="flex gap-3 text-base text-slate leading-relaxed">

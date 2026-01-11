@@ -34,7 +34,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       front: {
         title: 'AI-Ready Communication Lab',
-        idealFor: 'Leaders & organizations',
+        idealFor: 'Leaders and teams navigating AI adoption and internal messaging',
         delivers: [
           'Messaging frameworks',
           'Talking points',
@@ -43,9 +43,10 @@ export default function Services({ onNavigate }: ServicesProps) {
       },
       back: {
         includes: [
-          'Messaging frameworks',
-          'Talking points',
-          'Clarity for internal communication',
+          'Discovery session to understand communication gaps',
+          'Custom framework for talking about AI with clarity and empathy',
+          'Messaging templates and talking points',
+          'Follow-up refinement session',
         ],
         cta: 'Start a Lab Session',
       },
@@ -53,7 +54,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       front: {
         title: 'Social Wealth Workshops & Coaching',
-        idealFor: 'Individuals, leaders, teams',
+        idealFor: 'Coaching and workshops that build relationship capital as a strategic asset',
         delivers: [
           'Relationship mapping',
           'Trust-building tools',
@@ -62,9 +63,10 @@ export default function Services({ onNavigate }: ServicesProps) {
       },
       back: {
         includes: [
-          'Relationship mapping',
-          'Trust-building tools',
-          'Influence development',
+          'TEDx-inspired keynote on Social Wealth',
+          'Relational mapping exercises',
+          'Tools for trust-building and influence',
+          'Optional cohort or team coaching',
         ],
         cta: 'Build Social Wealth',
       },
@@ -72,7 +74,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       front: {
         title: 'Future-of-Work Keynotes & Strategy Sessions',
-        idealFor: 'Executive teams, org-wide events',
+        idealFor: 'High-impact talks paired with actionable strategy for leaders and teams',
         delivers: [
           'High-impact insights',
           'Actionable next steps',
@@ -80,8 +82,9 @@ export default function Services({ onNavigate }: ServicesProps) {
       },
       back: {
         includes: [
-          'High-impact insights',
-          'Actionable next steps',
+          'Keynote on AI readiness, mindset, and human-centered leadership',
+          'Strategy session to translate insights into next steps',
+          'Optional rollout plan or messaging guide',
         ],
         cta: 'Book a Speaking Engagement',
       },
@@ -89,7 +92,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       front: {
         title: 'Coaching for Individuals & Leaders',
-        idealFor: 'Professionals navigating growth or change',
+        idealFor: 'One-on-one coaching that strengthens AI-ready mindsets, communication, and relational influence',
         delivers: [
           'AI fluency',
           'Mindset development',
@@ -99,11 +102,12 @@ export default function Services({ onNavigate }: ServicesProps) {
       },
       back: {
         includes: [
-          'AI fluency',
-          'Mindset development',
-          'Communication',
-          'Career strategy',
+          'AI fluency and mindset development',
+          'Leadership communication',
+          'Navigating change and uncertainty',
+          'Building Social Wealth for career mobility',
         ],
+        includesLabel: 'Focus Areas',
         cta: 'Start Coaching',
       },
     },
