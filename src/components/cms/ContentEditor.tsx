@@ -193,45 +193,58 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                         {block.block_type === 'icon_item' ? (
                           <>
                             <div>
-                              <label className="block text-xs font-medium text-slate mb-1">Icon</label>
-                              <div className="flex gap-2">
+                              <label className="block text-sm font-semibold text-ink mb-2">Icon Selection</label>
+                              <div className="flex gap-3">
                                 <button
                                   type="button"
                                   onClick={() => {
                                     setIconPickerTarget(block);
                                     setShowIconPicker(true);
                                   }}
-                                  className="flex-shrink-0 w-20 h-20 flex items-center justify-center border-2 border-dashed border-border hover:border-navy rounded-lg transition-colors bg-surface"
+                                  className="group flex-shrink-0 w-24 h-24 flex flex-col items-center justify-center border-2 border-dashed border-border hover:border-navy rounded-xl transition-all bg-surface hover:bg-navy/5 hover:shadow-md"
                                   disabled={saving}
                                 >
                                   {block.metadata.icon && (() => {
                                     const IconComponent = Icons[block.metadata.icon as keyof typeof Icons] as any;
-                                    return IconComponent ? <IconComponent className="w-10 h-10 text-navy" /> : <ImageIcon className="w-10 h-10 text-slate" />;
+                                    return IconComponent ? (
+                                      <IconComponent className="w-12 h-12 text-navy group-hover:scale-110 transition-transform" />
+                                    ) : (
+                                      <ImageIcon className="w-12 h-12 text-slate" />
+                                    );
                                   })()}
-                                  {!block.metadata.icon && <ImageIcon className="w-10 h-10 text-slate" />}
+                                  {!block.metadata.icon && (
+                                    <>
+                                      <ImageIcon className="w-12 h-12 text-slate mb-1" />
+                                      <span className="text-[10px] text-slate font-medium">Click to browse</span>
+                                    </>
+                                  )}
                                 </button>
                                 <div className="flex-1">
-                                  <input
-                                    type="text"
-                                    value={block.metadata.icon || ''}
-                                    onChange={(e) => updateContentBlock(block, {
-                                      metadata: { ...block.metadata, icon: e.target.value }
-                                    })}
-                                    placeholder="Icon name (e.g., MessageCircle)"
-                                    className="w-full px-3 py-2 border border-border rounded text-sm mb-2"
-                                    disabled={saving}
-                                  />
                                   <button
                                     type="button"
                                     onClick={() => {
                                       setIconPickerTarget(block);
                                       setShowIconPicker(true);
                                     }}
-                                    className="text-xs text-navy hover:text-navy/80 font-medium"
+                                    className="w-full mb-2 px-4 py-3 bg-navy text-trueWhite rounded-lg hover:bg-navy/90 transition-colors font-medium text-sm flex items-center justify-center gap-2"
                                     disabled={saving}
                                   >
-                                    Browse {Object.keys(Icons).length} icons →
+                                    <ImageIcon className="w-4 h-4" />
+                                    Browse {Object.keys(Icons).filter(k => k !== 'createLucideIcon' && k !== 'default').length}+ Icons
                                   </button>
+                                  <input
+                                    type="text"
+                                    value={block.metadata.icon || ''}
+                                    onChange={(e) => updateContentBlock(block, {
+                                      metadata: { ...block.metadata, icon: e.target.value }
+                                    })}
+                                    placeholder="Or type icon name (e.g., MessageCircle)"
+                                    className="w-full px-3 py-2 border border-border rounded-lg text-sm"
+                                    disabled={saving}
+                                  />
+                                  {block.metadata.icon && (
+                                    <p className="text-xs text-slate mt-1">Current: <span className="font-semibold text-navy">{block.metadata.icon}</span></p>
+                                  )}
                                 </div>
                               </div>
                             </div>

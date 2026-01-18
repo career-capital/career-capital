@@ -404,10 +404,15 @@ export default function CMSInterface() {
                           <h4 className={`font-semibold ${section.is_published ? 'text-ink' : 'text-slate'}`}>
                             {section.section_type}
                           </h4>
-                          {!section.is_published && (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-slate/20 text-slate text-xs font-medium rounded">
+                          {section.is_published ? (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-success/20 text-success text-xs font-semibold rounded">
+                              <Eye className="w-3 h-3" />
+                              LIVE on site
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-slate/20 text-slate text-xs font-semibold rounded">
                               <EyeOff className="w-3 h-3" />
-                              Hidden from visitors
+                              DRAFT (not visible to visitors)
                             </span>
                           )}
                         </div>
@@ -417,22 +422,22 @@ export default function CMSInterface() {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => toggleSectionPublished(section)}
-                        className={`px-3 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-2 ${
+                        className={`px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-2 ${
                           section.is_published
-                            ? 'bg-success/10 text-success hover:bg-success/20'
-                            : 'bg-slate/10 text-slate hover:bg-slate/20 border-2 border-dashed border-slate/30'
+                            ? 'bg-slate/10 text-slate hover:bg-slate/20 border border-slate/30'
+                            : 'bg-success/10 text-success hover:bg-success/20 border border-success/30'
                         }`}
-                        title={section.is_published ? 'Hide this section from visitors' : 'Show this section to visitors'}
+                        title={section.is_published ? 'Click to unpublish (hide from visitors)' : 'Click to publish (make visible to visitors)'}
                       >
                         {section.is_published ? (
                           <>
-                            <Eye className="w-4 h-4" />
-                            Visible
+                            <EyeOff className="w-4 h-4" />
+                            Unpublish
                           </>
                         ) : (
                           <>
-                            <EyeOff className="w-4 h-4" />
-                            Hidden
+                            <Eye className="w-4 h-4" />
+                            Publish
                           </>
                         )}
                       </button>
