@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Mail, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
@@ -78,6 +78,7 @@ export default function Footer() {
               <a
                 href="mailto:info@careercapital.io"
                 className="flex items-center gap-2 text-base text-slate hover:text-navy transition-colors"
+                aria-label="Send email to info@careercapital.io (opens in your email application)"
               >
                 <Mail className="w-5 h-5" aria-hidden="true" />
                 info@careercapital.io
@@ -90,7 +91,9 @@ export default function Footer() {
                 aria-label="Connect on LinkedIn (opens in new window)"
               >
                 <Linkedin className="w-5 h-5" strokeWidth={0} fill="currentColor" aria-hidden="true" />
-                LinkedIn<span className="sr-only"> (opens in new window)</span>
+                LinkedIn
+                <ExternalLink className="w-4 h-4 ml-1" aria-hidden="true" />
+                <span className="sr-only"> (opens in new window)</span>
               </a>
             </div>
           </div>
