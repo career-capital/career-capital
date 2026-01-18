@@ -269,7 +269,7 @@ export default function Home() {
                 window.scrollTo(0, 0);
                 navigate('/about');
               }}
-              className="inline-flex items-center justify-center px-8 py-4 bg-navy text-trueWhite text-base hover:bg-steel transition-colors font-semibold"
+              className="btn-primary"
             >
               Learn More About Us
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />

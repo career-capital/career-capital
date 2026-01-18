@@ -222,7 +222,7 @@
 
   /* Secondary button on light backgrounds - SOLID FILL (recommended for accessibility on busy backgrounds) */
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-border bg-softWhite text-navy text-base font-medium rounded-md hover:border-steel hover:bg-trueWhite transition-all duration-200;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy/40 bg-softWhite text-navy text-base font-medium rounded-md hover:border-steel hover:bg-trueWhite transition-all duration-200;
   }
 
   /* Secondary button TRANSPARENT variant - use only on clean, simple backgrounds */
@@ -250,19 +250,19 @@
   }
 
   .btn-outline-dark {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy bg-navy/5 text-navy text-base hover:bg-navy/10 transition-colors;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-navy/60 bg-navy/5 text-navy text-base hover:bg-navy/10 hover:border-navy transition-colors;
   }
 
   /* ===== CARD COMPONENTS ===== */
 
   /* Interactive/Selectable Card - provides clear affordance for interaction */
   .card-interactive {
-    @apply bg-trueWhite border border-border rounded-lg p-6 cursor-pointer transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 hover:border-steel;
+    @apply bg-trueWhite border-2 border-navy/25 rounded-lg p-6 cursor-pointer transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 hover:border-steel;
   }
 
   /* Informational Card - static presentation of content */
   .card-info {
-    @apply bg-trueWhite border border-border rounded-lg p-6 shadow-sm transition-all duration-200 hover:border-steel hover:shadow-md hover:-translate-y-1;
+    @apply bg-trueWhite border-2 border-navy/25 rounded-lg p-6 shadow-sm transition-all duration-200 hover:border-steel hover:shadow-md hover:-translate-y-1;
   }
 
   /* Interactive card on dark backgrounds */
@@ -369,7 +369,7 @@
 
   .flip-card-front,
   .flip-card-back {
-    @apply w-full bg-trueWhite border-2 border-border rounded-lg;
+    @apply w-full bg-trueWhite border-2 border-navy/30 rounded-lg;
     padding: 1.5rem;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
