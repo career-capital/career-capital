@@ -55,8 +55,10 @@ export default function Admin() {
   useEffect(() => {
     if (activeTab === 'testimonials') {
       fetchTestimonials();
-    } else {
+    } else if (activeTab === 'contacts') {
       fetchContactSubmissions();
+    } else if (activeTab === 'cms') {
+      setLoading(false);
     }
   }, [activeTab]);
 
