@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { Save, Trash2, Plus, GripVertical } from 'lucide-react';
+import { Save, Trash2, Plus, GripVertical, Image as ImageIcon } from 'lucide-react';
+import * as Icons from 'lucide-react';
 import { SectionWithContent, ContentBlock, Button } from '../../lib/supabase';
 import { supabase } from '../../lib/supabase';
+import IconPicker from './IconPicker';
 
 interface ContentEditorProps {
   section: SectionWithContent;
@@ -11,6 +13,8 @@ interface ContentEditorProps {
 export default function ContentEditor({ section, onUpdate }: ContentEditorProps) {
   const [editMode, setEditMode] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [showIconPicker, setShowIconPicker] = useState(false);
+  const [iconPickerTarget, setIconPickerTarget] = useState<ContentBlock | null>(null);
 
   const updateContentBlock = async (block: ContentBlock, updates: Partial<ContentBlock>) => {
     setSaving(true);
@@ -131,19 +135,36 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
   };
 
   return (
-    <div className="border border-border rounded-lg p-6 mb-4 bg-trueWhite">
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <h3 className="text-lg font-semibold text-ink">{section.section_type}</h3>
-          <p className="text-sm text-slate">Section ID: {section.id.slice(0, 8)}</p>
+    <>
+      {showIconPicker && iconPickerTarget && (
+        <IconPicker
+          value={iconPickerTarget.metadata.icon || ''}
+          onChange={(iconName) => {
+            updateContentBlock(iconPickerTarget, {
+              metadata: { ...iconPickerTarget.metadata, icon: iconName }
+            });
+            setShowIconPicker(false);
+            setIconPickerTarget(null);
+          }}
+          onClose={() => {
+            setShowIconPicker(false);
+            setIconPickerTarget(null);
+          }}
+        />
+      )}
+      <div className="border border-border rounded-lg p-6 mb-4 bg-trueWhite">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h3 className="text-lg font-semibold text-ink">{section.section_type}</h3>
+            <p className="text-sm text-slate">Section ID: {section.id.slice(0, 8)}</p>
+          </div>
+          <button
+            onClick={() => setEditMode(!editMode)}
+            className="btn-secondary text-sm"
+          >
+            {editMode ? 'Done Editing' : 'Edit Content'}
+          </button>
         </div>
-        <button
-          onClick={() => setEditMode(!editMode)}
-          className="btn-secondary text-sm"
-        >
-          {editMode ? 'Done Editing' : 'Edit Content'}
-        </button>
-      </div>
 
       {editMode && (
         <div className="space-y-6">
@@ -172,16 +193,49 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
 
                         {block.block_type === 'icon_item' ? (
                           <>
-                            <input
-                              type="text"
-                              value={block.metadata.icon || ''}
-                              onChange={(e) => updateContentBlock(block, {
-                                metadata: { ...block.metadata, icon: e.target.value }
-                              })}
-                              placeholder="Icon name (e.g., MessageCircle)"
-                              className="w-full px-3 py-2 border border-border rounded text-sm"
-                              disabled={saving}
-                            />
+                            <div>
+                              <label className="block text-xs font-medium text-slate mb-1">Icon</label>
+                              <div className="flex gap-2">
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setIconPickerTarget(block);
+                                    setShowIconPicker(true);
+                                  }}
+                                  className="flex-shrink-0 w-20 h-20 flex items-center justify-center border-2 border-dashed border-border hover:border-navy rounded-lg transition-colors bg-surface"
+                                  disabled={saving}
+                                >
+                                  {block.metadata.icon && (() => {
+                                    const IconComponent = Icons[block.metadata.icon as keyof typeof Icons] as any;
+                                    return IconComponent ? <IconComponent className="w-10 h-10 text-navy" /> : <ImageIcon className="w-10 h-10 text-slate" />;
+                                  })()}
+                                  {!block.metadata.icon && <ImageIcon className="w-10 h-10 text-slate" />}
+                                </button>
+                                <div className="flex-1">
+                                  <input
+                                    type="text"
+                                    value={block.metadata.icon || ''}
+                                    onChange={(e) => updateContentBlock(block, {
+                                      metadata: { ...block.metadata, icon: e.target.value }
+                                    })}
+                                    placeholder="Icon name (e.g., MessageCircle)"
+                                    className="w-full px-3 py-2 border border-border rounded text-sm mb-2"
+                                    disabled={saving}
+                                  />
+                                  <button
+                                    type="button"
+                                    onClick={() => {
+                                      setIconPickerTarget(block);
+                                      setShowIconPicker(true);
+                                    }}
+                                    className="text-xs text-navy hover:text-navy/80 font-medium"
+                                    disabled={saving}
+                                  >
+                                    Browse {Object.keys(Icons).length} icons →
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
                             <input
                               type="text"
                               value={block.metadata.title || ''}
@@ -374,6 +428,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
           )}
         </div>
       )}
-    </div>
+      </div>
+    </>
   );
 }

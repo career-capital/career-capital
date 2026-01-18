@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Plus, Trash2, Eye, EyeOff, ChevronUp, ChevronDown } from 'lucide-react';
 import { supabase, Page, SectionWithContent, SectionTemplate } from '../../lib/supabase';
 import ContentEditor from './ContentEditor';
+import LivePreview from './LivePreview';
 
 export default function CMSInterface() {
   const [pages, setPages] = useState<Page[]>([]);
@@ -208,21 +209,35 @@ export default function CMSInterface() {
     fetchSections();
   };
 
-  const deleteSection = async (sectionId: string) => {
-    if (!confirm('Are you sure you want to delete this section? This will also delete all content blocks and buttons within it.')) {
+  const deleteSection = async (sectionId: string, sectionType: string) => {
+    const confirmed = window.confirm(
+      `Delete this ${sectionType} section?\n\n` +
+      `This will permanently delete:\n` +
+      `• All content blocks in this section\n` +
+      `• All buttons in this section\n\n` +
+      `This action cannot be undone.`
+    );
+
+    if (!confirmed) {
       return;
     }
 
-    const { error } = await supabase
-      .from('sections')
-      .delete()
-      .eq('id', sectionId);
+    try {
+      await supabase.from('content_blocks').delete().eq('section_id', sectionId);
+      await supabase.from('buttons').delete().eq('section_id', sectionId);
 
-    if (error) {
-      console.error('Error deleting section:', error);
-      alert('Failed to delete section');
-    } else {
+      const { error } = await supabase
+        .from('sections')
+        .delete()
+        .eq('id', sectionId);
+
+      if (error) throw error;
+
+      alert('Section deleted successfully');
       fetchSections();
+    } catch (error) {
+      console.error('Error deleting section:', error);
+      alert('Failed to delete section. Please try again.');
     }
   };
 
@@ -329,18 +344,25 @@ export default function CMSInterface() {
             </div>
 
             {showTemplates && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 p-4 bg-surface rounded-lg">
-                <h4 className="col-span-full text-sm font-semibold text-ink">Choose a section template:</h4>
-                {templates.map((template) => (
-                  <button
-                    key={template.id}
-                    onClick={() => createSectionFromTemplate(template)}
-                    className="text-left p-4 bg-trueWhite border border-border rounded-lg hover:border-navy transition-colors"
-                  >
-                    <h5 className="font-semibold text-ink mb-1">{template.name}</h5>
-                    <p className="text-sm text-slate">{template.description}</p>
-                  </button>
-                ))}
+              <div className="mt-6 p-6 bg-surface rounded-lg border-2 border-dashed border-border">
+                <h4 className="text-base font-semibold text-ink mb-4">Choose a section template:</h4>
+                {templates.length === 0 ? (
+                  <p className="text-slate">Loading templates...</p>
+                ) : (
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {templates.map((template) => (
+                      <button
+                        key={template.id}
+                        onClick={() => createSectionFromTemplate(template)}
+                        className="text-left p-5 bg-trueWhite border-2 border-border rounded-lg hover:border-navy hover:shadow-md transition-all group"
+                      >
+                        <h5 className="font-semibold text-navy group-hover:text-navy/80 mb-2">{template.name}</h5>
+                        <p className="text-sm text-slate leading-relaxed">{template.description}</p>
+                        <p className="text-xs text-navy font-medium mt-3">Click to add →</p>
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -388,7 +410,7 @@ export default function CMSInterface() {
                         )}
                       </button>
                       <button
-                        onClick={() => deleteSection(section.id)}
+                        onClick={() => deleteSection(section.id, section.section_type)}
                         className="p-2 hover:bg-error/10 rounded transition-colors text-error"
                         title="Delete section"
                       >
@@ -403,6 +425,8 @@ export default function CMSInterface() {
           </div>
         </>
       )}
+
+      {selectedPage && <LivePreview page={selectedPage} />}
     </div>
   );
 }
