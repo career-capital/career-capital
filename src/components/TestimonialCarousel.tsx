@@ -142,7 +142,7 @@ export default function TestimonialCarousel({
               className={`w-2 h-2 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 ${
                 index === currentIndex
                   ? 'bg-navy w-8'
-                  : 'bg-border hover:bg-slate'
+                  : 'bg-navy/30 hover:bg-slate'
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
               aria-current={index === currentIndex}

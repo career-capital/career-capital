@@ -56,7 +56,7 @@ export default function Navigation() {
         />
       )}
       <nav
-        className={`bg-softWhite border-b border-border fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+        className={`bg-softWhite border-b border-navy/30 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
         aria-label="Main navigation"
@@ -107,7 +107,7 @@ export default function Navigation() {
         {mobileMenuOpen && (
           <div
             ref={focusTrapRef}
-            className="md:hidden mobile-menu-enter bg-softWhite border-b border-border shadow-lg"
+            className="md:hidden mobile-menu-enter bg-softWhite border-b border-navy/30 shadow-lg"
           >
             <div className="px-6 py-8 space-y-1">
               {links.map((link, index) => (

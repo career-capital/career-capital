@@ -4,7 +4,7 @@ import Logo from './Logo';
 
 export default function Footer() {
   return (
-    <footer role="contentinfo" className="bg-softWhite text-ink border-t border-border py-16">
+    <footer role="contentinfo" className="bg-softWhite text-ink border-t border-navy/30 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 mb-8">
           <div>
@@ -99,7 +99,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 flex justify-center">
+        <div className="border-t border-navy/30 pt-8 flex justify-center">
           <p className="text-base text-slate">
             &copy; 2026 Career Capital. All rights reserved.
           </p>
