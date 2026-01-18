@@ -130,7 +130,7 @@ export default function Speaking() {
               return (
                 <div
                   key={index}
-                  className="bg-trueWhite border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-md"
+                  className="bg-trueWhite border border-navy/20 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-md"
                 >
                   <button
                     onClick={toggleExpanded}
@@ -163,7 +163,7 @@ export default function Speaking() {
                     }`}
                     aria-hidden={!isExpanded}
                   >
-                    <div className="px-6 pb-6 pt-2 border-t border-gray-100">
+                    <div className="px-6 pb-6 pt-2 border-t border-navy/20">
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-steel mb-3">
                           Key Themes
