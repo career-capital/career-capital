@@ -99,12 +99,55 @@ export default function IconPicker({ value, onChange, onClose }: IconPickerProps
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const iconList = useMemo(() => {
-    const icons = Object.keys(Icons).filter(key => {
-      return key !== 'createLucideIcon' &&
-             key !== 'default' &&
-             typeof Icons[key as keyof typeof Icons] === 'function';
-    });
-    return icons;
+    return [
+      'MessageCircle', 'MessageSquare', 'Mail', 'Phone', 'Megaphone',
+      'Users', 'User', 'UserPlus', 'UserCheck',
+      'Target', 'TrendingUp', 'TrendingDown', 'BarChart', 'BarChart2', 'BarChart3', 'PieChart', 'LineChart',
+      'Briefcase', 'Building', 'Building2',
+      'Lightbulb', 'Rocket', 'Sparkles',
+      'Zap', 'Code', 'Code2', 'Monitor', 'Smartphone', 'Laptop', 'Tablet', 'Globe', 'Globe2',
+      'Award', 'Trophy', 'Medal',
+      'CheckCircle', 'CheckCircle2', 'Check', 'CheckSquare',
+      'XCircle', 'X', 'XSquare',
+      'AlertCircle', 'AlertTriangle', 'Info',
+      'Heart', 'Star', 'ThumbsUp', 'ThumbsDown',
+      'Gift', 'Package', 'Box',
+      'Calendar', 'CalendarDays', 'Clock',
+      'MapPin', 'Map', 'Navigation',
+      'Home', 'Settings', 'Sliders', 'Search',
+      'BookOpen', 'Book', 'Library', 'GraduationCap',
+      'Presentation', 'Mic', 'Mic2', 'Video', 'Camera', 'Film',
+      'Image', 'FileText', 'File', 'Files', 'Folder',
+      'Download', 'Upload', 'Share', 'Share2', 'Send',
+      'Link', 'Link2', 'ExternalLink',
+      'Lock', 'Unlock', 'Shield', 'ShieldCheck',
+      'Eye', 'EyeOff',
+      'ChevronRight', 'ChevronLeft', 'ChevronUp', 'ChevronDown',
+      'ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown',
+      'ArrowUpRight', 'ArrowDownRight', 'ArrowUpLeft', 'ArrowDownLeft',
+      'Plus', 'Minus', 'Menu', 'MoreVertical', 'MoreHorizontal',
+      'Filter', 'RefreshCw', 'Repeat', 'RotateCw',
+      'Activity', 'Cpu', 'Database', 'Server', 'HardDrive',
+      'Wifi', 'WifiOff', 'Bluetooth',
+      'ShoppingCart', 'ShoppingBag', 'CreditCard', 'DollarSign', 'Coins',
+      'Bell', 'BellOff',
+      'Flag', 'Bookmark', 'Tag', 'Tags',
+      'Paperclip', 'Pin', 'Trash', 'Trash2',
+      'Edit', 'Edit2', 'Edit3',
+      'Copy', 'Clipboard', 'Save',
+      'PlayCircle', 'PauseCircle', 'StopCircle',
+      'Volume', 'Volume2', 'VolumeX',
+      'Smile', 'Frown', 'Meh',
+      'Sun', 'Moon', 'Cloud', 'CloudRain', 'CloudSnow',
+      'Umbrella', 'Droplet', 'Wind',
+      'Battery', 'BatteryCharging',
+      'Wifi', 'Signal', 'Bluetooth',
+      'Printer', 'HardDrive', 'Save',
+      'Compass', 'MapPin', 'Navigation2',
+      'Layers', 'Grid', 'Layout',
+      'Maximize', 'Minimize', 'ZoomIn', 'ZoomOut',
+      'Move', 'MousePointer', 'Hand'
+    ];
   }, []);
 
   const filteredIcons = useMemo(() => {
