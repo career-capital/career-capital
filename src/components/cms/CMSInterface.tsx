@@ -373,7 +373,14 @@ export default function CMSInterface() {
               <p className="text-slate">No sections yet. Add a section using the templates above.</p>
             ) : (
               sections.map((section, index) => (
-                <div key={section.id} className="bg-trueWhite border border-border rounded-lg p-4">
+                <div
+                  key={section.id}
+                  className={`bg-trueWhite border-2 rounded-lg p-4 transition-all ${
+                    section.is_published
+                      ? 'border-border'
+                      : 'border-dashed border-slate/30 bg-slate/5'
+                  }`}
+                >
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-3">
                       <div className="flex flex-col gap-1">
@@ -392,27 +399,47 @@ export default function CMSInterface() {
                           <ChevronDown className="w-4 h-4" />
                         </button>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-ink">{section.section_type}</h4>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <h4 className={`font-semibold ${section.is_published ? 'text-ink' : 'text-slate'}`}>
+                            {section.section_type}
+                          </h4>
+                          {!section.is_published && (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-slate/20 text-slate text-xs font-medium rounded">
+                              <EyeOff className="w-3 h-3" />
+                              Hidden from visitors
+                            </span>
+                          )}
+                        </div>
                         <p className="text-xs text-slate">Order: {index + 1}</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => toggleSectionPublished(section)}
-                        className="p-2 hover:bg-surface rounded transition-colors"
-                        title={section.is_published ? 'Hide section' : 'Show section'}
+                        className={`px-3 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-2 ${
+                          section.is_published
+                            ? 'bg-success/10 text-success hover:bg-success/20'
+                            : 'bg-slate/10 text-slate hover:bg-slate/20 border-2 border-dashed border-slate/30'
+                        }`}
+                        title={section.is_published ? 'Hide this section from visitors' : 'Show this section to visitors'}
                       >
                         {section.is_published ? (
-                          <Eye className="w-4 h-4 text-success" />
+                          <>
+                            <Eye className="w-4 h-4" />
+                            Visible
+                          </>
                         ) : (
-                          <EyeOff className="w-4 h-4 text-slate" />
+                          <>
+                            <EyeOff className="w-4 h-4" />
+                            Hidden
+                          </>
                         )}
                       </button>
                       <button
                         onClick={() => deleteSection(section.id, section.section_type)}
                         className="p-2 hover:bg-error/10 rounded transition-colors text-error"
-                        title="Delete section"
+                        title="Delete section permanently"
                       >
                         <Trash2 className="w-4 h-4" />
                       </button>
