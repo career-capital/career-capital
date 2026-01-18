@@ -23,17 +23,26 @@ function AdminRoute() {
 
   useEffect(() => {
     const checkAuth = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      setIsAuthenticated(!!session);
-      setAuthChecked(true);
+      try {
+        const { data: { session }, error } = await supabase.auth.getSession();
+        if (error) {
+          console.error('Auth check error:', error);
+        }
+        setIsAuthenticated(!!session);
+      } catch (error) {
+        console.error('Auth check failed:', error);
+        setIsAuthenticated(false);
+      } finally {
+        setAuthChecked(true);
+      }
     };
 
     checkAuth();
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((async () => {
-      const { data: { session } } = await supabase.auth.getSession();
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      console.log('Auth state changed:', event, session);
       setIsAuthenticated(!!session);
-    }) as any);
+    });
 
     return () => {
       subscription.unsubscribe();
@@ -47,7 +56,7 @@ function AdminRoute() {
   if (!authChecked) {
     return (
       <div className="bg-softWhite min-h-screen flex items-center justify-center">
-        <p className="text-slate">Loading...</p>
+        <p className="text-slate">Checking authentication...</p>
       </div>
     );
   }
