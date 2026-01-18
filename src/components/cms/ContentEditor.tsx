@@ -104,7 +104,6 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
         link_destination: '/contact',
         is_external: false,
         display_order: maxOrder + 1,
-        style_variant: 'btn-primary',
       });
 
     if (error) {
@@ -381,17 +380,21 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                           className="px-3 py-2 border border-border rounded text-sm"
                           disabled={saving}
                         />
-                        <select
-                          value={button.style_variant}
-                          onChange={(e) => updateButton(button, { style_variant: e.target.value })}
-                          className="px-3 py-2 border border-border rounded text-sm"
-                          disabled={saving}
-                        >
-                          <option value="btn-primary">Primary</option>
-                          <option value="btn-primary-on-dark">Primary on Dark</option>
-                          <option value="btn-secondary">Secondary</option>
-                          <option value="btn-secondary-on-dark">Secondary on Dark</option>
-                        </select>
+                        <div>
+                          <label className="block text-xs font-medium text-slate mb-1">Button Priority</label>
+                          <select
+                            value={button.button_type}
+                            onChange={(e) => updateButton(button, { button_type: e.target.value })}
+                            className="w-full px-3 py-2 border border-border rounded text-sm"
+                            disabled={saving}
+                          >
+                            <option value="primary">Primary - Main call-to-action (most important)</option>
+                            <option value="secondary">Secondary - Additional option (less emphasis)</option>
+                          </select>
+                          <p className="text-xs text-slate mt-1">
+                            Use secondary if it's not critical the user takes this action
+                          </p>
+                        </div>
                         <label className="flex items-center gap-2 col-span-2">
                           <input
                             type="checkbox"

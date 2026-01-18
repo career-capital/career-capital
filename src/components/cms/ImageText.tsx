@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { SectionWithContent } from '../../lib/supabase';
+import { getButtonStyleVariant } from '../../utils/buttonStyles';
 
 interface ImageTextProps {
   section: SectionWithContent;
@@ -54,7 +55,7 @@ export default function ImageText({ section }: ImageTextProps) {
               <button
                 key={button.id}
                 onClick={() => handleButtonClick(button)}
-                className={button.style_variant}
+                className={getButtonStyleVariant(button.button_type as 'primary' | 'secondary', section.background_color)}
               >
                 {button.button_text}
                 {button.is_external ? (

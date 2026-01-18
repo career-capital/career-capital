@@ -185,7 +185,7 @@ export default function CMSInterface() {
           { section_id: newSection.id, block_type: 'paragraph', content: 'CTA description text', display_order: 1, metadata: {} },
         ]);
         await supabase.from('buttons').insert([
-          { section_id: newSection.id, button_text: 'Get Started', button_type: 'primary', link_type: 'internal', link_destination: '/contact', is_external: false, display_order: 0, style_variant: 'btn-primary-on-dark' },
+          { section_id: newSection.id, button_text: 'Get Started', button_type: 'primary', link_type: 'internal', link_destination: '/contact', is_external: false, display_order: 0 },
         ]);
         break;
 
