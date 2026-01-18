@@ -37,7 +37,7 @@ export default function Admin() {
   const [activeTab, setActiveTab] = useState<'cms' | 'testimonials' | 'contacts'>('cms');
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [contactSubmissions, setContactSubmissions] = useState<ContactSubmission[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [customTag, setCustomTag] = useState('');
@@ -57,8 +57,6 @@ export default function Admin() {
       fetchTestimonials();
     } else if (activeTab === 'contacts') {
       fetchContactSubmissions();
-    } else if (activeTab === 'cms') {
-      setLoading(false);
     }
   }, [activeTab]);
 
