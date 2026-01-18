@@ -27,6 +27,9 @@ export default function SectionRenderer({ section }: SectionRendererProps) {
     case 'text_block':
       return <TextBlock section={section} />;
 
+    case 'text_only':
+      return <TextBlock section={section} />;
+
     case 'image_text':
       return <ImageText section={section} />;
 

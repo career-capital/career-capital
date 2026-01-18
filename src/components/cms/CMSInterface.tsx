@@ -3,6 +3,7 @@ import { Plus, Trash2, Eye, EyeOff, ChevronUp, ChevronDown } from 'lucide-react'
 import { supabase, Page, SectionWithContent, SectionTemplate } from '../../lib/supabase';
 import ContentEditor from './ContentEditor';
 import LivePreview from './LivePreview';
+import SectionWireframe from './SectionWireframes';
 
 export default function CMSInterface() {
   const [pages, setPages] = useState<Page[]>([]);
@@ -89,7 +90,9 @@ export default function CMSInterface() {
 
     if (error) {
       console.error('Error fetching templates:', error);
+      console.error('Template fetch error details:', error.message, error.details);
     } else if (data) {
+      console.log('Templates loaded:', data.length);
       setTemplates(data);
     }
   };
@@ -193,6 +196,14 @@ export default function CMSInterface() {
         await supabase.from('content_blocks').insert([
           { section_id: newSection.id, block_type: 'heading', content: 'Section Heading', display_order: 0, metadata: {} },
           { section_id: newSection.id, block_type: 'paragraph', content: 'Paragraph text goes here', display_order: 1, metadata: {} },
+        ]);
+        break;
+
+      case 'text_only':
+        await supabase.from('content_blocks').insert([
+          { section_id: newSection.id, block_type: 'section_heading', content: 'Section Heading', display_order: 0, metadata: {} },
+          { section_id: newSection.id, block_type: 'paragraph', content: 'First paragraph goes here', display_order: 1, metadata: {} },
+          { section_id: newSection.id, block_type: 'paragraph', content: 'Second paragraph goes here', display_order: 2, metadata: {} },
         ]);
         break;
 
@@ -345,20 +356,50 @@ export default function CMSInterface() {
 
             {showTemplates && (
               <div className="mt-6 p-6 bg-surface rounded-lg border-2 border-dashed border-border">
-                <h4 className="text-base font-semibold text-ink mb-4">Choose a section template:</h4>
+                <div className="flex items-center justify-between mb-5">
+                  <h4 className="text-base font-semibold text-ink">Choose a section layout:</h4>
+                  <button
+                    onClick={() => setShowTemplates(false)}
+                    className="text-slate hover:text-ink text-sm"
+                  >
+                    Cancel
+                  </button>
+                </div>
                 {templates.length === 0 ? (
-                  <p className="text-slate">Loading templates...</p>
+                  <div className="text-center py-8">
+                    <p className="text-slate mb-2">Loading templates...</p>
+                    <p className="text-xs text-slate">If this persists, please refresh the page.</p>
+                  </div>
                 ) : (
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {templates.map((template) => (
                       <button
                         key={template.id}
                         onClick={() => createSectionFromTemplate(template)}
-                        className="text-left p-5 bg-trueWhite border-2 border-border rounded-lg hover:border-navy hover:shadow-md transition-all group"
+                        className="text-left bg-trueWhite border-2 border-border rounded-xl hover:border-navy hover:shadow-lg transition-all group overflow-hidden"
                       >
-                        <h5 className="font-semibold text-navy group-hover:text-navy/80 mb-2">{template.name}</h5>
-                        <p className="text-sm text-slate leading-relaxed">{template.description}</p>
-                        <p className="text-xs text-navy font-medium mt-3">Click to add →</p>
+                        <div className="p-3 bg-slate/5 border-b border-border flex items-center justify-center">
+                          <SectionWireframe
+                            sectionType={template.section_type}
+                            className="w-full h-24"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h5 className="font-semibold text-navy group-hover:text-navy/80 mb-2 text-sm">
+                            {template.name}
+                          </h5>
+                          <p className="text-xs text-slate leading-relaxed mb-3">
+                            {template.description}
+                          </p>
+                          <div className="flex items-center justify-between">
+                            <span className="text-[10px] text-slate/60 font-mono">
+                              {template.section_type}
+                            </span>
+                            <span className="text-xs text-navy font-medium group-hover:translate-x-1 transition-transform">
+                              Add →
+                            </span>
+                          </div>
+                        </div>
                       </button>
                     ))}
                   </div>
