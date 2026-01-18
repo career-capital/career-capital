@@ -195,8 +195,15 @@
   /* Highly visible focus indicators for keyboard navigation */
   *:focus-visible {
     outline: 3px solid var(--cc-steel);
-    outline-offset: 2px;
+    outline-offset: 3px;
     border-radius: 2px;
+  }
+
+  /* Enhanced focus for buttons with higher contrast */
+  button:focus-visible,
+  a[class*="btn-"]:focus-visible {
+    outline: 4px solid var(--cc-steel);
+    outline-offset: 3px;
   }
 }
 

@@ -112,7 +112,7 @@ export default function Home() {
               className="btn-primary-on-dark"
             >
               Work With Us
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </button>
             <button
               onClick={() => {
@@ -125,19 +125,19 @@ export default function Home() {
             </button>
           </div>
           <div className="flex flex-wrap gap-3">
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border border-trueWhite/30 text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border-2 border-trueWhite/50 text-trueWhite text-sm font-medium">
               AI Fluency
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border border-trueWhite/30 text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border-2 border-trueWhite/50 text-trueWhite text-sm font-medium">
               Leadership Coaching
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border border-trueWhite/30 text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border-2 border-trueWhite/50 text-trueWhite text-sm font-medium">
               Relationship Management
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border border-trueWhite/30 text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border-2 border-trueWhite/50 text-trueWhite text-sm font-medium">
               Strategic Guidance
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border border-trueWhite/30 text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border-2 border-trueWhite/50 text-trueWhite text-sm font-medium">
               Keynote Speaking
             </span>
           </div>
@@ -326,16 +326,18 @@ export default function Home() {
                   className="btn-primary-on-dark"
                 >
                   Book for Your Event
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
                 </button>
                 <a
                   href="https://youtu.be/vT3fUJ1-BvA?si=VM77gHpuH9371MAY"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary-on-dark inline-flex items-center justify-center"
+                  aria-label="Watch the TEDxChicago talk (opens in new window)"
                 >
                   Watch the Talk
-                  <ExternalLink className="ml-2 w-4 h-4" />
+                  <ExternalLink className="ml-2 w-4 h-4" aria-hidden="true" />
+                  <span className="sr-only">(opens in new window)</span>
                 </a>
               </div>
             </div>

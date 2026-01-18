@@ -79,7 +79,7 @@ export default function Footer() {
                 href="mailto:info@careercapital.io"
                 className="flex items-center gap-2 text-base text-slate hover:text-navy transition-colors"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5" aria-hidden="true" />
                 info@careercapital.io
               </a>
               <a
@@ -87,9 +87,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-base text-slate hover:text-navy transition-colors"
+                aria-label="Connect on LinkedIn (opens in new window)"
               >
-                <Linkedin className="w-5 h-5" strokeWidth={0} fill="currentColor" />
-                LinkedIn
+                <Linkedin className="w-5 h-5" strokeWidth={0} fill="currentColor" aria-hidden="true" />
+                LinkedIn<span className="sr-only"> (opens in new window)</span>
               </a>
             </div>
           </div>
