@@ -199,7 +199,7 @@ export default function IconPicker({ value, onChange, onClose }: IconPickerProps
             <div className="flex-1">
               <h3 className="text-2xl font-bold text-ink mb-1">Choose an Icon</h3>
               <p className="text-sm text-slate">
-                Browse {iconList.length} icons · {value && <span className="text-navy font-semibold">Currently: {value}</span>}
+                Browse 150+ icons · {value && <span className="text-navy font-semibold">Currently: {value}</span>}
               </p>
             </div>
             <button
