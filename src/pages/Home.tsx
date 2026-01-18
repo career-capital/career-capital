@@ -112,7 +112,7 @@ export default function Home() {
               className="btn-primary-on-dark"
             >
               Work With Us
-              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+              <ArrowRight className="ml-2 w-4 h-4" strokeWidth={2} aria-hidden="true" />
             </button>
             <button
               onClick={() => {
@@ -125,19 +125,19 @@ export default function Home() {
             </button>
           </div>
           <div className="flex flex-wrap gap-3">
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/20 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
               AI Fluency
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/20 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
               Leadership Coaching
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/20 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
               Relationship Management
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/20 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
               Strategic Guidance
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/10 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/20 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
               Keynote Speaking
             </span>
           </div>
@@ -163,7 +163,7 @@ export default function Home() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <MessageCircle className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
+                  <MessageCircle className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
                   Coaching
@@ -177,7 +177,7 @@ export default function Home() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <Presentation className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
+                  <Presentation className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
                   Workshops
@@ -191,7 +191,7 @@ export default function Home() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <Compass className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
+                  <Compass className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
                   Strategic Guidance
@@ -223,7 +223,7 @@ export default function Home() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <Sparkles className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
+                  <Sparkles className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
                   AI Fluency
@@ -237,7 +237,7 @@ export default function Home() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <Users className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
+                  <Users className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
                   Relationship Management
@@ -251,7 +251,7 @@ export default function Home() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <TrendingUp className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
+                  <TrendingUp className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
                   Mindset Shifts
@@ -272,7 +272,7 @@ export default function Home() {
               className="btn-primary"
             >
               Learn More About Us
-              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+              <ArrowRight className="ml-2 w-4 h-4" strokeWidth={2} aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -295,7 +295,7 @@ export default function Home() {
                 aria-label="Navigate to testimonials page to see all client reviews"
               >
                 View All Testimonials
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" strokeWidth={2} aria-hidden="true" />
               </button>
             </div>
           </>
@@ -326,7 +326,7 @@ export default function Home() {
                   className="btn-primary-on-dark"
                 >
                   Book for Your Event
-                  <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+                  <ArrowRight className="ml-2 w-4 h-4" strokeWidth={2} aria-hidden="true" />
                 </button>
                 <a
                   href="https://youtu.be/vT3fUJ1-BvA?si=VM77gHpuH9371MAY"
@@ -336,7 +336,7 @@ export default function Home() {
                   aria-label="Watch the TEDxChicago talk (opens in new window)"
                 >
                   Watch the Talk
-                  <ExternalLink className="ml-2 w-4 h-4" aria-hidden="true" />
+                  <ExternalLink className="ml-2 w-4 h-4" strokeWidth={2} aria-hidden="true" />
                   <span className="sr-only">(opens in new window)</span>
                 </a>
               </div>
