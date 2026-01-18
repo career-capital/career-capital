@@ -26,3 +26,67 @@ export interface Testimonial {
   created_at: string;
   updated_at: string;
 }
+
+export interface Page {
+  id: string;
+  slug: string;
+  title: string;
+  meta_description: string;
+  is_published: boolean;
+  display_order: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface Section {
+  id: string;
+  page_id: string;
+  section_type: string;
+  display_order: number;
+  is_published: boolean;
+  background_color: string;
+  text_color: string;
+  padding: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ContentBlock {
+  id: string;
+  section_id: string;
+  block_type: string;
+  content: string;
+  display_order: number;
+  metadata: Record<string, any>;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface Button {
+  id: string;
+  section_id: string;
+  button_text: string;
+  button_type: string;
+  link_type: string;
+  link_destination: string;
+  is_external: boolean;
+  display_order: number;
+  style_variant: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface SectionTemplate {
+  id: string;
+  name: string;
+  section_type: string;
+  description: string;
+  default_config: Record<string, any>;
+  preview_image: string;
+  created_at: string;
+}
+
+export interface SectionWithContent extends Section {
+  content_blocks: ContentBlock[];
+  buttons: Button[];
+}

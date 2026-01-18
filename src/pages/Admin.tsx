@@ -1,6 +1,7 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { supabase, Testimonial } from '../lib/supabase';
-import { Plus, Edit2, Trash2, X, ChevronUp, ChevronDown, Tag as TagIcon, Mail, MessageSquare, LogOut } from 'lucide-react';
+import { Plus, Edit2, Trash2, X, ChevronUp, ChevronDown, Tag as TagIcon, Mail, MessageSquare, LogOut, FileEdit } from 'lucide-react';
+import CMSInterface from '../components/cms/CMSInterface';
 
 interface ContactSubmission {
   id: string;
@@ -33,7 +34,7 @@ const OTHER_TAGS = [
 ];
 
 export default function Admin() {
-  const [activeTab, setActiveTab] = useState<'testimonials' | 'contacts'>('testimonials');
+  const [activeTab, setActiveTab] = useState<'cms' | 'testimonials' | 'contacts'>('cms');
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [contactSubmissions, setContactSubmissions] = useState<ContactSubmission[]>([]);
   const [loading, setLoading] = useState(true);
@@ -406,6 +407,17 @@ export default function Admin() {
 
         <div className="flex gap-4 mb-8 border-b border-border">
           <button
+            onClick={() => setActiveTab('cms')}
+            className={`px-6 py-3 font-medium transition-colors ${
+              activeTab === 'cms'
+                ? 'text-navy border-b-2 border-navy'
+                : 'text-slate hover:text-ink'
+            }`}
+          >
+            <FileEdit className="w-4 h-4 inline mr-2" />
+            Content Editor
+          </button>
+          <button
             onClick={() => setActiveTab('testimonials')}
             className={`px-6 py-3 font-medium transition-colors ${
               activeTab === 'testimonials'
@@ -433,6 +445,8 @@ export default function Admin() {
             )}
           </button>
         </div>
+
+        {activeTab === 'cms' && <CMSInterface />}
 
         {activeTab === 'testimonials' && (
           <>
