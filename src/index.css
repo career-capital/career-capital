@@ -237,7 +237,7 @@
 
   /* Secondary button on dark backgrounds - SOLID FILL (recommended for accessibility) */
   .btn-secondary-on-dark {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-softWhite bg-navy text-trueWhite text-base hover:bg-steel hover:text-trueWhite hover:border-steel transition-colors;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-trueWhite bg-steel text-trueWhite text-base hover:bg-navy hover:text-trueWhite hover:border-trueWhite transition-colors;
   }
 
   /* Secondary button on dark backgrounds - TRANSPARENT variant */
