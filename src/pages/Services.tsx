@@ -237,7 +237,7 @@ export default function Services() {
               className="btn-primary"
             >
               Let's Talk
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -343,7 +343,7 @@ export default function Services() {
                         className="btn-secondary"
                       >
                         {service.cta}
-                        <ArrowRight className="ml-2 w-4 h-4" />
+                        <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
                       </button>
                     </div>
                   </div>
@@ -443,7 +443,7 @@ export default function Services() {
                         className="btn-secondary"
                       >
                         {service.cta}
-                        <ArrowRight className="ml-2 w-4 h-4" />
+                        <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
                       </button>
                     </div>
                   </div>
@@ -546,7 +546,7 @@ export default function Services() {
               className="btn-primary-on-dark w-full sm:w-auto"
             >
               Start a Conversation
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </button>
           </div>
         </div>

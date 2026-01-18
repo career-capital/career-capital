@@ -350,7 +350,7 @@ export default function Testimonials() {
               className="btn-primary-on-dark w-full sm:w-auto"
             >
               Get in Touch
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </button>
           </div>
         </div>

@@ -32,7 +32,7 @@ export default function Contact() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-semibold leading-tight text-navy mb-6">Ready to start the conversation?</h2>
             <div className="flex items-center gap-3 mb-6">
-              <Mail className="w-6 h-6 text-navy flex-shrink-0" />
+              <Mail className="w-6 h-6 text-navy flex-shrink-0" aria-hidden="true" />
               <h3 className="text-xl text-ink">Send us an email</h3>
             </div>
             <p className="text-slate leading-relaxed mb-6">
@@ -56,7 +56,7 @@ export default function Contact() {
                 <h2 className="text-4xl font-semibold leading-tight text-navy mb-6">Ready to start the conversation?</h2>
                 <div className="bg-surface border border-border p-8">
                   <div className="flex items-center gap-3 mb-6">
-                    <Mail className="w-6 h-6 text-navy flex-shrink-0" />
+                    <Mail className="w-6 h-6 text-navy flex-shrink-0" aria-hidden="true" />
                     <h3 className="text-xl text-ink">Send us an email</h3>
                   </div>
                   <p className="text-slate leading-relaxed mb-6">
@@ -78,7 +78,7 @@ export default function Contact() {
                 <div className="space-y-6">
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <Mail className="w-5 h-5 text-navy" />
+                      <Mail className="w-5 h-5 text-navy" aria-hidden="true" />
                     </div>
                     <div>
                       <h3 className="text-lg text-ink mb-2">Response Time</h3>
@@ -90,7 +90,7 @@ export default function Contact() {
 
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <MessageSquare className="w-5 h-5 text-navy" />
+                      <MessageSquare className="w-5 h-5 text-navy" aria-hidden="true" />
                     </div>
                     <div>
                       <h3 className="text-lg text-ink mb-2">Discovery Conversation</h3>
@@ -102,7 +102,7 @@ export default function Contact() {
 
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <Calendar className="w-5 h-5 text-navy" />
+                      <Calendar className="w-5 h-5 text-navy" aria-hidden="true" />
                     </div>
                     <div>
                       <h3 className="text-lg text-ink mb-2">Tailored Proposal</h3>
@@ -114,7 +114,7 @@ export default function Contact() {
 
                   <div className="flex gap-4 items-start">
                     <div className="flex-shrink-0 mt-1">
-                      <Rocket className="w-5 h-5 text-navy" />
+                      <Rocket className="w-5 h-5 text-navy" aria-hidden="true" />
                     </div>
                     <div>
                       <h3 className="text-lg text-ink mb-2">Project Launch</h3>
@@ -147,7 +147,7 @@ export default function Contact() {
               className="btn-primary-on-dark w-full sm:w-auto"
             >
               View Services
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </button>
           </div>
         </div>

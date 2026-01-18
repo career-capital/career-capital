@@ -79,7 +79,7 @@ export default function Speaking() {
           <h2 id="formats-heading" className="text-4xl md:text-5xl font-medium text-ink mb-12">Engagement Formats</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="space-y-4">
-              <Mic className="w-12 h-12 text-navy" strokeWidth={1.5} />
+              <Mic className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="text-xl font-medium text-ink">Keynote Speeches</h3>
               <p className="text-slate leading-relaxed">
                 45-60 minute presentations for conferences, leadership summits, and
@@ -88,7 +88,7 @@ export default function Speaking() {
             </div>
 
             <div className="space-y-4">
-              <Users className="w-12 h-12 text-navy" strokeWidth={1.5} />
+              <Users className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="text-xl font-medium text-ink">Workshops</h3>
               <p className="text-slate leading-relaxed">
                 Half-day or full-day interactive sessions for leadership teams and
@@ -97,7 +97,7 @@ export default function Speaking() {
             </div>
 
             <div className="space-y-4">
-              <Lightbulb className="w-12 h-12 text-navy" strokeWidth={1.5} />
+              <Lightbulb className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="text-xl font-medium text-ink">Facilitation</h3>
               <p className="text-slate leading-relaxed">
                 Guided strategy sessions and offsites focused on AI readiness and
@@ -214,7 +214,7 @@ export default function Speaking() {
                 className="btn-primary-on-dark w-full sm:w-auto"
               >
                 Inquire About Availability
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
               </button>
             </div>
             <div className="w-full lg:w-[500px] flex-shrink-0">
@@ -250,9 +250,10 @@ export default function Speaking() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="no-underline"
+                aria-label="Read article: Philanthropy is about more than writing a check (opens in new window)"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" />
+                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" aria-hidden="true" />
                   <span className="text-sm font-medium text-navy uppercase tracking-wide">Chicago Sun-Times</span>
                 </div>
                 <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
@@ -261,6 +262,7 @@ export default function Speaking() {
                 <p className="text-sm text-slate">
                   Exploring the deeper meaning of giving back through relationship-building and community engagement.
                 </p>
+                <span className="sr-only">(opens in new window)</span>
               </a>
             </article>
 
@@ -270,9 +272,10 @@ export default function Speaking() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="no-underline"
+                aria-label="Read article: Nisaini Rexach at Teach For America (opens in new window)"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" />
+                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" aria-hidden="true" />
                   <span className="text-sm font-medium text-navy uppercase tracking-wide">Crain's Chicago Business</span>
                 </div>
                 <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
@@ -281,6 +284,7 @@ export default function Speaking() {
                 <p className="text-sm text-slate">
                   Profile highlighting leadership in education and commitment to expanding opportunities for Chicago youth.
                 </p>
+                <span className="sr-only">(opens in new window)</span>
               </a>
             </article>
 
@@ -290,9 +294,10 @@ export default function Speaking() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="no-underline"
+                aria-label="Read article: Nisaini Rexach - Pioneering a New Era of Social Impact in Chicago (opens in new window)"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" />
+                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" aria-hidden="true" />
                   <span className="text-sm font-medium text-navy uppercase tracking-wide">Chi Tech for Good</span>
                 </div>
                 <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
@@ -301,6 +306,7 @@ export default function Speaking() {
                 <p className="text-sm text-slate">
                   Feature on innovative approaches to social change and technology's role in community transformation.
                 </p>
+                <span className="sr-only">(opens in new window)</span>
               </a>
             </article>
           </div>
@@ -395,7 +401,7 @@ export default function Speaking() {
               className="btn-primary-on-dark w-full sm:w-auto"
             >
               Get in Touch
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </button>
           </div>
         </div>

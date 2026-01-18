@@ -48,13 +48,13 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="nisaini-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-8">Meet the Founder</h2>
           <div className="flex flex-wrap gap-3 mb-12">
-            <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-navy/5 border-2 border-navy/30 text-navy text-sm font-medium">
               TEDxChicago Main Stage Speaker
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-navy/5 border-2 border-navy/30 text-navy text-sm font-medium">
               Fortune 100 Experience
             </span>
-            <span className="inline-flex items-center px-4 py-2 bg-navy/5 border border-navy/20 text-navy text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 bg-navy/5 border-2 border-navy/30 text-navy text-sm font-medium">
               Social Impact Leader
             </span>
           </div>
@@ -66,9 +66,10 @@ export default function About() {
                   href="https://www.linkedin.com/in/nisainirexach/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium text-navy hover:text-steel"
+                  className="font-medium text-navy hover:text-steel inline-flex items-center gap-1"
+                  aria-label="Nisaini Rexach's LinkedIn profile (opens in new window)"
                 >
-                  Nisaini Rexach
+                  Nisaini Rexach<ExternalLink className="w-4 h-4" aria-hidden="true" /><span className="sr-only"> (opens in new window)</span>
                 </a> is a strategic communicator, mentor, and main stage TEDxChicago speaker whose work sits at the intersection of relationship‑driven growth and AI‑ready communication. Her philosophy is rooted in the belief that careers accelerate when clarity, connection, and credibility work together—and she helps individuals and organizations build all three with intention.
               </p>
               <p>
@@ -106,7 +107,7 @@ export default function About() {
           <h2 id="philosophy-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-12">Core Philosophy</h2>
           <div className="grid md:grid-cols-3 gap-12">
             <div className="space-y-4">
-              <Heart className="w-12 h-12 text-navy" strokeWidth={1.5} />
+              <Heart className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="text-xl font-medium text-ink">
                 Relationships matter most
               </h3>
@@ -118,7 +119,7 @@ export default function About() {
             </div>
 
             <div className="space-y-4">
-              <Target className="w-12 h-12 text-navy" strokeWidth={1.5} />
+              <Target className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="text-xl font-medium text-ink">
                 Practical over theoretical
               </h3>
@@ -129,7 +130,7 @@ export default function About() {
             </div>
 
             <div className="space-y-4">
-              <Compass className="w-12 h-12 text-navy" strokeWidth={1.5} />
+              <Compass className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="text-xl font-medium text-ink">
                 Clarity through change
               </h3>
@@ -160,7 +161,7 @@ export default function About() {
               className="btn-primary-on-dark w-full sm:w-auto"
             >
               Get in Touch
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </button>
           </div>
         </div>
