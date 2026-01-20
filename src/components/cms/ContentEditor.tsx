@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Save, Trash2, Plus, GripVertical, Image as ImageIcon } from 'lucide-react';
 import * as Icons from 'lucide-react';
 import { SectionWithContent, ContentBlock, Button } from '../../lib/supabase';
@@ -15,16 +15,45 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
   const [saving, setSaving] = useState(false);
   const [showIconPicker, setShowIconPicker] = useState(false);
   const [iconPickerTarget, setIconPickerTarget] = useState<ContentBlock | null>(null);
+  const [localBlocks, setLocalBlocks] = useState<ContentBlock[]>([]);
+  const [localButtons, setLocalButtons] = useState<Button[]>([]);
+  const saveTimeoutRef = useRef<Record<string, NodeJS.Timeout>>({});
 
-  const updateContentBlock = async (block: ContentBlock, updates: Partial<ContentBlock>) => {
+  useEffect(() => {
+    setLocalBlocks(section.content_blocks);
+    setLocalButtons(section.buttons);
+  }, [section.content_blocks, section.buttons]);
+
+  const updateContentBlockLocal = (blockId: string, updates: Partial<ContentBlock>) => {
+    setLocalBlocks(prev =>
+      prev.map(block =>
+        block.id === blockId
+          ? { ...block, ...updates, metadata: updates.metadata !== undefined ? updates.metadata : block.metadata }
+          : block
+      )
+    );
+
+    if (saveTimeoutRef.current[blockId]) {
+      clearTimeout(saveTimeoutRef.current[blockId]);
+    }
+
+    saveTimeoutRef.current[blockId] = setTimeout(() => {
+      saveContentBlock(blockId, updates);
+    }, 1000);
+  };
+
+  const saveContentBlock = async (blockId: string, updates: Partial<ContentBlock>) => {
     setSaving(true);
+    const block = localBlocks.find(b => b.id === blockId);
+    if (!block) return;
+
     const { error } = await supabase
       .from('content_blocks')
       .update({
         content: updates.content !== undefined ? updates.content : block.content,
         metadata: updates.metadata !== undefined ? updates.metadata : block.metadata,
       })
-      .eq('id', block.id);
+      .eq('id', blockId);
 
     if (error) {
       console.error('Error updating content block:', error);
@@ -35,12 +64,30 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
     setSaving(false);
   };
 
-  const updateButton = async (button: Button, updates: Partial<Button>) => {
+  const updateButtonLocal = (buttonId: string, updates: Partial<Button>) => {
+    setLocalButtons(prev =>
+      prev.map(button =>
+        button.id === buttonId
+          ? { ...button, ...updates }
+          : button
+      )
+    );
+
+    if (saveTimeoutRef.current[buttonId]) {
+      clearTimeout(saveTimeoutRef.current[buttonId]);
+    }
+
+    saveTimeoutRef.current[buttonId] = setTimeout(() => {
+      saveButton(buttonId, updates);
+    }, 1000);
+  };
+
+  const saveButton = async (buttonId: string, updates: Partial<Button>) => {
     setSaving(true);
     const { error } = await supabase
       .from('buttons')
       .update(updates)
-      .eq('id', button.id);
+      .eq('id', buttonId);
 
     if (error) {
       console.error('Error updating button:', error);
@@ -139,7 +186,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
         <IconPicker
           value={iconPickerTarget.metadata.icon || ''}
           onChange={(iconName) => {
-            updateContentBlock(iconPickerTarget, {
+            updateContentBlockLocal(iconPickerTarget.id, {
               metadata: { ...iconPickerTarget.metadata, icon: iconName }
             });
             setShowIconPicker(false);
@@ -170,7 +217,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
           <div>
             <h4 className="text-sm font-semibold text-ink mb-3">Content Blocks</h4>
             <div className="space-y-3">
-              {section.content_blocks
+              {localBlocks
                 .sort((a, b) => a.display_order - b.display_order)
                 .map((block) => (
                   <div key={block.id} className="border border-border rounded p-3 bg-softWhite">
@@ -235,7 +282,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                                   <input
                                     type="text"
                                     value={block.metadata.icon || ''}
-                                    onChange={(e) => updateContentBlock(block, {
+                                    onChange={(e) => updateContentBlockLocal(block.id, {
                                       metadata: { ...block.metadata, icon: e.target.value }
                                     })}
                                     placeholder="Or type icon name (e.g., MessageCircle)"
@@ -251,7 +298,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                             <input
                               type="text"
                               value={block.metadata.title || ''}
-                              onChange={(e) => updateContentBlock(block, {
+                              onChange={(e) => updateContentBlockLocal(block.id, {
                                 metadata: { ...block.metadata, title: e.target.value }
                               })}
                               placeholder="Title"
@@ -260,7 +307,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                             />
                             <textarea
                               value={block.content}
-                              onChange={(e) => updateContentBlock(block, { content: e.target.value })}
+                              onChange={(e) => updateContentBlockLocal(block.id, { content: e.target.value })}
                               placeholder="Description"
                               rows={3}
                               className="w-full px-3 py-2 border border-border rounded text-sm resize-none"
@@ -272,7 +319,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                             <input
                               type="text"
                               value={block.content}
-                              onChange={(e) => updateContentBlock(block, { content: e.target.value })}
+                              onChange={(e) => updateContentBlockLocal(block.id, { content: e.target.value })}
                               placeholder="Fallback image URL"
                               className="w-full px-3 py-2 border border-border rounded text-sm"
                               disabled={saving}
@@ -280,7 +327,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                             <input
                               type="text"
                               value={block.metadata.desktop || ''}
-                              onChange={(e) => updateContentBlock(block, {
+                              onChange={(e) => updateContentBlockLocal(block.id, {
                                 metadata: { ...block.metadata, desktop: e.target.value }
                               })}
                               placeholder="Desktop image URL"
@@ -290,7 +337,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                             <input
                               type="text"
                               value={block.metadata.tablet || ''}
-                              onChange={(e) => updateContentBlock(block, {
+                              onChange={(e) => updateContentBlockLocal(block.id, {
                                 metadata: { ...block.metadata, tablet: e.target.value }
                               })}
                               placeholder="Tablet image URL"
@@ -303,7 +350,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                             <input
                               type="text"
                               value={block.content}
-                              onChange={(e) => updateContentBlock(block, { content: e.target.value })}
+                              onChange={(e) => updateContentBlockLocal(block.id, { content: e.target.value })}
                               placeholder="Image URL"
                               className="w-full px-3 py-2 border border-border rounded text-sm"
                               disabled={saving}
@@ -311,7 +358,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                             <input
                               type="text"
                               value={block.metadata.alt || ''}
-                              onChange={(e) => updateContentBlock(block, {
+                              onChange={(e) => updateContentBlockLocal(block.id, {
                                 metadata: { ...block.metadata, alt: e.target.value }
                               })}
                               placeholder="Alt text"
@@ -322,7 +369,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                         ) : (
                           <textarea
                             value={block.content}
-                            onChange={(e) => updateContentBlock(block, { content: e.target.value })}
+                            onChange={(e) => updateContentBlockLocal(block.id, { content: e.target.value })}
                             placeholder="Content"
                             rows={block.block_type === 'heading' ? 2 : 4}
                             className="w-full px-3 py-2 border border-border rounded text-sm resize-none"
@@ -360,7 +407,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
           <div>
             <h4 className="text-sm font-semibold text-ink mb-3">Buttons</h4>
             <div className="space-y-3">
-              {section.buttons
+              {localButtons
                 .sort((a, b) => a.display_order - b.display_order)
                 .map((button) => (
                   <div key={button.id} className="border border-border rounded p-3 bg-softWhite">
@@ -370,14 +417,14 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                         <input
                           type="text"
                           value={button.button_text}
-                          onChange={(e) => updateButton(button, { button_text: e.target.value })}
+                          onChange={(e) => updateButtonLocal(button.id, { button_text: e.target.value })}
                           placeholder="Button text"
                           className="px-3 py-2 border border-border rounded text-sm"
                           disabled={saving}
                         />
                         <select
                           value={button.link_type}
-                          onChange={(e) => updateButton(button, { link_type: e.target.value })}
+                          onChange={(e) => updateButtonLocal(button.id, { link_type: e.target.value })}
                           className="px-3 py-2 border border-border rounded text-sm"
                           disabled={saving}
                         >
@@ -388,7 +435,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                         <input
                           type="text"
                           value={button.link_destination}
-                          onChange={(e) => updateButton(button, { link_destination: e.target.value })}
+                          onChange={(e) => updateButtonLocal(button.id, { link_destination: e.target.value })}
                           placeholder="Destination URL/path"
                           className="px-3 py-2 border border-border rounded text-sm"
                           disabled={saving}
@@ -397,7 +444,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                           <label className="block text-xs font-medium text-slate mb-1">Button Priority</label>
                           <select
                             value={button.button_type}
-                            onChange={(e) => updateButton(button, { button_type: e.target.value })}
+                            onChange={(e) => updateButtonLocal(button.id, { button_type: e.target.value })}
                             className="w-full px-3 py-2 border border-border rounded text-sm"
                             disabled={saving}
                           >
@@ -412,7 +459,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                           <input
                             type="checkbox"
                             checked={button.is_external}
-                            onChange={(e) => updateButton(button, { is_external: e.target.checked })}
+                            onChange={(e) => updateButtonLocal(button.id, { is_external: e.target.checked })}
                             className="w-4 h-4"
                             disabled={saving}
                           />
