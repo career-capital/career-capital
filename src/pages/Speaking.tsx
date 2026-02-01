@@ -8,43 +8,43 @@ export default function Speaking() {
 
   const topics = [
     {
-      title: 'Social Wealth: Building Career Capital',
-      description: 'Your network underwrites your next move. Learn how intentional relationship-building creates opportunities traditional networking never could.',
+      title: 'From AI Awareness to AI Advantage',
+      description: 'The organizations that master AI now will dominate their markets tomorrow. Learn how to move from reactive adoption to strategic competitive advantage.',
       content: [
-        'Strategic investment vs transactional networking',
-        'How "social wealth" compounds over time',
-        'Practical relationship-building frameworks',
-        'Every encounter is an interview',
+        'Why AI fluency is now a business imperative',
+        'Moving from experimentation to strategic implementation',
+        'Building capabilities that scale across operations',
+        'Creating competitive advantage through AI adoption',
       ],
     },
     {
-      title: 'AI Fluency as Leadership Imperative',
-      description: 'Leaders must understand AI—not as technologists, but as strategic thinkers who can guide their teams through transformation.',
+      title: 'AI Fluency for Leadership',
+      description: 'Leaders don\'t need to code—but they must understand AI well enough to make strategic decisions, guide teams confidently, and champion transformation.',
       content: [
-        'AI fluency for executives (no coding required)',
-        'Evaluating opportunities and risks',
-        'Building confidence through hands-on experience',
-        'Navigating the hype cycle with clarity',
+        'Executive-level AI fluency (no technical background required)',
+        'Evaluating opportunities, risks, and ROI',
+        'Leading teams through AI adoption with clarity',
+        'Navigating the hype cycle and making informed decisions',
       ],
     },
     {
-      title: 'Relationship Management in AI Age',
-      description: 'Human connection becomes more valuable as AI handles routine tasks. Strengthen collaboration as technology transforms the workplace.',
+      title: 'Leading AI Transformation Without Losing Your Culture',
+      description: 'Build technical capability while maintaining organizational values. Practical approaches to AI adoption that strengthen culture rather than erode it.',
       content: [
-        'Why relationships matter more, not less',
-        'Balancing technology with culture and trust',
-        'Maintaining connection in digital workplaces',
-        'Leading teams through change with empathy',
+        'Assessing organizational AI readiness',
+        'Change management strategies for sustainable adoption',
+        'Balancing rapid implementation with team trust',
+        'Building psychological safety during technological change',
       ],
     },
     {
-      title: 'Building AI Readiness With Humanity',
-      description: 'Create technical capability while maintaining your values. Practical roadmaps that balance quick wins with long-term organizational health.',
+      title: 'Scaling AI Capabilities Across Your Organization',
+      description: 'Moving beyond pilot programs to enterprise-wide AI fluency. Practical roadmaps for scaling adoption, standardizing practices, and maximizing impact.',
       content: [
-        'Assess readiness: culture, skills, and strategy',
-        'Practical roadmaps with quick wins',
-        'Navigate ethical considerations',
-        'Build psychological safety for learning',
+        'From isolated use cases to strategic implementation',
+        'Building AI playbooks and standardized practices',
+        'Cross-functional alignment and capability building',
+        'Measuring success and ROI at scale',
       ],
     },
   ];
@@ -68,8 +68,7 @@ export default function Speaking() {
             Speaking & Workshops
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Practical guidance and powerful frameworks for teams ready to build AI fluency,
-            strengthen relationships, and lead through transformation with clarity and confidence.
+            Energize teams and align leadership around AI transformation with keynotes, workshops, and strategy sessions that deliver actionable frameworks and immediate clarity.
           </p>
         </div>
       </section>
@@ -112,7 +111,7 @@ export default function Speaking() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="topics-heading" className="text-4xl md:text-5xl font-medium text-ink mb-3">Speaking Topics</h2>
           <p className="text-lg text-slate mb-12 leading-relaxed">
-            Customizable keynotes and workshops designed to build AI fluency and strengthen relationships.
+            Customizable keynotes and workshops focused on AI transformation, strategic implementation, and leadership in technological change.
           </p>
           <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
@@ -189,22 +188,29 @@ export default function Speaking() {
 
       <section aria-labelledby="speaking-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl mb-8">
             <h2 id="speaking-cta-heading" className="text-4xl md:text-5xl font-medium text-softWhite mb-6">
-              Public speaking with purpose: TEDxChicago
+              TEDxChicago Main Stage Speaker
             </h2>
+            <p className="text-lg text-trueWhite/95 leading-relaxed">
+              See Nisaini in action—proven stage presence, compelling storytelling, and frameworks that audiences can immediately apply to their work.
+            </p>
           </div>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
               <p className="text-lg text-trueWhite/90 leading-relaxed mb-4">
-                A powerful exploration of intentional relationship-building as career capital.
-                Through personal stories spanning from Chicago's government housing to boardrooms
-                with Fortune 500 CEOs, this talk introduces the "social wealth" framework—showing
-                how your supporters become the foundation for every career move you make.
+                This TEDx talk demonstrates the speaking style and practical frameworks Nisaini brings to every engagement.
+                Through personal stories and strategic insights, she explores how intentional relationship-building becomes
+                career capital—a foundation that's even more critical as AI transforms how we work.
+              </p>
+              <p className="text-lg text-trueWhite/90 leading-relaxed mb-4">
+                <strong className="text-trueWhite">What this shows about working with Nisaini:</strong> Clear communication,
+                actionable frameworks, authentic storytelling, and the ability to connect complex concepts to real-world application.
               </p>
               <p className="text-lg text-trueWhite/90 leading-relaxed mb-8">
-                <strong className="text-trueWhite">Key insight:</strong> Your network doesn't just open doors—it underwrites your next opportunity.
-                Every encounter is an interview, and investing in genuine relationships compounds over time.
+                <strong className="text-trueWhite">Why this matters in the AI era:</strong> As technology handles more routine tasks,
+                the ability to build genuine connections, communicate with clarity, and lead through change becomes your competitive advantage.
+                Nisaini brings this perspective to every AI transformation conversation.
               </p>
               <button
                 onClick={() => {
@@ -213,7 +219,7 @@ export default function Speaking() {
                 }}
                 className="btn-primary-on-dark w-full sm:w-auto"
               >
-                Inquire About Availability
+                Book for Your Event
                 <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
               </button>
             </div>
@@ -318,7 +324,7 @@ export default function Speaking() {
           <div className="max-w-md">
             <h2 id="differentiators-heading" className="text-4xl md:text-5xl font-medium text-ink mb-4">What Makes This Different</h2>
           </div>
-          <p className="text-xl text-slate mb-12">Real partnership built on trust, customization, and lasting capability.</p>
+          <p className="text-xl text-slate mb-12">Practical, actionable insights designed for real-world implementation and lasting organizational impact.</p>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1">
               <div className="flex gap-6 relative items-stretch">
@@ -327,9 +333,9 @@ export default function Speaking() {
                   <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="text-lg text-ink mb-2">Relationships first, always</h3>
+                  <h3 className="text-lg text-ink mb-2">Practical over theoretical</h3>
                   <p className="text-slate leading-relaxed">
-                    This isn't transactional consulting. We build trust and genuine connection alongside technical capability—because lasting transformation happens through people, not just processes.
+                    Every presentation delivers actionable frameworks your team can implement immediately—not abstract concepts that sit in notebooks. You'll leave with clear next steps and tools you can use right away.
                   </p>
                 </div>
               </div>
@@ -340,9 +346,9 @@ export default function Speaking() {
                   <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="text-lg text-ink mb-2">Customized to your reality</h3>
+                  <h3 className="text-lg text-ink mb-2">Customized to your context</h3>
                   <p className="text-slate leading-relaxed">
-                    No templates or cookie-cutter frameworks. Every engagement is shaped around your organization's unique context, culture, and challenges—because what works for one team rarely fits another.
+                    No generic presentations. Every keynote and workshop is tailored to your organization's specific challenges, industry context, and current AI maturity level—because what resonates for one audience won't work for another.
                   </p>
                 </div>
               </div>
@@ -353,9 +359,9 @@ export default function Speaking() {
                   <div className="absolute left-[5px] top-[2rem] bottom-[0.5rem] w-0.5 bg-border"></div>
                 </div>
                 <div className="pb-8">
-                  <h3 className="text-lg text-ink mb-2">Fluency over dependency</h3>
+                  <h3 className="text-lg text-ink mb-2">Capability building, not inspiration alone</h3>
                   <p className="text-slate leading-relaxed">
-                    The goal is to build your team's lasting capability, not create reliance on outside expertise. We work together to develop the confidence and skills that compound long after our engagement ends.
+                    Energizing your team matters—but building lasting capability matters more. Sessions focus on developing AI fluency and strategic thinking that compounds long after the event ends.
                   </p>
                 </div>
               </div>
@@ -363,9 +369,9 @@ export default function Speaking() {
               <div className="flex gap-6 relative items-start">
                 <div className="w-3 h-3 rounded-full bg-navy flex-shrink-0 mt-[0.4rem]"></div>
                 <div>
-                  <h3 className="text-lg text-ink mb-2">Long-term partnership mindset</h3>
+                  <h3 className="text-lg text-ink mb-2">Real implementation support</h3>
                   <p className="text-slate leading-relaxed">
-                    Quick wins matter, but sustained success matters more. This work is about making strategic deposits that compound over time—building relationships and capabilities that create lasting value.
+                    Optional follow-up strategy sessions ensure your team can translate insights into action. We can help bridge the gap between inspiration and implementation with ongoing support.
                   </p>
                 </div>
               </div>
@@ -384,23 +390,23 @@ export default function Speaking() {
         </div>
       </section>
 
-      <section aria-labelledby="final-cta-heading" className="bg-navy text-trueWhite py-16">
+      <section aria-labelledby="final-cta-heading" className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 id="final-cta-heading" className="text-4xl md:text-5xl font-medium text-softWhite mb-6">
-              Ready to bring this insight to your organization?
+            <h2 id="final-cta-heading" className="text-4xl md:text-5xl font-medium text-ink mb-6">
+              Ready to energize your team around AI transformation?
             </h2>
-            <p className="text-xl text-trueWhite/90 leading-relaxed mb-8">
-              Let's discuss how a keynote, workshop, or facilitated session can help your team build the relationships and capabilities that drive lasting success.
+            <p className="text-xl text-slate leading-relaxed mb-8">
+              Let's discuss how a keynote, workshop, or strategy session can help your organization build AI capabilities, align leadership, and accelerate transformation.
             </p>
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
                 navigate('/contact');
               }}
-              className="btn-primary-on-dark w-full sm:w-auto"
+              className="btn-primary w-full sm:w-auto"
             >
-              Get in Touch
+              Discuss Your Event
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </button>
           </div>

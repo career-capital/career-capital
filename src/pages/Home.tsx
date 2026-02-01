@@ -304,6 +304,39 @@ export default function Home() {
         )}
       </section>
 
+      <section aria-labelledby="home-cta-heading" className="bg-navy text-trueWhite py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 id="home-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
+              Ready to turn AI potential into competitive advantage?
+            </h2>
+            <p className="text-xl text-trueWhite/90 mb-8 leading-relaxed">
+              Let's discuss how we can help your organization build AI capabilities, scale transformation, and lead your market.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  navigate('/contact');
+                }}
+                className="btn-primary-on-dark"
+              >
+                Start a Conversation
+                <ArrowRight className="ml-2 w-4 h-4" strokeWidth={2} aria-hidden="true" />
+              </button>
+              <button
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  navigate('/services');
+                }}
+                className="btn-secondary-on-dark"
+              >
+                View All Services
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
