@@ -188,29 +188,13 @@ export default function Speaking() {
 
       <section aria-labelledby="speaking-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-8">
-            <h2 id="speaking-cta-heading" className="text-4xl md:text-5xl font-medium text-softWhite mb-6">
-              TEDxChicago Main Stage Speaker
-            </h2>
-            <p className="text-lg text-trueWhite/95 leading-relaxed">
-              See Nisaini in action—proven stage presence, compelling storytelling, and frameworks that audiences can immediately apply to their work.
-            </p>
-          </div>
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="flex-1">
-              <p className="text-lg text-trueWhite/90 leading-relaxed mb-4">
-                This TEDx talk demonstrates the speaking style and practical frameworks Nisaini brings to every engagement.
-                Through personal stories and strategic insights, she explores how intentional relationship-building becomes
-                career capital—a foundation that's even more critical as AI transforms how we work.
-              </p>
-              <p className="text-lg text-trueWhite/90 leading-relaxed mb-4">
-                <strong className="text-trueWhite">What this shows about working with Nisaini:</strong> Clear communication,
-                actionable frameworks, authentic storytelling, and the ability to connect complex concepts to real-world application.
-              </p>
+              <h2 id="speaking-cta-heading" className="text-4xl md:text-5xl font-medium text-softWhite mb-6">
+                TEDxChicago Main Stage Speaker
+              </h2>
               <p className="text-lg text-trueWhite/90 leading-relaxed mb-8">
-                <strong className="text-trueWhite">Why this matters in the AI era:</strong> As technology handles more routine tasks,
-                the ability to build genuine connections, communicate with clarity, and lead through change becomes your competitive advantage.
-                Nisaini brings this perspective to every AI transformation conversation.
+                See Nisaini's stage presence and storytelling ability. As AI transforms how we work, the human skills she demonstrates—clear communication, authentic connection, and leading through change—become more valuable than ever.
               </p>
               <button
                 onClick={() => {
@@ -237,84 +221,6 @@ export default function Speaking() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="publications-heading" className="bg-softWhite py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="publications-heading" className="text-4xl md:text-5xl font-medium text-ink mb-4">
-            Featured In
-          </h2>
-          <p className="text-lg text-slate mb-12 max-w-3xl">
-            Insights on leadership, social impact, and building meaningful connections.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            <article className="card-info group">
-              <a
-                href="https://chicago.suntimes.com/other-views/2024/12/24/philanthropy-more-than-writing-check-teach-for-america-access-kids-young-people-nisaini-rexach"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline"
-                aria-label="Read article: Philanthropy is about more than writing a check (opens in new window)"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" aria-hidden="true" />
-                  <span className="text-sm font-medium text-navy uppercase tracking-wide">Chicago Sun-Times</span>
-                </div>
-                <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
-                  Philanthropy is about more than writing a check
-                </h3>
-                <p className="text-sm text-slate">
-                  Exploring the deeper meaning of giving back through relationship-building and community engagement.
-                </p>
-                <span className="sr-only">(opens in new window)</span>
-              </a>
-            </article>
-
-            <article className="card-info group">
-              <a
-                href="https://www.chicagobusiness.com/people-on-the-move/nisaini-rexach"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline"
-                aria-label="Read article: Nisaini Rexach at Teach For America (opens in new window)"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" aria-hidden="true" />
-                  <span className="text-sm font-medium text-navy uppercase tracking-wide">Crain's Chicago Business</span>
-                </div>
-                <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
-                  Nisaini Rexach at Teach For America
-                </h3>
-                <p className="text-sm text-slate">
-                  Profile highlighting leadership in education and commitment to expanding opportunities for Chicago youth.
-                </p>
-                <span className="sr-only">(opens in new window)</span>
-              </a>
-            </article>
-
-            <article className="card-info group">
-              <a
-                href="https://chitechforgood.com/f/nisaini-rexach-pioneering-a-new-era-of-social-impact-in-chicago"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline"
-                aria-label="Read article: Nisaini Rexach - Pioneering a New Era of Social Impact in Chicago (opens in new window)"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" aria-hidden="true" />
-                  <span className="text-sm font-medium text-navy uppercase tracking-wide">Chi Tech for Good</span>
-                </div>
-                <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
-                  Nisaini Rexach: Pioneering a New Era of Social Impact in Chicago
-                </h3>
-                <p className="text-sm text-slate">
-                  Feature on innovative approaches to social change and technology's role in community transformation.
-                </p>
-                <span className="sr-only">(opens in new window)</span>
-              </a>
-            </article>
           </div>
         </div>
       </section>
@@ -390,13 +296,13 @@ export default function Speaking() {
         </div>
       </section>
 
-      <section aria-labelledby="final-cta-heading" className="bg-surface py-16">
+      <section aria-labelledby="final-cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 id="final-cta-heading" className="text-4xl md:text-5xl font-medium text-ink mb-6">
+            <h2 id="final-cta-heading" className="text-4xl md:text-5xl font-medium text-softWhite mb-6">
               Ready to energize your team around AI transformation?
             </h2>
-            <p className="text-xl text-slate leading-relaxed mb-8">
+            <p className="text-xl text-trueWhite/90 leading-relaxed mb-8">
               Let's discuss how a keynote, workshop, or strategy session can help your organization build AI capabilities, align leadership, and accelerate transformation.
             </p>
             <button
@@ -404,7 +310,7 @@ export default function Speaking() {
                 window.scrollTo(0, 0);
                 navigate('/contact');
               }}
-              className="btn-primary w-full sm:w-auto"
+              className="btn-primary-on-dark w-full sm:w-auto"
             >
               Discuss Your Event
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />

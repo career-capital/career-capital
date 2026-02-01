@@ -143,6 +143,84 @@ export default function About() {
         </div>
       </section>
 
+      <section aria-labelledby="publications-heading" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="publications-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-4">
+            Featured In
+          </h2>
+          <p className="text-lg text-slate mb-12 max-w-3xl">
+            Insights on leadership, social impact, and building meaningful connections.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <article className="card-info group">
+              <a
+                href="https://chicago.suntimes.com/other-views/2024/12/24/philanthropy-more-than-writing-check-teach-for-america-access-kids-young-people-nisaini-rexach"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline"
+                aria-label="Read article: Philanthropy is about more than writing a check (opens in new window)"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" aria-hidden="true" />
+                  <span className="text-sm font-medium text-navy uppercase tracking-wide">Chicago Sun-Times</span>
+                </div>
+                <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
+                  Philanthropy is about more than writing a check
+                </h3>
+                <p className="text-sm text-slate">
+                  Exploring the deeper meaning of giving back through relationship-building and community engagement.
+                </p>
+                <span className="sr-only">(opens in new window)</span>
+              </a>
+            </article>
+
+            <article className="card-info group">
+              <a
+                href="https://www.chicagobusiness.com/people-on-the-move/nisaini-rexach"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline"
+                aria-label="Read article: Nisaini Rexach at Teach For America (opens in new window)"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" aria-hidden="true" />
+                  <span className="text-sm font-medium text-navy uppercase tracking-wide">Crain's Chicago Business</span>
+                </div>
+                <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
+                  Nisaini Rexach at Teach For America
+                </h3>
+                <p className="text-sm text-slate">
+                  Profile highlighting leadership in education and commitment to expanding opportunities for Chicago youth.
+                </p>
+                <span className="sr-only">(opens in new window)</span>
+              </a>
+            </article>
+
+            <article className="card-info group">
+              <a
+                href="https://chitechforgood.com/f/nisaini-rexach-pioneering-a-new-era-of-social-impact-in-chicago"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline"
+                aria-label="Read article: Nisaini Rexach - Pioneering a New Era of Social Impact in Chicago (opens in new window)"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <ExternalLink className="w-5 h-5 text-navy flex-shrink-0 group-hover:text-steel transition-colors" aria-hidden="true" />
+                  <span className="text-sm font-medium text-navy uppercase tracking-wide">Chi Tech for Good</span>
+                </div>
+                <h3 className="text-lg font-medium text-ink mb-2 group-hover:text-navy transition-colors">
+                  Nisaini Rexach: Pioneering a New Era of Social Impact in Chicago
+                </h3>
+                <p className="text-sm text-slate">
+                  Feature on innovative approaches to social change and technology's role in community transformation.
+                </p>
+                <span className="sr-only">(opens in new window)</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section aria-labelledby="cta-heading" className="bg-navy text-trueWhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
