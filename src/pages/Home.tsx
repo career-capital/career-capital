@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Target, Zap, TrendingUp, MessageCircle, Presentation, Compass } from 'lucide-react';
+import { ArrowRight, Target, Zap, TrendingUp, RefreshCw, Presentation, Compass } from 'lucide-react';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import { supabase, Testimonial } from '../lib/supabase';
 
@@ -191,7 +191,7 @@ export default function Home() {
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <MessageCircle className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
+                  <RefreshCw className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
                   Change Management
