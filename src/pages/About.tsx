@@ -86,8 +86,8 @@ export default function About() {
 
           <div className="lg:aspect-[3/4] lg:overflow-hidden max-w-2xl lg:max-w-none">
             <img
-              src="/tedx03.jpg"
-              alt="Nisaini Rexach"
+              src="/nisaini_rexach_headshot_2025.jpg"
+              alt="Nisaini Rexach, Founder of Career Capital"
               className="w-full h-full shadow-lg lg:object-cover lg:object-[center_20%]"
               loading="lazy"
             />
