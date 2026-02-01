@@ -22,7 +22,7 @@ export default function Contact() {
             Contact
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Let's build your career capital.
+            Let's accelerate your AI transformation.
           </p>
         </div>
       </section>
