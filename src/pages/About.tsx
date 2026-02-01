@@ -22,7 +22,7 @@ export default function About() {
             About
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md">
-            Bridging human relationships and AI‑ready communication.
+            Building AI fluency through clear communication and strategic change leadership.
           </p>
         </div>
       </section>
@@ -70,16 +70,16 @@ export default function About() {
                   aria-label="Nisaini Rexach's LinkedIn profile (opens in new window)"
                 >
                   Nisaini Rexach<ExternalLink className="w-4 h-4" aria-hidden="true" /><span className="sr-only"> (opens in new window)</span>
-                </a> is a strategic communicator, mentor, and main stage TEDxChicago speaker whose work sits at the intersection of relationship‑driven growth and AI‑ready communication. Her philosophy is rooted in the belief that careers accelerate when clarity, connection, and credibility work together—and she helps individuals and organizations build all three with intention.
+                </a> is an AI transformation strategist, organizational change expert, and main stage TEDxChicago speaker who helps organizations navigate the intersection of technological advancement and human capability. Her approach combines AI fluency building with change leadership—ensuring teams adopt new capabilities while maintaining trust, culture, and strategic clarity.
               </p>
               <p>
-                Her signature framework, <em>How social wealth can transform your career</em>, draws from lived experiences spanning Chicago's public housing to Fortune 500 boardrooms. It's a reminder that every encounter is an interview, every relationship is an asset, and every moment is an opportunity to shape how others experience you.
+                With experience spanning Fortune 500 companies and mission-driven organizations, Nisaini understands that successful AI transformation isn't just about technology—it's about people, communication, and organizational readiness. She translates complex AI concepts into practical frameworks that leaders and teams can implement immediately.
               </p>
               <p>
-                Through Career Capital, Nisaini brings curiosity, structural agility, and relationship management to every engagement. She helps clients communicate with precision, strengthen their professional presence, and build the relational capital needed to thrive in an AI‑accelerating world.
+                Through Career Capital, Nisaini delivers comprehensive AI enablement: from hands-on training workshops and strategic implementation consulting to executive coaching and keynote presentations. She helps organizations at every AI maturity level build capabilities, scale adoption, and achieve competitive advantage.
               </p>
               <p>
-                Whether she's coaching emerging leaders, advising executives, or speaking on national stages, Nisaini is committed to one thing: helping people show up with clarity, confidence, and purpose—so their work, their voice, and their impact carry further.
+                Whether she's training operational teams, advising executives, or speaking on national stages, Nisaini is committed to one thing: helping organizations transform AI potential into measurable business results—with clarity, confidence, and sustainable momentum.
               </p>
             </div>
           </div>
@@ -103,12 +103,12 @@ export default function About() {
             <div className="space-y-4">
               <Heart className="w-12 h-12 text-navy" strokeWidth={1.5} aria-hidden="true" />
               <h3 className="text-xl font-medium text-ink">
-                Relationships matter most
+                Human trust powers AI adoption
               </h3>
               <p className="text-slate leading-relaxed">
-                Technology amplifies human capability, but relationships create the foundation
-                for sustainable success. Strong connections enable organizations to navigate
-                change with resilience and clarity.
+                AI capabilities scale faster when leaders communicate with clarity and teams
+                trust the transformation process. Strong organizational relationships create
+                the foundation for sustainable AI adoption and lasting competitive advantage.
               </p>
             </div>
 
@@ -222,8 +222,8 @@ export default function About() {
               Let's work together
             </h2>
             <p className="text-lg text-trueWhite/90 mb-8">
-              If you're ready to build AI fluency in your organization while strengthening
-              relationships, we'd love to hear from you.
+              If you're ready to build AI fluency across your organization while leading
+              transformation with clarity and confidence, we'd love to hear from you.
             </p>
             <button
               onClick={() => {
