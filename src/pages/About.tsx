@@ -85,18 +85,12 @@ export default function About() {
           </div>
 
           <div className="lg:aspect-[3/4] lg:overflow-hidden max-w-2xl lg:max-w-none">
-            <picture>
-              <source
-                media="(min-width: 1024px)"
-                srcSet="/nisaini_rexach_headshot_2025 copy.jpg"
-              />
-              <img
-                src="/nisaini_rexach_headshot_2025 copy copy.jpg"
-                alt="Nisaini Rexach headshot"
-                className="w-full h-full shadow-lg lg:object-cover lg:object-[center_20%]"
-                loading="lazy"
-              />
-            </picture>
+            <img
+              src="/tedx03.jpg"
+              alt="Nisaini Rexach"
+              className="w-full h-full shadow-lg lg:object-cover lg:object-[center_20%]"
+              loading="lazy"
+            />
           </div>
         </div>
         </div>
