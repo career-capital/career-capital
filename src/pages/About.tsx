@@ -30,16 +30,16 @@ export default function About() {
       <section aria-labelledby="problem-heading" className="py-16 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="problem-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-6">
-            The Problem We Solve
+            The Challenge
           </h2>
           <p className="text-lg text-slate leading-relaxed mb-6 max-w-4xl">
-            AI is reshaping work faster than most people and organizations can adapt.
+            AI is no longer optional—it's the new baseline for competitive advantage. But most organizations struggle to move beyond experimentation.
           </p>
           <p className="text-lg text-slate leading-relaxed mb-6 max-w-4xl">
-            Teams are unsure what AI means for their roles. Leaders struggle to communicate change with empathy. Individuals feel pressure to stay relevant without a roadmap. Organizations want to modernize without losing their culture.
+            Teams don't know how to use AI effectively. Leaders struggle to drive adoption at scale. Organizations invest in tools but see minimal returns because AI fluency and AI‑ready mindsets aren't embedded across the business.
           </p>
           <p className="text-lg text-slate leading-relaxed max-w-4xl">
-            Career Capital helps build the mindsets, relationships, and AI fluency needed to navigate this shift—without losing the human side of work.
+            Career Capital closes this gap—building the practical skills, strategic frameworks, and organizational readiness that turn AI potential into measurable productivity gains.
           </p>
         </div>
       </section>

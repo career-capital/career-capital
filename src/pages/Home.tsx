@@ -95,13 +95,13 @@ export default function Home() {
         </picture>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-36">
           <h1 className="text-5xl md:text-6xl font-semibold text-trueWhite mb-6 leading-tight drop-shadow-lg">
-            Don't just keep up with AI. <em>Get ahead with it</em>.
+            Building momentum in the AI Era
           </h1>
           <p className="text-2xl md:text-3xl text-trueWhite/95 mb-4 leading-relaxed drop-shadow-md font-medium">
-            We turn AI potential into competitive advantage
+            Helping individuals and teams develop AI fluency and AI‑ready mindsets.
           </p>
           <p className="text-lg text-trueWhite/90 mb-10 leading-relaxed drop-shadow-md max-w-3xl">
-            Organizations that master AI now will lead their markets tomorrow. We help businesses at every fluency level—from foundational adoption to advanced implementation—scale AI capabilities, accelerate transformation, and multiply impact across operations.
+            Learn. Adapt. Thrive. Career Capital is a boutique advisory firm that builds AI fluency and AI‑ready mindsets across organizations, helping teams learn, adapt, and thrive in an Analog + AI world.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-28">
             <button
@@ -124,23 +124,6 @@ export default function Home() {
               Explore Services
             </button>
           </div>
-          <div className="flex flex-wrap gap-3">
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/20 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
-              AI Training Programs
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/20 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
-              Strategic Implementation
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/20 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
-              Enterprise Enablement
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/20 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
-              Organizational Transformation
-            </span>
-            <span className="inline-flex items-center px-4 py-2 bg-trueWhite/20 backdrop-blur-md border-2 border-trueWhite text-trueWhite text-sm font-medium">
-              Keynote Speaking
-            </span>
-          </div>
         </div>
       </section>
 
@@ -150,26 +133,26 @@ export default function Home() {
             What We Do
           </h2>
 
-          <div className="space-y-6 max-w-4xl mb-12">
+          <div className="space-y-6 max-w-4xl mb-16">
             <p className="text-lg text-slate leading-relaxed">
-              Career Capital delivers comprehensive AI enablement that helps organizations transform AI from an emerging challenge into a clear competitive advantage.
+              Career Capital helps organizations build AI fluency, develop AI‑ready mindsets, and scale learning across the business so teams can work confidently with AI and unlock meaningful productivity gains.
             </p>
             <p className="text-lg text-slate leading-relaxed">
-              We work with businesses at every level of AI maturity—providing practical training, strategic implementation guidance, and organizational transformation support that drives measurable results:
+              We combine practical training, human‑centered enablement, and strategic guidance to help organizations move beyond experimentation and turn AI into a sustainable competitive advantage.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             <div>
               <div className="flex flex-col items-start h-full">
                 <div className="mb-6">
-                  <Presentation className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
+                  <Target className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
-                  AI Training Programs
+                  AI Adoption
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Customized programs for teams at all fluency levels—from foundational tool adoption to advanced workflow optimization. Hands-on, practical training that creates immediate business impact.
+                  Practical, hands‑on training that builds AI fluency across all levels of the organization — from foundational literacy to advanced workflow optimization. Teams learn how to use AI effectively in their day‑to‑day work to drive immediate productivity gains.
                 </p>
               </div>
             </div>
@@ -183,7 +166,7 @@ export default function Home() {
                   Strategic Implementation
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  End-to-end consulting to integrate AI into operations, scale capabilities across departments, and maximize ROI on AI investments. From strategy to execution.
+                  Support to integrate AI into core operations, scale learning and capability across the business, and turn AI investments into measurable outcomes.
                 </p>
               </div>
             </div>
@@ -194,56 +177,10 @@ export default function Home() {
                   <RefreshCw className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
-                  Change Management
+                  Change Management & AI Mindset Development
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Navigate the human side of AI adoption. Build organizational readiness, accelerate buy-in, and create sustainable transformation across all levels of your business.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="why-cc-heading" className="bg-surface py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="why-cc-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-8">
-            Why Organizations Choose Career Capital
-          </h2>
-          <div className="space-y-6 max-w-4xl mb-12">
-            <p className="text-xl text-ink leading-relaxed font-medium">
-              The AI revolution isn't coming—it's here. Organizations that build AI capabilities now will dominate their markets. Those that wait will struggle to catch up.
-            </p>
-            <p className="text-lg text-slate leading-relaxed">
-              We help you move fast and scale smart with AI enablement designed for real-world results.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-12">
-            <div>
-              <div className="flex flex-col items-start h-full">
-                <div className="mb-6">
-                  <Target className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
-                </div>
-                <h3 className="text-2xl font-semibold text-ink mb-4">
-                  All Fluency Levels
-                </h3>
-                <p className="text-base text-slate leading-relaxed">
-                  Whether your team is just starting with AI or already using advanced tools daily, we accelerate your progress with training tailored to your current capabilities.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <div className="flex flex-col items-start h-full">
-                <div className="mb-6">
-                  <Zap className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
-                </div>
-                <h3 className="text-2xl font-semibold text-ink mb-4">
-                  Rapid Implementation
-                </h3>
-                <p className="text-base text-slate leading-relaxed">
-                  No theoretical frameworks or lengthy transformations. We deliver practical, hands-on enablement that creates measurable business value in weeks, not months.
+                  Human‑centered enablement that helps teams shift how they think about AI. We build the confidence, adaptability, and buy‑in needed for sustainable adoption — ensuring AI becomes a capability, not a disruption.
                 </p>
               </div>
             </div>
@@ -254,10 +191,104 @@ export default function Home() {
                   <TrendingUp className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
-                  Competitive Edge
+                  Enterprise Enablement
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Scale AI capabilities across your organization to multiply productivity, accelerate innovation, and outpace competitors still figuring out where to start.
+                  Scalable learning programs that embed AI fluency across the entire organization. We help leaders and teams develop shared language, shared skills, and shared confidence so AI capability becomes a cultural strength, not a siloed initiative.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-6">
+                  <Presentation className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
+                </div>
+                <h3 className="text-2xl font-semibold text-ink mb-4">
+                  Future‑of‑Work Keynotes & Leadership Sessions
+                </h3>
+                <p className="text-base text-slate leading-relaxed">
+                  Clear, energizing guidance for leaders navigating the Analog + AI future. Sessions are designed to inspire action, accelerate readiness, and align teams around the skills and mindsets needed to thrive with AI.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="why-cc-heading" className="bg-surface py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="why-cc-heading" className="text-4xl md:text-5xl font-semibold text-ink mb-16">
+            Why Organizations Choose Career Capital
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-6">
+                  <RefreshCw className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
+                </div>
+                <h3 className="text-2xl font-semibold text-ink mb-4">
+                  Human‑Centered AI Enablement
+                </h3>
+                <p className="text-base text-slate leading-relaxed">
+                  We don't just teach tools — we build the mindsets and behaviors that make AI adoption stick.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-6">
+                  <Target className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
+                </div>
+                <h3 className="text-2xl font-semibold text-ink mb-4">
+                  All Fluency Levels
+                </h3>
+                <p className="text-base text-slate leading-relaxed">
+                  Whether your team is just beginning or already experimenting with advanced tools, we accelerate progress with training tailored to your current capabilities.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-6">
+                  <Zap className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
+                </div>
+                <h3 className="text-2xl font-semibold text-ink mb-4">
+                  Rapid, Practical Implementation
+                </h3>
+                <p className="text-base text-slate leading-relaxed">
+                  No theory for theory's sake. We deliver hands‑on learning and real‑world workflows that create measurable business value in weeks, not months.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-6">
+                  <Compass className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
+                </div>
+                <h3 className="text-2xl font-semibold text-ink mb-4">
+                  Scalable Learning Across the Business
+                </h3>
+                <p className="text-base text-slate leading-relaxed">
+                  We embed AI fluency at every level — ensuring AI capability becomes a shared strength, not a siloed skill.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex flex-col items-start h-full">
+                <div className="mb-6">
+                  <TrendingUp className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
+                </div>
+                <h3 className="text-2xl font-semibold text-ink mb-4">
+                  A Competitive Edge in an Analog + AI World
+                </h3>
+                <p className="text-base text-slate leading-relaxed">
+                  Organizations that build AI fluency now will lead their markets tomorrow. We help you move fast, scale smart, and stay ahead.
                 </p>
               </div>
             </div>
@@ -308,10 +339,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 id="home-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
-              Ready to turn AI potential into competitive advantage?
+              Ready to build AI fluency across your organization?
             </h2>
             <p className="text-xl text-trueWhite/90 mb-8 leading-relaxed">
-              Let's discuss how we can help your organization build AI capabilities, scale transformation, and lead your market.
+              Let's discuss how we can help your teams develop AI‑ready mindsets, scale learning, and thrive in an Analog + AI world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button

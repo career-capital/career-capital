@@ -170,7 +170,7 @@ export default function Services() {
             Services
           </h1>
           <p className="text-xl text-trueWhite/95 mb-8 leading-relaxed drop-shadow-md max-w-4xl">
-            Comprehensive AI enablement that helps organizations at every maturity level build capabilities, accelerate transformation, and gain competitive advantage through strategic implementation.
+            We help organizations build AI fluency and AI‑ready mindsets so their people can work confidently with AI and thrive in an Analog + AI world.
           </p>
         </div>
       </section>
@@ -181,7 +181,7 @@ export default function Services() {
             Who We Work With
           </h2>
           <p className="text-xl text-slate mb-12 leading-relaxed max-w-4xl">
-            Career Capital partners with organizations at every stage of AI adoption—from foundational awareness to advanced implementation—helping them move faster and scale smarter.
+            Career Capital partners with organizations at every stage of AI maturity—helping teams develop AI fluency, build AI‑ready mindsets, and scale learning across the business.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             <div>
@@ -251,7 +251,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="services-heading-main" className="text-4xl md:text-5xl font-semibold text-ink mb-4">Our Services</h2>
           <p className="text-xl text-slate mb-12 leading-relaxed">
-            Comprehensive AI enablement from training to strategic implementation—designed to build lasting capabilities and competitive advantage.
+            Practical training, human‑centered enablement, and strategic guidance to help organizations build AI fluency and turn AI into a sustainable competitive advantage.
           </p>
           <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
@@ -537,10 +537,10 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <h2 id="services-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
-              Ready to accelerate your AI transformation?
+              Ready to build AI fluency across your organization?
             </h2>
             <p className="text-lg text-trueWhite/90 mb-8">
-              Let's discuss how we can help your organization build AI capabilities, scale transformation, and gain competitive advantage.
+              Let's discuss how we can help your teams develop AI‑ready mindsets, scale learning, and thrive in an Analog + AI world.
             </p>
             <button
               onClick={() => {
