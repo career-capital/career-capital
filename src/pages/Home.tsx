@@ -337,14 +337,14 @@ export default function Home() {
 
       <section aria-labelledby="home-cta-heading" className="bg-navy text-trueWhite py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl">
             <h2 id="home-cta-heading" className="text-4xl md:text-5xl font-semibold text-softWhite mb-6">
               Ready to build AI fluency across your organization?
             </h2>
             <p className="text-xl text-trueWhite/90 mb-8 leading-relaxed">
               Let's discuss how we can help your teams develop AI‑ready mindsets, scale learning, and thrive in an Analog + AI world.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => {
                   window.scrollTo(0, 0);
