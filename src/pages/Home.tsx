@@ -152,7 +152,7 @@ export default function Home() {
                   AI Adoption
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Practical, hands‑on training that builds AI fluency across all levels of the organization — from foundational literacy to advanced workflow optimization. Teams learn how to use AI effectively in their day‑to‑day work to drive immediate productivity gains.
+                  Hands‑on training that builds AI fluency from foundational literacy to advanced workflow optimization, driving immediate productivity gains.
                 </p>
               </div>
             </div>
@@ -166,7 +166,7 @@ export default function Home() {
                   Strategic Implementation
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Support to integrate AI into core operations, scale learning and capability across the business, and turn AI investments into measurable outcomes.
+                  Integrate AI into core operations, scale capability, and turn investments into measurable outcomes.
                 </p>
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function Home() {
                   Change Management & AI Mindset Development
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Human‑centered enablement that helps teams shift how they think about AI. We build the confidence, adaptability, and buy‑in needed for sustainable adoption — ensuring AI becomes a capability, not a disruption.
+                  Build the confidence and buy‑in needed for sustainable adoption, ensuring AI becomes a capability, not a disruption.
                 </p>
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function Home() {
                   Enterprise Enablement
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Scalable learning programs that embed AI fluency across the entire organization. We help leaders and teams develop shared language, shared skills, and shared confidence so AI capability becomes a cultural strength, not a siloed initiative.
+                  Scalable programs that embed AI fluency organization‑wide, making capability a cultural strength, not a siloed initiative.
                 </p>
               </div>
             </div>
@@ -208,7 +208,7 @@ export default function Home() {
                   Future‑of‑Work Keynotes & Leadership Sessions
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Clear, energizing guidance for leaders navigating the Analog + AI future. Sessions are designed to inspire action, accelerate readiness, and align teams around the skills and mindsets needed to thrive with AI.
+                  Energizing guidance that inspires action and aligns teams around the skills and mindsets needed to thrive with AI.
                 </p>
               </div>
             </div>
