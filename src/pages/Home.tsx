@@ -101,7 +101,7 @@ export default function Home() {
             Helping individuals and teams develop AI fluency and AI‑ready mindsets.
           </p>
           <p className="text-lg text-trueWhite/90 mb-10 leading-relaxed drop-shadow-md max-w-3xl">
-            Learn. Adapt. Thrive. Career Capital is a boutique advisory firm that builds AI fluency and AI‑ready mindsets across organizations, helping teams learn, adapt, and thrive in an Analog + AI world.
+            <strong>Learn. Adapt. Thrive.</strong> Career Capital is a boutique advisory firm that builds AI fluency and AI‑ready mindsets across organizations, helping teams learn, adapt, and thrive in an Analog + AI world.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-28">
             <button
