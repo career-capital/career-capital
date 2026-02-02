@@ -115,8 +115,8 @@ export default function Services() {
   const addonServices: Service[] = [
     {
       title: 'AI Implementation Office Hours',
-      subtitle: 'Ongoing support for teams actively implementing AI. Regular access for questions, troubleshooting, and strategic guidance as challenges emerge.',
-      idealFor: 'Teams mid-implementation seeking continuous support without full consulting engagements',
+      subtitle: 'Ongoing support for teams actively working with Career Capital. Regular access for questions, troubleshooting, and strategic guidance as challenges emerge.',
+      idealFor: 'Active clients seeking continuous support to complement their core engagement',
       delivers: [
         'Continuous support',
         'Real-time guidance',
