@@ -232,7 +232,7 @@ export default function Home() {
                   Human‑Centered AI Enablement
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  We don't just teach tools — we build the mindsets and behaviors that make AI adoption stick.
+                  We build the mindsets and behaviors that make AI adoption stick.
                 </p>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function Home() {
                   All Fluency Levels
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Whether your team is just beginning or already experimenting with advanced tools, we accelerate progress with training tailored to your current capabilities.
+                  We accelerate progress with training tailored to your team's current capabilities.
                 </p>
               </div>
             </div>
@@ -260,7 +260,7 @@ export default function Home() {
                   Rapid, Practical Implementation
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  No theory for theory's sake. We deliver hands‑on learning and real‑world workflows that create measurable business value in weeks, not months.
+                  Hands‑on learning and real‑world workflows that create measurable business value fast.
                 </p>
               </div>
             </div>
@@ -274,7 +274,7 @@ export default function Home() {
                   Scalable Learning Across the Business
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  We embed AI fluency at every level — ensuring AI capability becomes a shared strength, not a siloed skill.
+                  We embed AI fluency at every level, making capability a shared strength, not a siloed skill.
                 </p>
               </div>
             </div>
@@ -288,7 +288,7 @@ export default function Home() {
                   A Competitive Edge in an Analog + AI World
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Organizations that build AI fluency now will lead their markets tomorrow. We help you move fast, scale smart, and stay ahead.
+                  Build AI fluency now to lead tomorrow. Move fast, scale smart, and stay ahead.
                 </p>
               </div>
             </div>
