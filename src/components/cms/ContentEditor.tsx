@@ -18,6 +18,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
   const [iconPickerTarget, setIconPickerTarget] = useState<ContentBlock | null>(null);
   const [localBlocks, setLocalBlocks] = useState<ContentBlock[]>([]);
   const [localButtons, setLocalButtons] = useState<Button[]>([]);
+  const [showPublishModal, setShowPublishModal] = useState(false);
 
   useEffect(() => {
     setLocalBlocks(section.content_blocks);
@@ -47,7 +48,16 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
     setHasUnsavedChanges(true);
   };
 
+  const handleSaveClick = () => {
+    if (section.is_published) {
+      setShowPublishModal(true);
+    } else {
+      saveAllChanges();
+    }
+  };
+
   const saveAllChanges = async () => {
+    setShowPublishModal(false);
     setSaving(true);
 
     try {
@@ -179,6 +189,40 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
 
   return (
     <>
+      {showPublishModal && (
+        <div className="fixed inset-0 bg-ink/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-trueWhite rounded-lg shadow-xl max-w-md w-full p-6">
+            <h3 className="text-xl font-semibold text-ink mb-4">Publish Changes to Live Site?</h3>
+            <div className="mb-6">
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
+                <p className="text-sm font-semibold text-yellow-900 mb-2">This section is currently live</p>
+                <p className="text-sm text-yellow-800">
+                  Your changes will be immediately visible to all website visitors after clicking "Publish Now".
+                </p>
+              </div>
+              <p className="text-sm text-slate">
+                Make sure you've reviewed your edits carefully before publishing. You can always make additional changes later.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setShowPublishModal(false)}
+                className="flex-1 px-4 py-3 border-2 border-border text-ink font-semibold rounded-lg hover:bg-surface transition-colors"
+                disabled={saving}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={saveAllChanges}
+                disabled={saving}
+                className="flex-1 px-4 py-3 bg-navy text-trueWhite font-semibold rounded-lg hover:bg-navy/90 transition-colors disabled:opacity-50"
+              >
+                {saving ? 'Publishing...' : 'Publish Now'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {showIconPicker && iconPickerTarget && (
         <IconPicker
           value={iconPickerTarget.metadata.icon || ''}
@@ -211,6 +255,19 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
 
       {editMode && (
         <div className="space-y-6">
+          {section.is_published && (
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+                <p className="text-sm font-semibold text-blue-900">
+                  Editing Live Section
+                </p>
+              </div>
+              <p className="text-sm text-blue-800 mt-2">
+                This section is currently visible to website visitors. When you save changes, you'll be asked to confirm before publishing them live.
+              </p>
+            </div>
+          )}
           {hasUnsavedChanges && (
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
               <div className="flex items-center justify-between">
@@ -218,7 +275,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                   <span className="text-yellow-800 text-sm font-medium">You have unsaved changes</span>
                 </div>
                 <button
-                  onClick={saveAllChanges}
+                  onClick={handleSaveClick}
                   disabled={saving}
                   className="btn-primary flex items-center gap-2"
                 >
@@ -505,7 +562,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
                   <span className="text-yellow-800 text-sm font-medium">Don't forget to save your changes!</span>
                 </div>
                 <button
-                  onClick={saveAllChanges}
+                  onClick={handleSaveClick}
                   disabled={saving}
                   className="btn-primary flex items-center gap-2"
                 >
