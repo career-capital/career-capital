@@ -13,15 +13,16 @@ interface ContentEditorProps {
 export default function ContentEditor({ section, onUpdate }: ContentEditorProps) {
   const [editMode, setEditMode] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
   const [showIconPicker, setShowIconPicker] = useState(false);
   const [iconPickerTarget, setIconPickerTarget] = useState<ContentBlock | null>(null);
   const [localBlocks, setLocalBlocks] = useState<ContentBlock[]>([]);
   const [localButtons, setLocalButtons] = useState<Button[]>([]);
-  const saveTimeoutRef = useRef<Record<string, NodeJS.Timeout>>({});
 
   useEffect(() => {
     setLocalBlocks(section.content_blocks);
     setLocalButtons(section.buttons);
+    setHasUnsavedChanges(false);
   }, [section.content_blocks, section.buttons]);
 
   const updateContentBlockLocal = (blockId: string, updates: Partial<ContentBlock>) => {
@@ -32,36 +33,7 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
           : block
       )
     );
-
-    if (saveTimeoutRef.current[blockId]) {
-      clearTimeout(saveTimeoutRef.current[blockId]);
-    }
-
-    saveTimeoutRef.current[blockId] = setTimeout(() => {
-      saveContentBlock(blockId, updates);
-    }, 1000);
-  };
-
-  const saveContentBlock = async (blockId: string, updates: Partial<ContentBlock>) => {
-    setSaving(true);
-    const block = localBlocks.find(b => b.id === blockId);
-    if (!block) return;
-
-    const { error } = await supabase
-      .from('content_blocks')
-      .update({
-        content: updates.content !== undefined ? updates.content : block.content,
-        metadata: updates.metadata !== undefined ? updates.metadata : block.metadata,
-      })
-      .eq('id', blockId);
-
-    if (error) {
-      console.error('Error updating content block:', error);
-      alert('Failed to update content');
-    } else {
-      onUpdate();
-    }
-    setSaving(false);
+    setHasUnsavedChanges(true);
   };
 
   const updateButtonLocal = (buttonId: string, updates: Partial<Button>) => {
@@ -72,30 +44,55 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
           : button
       )
     );
-
-    if (saveTimeoutRef.current[buttonId]) {
-      clearTimeout(saveTimeoutRef.current[buttonId]);
-    }
-
-    saveTimeoutRef.current[buttonId] = setTimeout(() => {
-      saveButton(buttonId, updates);
-    }, 1000);
+    setHasUnsavedChanges(true);
   };
 
-  const saveButton = async (buttonId: string, updates: Partial<Button>) => {
+  const saveAllChanges = async () => {
     setSaving(true);
-    const { error } = await supabase
-      .from('buttons')
-      .update(updates)
-      .eq('id', buttonId);
 
-    if (error) {
-      console.error('Error updating button:', error);
-      alert('Failed to update button');
-    } else {
+    try {
+      for (const block of localBlocks) {
+        const { error } = await supabase
+          .from('content_blocks')
+          .update({
+            content: block.content,
+            metadata: block.metadata,
+          })
+          .eq('id', block.id);
+
+        if (error) {
+          console.error('Error updating content block:', error);
+          throw error;
+        }
+      }
+
+      for (const button of localButtons) {
+        const { error } = await supabase
+          .from('buttons')
+          .update({
+            button_text: button.button_text,
+            button_type: button.button_type,
+            link_type: button.link_type,
+            link_destination: button.link_destination,
+            is_external: button.is_external,
+          })
+          .eq('id', button.id);
+
+        if (error) {
+          console.error('Error updating button:', error);
+          throw error;
+        }
+      }
+
+      setHasUnsavedChanges(false);
       onUpdate();
+      alert('Changes saved successfully!');
+    } catch (error) {
+      console.error('Error saving changes:', error);
+      alert('Failed to save changes. Please try again.');
+    } finally {
+      setSaving(false);
     }
-    setSaving(false);
   };
 
   const addContentBlock = async (blockType: string) => {
@@ -214,6 +211,24 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
 
       {editMode && (
         <div className="space-y-6">
+          {hasUnsavedChanges && (
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="text-yellow-800 text-sm font-medium">You have unsaved changes</span>
+                </div>
+                <button
+                  onClick={saveAllChanges}
+                  disabled={saving}
+                  className="btn-primary flex items-center gap-2"
+                >
+                  <Save className="w-4 h-4" />
+                  {saving ? 'Saving...' : 'Save Changes'}
+                </button>
+              </div>
+            </div>
+          )}
+
           <div>
             <h4 className="text-sm font-semibold text-ink mb-3">Content Blocks</h4>
             <div className="space-y-3">
@@ -483,10 +498,21 @@ export default function ContentEditor({ section, onUpdate }: ContentEditorProps)
             </button>
           </div>
 
-          {saving && (
-            <div className="text-sm text-slate flex items-center gap-2">
-              <Save className="w-4 h-4 animate-pulse" />
-              Saving changes...
+          {hasUnsavedChanges && (
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="text-yellow-800 text-sm font-medium">Don't forget to save your changes!</span>
+                </div>
+                <button
+                  onClick={saveAllChanges}
+                  disabled={saving}
+                  className="btn-primary flex items-center gap-2"
+                >
+                  <Save className="w-4 h-4" />
+                  {saving ? 'Saving...' : 'Save Changes'}
+                </button>
+              </div>
             </div>
           )}
         </div>
