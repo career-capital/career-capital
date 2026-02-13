@@ -8,75 +8,92 @@ export default function SectionWireframe({ sectionType, className = '' }: Wirefr
     hero_banner: (
       <svg viewBox="0 0 200 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="200" height="120" fill="#1E3A5F" rx="4"/>
-        <rect x="20" y="30" width="160" height="12" fill="#FFFFFF" opacity="0.9" rx="2"/>
-        <rect x="40" y="48" width="120" height="6" fill="#FFFFFF" opacity="0.7" rx="1"/>
-        <rect x="50" y="60" width="100" height="5" fill="#FFFFFF" opacity="0.6" rx="1"/>
-        <rect x="30" y="75" width="35" height="18" fill="#FFFFFF" opacity="0.2" rx="9"/>
-        <rect x="70" y="75" width="35" height="18" fill="#FFFFFF" opacity="0.2" rx="9"/>
-        <rect x="110" y="75" width="35" height="18" fill="#FFFFFF" opacity="0.2" rx="9"/>
-        <text x="100" y="13" fontSize="8" fill="#FFFFFF" opacity="0.5" textAnchor="middle">Hero with Image</text>
+        <rect width="200" height="120" fill="url(#heroGradient)" opacity="0.3"/>
+        <defs>
+          <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{stopColor:'#4A5568', stopOpacity:0.5}} />
+            <stop offset="100%" style={{stopColor:'#1E3A5F', stopOpacity:0.8}} />
+          </linearGradient>
+        </defs>
+        <rect x="15" y="25" width="140" height="14" fill="#FFFFFF" opacity="0.95" rx="2"/>
+        <rect x="15" y="44" width="110" height="7" fill="#FFFFFF" opacity="0.85" rx="1"/>
+        <rect x="15" y="55" width="130" height="5" fill="#FFFFFF" opacity="0.75" rx="1"/>
+        <rect x="15" y="68" width="45" height="14" fill="#FFFFFF" opacity="0.9" rx="7"/>
+        <rect x="65" y="68" width="45" height="14" fill="#FFFFFF" opacity="0.3" rx="7"/>
+        <rect x="15" y="95" width="35" height="10" fill="#FFFFFF" opacity="0.25" rx="5"/>
+        <rect x="55" y="95" width="38" height="10" fill="#FFFFFF" opacity="0.25" rx="5"/>
+        <rect x="98" y="95" width="42" height="10" fill="#FFFFFF" opacity="0.25" rx="5"/>
+        <text x="100" y="13" fontSize="7" fill="#FFFFFF" opacity="0.5" textAnchor="middle">Full-Width Hero Banner</text>
       </svg>
     ),
 
     icon_grid_3: (
       <svg viewBox="0 0 200 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="200" height="120" fill="#F8F9FA" rx="4"/>
-        <rect x="60" y="10" width="80" height="8" fill="#1E3A5F" opacity="0.8" rx="2"/>
-        <circle cx="35" cy="50" r="8" stroke="#1E3A5F" strokeWidth="2" opacity="0.6"/>
-        <rect x="20" y="65" width="30" height="4" fill="#64748B" opacity="0.6" rx="1"/>
-        <rect x="20" y="72" width="30" height="3" fill="#64748B" opacity="0.4" rx="1"/>
-        <rect x="20" y="78" width="25" height="3" fill="#64748B" opacity="0.4" rx="1"/>
-        <circle cx="100" cy="50" r="8" stroke="#1E3A5F" strokeWidth="2" opacity="0.6"/>
-        <rect x="85" y="65" width="30" height="4" fill="#64748B" opacity="0.6" rx="1"/>
-        <rect x="85" y="72" width="30" height="3" fill="#64748B" opacity="0.4" rx="1"/>
-        <rect x="85" y="78" width="25" height="3" fill="#64748B" opacity="0.4" rx="1"/>
-        <circle cx="165" cy="50" r="8" stroke="#1E3A5F" strokeWidth="2" opacity="0.6"/>
-        <rect x="150" y="65" width="30" height="4" fill="#64748B" opacity="0.6" rx="1"/>
-        <rect x="150" y="72" width="30" height="3" fill="#64748B" opacity="0.4" rx="1"/>
-        <rect x="150" y="78" width="25" height="3" fill="#64748B" opacity="0.4" rx="1"/>
-        <text x="100" y="105" fontSize="7" fill="#64748B" opacity="0.5" textAnchor="middle">3 Icon Cards</text>
+        <rect x="50" y="15" width="100" height="9" fill="#1E3A5F" opacity="0.9" rx="2"/>
+        <rect x="60" y="28" width="80" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <circle cx="35" cy="56" r="10" stroke="#1E3A5F" strokeWidth="2.5" opacity="0.7"/>
+        <rect x="20" y="72" width="30" height="5" fill="#1E3A5F" opacity="0.8" rx="1"/>
+        <rect x="20" y="80" width="30" height="3" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="20" y="85" width="30" height="3" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="20" y="90" width="25" height="3" fill="#64748B" opacity="0.5" rx="1"/>
+        <circle cx="100" cy="56" r="10" stroke="#1E3A5F" strokeWidth="2.5" opacity="0.7"/>
+        <rect x="85" y="72" width="30" height="5" fill="#1E3A5F" opacity="0.8" rx="1"/>
+        <rect x="85" y="80" width="30" height="3" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="85" y="85" width="30" height="3" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="85" y="90" width="25" height="3" fill="#64748B" opacity="0.5" rx="1"/>
+        <circle cx="165" cy="56" r="10" stroke="#1E3A5F" strokeWidth="2.5" opacity="0.7"/>
+        <rect x="150" y="72" width="30" height="5" fill="#1E3A5F" opacity="0.8" rx="1"/>
+        <rect x="150" y="80" width="30" height="3" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="150" y="85" width="30" height="3" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="150" y="90" width="25" height="3" fill="#64748B" opacity="0.5" rx="1"/>
+        <text x="100" y="110" fontSize="7" fill="#64748B" opacity="0.5" textAnchor="middle">3-Column Icon Grid</text>
       </svg>
     ),
 
     cta: (
       <svg viewBox="0 0 200 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="200" height="120" fill="#1E3A5F" rx="4"/>
-        <rect x="40" y="35" width="120" height="10" fill="#FFFFFF" opacity="0.9" rx="2"/>
-        <rect x="50" y="52" width="100" height="5" fill="#FFFFFF" opacity="0.7" rx="1"/>
-        <rect x="55" y="60" width="90" height="4" fill="#FFFFFF" opacity="0.6" rx="1"/>
-        <rect x="50" y="75" width="45" height="16" fill="#FFFFFF" opacity="0.9" rx="8"/>
-        <rect x="105" y="75" width="45" height="16" fill="#FFFFFF" opacity="0.3" rx="8"/>
-        <text x="100" y="13" fontSize="8" fill="#FFFFFF" opacity="0.5" textAnchor="middle">Call to Action</text>
+        <rect x="30" y="30" width="140" height="12" fill="#FFFFFF" opacity="0.95" rx="2"/>
+        <rect x="45" y="48" width="110" height="5" fill="#FFFFFF" opacity="0.8" rx="1"/>
+        <rect x="50" y="57" width="100" height="4" fill="#FFFFFF" opacity="0.75" rx="1"/>
+        <rect x="40" y="72" width="50" height="15" fill="#FFFFFF" opacity="0.95" rx="7"/>
+        <rect x="95" y="72" width="50" height="15" fill="#FFFFFF" opacity="0.35" rx="7"/>
+        <text x="100" y="13" fontSize="7" fill="#FFFFFF" opacity="0.6" textAnchor="middle">Centered Call-to-Action</text>
       </svg>
     ),
 
     text_block: (
       <svg viewBox="0 0 200 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="200" height="120" fill="#FFFFFF" rx="4"/>
-        <rect x="30" y="25" width="100" height="8" fill="#1E3A5F" opacity="0.8" rx="2"/>
-        <rect x="30" y="45" width="140" height="4" fill="#64748B" opacity="0.6" rx="1"/>
-        <rect x="30" y="52" width="140" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <rect x="30" y="59" width="135" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <rect x="30" y="70" width="140" height="4" fill="#64748B" opacity="0.6" rx="1"/>
-        <rect x="30" y="77" width="140" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <rect x="30" y="84" width="120" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <text x="100" y="105" fontSize="7" fill="#64748B" opacity="0.5" textAnchor="middle">Text Content</text>
+        <rect x="20" y="20" width="95" height="10" fill="#1E3A5F" opacity="0.9" rx="2"/>
+        <rect x="20" y="40" width="160" height="4" fill="#64748B" opacity="0.6" rx="1"/>
+        <rect x="20" y="47" width="160" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="20" y="54" width="155" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="20" y="61" width="160" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="20" y="73" width="160" height="4" fill="#64748B" opacity="0.6" rx="1"/>
+        <rect x="20" y="80" width="160" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="20" y="87" width="145" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="20" y="94" width="160" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <text x="100" y="110" fontSize="7" fill="#64748B" opacity="0.5" textAnchor="middle">Heading + Paragraphs</text>
       </svg>
     ),
 
     image_text: (
       <svg viewBox="0 0 200 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="200" height="120" fill="#F8F9FA" rx="4"/>
-        <rect x="15" y="20" width="75" height="80" fill="#E2E8F0" rx="2"/>
-        <circle cx="52.5" cy="50" r="12" stroke="#94A3B8" strokeWidth="2"/>
-        <path d="M40 75 L52.5 65 L65 75" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <rect x="105" y="30" width="75" height="7" fill="#1E3A5F" opacity="0.8" rx="1"/>
-        <rect x="105" y="45" width="70" height="4" fill="#64748B" opacity="0.6" rx="1"/>
-        <rect x="105" y="52" width="70" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <rect x="105" y="59" width="65" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <rect x="105" y="70" width="70" height="4" fill="#64748B" opacity="0.6" rx="1"/>
-        <rect x="105" y="77" width="70" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <text x="100" y="105" fontSize="7" fill="#64748B" opacity="0.5" textAnchor="middle">Image + Text</text>
+        <rect x="10" y="15" width="80" height="90" fill="#E2E8F0" rx="3"/>
+        <circle cx="50" cy="48" r="14" stroke="#94A3B8" strokeWidth="2.5"/>
+        <path d="M35 70 L50 58 L65 70" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <rect x="100" y="25" width="85" height="8" fill="#1E3A5F" opacity="0.9" rx="2"/>
+        <rect x="100" y="42" width="80" height="4" fill="#64748B" opacity="0.6" rx="1"/>
+        <rect x="100" y="49" width="80" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="100" y="56" width="75" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="100" y="63" width="80" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="100" y="75" width="80" height="4" fill="#64748B" opacity="0.6" rx="1"/>
+        <rect x="100" y="82" width="80" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="100" y="89" width="70" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <text x="100" y="110" fontSize="7" fill="#64748B" opacity="0.5" textAnchor="middle">Side-by-Side Image + Text</text>
       </svg>
     ),
 
@@ -95,16 +112,17 @@ export default function SectionWireframe({ sectionType, className = '' }: Wirefr
     text_only: (
       <svg viewBox="0 0 200 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="200" height="120" fill="#FFFFFF" rx="4"/>
-        <rect x="30" y="20" width="90" height="9" fill="#1E3A5F" opacity="0.8" rx="2"/>
-        <rect x="30" y="40" width="140" height="4" fill="#64748B" opacity="0.6" rx="1"/>
-        <rect x="30" y="47" width="140" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <rect x="30" y="54" width="135" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <rect x="30" y="65" width="140" height="4" fill="#64748B" opacity="0.6" rx="1"/>
-        <rect x="30" y="72" width="140" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <rect x="30" y="79" width="130" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <rect x="30" y="90" width="140" height="4" fill="#64748B" opacity="0.6" rx="1"/>
-        <rect x="30" y="97" width="125" height="4" fill="#64748B" opacity="0.5" rx="1"/>
-        <text x="100" y="110" fontSize="7" fill="#64748B" opacity="0.5" textAnchor="middle">Text Only</text>
+        <rect x="25" y="18" width="85" height="8" fill="#1E3A5F" opacity="0.85" rx="2"/>
+        <rect x="25" y="35" width="150" height="4" fill="#64748B" opacity="0.6" rx="1"/>
+        <rect x="25" y="42" width="150" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="25" y="49" width="145" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="25" y="56" width="150" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="25" y="63" width="140" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="25" y="75" width="150" height="4" fill="#64748B" opacity="0.6" rx="1"/>
+        <rect x="25" y="82" width="150" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="25" y="89" width="135" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <rect x="25" y="96" width="150" height="4" fill="#64748B" opacity="0.5" rx="1"/>
+        <text x="100" y="110" fontSize="7" fill="#64748B" opacity="0.5" textAnchor="middle">Multiple Paragraphs</text>
       </svg>
     ),
   };
