@@ -39,9 +39,11 @@ function AdminRoute() {
 
     checkAuth();
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
-      console.log('Auth state changed:', event, session);
-      setIsAuthenticated(!!session);
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      (async () => {
+        console.log('Auth state changed:', event, session);
+        setIsAuthenticated(!!session);
+      })();
     });
 
     return () => {
