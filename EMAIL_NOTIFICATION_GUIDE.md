@@ -2,70 +2,117 @@
 
 ## Overview
 
-The contact form now automatically sends email notifications to the admin email address (info@careercapital.net) whenever a new submission is received. The email includes all submission details and allows direct reply to the sender.
+The contact form automatically sends notifications via Zapier whenever a new submission is received. This allows you to configure email notifications, Slack messages, or any other action supported by Zapier.
 
 ## How It Works
 
 1. **Form Submission**: When someone submits the contact form on the website
 2. **Database Insert**: The submission is saved to the `contact_submissions` table
 3. **Automatic Trigger**: A database trigger fires automatically
-4. **Email Sent**: An edge function sends a formatted email notification via Resend
-5. **Admin Receives**: The admin receives an email with full submission details
+4. **Zapier Webhook**: Contact data is sent to your Zapier webhook URL
+5. **Zapier Action**: Zapier processes the webhook and performs your configured action (send email, Slack notification, etc.)
 
-## Email Contents
+## Setting Up Email Notifications with Zapier
 
-Each notification email includes:
+### Step 1: Create a Zapier Account
 
-- **From**: The submitter's name
-- **Email**: The submitter's email (clickable mailto link)
-- **Organization**: If provided
-- **Inquiry Type**: Consulting, Speaking, Workshop, or Other
-- **Message**: Full message content
-- **Timestamp**: When the submission was received
-- **Quick Actions**:
-  - Reply directly to the email (reply-to is set to submitter's email)
-  - View in admin dashboard (link provided)
+1. Go to https://zapier.com and sign up for a free account
+2. Free tier includes 100 tasks per month (more than enough for most contact forms)
 
-## Email Configuration
+### Step 2: Create a New Zap
 
-### Required Environment Variables
+1. Click "Create Zap" in your Zapier dashboard
+2. Name it something like "Career Capital Contact Form Notifications"
 
-The system requires two environment variables to be configured in your Supabase project:
+### Step 3: Set Up the Trigger (Webhook)
 
-1. **RESEND_API_KEY**: Your Resend API key for sending emails
-   - Get your API key from: https://resend.com/api-keys
-   - Add this in Supabase Dashboard → Edge Functions → Manage Secrets
+1. **App**: Search for and select "Webhooks by Zapier"
+2. **Event**: Choose "Catch Hook"
+3. **Webhook URL**: Copy the custom webhook URL Zapier provides
+4. **Note**: Save this URL - you'll need it for the database configuration
 
-2. **ADMIN_EMAIL**: The email address that receives notifications
-   - Default: info@careercapital.net
-   - Change this if you want notifications sent to a different address
+### Step 4: Configure the Action (Send Email)
 
-3. **SITE_URL**: Your website URL (for admin dashboard link)
-   - Default: https://careercapital.net
-   - Should match your production domain
+1. **App**: Search for and select "Email by Zapier" (or "Gmail" if you prefer)
+2. **Event**: Choose "Send Outbound Email"
+3. **Configure the email**:
+   - **To**: info@careercapital.net (or your preferred email)
+   - **From Name**: Career Capital Contact Form
+   - **Subject**: Use dynamic data like "New {inquiry_type} inquiry from {name}"
+   - **Body Type**: HTML
+   - **Body**: Create a formatted email using the webhook data
 
-### Setting Up Resend
+### Example Email Template
 
-1. Create a free account at https://resend.com
-2. Add and verify your domain (careercapital.net)
-3. Generate an API key
-4. Add the API key to Supabase Edge Function secrets
+```html
+<h2>New Contact Form Submission</h2>
 
-### Configuring Edge Function Secrets
+<p><strong>From:</strong> {name}</p>
+<p><strong>Email:</strong> <a href="mailto:{email}">{email}</a></p>
+<p><strong>Organization:</strong> {organization}</p>
+<p><strong>Inquiry Type:</strong> {inquiry_type}</p>
 
-To add the required environment variables:
+<h3>Message:</h3>
+<p>{message}</p>
 
-1. Go to your Supabase Dashboard
-2. Navigate to Edge Functions
-3. Click "Manage Secrets"
-4. Add the following secrets:
-   - `RESEND_API_KEY`: Your Resend API key
-   - `ADMIN_EMAIL`: info@careercapital.net (or your preferred email)
-   - `SITE_URL`: https://careercapital.net (or your production URL)
+<hr>
+<p><small>Submitted: {created_at}</small></p>
+<p><a href="https://careercapital.net/admin">View in Admin Dashboard</a></p>
+
+<p><em>To respond, simply reply to {email}</em></p>
+```
+
+### Step 5: Test the Integration
+
+1. In Zapier, click "Test trigger" to make sure the webhook is working
+2. Submit a test form on your website
+3. Check that Zapier receives the data
+4. Run the test action to send yourself an email
+5. Verify the email looks correct
+
+### Step 6: Turn On Your Zap
+
+1. Click "Publish" to activate your Zap
+2. Now all new contact submissions will trigger email notifications
+
+## Webhook Data Structure
+
+The webhook sends the following data for each submission:
+
+```json
+{
+  "id": "unique-submission-id",
+  "name": "Submitter Name",
+  "email": "submitter@example.com",
+  "organization": "Company Name",
+  "inquiry_type": "consulting|speaking|workshop|other",
+  "message": "Full message text",
+  "status": "new",
+  "created_at": "2024-01-01T12:00:00Z"
+}
+```
+
+## Alternative Zapier Actions
+
+Instead of email, you can configure other actions:
+
+### Slack Notifications
+- **App**: Slack
+- **Action**: Send Channel Message
+- Posts new submissions to a dedicated Slack channel
+
+### Google Sheets
+- **App**: Google Sheets
+- **Action**: Create Spreadsheet Row
+- Logs all submissions to a spreadsheet for tracking
+
+### Multiple Actions
+- Add multiple action steps to send email AND post to Slack
+- Or use Zapier's filter feature to route different inquiry types to different people
 
 ## Archive System
 
-The contact submissions system now includes archive functionality to help manage submissions without losing data.
+The contact submissions system includes archive functionality to help manage submissions without losing data.
 
 ### Archive vs Delete
 
@@ -116,8 +163,8 @@ The contact submissions system now includes archive functionality to help manage
 
 ### Recommended Process
 
-1. **Receive Email**: Get notification in your inbox with full details
-2. **Quick Response**: Reply directly to the email if urgent
+1. **Receive Notification**: Get notification via email (or Slack) with full details
+2. **Quick Response**: Use the email address to respond directly
 3. **Update Status**: Log in to admin dashboard and update status
    - "New" → "Read" (when reviewing)
    - "Read" → "Responded" (after replying)
@@ -133,63 +180,57 @@ The contact submissions system now includes archive functionality to help manage
 
 ## Troubleshooting
 
-### Email Not Received
+### Not Receiving Notifications
 
-1. Check spam/junk folder
-2. Verify RESEND_API_KEY is configured in Supabase
-3. Verify ADMIN_EMAIL is set correctly
-4. Check Resend dashboard for delivery status
-5. Verify domain is verified in Resend
+1. Check that your Zap is turned ON (not paused)
+2. Check Zapier's Task History to see if webhook was received
+3. Verify the webhook URL in your database migration matches your Zap
+4. Check your email spam/junk folder
+5. Test by submitting a form and watching Zapier's logs
 
-### Testing Emails
+### Testing the Webhook
 
-To test the email system:
+To test without submitting through the website:
 
-1. Submit a test contact form on your website
-2. Check the admin email inbox
-3. Verify email formatting and reply-to functionality
-4. Test clicking the admin dashboard link
+1. Go to your Zap's trigger step
+2. Use "Test trigger" feature
+3. Or manually send a POST request to your webhook URL with sample data
 
 ### Common Issues
 
-- **No email received**: Check Resend API key configuration
-- **Wrong recipient**: Update ADMIN_EMAIL environment variable
-- **Broken links**: Verify SITE_URL is set correctly
-- **Can't reply**: Ensure reply-to header is set (automatic in our implementation)
+- **Zap not triggering**: Verify webhook URL is correct in database migration
+- **Wrong email format**: Edit your Zap's action step to adjust email template
+- **Missing data**: Check that all fields are mapped correctly in Zapier
+- **Reply not working**: Make sure to include the submitter's email in your template
 
 ## Technical Details
 
-### Edge Function
-
-- **Name**: `send-contact-notification`
-- **Trigger**: Automatic on new contact submission
-- **Service**: Resend API
-- **Reply-To**: Set to submitter's email for easy responses
-
 ### Database Trigger
 
-- **Function**: `send_contact_notification()`
-- **Trigger**: `trigger_send_contact_notification`
+- **Function**: `notify_zapier_contact_submission()`
+- **Trigger**: `trigger_notify_zapier`
 - **Event**: AFTER INSERT on contact_submissions
 - **Execution**: Asynchronous (doesn't block form submission)
 
 ### Security
 
-- Edge function uses Supabase authentication
-- Environment variables stored securely in Supabase
-- Email sending happens server-side only
-- No sensitive data exposed to client
+- Webhook URL is stored in the database function
+- Data is sent via HTTPS to Zapier
+- No authentication required for webhook (Zapier generates unique URL)
+- All sensitive processing happens on Zapier's secure servers
 
-## Migration from Zapier
+### Migration File
 
-This system replaces the previous Zapier webhook integration with a native email solution:
+The Zapier webhook integration is defined in:
+- `supabase/migrations/20260104022758_add_zapier_webhook_integration.sql`
 
-- **Before**: Contact submissions → Zapier → Manual email setup
-- **Now**: Contact submissions → Edge function → Resend → Email
+To update the webhook URL, modify this migration file and update the `webhook_url` variable.
 
-Benefits:
-- Faster delivery
-- Better formatting
-- Direct reply capability
-- Lower cost (Resend has generous free tier)
-- More control over email content
+## Benefits of Using Zapier
+
+- **Flexibility**: Change notification methods without code changes
+- **No API Keys**: No need to manage email service API keys
+- **Multiple Actions**: Send email, post to Slack, log to sheets - all from one submission
+- **Easy Setup**: Visual interface, no coding required
+- **Reliable**: Zapier handles retries and error handling
+- **Free Tier**: 100 tasks/month is sufficient for most contact forms
