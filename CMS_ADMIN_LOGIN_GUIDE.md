@@ -107,11 +107,47 @@ At the top, you'll see buttons for each page (Home, About, Services, etc.). Clic
 
 ## Contact Submissions
 
+### Email Notifications
+
+You will receive an email notification at info@careercapital.net whenever someone submits the contact form. The email includes:
+- All submission details (name, email, organization, message)
+- Direct reply capability - just hit "Reply" to respond to the sender
+- Link to view in the admin dashboard
+
+### Managing Submissions
+
 All contact form submissions appear in the **"Contact Submissions"** tab:
-- View submitter name, email, organization, and message
-- Change status: New → Read → Responded → Archived
-- Click the email address to send a reply directly
-- Delete submissions you no longer need
+
+**Viewing Submissions**:
+- **Active Tab**: Shows current, unarchived submissions (default view)
+- **Archived Tab**: Shows archived submissions for record-keeping
+- Badge count shows number of new submissions
+
+**Status Management**:
+- **New**: Just received (marked with blue badge)
+- **Read**: You've reviewed the submission
+- **Responded**: You've replied to the inquiry
+- Use the status dropdown to update
+
+**Archive System**:
+- Click the **Archive icon** (📦) to archive a submission
+  - Moves to "Archived" tab
+  - Keeps record but removes from active view
+  - Recommended for completed conversations
+- Click the **Restore icon** (📤) to restore from archive
+  - Returns to active tab
+  - Status changes to "Read"
+
+**Deleting Submissions**:
+- Click the **Trash icon** (🗑️) to delete
+- You'll see a confirmation dialog with important warning
+- **Two Options**:
+  1. **Archive Instead** (Recommended) - Preserves data, moves to archive
+  2. **Delete Forever** - Permanently removes (cannot be undone)
+- **Cancel** to abort the operation
+- Only use permanent delete for spam or invalid submissions
+
+**Best Practice**: Archive submissions rather than deleting them to maintain a record of all inquiries.
 
 ## Tips for Success
 

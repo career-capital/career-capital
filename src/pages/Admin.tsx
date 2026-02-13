@@ -1,6 +1,6 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { supabase, Testimonial } from '../lib/supabase';
-import { Plus, Edit2, Trash2, X, ChevronUp, ChevronDown, Tag as TagIcon, Mail, MessageSquare, LogOut, FileEdit } from 'lucide-react';
+import { Plus, Edit2, Trash2, X, ChevronUp, ChevronDown, Tag as TagIcon, Mail, MessageSquare, LogOut, FileEdit, Archive, ArchiveRestore } from 'lucide-react';
 import CMSInterface from '../components/cms/CMSInterface';
 
 interface ContactSubmission {
@@ -11,6 +11,7 @@ interface ContactSubmission {
   inquiry_type: string;
   message: string;
   status: string;
+  archived: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -37,10 +38,12 @@ export default function Admin() {
   const [activeTab, setActiveTab] = useState<'cms' | 'testimonials' | 'contacts'>('cms');
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [contactSubmissions, setContactSubmissions] = useState<ContactSubmission[]>([]);
+  const [showArchived, setShowArchived] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [customTag, setCustomTag] = useState('');
+  const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     quote: '',
     author: '',
@@ -58,7 +61,7 @@ export default function Admin() {
     } else if (activeTab === 'contacts') {
       fetchContactSubmissions();
     }
-  }, [activeTab]);
+  }, [activeTab, showArchived]);
 
   const fetchTestimonials = async () => {
     setLoading(true);
@@ -77,10 +80,15 @@ export default function Admin() {
 
   const fetchContactSubmissions = async () => {
     setLoading(true);
-    const { data, error } = await supabase
+    let query = supabase
       .from('contact_submissions')
-      .select('*')
-      .order('created_at', { ascending: false });
+      .select('*');
+
+    if (!showArchived) {
+      query = query.eq('archived', false);
+    }
+
+    const { data, error } = await query.order('created_at', { ascending: false });
 
     if (error) {
       console.error('Error fetching contact submissions:', error);
@@ -105,10 +113,23 @@ export default function Admin() {
     fetchContactSubmissions();
   };
 
-  const handleDeleteSubmission = async (id: string) => {
-    if (!confirm('Are you sure you want to delete this submission?')) {
+  const handleArchiveSubmission = async (id: string, archive: boolean) => {
+    const { error } = await supabase
+      .from('contact_submissions')
+      .update({ archived: archive, status: archive ? 'archived' : 'read' })
+      .eq('id', id);
+
+    if (error) {
+      console.error('Error archiving submission:', error);
+      alert('Failed to archive submission');
       return;
     }
+
+    fetchContactSubmissions();
+  };
+
+  const handleDeleteSubmission = async (id: string) => {
+    setDeleteConfirmId(null);
 
     const { error } = await supabase
       .from('contact_submissions')
@@ -121,6 +142,7 @@ export default function Admin() {
       return;
     }
 
+    alert('Submission permanently deleted');
     fetchContactSubmissions();
   };
 
@@ -438,9 +460,9 @@ export default function Admin() {
           >
             <Mail className="w-4 h-4 inline mr-2" />
             Contact Submissions
-            {contactSubmissions.filter(s => s.status === 'new').length > 0 && (
+            {contactSubmissions.filter(s => s.status === 'new' && !s.archived).length > 0 && (
               <span className="ml-2 inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-trueWhite bg-navy rounded-full">
-                {contactSubmissions.filter(s => s.status === 'new').length}
+                {contactSubmissions.filter(s => s.status === 'new' && !s.archived).length}
               </span>
             )}
           </button>
@@ -844,80 +866,156 @@ export default function Admin() {
         )}
 
         {activeTab === 'contacts' && (
-          <div className="space-y-4">
-            {contactSubmissions.map((submission) => (
-              <div
-                key={submission.id}
-                className="bg-surface border border-border p-6"
-              >
-                <div className="flex justify-between gap-4 mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-lg font-medium text-ink">{submission.name}</h3>
-                      <span className={`text-xs px-2 py-1 ${
-                        submission.status === 'new' ? 'bg-navy text-trueWhite' :
-                        submission.status === 'read' ? 'bg-slate/20 text-slate' :
-                        submission.status === 'responded' ? 'bg-green-100 text-green-800' :
-                        'bg-gray-100 text-gray-600'
-                      }`}>
-                        {submission.status.toUpperCase()}
-                      </span>
-                      <span className={`text-xs px-2 py-1 ${
-                        submission.inquiry_type === 'consulting' ? 'bg-blue-100 text-blue-800' :
-                        submission.inquiry_type === 'speaking' ? 'bg-purple-100 text-purple-800' :
-                        submission.inquiry_type === 'workshop' ? 'bg-orange-100 text-orange-800' :
-                        'bg-gray-100 text-gray-600'
-                      }`}>
-                        {submission.inquiry_type === 'consulting' ? 'Consulting' :
-                         submission.inquiry_type === 'speaking' ? 'Speaking' :
-                         submission.inquiry_type === 'workshop' ? 'Workshop' : 'Other'}
-                      </span>
-                    </div>
-                    <p className="text-slate text-sm mb-1">
-                      <a href={`mailto:${submission.email}`} className="hover:text-navy transition-colors">
-                        {submission.email}
-                      </a>
-                    </p>
-                    {submission.organization && (
-                      <p className="text-slate text-sm mb-3">{submission.organization}</p>
-                    )}
-                    <p className="text-ink leading-relaxed mb-3 whitespace-pre-wrap">
-                      {submission.message}
-                    </p>
-                    <p className="text-xs text-slate">
-                      Submitted: {new Date(submission.created_at).toLocaleString()}
-                    </p>
-                  </div>
+          <>
+            <div className="flex justify-between items-center mb-6">
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setShowArchived(false)}
+                  className={`px-4 py-2 text-sm transition-colors ${
+                    !showArchived
+                      ? 'bg-navy text-trueWhite'
+                      : 'bg-surface border border-border text-ink hover:border-navy'
+                  }`}
+                >
+                  Active ({contactSubmissions.filter(s => !s.archived).length})
+                </button>
+                <button
+                  onClick={() => setShowArchived(true)}
+                  className={`px-4 py-2 text-sm transition-colors ${
+                    showArchived
+                      ? 'bg-navy text-trueWhite'
+                      : 'bg-surface border border-border text-ink hover:border-navy'
+                  }`}
+                >
+                  Archived ({contactSubmissions.filter(s => s.archived).length})
+                </button>
+              </div>
+            </div>
 
-                  <div className="flex flex-col gap-2">
-                    <select
-                      value={submission.status}
-                      onChange={(e) => handleUpdateSubmissionStatus(submission.id, e.target.value)}
-                      className="text-xs px-2 py-1 border border-border focus:border-navy focus:ring-1 focus:ring-navy outline-none"
-                    >
-                      <option value="new">New</option>
-                      <option value="read">Read</option>
-                      <option value="responded">Responded</option>
-                      <option value="archived">Archived</option>
-                    </select>
-                    <button
-                      onClick={() => handleDeleteSubmission(submission.id)}
-                      className="p-2 text-slate hover:text-red-600 transition-colors"
-                      title="Delete"
-                    >
-                      <Trash2 className="w-5 h-5" />
-                    </button>
+            <div className="space-y-4">
+              {contactSubmissions.map((submission) => (
+                <div
+                  key={submission.id}
+                  className={`bg-surface border border-border p-6 ${
+                    submission.archived ? 'opacity-75' : ''
+                  }`}
+                >
+                  <div className="flex justify-between gap-4 mb-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="text-lg font-medium text-ink">{submission.name}</h3>
+                        {submission.archived && (
+                          <span className="text-xs px-2 py-1 bg-gray-200 text-gray-700">
+                            ARCHIVED
+                          </span>
+                        )}
+                        <span className={`text-xs px-2 py-1 ${
+                          submission.status === 'new' ? 'bg-navy text-trueWhite' :
+                          submission.status === 'read' ? 'bg-slate/20 text-slate' :
+                          submission.status === 'responded' ? 'bg-green-100 text-green-800' :
+                          'bg-gray-100 text-gray-600'
+                        }`}>
+                          {submission.status.toUpperCase()}
+                        </span>
+                        <span className={`text-xs px-2 py-1 ${
+                          submission.inquiry_type === 'consulting' ? 'bg-blue-100 text-blue-800' :
+                          submission.inquiry_type === 'speaking' ? 'bg-purple-100 text-purple-800' :
+                          submission.inquiry_type === 'workshop' ? 'bg-orange-100 text-orange-800' :
+                          'bg-gray-100 text-gray-600'
+                        }`}>
+                          {submission.inquiry_type === 'consulting' ? 'Consulting' :
+                           submission.inquiry_type === 'speaking' ? 'Speaking' :
+                           submission.inquiry_type === 'workshop' ? 'Workshop' : 'Other'}
+                        </span>
+                      </div>
+                      <p className="text-slate text-sm mb-1">
+                        <a href={`mailto:${submission.email}`} className="hover:text-navy transition-colors">
+                          {submission.email}
+                        </a>
+                      </p>
+                      {submission.organization && (
+                        <p className="text-slate text-sm mb-3">{submission.organization}</p>
+                      )}
+                      <p className="text-ink leading-relaxed mb-3 whitespace-pre-wrap">
+                        {submission.message}
+                      </p>
+                      <p className="text-xs text-slate">
+                        Submitted: {new Date(submission.created_at).toLocaleString()}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                      {!submission.archived && (
+                        <select
+                          value={submission.status}
+                          onChange={(e) => handleUpdateSubmissionStatus(submission.id, e.target.value)}
+                          className="text-xs px-2 py-1 border border-border focus:border-navy focus:ring-1 focus:ring-navy outline-none"
+                        >
+                          <option value="new">New</option>
+                          <option value="read">Read</option>
+                          <option value="responded">Responded</option>
+                        </select>
+                      )}
+                      <button
+                        onClick={() => handleArchiveSubmission(submission.id, !submission.archived)}
+                        className="p-2 text-slate hover:text-navy transition-colors flex items-center gap-1"
+                        title={submission.archived ? "Restore from archive" : "Archive"}
+                      >
+                        {submission.archived ? (
+                          <ArchiveRestore className="w-5 h-5" />
+                        ) : (
+                          <Archive className="w-5 h-5" />
+                        )}
+                      </button>
+                      {deleteConfirmId === submission.id ? (
+                        <div className="flex flex-col gap-1 bg-red-50 border border-red-300 p-2 rounded">
+                          <p className="text-xs text-red-900 mb-2 font-medium">
+                            This cannot be undone!
+                          </p>
+                          <button
+                            onClick={() => handleArchiveSubmission(submission.id, true)}
+                            className="text-xs px-2 py-1 bg-slate text-trueWhite hover:bg-steel transition-colors"
+                          >
+                            Archive Instead
+                          </button>
+                          <button
+                            onClick={() => handleDeleteSubmission(submission.id)}
+                            className="text-xs px-2 py-1 bg-red-600 text-trueWhite hover:bg-red-700 transition-colors"
+                          >
+                            Delete Forever
+                          </button>
+                          <button
+                            onClick={() => setDeleteConfirmId(null)}
+                            className="text-xs px-2 py-1 bg-surface border border-border hover:border-navy transition-colors"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      ) : (
+                        <button
+                          onClick={() => setDeleteConfirmId(submission.id)}
+                          className="p-2 text-slate hover:text-red-600 transition-colors"
+                          title="Delete permanently"
+                        >
+                          <Trash2 className="w-5 h-5" />
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
 
-            {contactSubmissions.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-slate">No contact submissions yet.</p>
-              </div>
-            )}
-          </div>
+              {contactSubmissions.length === 0 && (
+                <div className="text-center py-12">
+                  <p className="text-slate">
+                    {showArchived
+                      ? 'No archived submissions.'
+                      : 'No active contact submissions.'}
+                  </p>
+                </div>
+              )}
+            </div>
+          </>
         )}
       </section>
     </div>
