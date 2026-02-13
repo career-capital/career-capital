@@ -101,7 +101,7 @@ export default function Home() {
             Helping individuals and teams develop AI fluency and AI‑ready mindsets.
           </p>
           <p className="text-lg text-trueWhite/90 mb-10 leading-relaxed drop-shadow-md max-w-3xl">
-            <strong>Learn. Adapt. Thrive.</strong> Career Capital is a boutique advisory firm that builds AI fluency and AI‑ready mindsets across organizations, helping teams learn, adapt, and thrive in an Analog + AI world.
+            Career Capital is a boutique advisory firm that builds AI fluency and AI‑ready mindsets across organizations, helping teams learn, adapt, and thrive in an Analog + AI world.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-28">
             <button
@@ -138,7 +138,7 @@ export default function Home() {
               Career Capital helps organizations build AI fluency, develop AI‑ready mindsets, and scale learning across the business so teams can work confidently with AI and unlock meaningful productivity gains.
             </p>
             <p className="text-lg text-slate leading-relaxed">
-              We combine practical training, human‑centered enablement, and strategic guidance to help organizations move beyond experimentation and turn AI into a sustainable competitive advantage.
+              The focus is practical, human‑centered, and built for real‑world adoption. We help organizations move beyond experimentation and turn AI into a sustainable competitive advantage.
             </p>
           </div>
 
@@ -149,7 +149,7 @@ export default function Home() {
                   <Target className="w-12 h-12 text-navy" strokeWidth={2} aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-semibold text-ink mb-4">
-                  AI Adoption
+                  AI Training Programs
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
                   Hands‑on training that builds AI fluency from foundational literacy to advanced workflow optimization, driving immediate productivity gains.
@@ -232,7 +232,7 @@ export default function Home() {
                   Human‑Centered AI Enablement
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  We build the mindsets and behaviors that make AI adoption stick.
+                  AI adoption succeeds when people succeed. We build the mindsets and behaviors that make AI capability stick.
                 </p>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function Home() {
                   All Fluency Levels
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  We accelerate progress with training tailored to your team's current capabilities.
+                  Whether teams are just beginning or already experimenting with advanced tools, we accelerate progress with training tailored to their current capabilities.
                 </p>
               </div>
             </div>
@@ -260,7 +260,7 @@ export default function Home() {
                   Rapid, Practical Implementation
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Hands‑on learning and real‑world workflows that create measurable business value fast.
+                  Hands‑on learning and real workflows that create measurable business value in weeks, not months.
                 </p>
               </div>
             </div>
@@ -274,7 +274,7 @@ export default function Home() {
                   Scalable Learning Across the Business
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  We embed AI fluency at every level, making capability a shared strength, not a siloed skill.
+                  AI fluency becomes a shared strength, not a siloed skill. We help organizations embed capability across every level.
                 </p>
               </div>
             </div>
@@ -288,7 +288,7 @@ export default function Home() {
                   A Competitive Edge in an Analog + AI World
                 </h3>
                 <p className="text-base text-slate leading-relaxed">
-                  Build AI fluency now to lead tomorrow. Move fast, scale smart, and stay ahead.
+                  Organizations that build AI fluency now will lead their markets tomorrow. We help you move fast, scale smart, and stay ahead.
                 </p>
               </div>
             </div>

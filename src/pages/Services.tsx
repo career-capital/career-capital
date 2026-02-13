@@ -20,8 +20,8 @@ export default function Services() {
 
   const services: Service[] = [
     {
-      title: 'AI Adoption',
-      subtitle: 'Practical, hands‑on training that builds AI fluency across all levels of the organization — from foundational literacy to advanced workflow optimization.',
+      title: 'AI Training Programs',
+      subtitle: 'Practical, hands‑on training that builds AI fluency across all levels of the organization — from foundational literacy to advanced workflow optimization. Teams learn how to use AI effectively in their day‑to‑day work to drive immediate productivity gains.',
       idealFor: 'Teams at any fluency level looking to accelerate AI adoption and drive immediate productivity gains',
       delivers: [
         'Hands-on training',
@@ -40,7 +40,7 @@ export default function Services() {
     },
     {
       title: 'Strategic Implementation',
-      subtitle: 'Support to integrate AI into core operations, scale learning and capability across the business, and turn AI investments into measurable outcomes.',
+      subtitle: 'Support to integrate AI into core operations, scale learning, and capability across the business, and turn AI investments into measurable outcomes.',
       idealFor: 'Organizations ready to move beyond experimentation to strategic, enterprise-wide AI transformation',
       delivers: [
         'Strategic roadmap',
@@ -58,7 +58,7 @@ export default function Services() {
     },
     {
       title: 'Change Management & AI Mindset Development',
-      subtitle: 'Human‑centered enablement that helps teams shift how they think about AI. We build the confidence, adaptability, and buy‑in needed for sustainable adoption.',
+      subtitle: 'Human‑centered enablement that helps teams shift how they think about AI. We build the confidence, adaptability, and buy‑in needed for sustainable adoption — ensuring AI becomes a capability, not a disruption.',
       idealFor: 'Organizations implementing AI changes and needing to align teams, reduce anxiety, and drive sustainable adoption',
       delivers: [
         'Confidence building',
@@ -76,7 +76,7 @@ export default function Services() {
     },
     {
       title: 'Enterprise Enablement',
-      subtitle: 'Scalable learning programs that embed AI fluency across the entire organization. We help leaders and teams develop shared language, shared skills, and shared confidence.',
+      subtitle: 'Scalable learning programs that embed AI fluency across the entire organization. Leaders and teams develop shared language, shared skills, and shared confidence so AI capability becomes a cultural strength, not a siloed initiative.',
       idealFor: 'Organizations needing standardized AI practices to scale adoption across multiple teams or departments',
       delivers: [
         'Scalable programs',
@@ -94,7 +94,7 @@ export default function Services() {
     },
     {
       title: 'Future‑of‑Work Keynotes & Leadership Sessions',
-      subtitle: 'Clear, energizing guidance for leaders navigating the Analog + AI future. Sessions are designed to inspire action, accelerate readiness, and align teams.',
+      subtitle: 'Clear, energizing guidance for leaders navigating the Analog + AI future. Sessions inspire action, accelerate readiness, and align teams around the skills and mindsets needed to thrive with AI.',
       idealFor: 'Organizations launching AI initiatives or needing to build momentum around transformation at key inflection points',
       delivers: [
         'Inspirational insights',
